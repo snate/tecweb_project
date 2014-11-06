@@ -4,9 +4,9 @@ _______________________
 ### Team: *Carlo*, *Federica*, *Graziano*, *Sebastiano*.
 
 ### Questo documento è stato creato con lo scopo di fornire una base per inserire idee al nostro progetto di TecWeb, qualsiasi intuizione, aggiunta o proposta scrivetela qui.
-(++) non so se sia scontato, aggiungere parti presenti in "Struttura Homepage" alla pagina località specifica, ad esempio footer e breadcrumb; in alternativa, seguendo DRY scriverlo una volta per tutte le pagine e poi scrivere le particolarità di ogni pagina [Sebastiano]
-(++) in "Struttura Homepage", limitare già da ora a "Inglese" e "Italiano" le lingue disponibili, per quanto mi riguarda. Se altri conoscono lingue aggiuntive ben venga, ma io posso garantire di scrivere pagine solo in queste due lingue. Di tedesco e serbo (se Carlo volesse) conosco una quantità limitata di parole [Sebastiano]
-(++) in "Struttura pagina località specifica", inserire foto della località specifica e una con la posizione della località in una mappa (spesso mi è capitato, e non penso di essere l'unico, di guardare una descrizione di una località e chiedermi: "Dove si trova di preciso?"). [Sebastiano]
+1. non so se sia scontato, aggiungere parti presenti in "Struttura Homepage" alla pagina località specifica, ad esempio footer e breadcrumb; in alternativa, seguendo [DRY](http://it.wikipedia.org/wiki/Don't_Repeat_Yourself "Principio base di programmazione") scriverlo una volta per tutte le pagine e poi scrivere le particolarità di ogni pagina *Sebastiano*
+2. in "Struttura Homepage", limitare già da ora a "Inglese" e "Italiano" le lingue disponibili, per quanto mi riguarda. Se altri conoscono lingue aggiuntive ben venga, ma io posso garantire di scrivere pagine solo in queste due lingue. Di tedesco e serbo (se Carlo volesse) conosco una quantità limitata di parole *Sebastiano*
+3. in "Struttura pagina località specifica", inserire foto della località specifica e una con la posizione della località in una mappa (spesso mi è capitato, e non penso di essere l'unico, di guardare una descrizione di una località e chiedermi: "Dove si trova di preciso?"). *Sebastiano*
 
 _______________________
 ### Tema principale progetto :
