@@ -1,0 +1,169 @@
+html {
+font-family: "Comic Sans MS", Arial, Helvetica, serif;
+color: black;
+}
+
+* {
+margin: 0;
+padding: 0;
+border: 0;
+}
+
+body {
+font-family: "Comic Sans MS", Arial, Helvetica, serif;
+background: #ffffff;
+color: #000000;
+}
+
+#header {
+background: #a80022;
+color: #ffffff;
+text-align: center;
+padding: 1em 0; 
+}
+
+#header h1 {
+color: #f3c42b;
+}
+
+#header h1+h2 {
+color: #f3c42b;
+}
+
+#breadcrumb {
+background: #0e1e38;
+color: #f3c42b;
+padding: 0em 1em;
+}
+
+#sidebar {
+width: 20%;
+float: left;
+clear: left;
+}
+
+#sidebar ul {
+list-style-type: none;
+padding: 0 3em 1em 1em;
+}
+
+#sidebar ul li.currentlink:before {
+display: inline-block;
+content: " ";
+background-image: url('images/red.jpg');
+background-size: 1.7em;
+background-repeat: no-repeat;
+width: 1.5em;
+height: 1.5em;
+}
+
+#news {
+border: 2px dashed #a80022;
+float: right;
+width: 15%;
+}
+
+.newsbox {
+padding: 0.5em;
+}
+
+.newsbox h2 {
+background: yellow;
+padding: 0.1em 0.2em;
+}
+
+.newsbox dt {
+display: inline
+}
+
+.newsbox dt:after {
+content: ":";
+}
+
+.newsbox dd {
+display: inline;
+margin: 0;
+clear: left;
+}
+
+#contenthome {
+border-left: 1px solid black;
+float: left;
+width: 64%;
+}
+
+#content h1 {
+text-align: center;
+}
+
+#content img {
+margin: 1em auto;
+}
+
+#content {
+border-left: 1px solid black;
+float: left;
+width: 79%;
+}
+
+#contenthome h1 {
+text-align: center;
+}
+
+#contenthome .immagine {
+margin: 1em auto;
+}
+
+.versioni {
+width: 90%;
+margin: 2em auto;
+}
+
+.versioni dt {
+background: #a80022;
+border: 1px solid #a80022;
+width: 100%;
+padding-left: 0.8em;
+color: #fff;
+}
+
+.versioni dd {
+width: 100%;
+border: 1px solid #a80022;
+padding-left: 0.8em;
+color: #000;
+margin-bottom: 2em;
+}
+
+.personaggi {
+width: 90%;
+margin: 2em auto;
+}
+
+.personaggi dt {
+background: #a80022;
+border: 1px solid #a80022;
+width: 100%;
+padding-left: 0.8em;
+color: #fff;
+}
+
+.personaggi dd {
+width: 100%;
+border: 1px solid #a80022;
+padding-left: 0.8em;
+color: #000;
+margin-bottom: 2em;
+}
+
+#footer {
+border-top: 1px solid black;
+font-style: italic;
+padding: 0.5em;
+clear: both;
+text-align: center;
+}
+
+#footer img {
+margin: 0 5px;
+}
