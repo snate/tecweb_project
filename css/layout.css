@@ -1,6 +1,7 @@
 html {
-font-family: "Comic Sans MS", Arial, Helvetica, serif;
-color: black;
+font-family: Open Sans Condensed, Arial, Helvetica, serif;
+color: #e6fff6;
+background: #14996A;
 }
 
 * {
@@ -9,161 +10,144 @@ padding: 0;
 border: 0;
 }
 
-body {
-font-family: "Comic Sans MS", Arial, Helvetica, serif;
-background: #ffffff;
-color: #000000;
+#header {
+overflow: hidden;
+height: 2.8em;
+background-color: #14996a;
 }
 
-#header {
-background: #a80022;
-color: #ffffff;
-text-align: center;
-padding: 1em 0; 
+#header .search_provvisorio {
+float: left;
+height: 1.2em;
+margin: 0.8em;
+padding: 0 0.5em;
+background-color: #e6fff6;
 }
 
 #header h1 {
-color: #f3c42b;
-}
-
-#header h1+h2 {
-color: #f3c42b;
-}
-
-#breadcrumb {
-background: #0e1e38;
-color: #f3c42b;
-padding: 0em 1em;
-}
-
-#sidebar {
-width: 20%;
-float: left;
-clear: left;
-}
-
-#sidebar ul {
-list-style-type: none;
-padding: 0 3em 1em 1em;
-}
-
-#sidebar ul li.currentlink:before {
-display: inline-block;
-content: " ";
-background-image: url('images/red.jpg');
-background-size: 1.7em;
-background-repeat: no-repeat;
-width: 1.5em;
-height: 1.5em;
-}
-
-#news {
-border: 2px dashed #a80022;
+position: relative;
 float: right;
-width: 15%;
+color: #fff;
+font-weight: normal;
+text-transform: uppercase;
+font-size: 2em;
+padding-right: 0.6em;
 }
 
-.newsbox {
+#nav_home {
+height: 2em;
+overflow: hidden;
+background-color: #e6fff6;
+padding: 0 0.8em;
+}
+
+.navmenu {
+list-style: none;
+}
+
+.navmenu li {
+float: left;
+height: 2em;
+padding: 0 0.8em;
+line-height: 1.3em;
+font-size: 1.4em;
+text-transform: uppercase;
+}
+
+.navmenu li:first-child {
+padding: 0 0.8em 0 0;
+}
+
+.navmenu li a {
+color: #14996A;
+text-decoration: none;
+font-weight: 700;
+}
+
+#main {
+display: block;
+background-color: #ffffff;
+}
+
+.categoria {
+float: left;
+width: 33.2%;
+margin-right: 0.2%;
+height: 700px;
+text-align: center;
+background-color: #14996A;
+background-position: center;
+background-repeat: no-repeat;
+backgound-size: 100%;
+}
+
+.c_cit {
+background-image: url(../images/HOME_BG_CITY.png);
+}
+
+.c_mont {
+margin-right: 0;
+background-image: url(../images/HOME_BG_MOUNTAIN.png);
+background-position-x: right;
+}
+
+.c_mare {
+background-image: url(../images/HOME_BG_SEA.png);
+background-position-y: -6em;
+}
+
+.categoria h1 {
+color: #e6fff6;
+font-weight: normal;
+text-transform: uppercase;
+font-size: 4em;
+text-align: center;
 padding: 0.5em;
 }
 
-.newsbox h2 {
-background: yellow;
-padding: 0.1em 0.2em;
-}
-
-.newsbox dt {
-display: inline
-}
-
-.newsbox dt:after {
-content: ":";
-}
-
-.newsbox dd {
-display: inline;
-margin: 0;
-clear: left;
-}
-
-#contenthome {
-border-left: 1px solid black;
-float: left;
-width: 64%;
-}
-
-#content h1 {
-text-align: center;
-}
-
-#content img {
-margin: 1em auto;
-}
-
-#content {
-border-left: 1px solid black;
-float: left;
-width: 79%;
-}
-
-#contenthome h1 {
-text-align: center;
-}
-
-#contenthome .immagine {
-margin: 1em auto;
-}
-
-.versioni {
-width: 90%;
-margin: 2em auto;
-}
-
-.versioni dt {
-background: #a80022;
-border: 1px solid #a80022;
-width: 100%;
-padding-left: 0.8em;
-color: #fff;
-}
-
-.versioni dd {
-width: 100%;
-border: 1px solid #a80022;
-padding-left: 0.8em;
-color: #000;
-margin-bottom: 2em;
-}
-
-.personaggi {
-width: 90%;
-margin: 2em auto;
-}
-
-.personaggi dt {
-background: #a80022;
-border: 1px solid #a80022;
-width: 100%;
-padding-left: 0.8em;
-color: #fff;
-}
-
-.personaggi dd {
-width: 100%;
-border: 1px solid #a80022;
-padding-left: 0.8em;
-color: #000;
-margin-bottom: 2em;
+.categoria:hover h1 {
+color: #212330;
 }
 
 #footer {
-border-top: 1px solid black;
-font-style: italic;
+display: inline-block;
 padding: 0.5em;
-clear: both;
-text-align: center;
+background-color: #212330;
 }
 
-#footer img {
-margin: 0 5px;
+.footer_progetto, .footer_privacy {
+width: 30%;
+padding-right: 1%;
+float: left;
+}
+
+.footer_privacy {
+padding: 0 0.5%;
+}
+
+.footer_info {
+width: 18%;
+padding: 0 0.5%;
+float: left;
+}
+
+#footer h1 {
+color: #fff;
+font-weight: normal;
+text-transform: uppercase;
+font-size: 1.4em;
+}
+
+.footer_info ul {
+list-style: none;
+padding-left: 0.4em;
+}
+
+.footer_info ul li {
+font-size: 1em;
+}
+
+.footer_info ul li a {
+color: #e6fff6;
+text-decoration: none;
 }
