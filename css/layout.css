@@ -34,7 +34,7 @@ font-size: 2em;
 padding-right: 0.6em;
 }
 
-#nav_home {
+#nav_home, #breadcrumb {
 height: 2em;
 overflow: hidden;
 background-color: #e6fff6;
@@ -64,7 +64,7 @@ text-decoration: none;
 font-weight: 700;
 }
 
-#main {
+#main_home {
 display: block;
 background-color: #ffffff;
 }
@@ -82,17 +82,17 @@ backgound-size: 100%;
 }
 
 .c_cit {
-background-image: url(../images/HOME_BG_CITY.png);
+background-image: url(../images/HOME_BG_CITY.jpg);
 }
 
 .c_mont {
 margin-right: 0;
-background-image: url(../images/HOME_BG_MOUNTAIN.png);
+background-image: url(../images/HOME_BG_MOUNTAIN.jpg);
 background-position-x: right;
 }
 
 .c_mare {
-background-image: url(../images/HOME_BG_SEA.png);
+background-image: url(../images/HOME_BG_SEA.jpg);
 background-position-y: -6em;
 }
 
@@ -151,3 +151,28 @@ font-size: 1em;
 color: #e6fff6;
 text-decoration: none;
 }
+
+#main {
+display: block;
+background-color: #212330;
+}
+
+#nav {
+float: left;
+width: 30%;
+padding-right: 1%;
+background-color: #212330;
+}
+
+#content {
+float: left;
+width: 69%;
+color: #222222;
+background-color: #ffffff;
+}
+
+#content img {
+margin: 0 auto;
+}
+
+/* OCCHIO ALLA STORIA COLONNA - DARE COLORE NAV A MAIN */
