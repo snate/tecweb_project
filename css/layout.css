@@ -81,17 +81,17 @@ background-repeat: no-repeat;
 backgound-size: 100%;
 }
 
-.c_cit {
+#c_cit {
 background-image: url(../images/HOME_BG_CITY.jpg);
 }
 
-.c_mont {
+#c_mont {
 margin-right: 0;
 background-image: url(../images/HOME_BG_MOUNTAIN.jpg);
 background-position-x: right;
 }
 
-.c_mare {
+#c_mare {
 background-image: url(../images/HOME_BG_SEA.jpg);
 background-position-y: -6em;
 }
@@ -159,20 +159,52 @@ background-color: #212330;
 
 #nav {
 float: left;
-width: 30%;
+width: 20%;
 padding-right: 1%;
 background-color: #212330;
 }
 
 #content {
 float: left;
-width: 69%;
+width: 79%;
+color: #E6FFF6;
+background-color: #212330;
+}
+
+#descr_loc {
+float: left;
+width: 80%;
+overflow: hidden;
 color: #222222;
 background-color: #ffffff;
 }
 
-#content img {
+#aside {
+float: left;
+width: 20%;
+color: #E6FFF6;
+background-color: #212330;
+}
+
+.immagini {
+width: 45em;
+height: 18em;
+margin: 1em auto;
+overflow: hidden;
+}
+
+.immagini img {
+width: 100%;
 margin: 0 auto;
+}
+
+#img_presentazione {
+height: 14em;
+overflow: hidden;
+}
+
+#img_presentazione img {
+width: 100%;
 }
 
 /* OCCHIO ALLA STORIA COLONNA - DARE COLORE NAV A MAIN */
