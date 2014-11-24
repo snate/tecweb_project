@@ -34,7 +34,7 @@ font-size: 2em;
 padding-right: 0.6em;
 }
 
-#nav_home {
+#nav_home, #breadcrumb {
 height: 2em;
 overflow: hidden;
 background-color: #e6fff6;
@@ -64,7 +64,7 @@ text-decoration: none;
 font-weight: 700;
 }
 
-#main {
+#main_home {
 display: block;
 background-color: #ffffff;
 }
@@ -81,18 +81,18 @@ background-repeat: no-repeat;
 backgound-size: 100%;
 }
 
-.c_cit {
-background-image: url(../images/HOME_BG_CITY.png);
+#c_cit {
+background-image: url(../images/HOME_BG_CITY.jpg);
 }
 
-.c_mont {
+#c_mont {
 margin-right: 0;
-background-image: url(../images/HOME_BG_MOUNTAIN.png);
+background-image: url(../images/HOME_BG_MOUNTAIN.jpg);
 background-position-x: right;
 }
 
-.c_mare {
-background-image: url(../images/HOME_BG_SEA.png);
+#c_mare {
+background-image: url(../images/HOME_BG_SEA.jpg);
 background-position-y: -6em;
 }
 
@@ -152,6 +152,7 @@ color: #e6fff6;
 text-decoration: none;
 }
 
+<<<<<<< HEAD
 /* INIZIO CSS PAGINA DI LOGIN */
 
 .container {
@@ -287,3 +288,61 @@ input[type=submit]:active {
   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
   color:black;
 }
+=======
+#main {
+display: block;
+background-color: #212330;
+}
+
+#nav {
+float: left;
+width: 20%;
+padding-right: 1%;
+background-color: #212330;
+}
+
+#content {
+float: left;
+width: 79%;
+color: #E6FFF6;
+background-color: #212330;
+}
+
+#descr_loc {
+float: left;
+width: 80%;
+overflow: hidden;
+color: #222222;
+background-color: #ffffff;
+}
+
+#aside {
+float: left;
+width: 20%;
+color: #E6FFF6;
+background-color: #212330;
+}
+
+.immagini {
+width: 45em;
+height: 18em;
+margin: 1em auto;
+overflow: hidden;
+}
+
+.immagini img {
+width: 100%;
+margin: 0 auto;
+}
+
+#img_presentazione {
+height: 14em;
+overflow: hidden;
+}
+
+#img_presentazione img {
+width: 100%;
+}
+
+/* OCCHIO ALLA STORIA COLONNA - DARE COLORE NAV A MAIN */
+>>>>>>> 06ec0e13f79eaa89941943fbaaae9377bcdaffd2
