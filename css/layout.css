@@ -434,6 +434,10 @@ padding-right: 1em;
 color: #fff;
 }
 
+.government li,.utility li {
+  list-style: none;
+}
+
 .info dt {
 float: left;
 margin-right: 0.3em;
