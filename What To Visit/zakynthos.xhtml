@@ -19,47 +19,34 @@ LINK FOOTER
   <body>
     <div id="header">
       <h1>WHAT TO VISIT</h1>
-      <span id="search_provvisorio">Cerca una localit&agrave;</span>
+      <span class="search_provvisorio">Cerca una localit&agrave;</span>
     </div>
     <div id="breadcrumb">
-      Ti trovi in:
+      Stai visualizzando:
       <a href="homepage.xhtml" title="Pagina principale">
-        <span xml:lang="en">Home</span>
+        <span xml:lang="en">What To Visit</span>
       </a>
       &gt; <a href="mare.xhtml" title="Località marittime">
-        Mare
+        Localit&agrave; Marittime
       </a>
       &gt; Zante
     </div>
-    <div id="main">
       <div id="nav">
         <ul>
-          <li>
-            <a href="homepage.xhtml" title="Torna alla pagina principale">
-              <span xml:lang="en">Home</span>
-            </a>
-			      <ul>
-              <li>
-                <a href="mare.xhtml" title="Vai alla pagina delle località marittime">
-                  Mare
-                </a>
-                <ul>
-                  <li>
-                    Zante
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="citta.xhtml" title="Vai alla pagina delle località cittadine">
-                  Citt&agrave;
-                </a>
-              </li>
-              <li>
-                <a href="montagna.xhtml" title="Vai alla pagina delle località montane">
-                  Montagna
-                </a>
-              </li>
-            </ul>
+          <li class="nav_home">
+            <a href="homepage.xhtml" title="Torna alla pagina principale"><span xml:lang="en">Home</span></a>
+          </li>
+          <li class="nav_mare">
+            <a href="mare.xhtml" title="Vai alla pagina delle località marittime">Mare</a>
+          </li>
+          <li class="nav_loc nav_selected">
+            Zante
+          </li>
+          <li class="nav_cit">
+            <a href="citta.xhtml" title="Vai alla pagina delle località cittadine">Citt&agrave;</a>
+          </li>
+          <li class="nav_mont">
+            <a href="montagna.xhtml" title="Vai alla pagina delle località montane">Montagna</a>
           </li>
          </ul>
       </div>
@@ -69,7 +56,7 @@ LINK FOOTER
         </div>
         <div id="descr_loc">
           <h1>
-            Mare
+            Localit&agrave; Marittima
           </h1>
           <h2>
             Zante - <span xml:lang="en">Z&aacute;kynthos</span>
@@ -112,24 +99,24 @@ LINK FOOTER
             </h1>
             <ul class="government">
               <li>
-                <a href="http://www.zakynthos.net.gr/" title="Sito della citt&agrave;">
+                <a href="http://www.zakynthos.net.gr/" title="Sito della citt&agrave;" class="link_out">
                   <span xml:lang="en">Zakynthos</span>
                 </a>
               </li>
               <li>
-                <a href="http://zante.gr/bus/" title="Bus a Zante">
+                <a href="http://zante.gr/bus/" title="Bus a Zante" class="link_out">
                   Trasporti a <span xml:lang="en">Zakynthos</span>
                 </a>
               </li>
             </ul>
             <ul class="utility">
               <li>
-                <a href="http://www.greeka.com/ionian/zakynthos/zakynthos-beaches/zakynthos-navagio_or_shipwreck.htm" title="Spiaggia Navagio">
+                <a href="http://www.greeka.com/ionian/zakynthos/zakynthos-beaches/zakynthos-navagio_or_shipwreck.htm" title="Spiaggia Navagio" class="link_out">
                   <span xml:lang="en">Navajo Beach</span>
                 </a>
               </li>
               <li>
-                <a href="http://www.rescueclub.net/" title="Sito del Rescue Club">
+                <a href="http://www.rescueclub.net/" title="Sito del Rescue Club" class="link_out">
                   <span xml:lang="eng">Rescue Club</span>
                 </a>
               </li>
@@ -137,18 +124,21 @@ LINK FOOTER
             <h1>
               ZANTE
             </h1>
-            <ul class="info">
-              <li>Nazione: Grecia</li>
-              <li>Abitanti: 40000</li>
-              <li>Superficie: 407 km<span class="square">2</span></li>
-              <li>Posizione: Isole Ionie</li>
-            </ul>
+            <dl class="info">
+              <dt>Nazione:</dt>
+                <dd>Grecia</dd>
+              <dt>Abitanti:</dt>
+                <dd>40000</dd>
+              <dt>Superficie:</dt>
+                <dd>407 km<span class="square">2</span></dd>
+              <dt>Posizione:</dt>
+                <dd>Isole Ionie</dd>
+            </dl>
           </div>
         </div>
         <div id="comments">
         </div>
       </div>
-    </div>
     <div id="footer">
       <ul>
         <li>
