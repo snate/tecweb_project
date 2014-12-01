@@ -444,5 +444,9 @@ float. left;
 clear: right;
 }
 
+.square {
+vertical-align: super;
+font-size: 0.7em;
+}
+
 /* OCCHIO ALLA STORIA COLONNA - DARE COLORE NAV A MAIN */
->>>>>>> 06ec0e13f79eaa89941943fbaaae9377bcdaffd2
