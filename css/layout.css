@@ -61,8 +61,12 @@ padding: 0 0.8em 0 0;
 
 .navmenu li a {
 color: #14996A;
-text-decoration: underline;
+text-decoration: none;
 font-weight: 700;
+}
+
+.navmenu li a:hover {
+text-decoration: underline;
 }
 
 .categoria {
@@ -156,7 +160,11 @@ font-size: 1em;
 
 .footer_info ul li a {
 color: #e6fff6;
-text-decoration: underline;
+text-decoration: none;
+}
+
+.footer_info ul li a:hover {
+  text-decoration:underline;
 }
 
 /* INIZIO CSS PAGINA DI LOGIN */
