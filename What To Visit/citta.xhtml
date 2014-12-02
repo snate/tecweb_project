@@ -1,4 +1,4 @@
-<!--TO DO:
+﻿<!--TO DO:
 HEADER > la barra di ricerca va in uno span da dimensionare opportunamente?
 DECIDERE aside SE TOP FIVE / ALTRO / TOGLIERLA
 LINK FOOTER
@@ -20,37 +20,28 @@ LINK FOOTER
   <body>
     <div id="header">
       <h1>WHAT TO VISIT</h1>
-      <span id="BARRADIRICERCA" >Cerca una localit&agrave;</span>
+      <span class="search_provvisorio">Cerca una localit&agrave;</span>
     </div>
     <div id="breadcrumb">
       Ti trovi in:
       <a href="homepage.xhtml" title="Pagina principale">
-        <span xml:lang="en">Home</span>
+        <span xml:lang="en">What To Visit</span>
       </a>
-      &gt; Citt&agrave;
+      &gt; Localit&agrave; Cittadine
     </div>
-    <div id="main">
       <div id="nav">
         <ul>
-          <li>
-            <a href="homepage.xhtml" title="Torna alla pagina principale">
-              <span xml:lang="en">Home</span>
-            </a>
-			      <ul>
-              <li>
-                <a href="mare.xhtml" title="Vai alla pagina delle località marittime">
-                  Mare
-                </a>
-              </li>
-              <li>
-                Citt&agrave;
-              </li>
-              <li>
-                <a href="montagna.xhtml" title="Vai alla pagina delle località montane">
-                  Montagna
-                </a>
-              </li>
-            </ul>
+          <li class="nav_home">
+            <a href="homepage.xhtml" title="Torna alla pagina principale"><span xml:lang="en">Home</span> </a>
+          </li>
+          <li class="nav_mare">
+            <a href="mare.xhtml" title="Vai alla pagina delle località marittime">Mare</a>
+          </li>
+          <li class="nav_cit nav_selected">
+            Citt&agrave;
+          </li>
+          <li class="nav_mont">
+            <a href="montagna.xhtml" title="Vai alla pagina delle località montane">Montagna</a>
           </li>
         </ul>
       </div>
@@ -63,19 +54,13 @@ LINK FOOTER
         </h2>
         <ul>
           <li>
-            <a href="london.xhtml" title="Scopri Londra">
-              Londra
-            </a>
+            <a href="london.xhtml" title="Scopri Londra">Londra</a>
           </li>
           <li>
-            <a href="paris.xhtml" title="Scopri Parigi">
-              Parigi
-            </a>
+            <a href="paris.xhtml" title="Scopri Parigi">Parigi</a>
           </li>
-		  <li>
-            <a href="praga.xhtml" title="Scopri Praga">
-              Praga
-            </a>
+          <li>
+            <a href="praga.xhtml" title="Scopri Praga">Praga</a>
           </li>
         </ul>
       </div>
@@ -84,7 +69,6 @@ LINK FOOTER
       </div>
       <div id="comments">
       </div>
-    </div>
     <div id="footer">
       <ul>
         <li>

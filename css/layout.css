@@ -95,16 +95,25 @@ background-position-y: -6em;
 }
 
 .categoria h1 {
+padding: 0.5em;
 color: #e6fff6;
+font-size: 4em;
 font-weight: normal;
 text-transform: uppercase;
-font-size: 4em;
 text-align: center;
-padding: 0.5em;
+line-height: 1em;
 }
 
 .categoria:hover h1 {
 color: #212330;
+}
+
+.categoria:visited h1 {
+color: red;
+}
+
+.categoria:active h1 {
+color: yellow;
 }
 
 #footer {
