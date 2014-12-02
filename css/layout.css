@@ -316,6 +316,10 @@ color: #14996a;
 text-decoration: none;
 }
 
+#breadcrumb a:hover {
+text-decoration: underline;
+}
+
 #nav {
 float: left;
 width: 20%;
@@ -369,6 +373,10 @@ background-position: 0.6em 0.1em;
 #nav li a {
 text-decoration: none;
 color: #fff;
+}
+
+#nav li a:hover {
+text-decoration: underline;
 }
 
 #content {
