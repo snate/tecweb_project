@@ -16,14 +16,6 @@ height: 2.8em;
 background-color: #14996a;
 }
 
-#header .search_provvisorio {
-float: right;
-height: 1.2em;
-margin: 0.8em;
-padding: 0 0.5em;
-background-color: #e6fff6;
-}
-
 #header h1 {
 position: relative;
 float: left;
@@ -167,6 +159,34 @@ text-decoration: none;
   text-decoration:underline;
 }
 
+/* SEARCH-BAR */
+
+#header .search_bar {
+  float: right;
+}
+
+#header .search_bar  #search input[type="text"] {
+  background: url(../images/icons/search-white.png) no-repeat 10px 6px #444;
+  margin: 0.9em;
+  color: #d7d7d7;
+  width: 100px;
+  padding: 6px 15px 6px 35px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-transition: all 0.7s ease 0s;
+  -moz-transition: all 0.7s ease 0s;
+  -o-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s;
+}
+
+#header .search_bar #search input[type="text"]:focus {
+  background: url(../images/icons/search-dark.png) no-repeat 10px 6px #fcfcfc;
+  color: #6a6f75;
+  width: 200px;
+  outline: none; // rimuove il bordo blu dovuto al focus su input
+}
+
 /* INIZIO CSS PAGINA DI LOGIN */
 
 .container {
@@ -246,7 +266,7 @@ text-decoration: none;
   font-weight: bold;
 }
 
-input[type=text], input[type=password] {
+.login input[type=text], input[type=password] {
   margin: 5px;
   padding: 0 10px;
   width:90%;
@@ -259,7 +279,7 @@ input[type=text], input[type=password] {
   outline: 5px solid #eff4f7;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+.login input[type=text]:focus, input[type=password]:focus {
   border-color: #7dc9e2;
   outline-color: #dceefc;
   outline-offset: 0;
