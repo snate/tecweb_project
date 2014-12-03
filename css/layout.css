@@ -167,7 +167,8 @@ text-decoration: none;
 
 #header .search_bar  #search input[type="text"] {
   background: url(../images/icons/search-white.png) no-repeat 10px 6px #444;
-  margin: 0.9em;
+  margin: 0.7em;
+  border: 0 none;
   color: #d7d7d7;
   width: 100px;
   padding: 6px 15px 6px 35px;
@@ -262,7 +263,7 @@ text-decoration: none;
 
 .credentials {
   color: #545353;
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: bold;
 }
 
@@ -324,6 +325,10 @@ input[type=submit]:active {
   color:black;
 }
 
+.info_login {
+  color: #545353;
+  font-size: 0.7em;
+}
 /* INIZIO CSS LOCALITA */
 
 #breadcrumb {
