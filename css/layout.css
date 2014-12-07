@@ -90,25 +90,25 @@ background-image: url(../images/HOME_BG_SEA.jpg);
 background-position-y: -6em;
 }
 
-.categoria h1 {
-padding: 0.5em;
+h1 .categoria {
+padding-top: 0.5em;
 color: #e6fff6;
-font-size: 4em;
+font-size: 2em;
 font-weight: normal;
 text-transform: uppercase;
 text-align: center;
 line-height: 1em;
 }
 
-.categoria:hover h1 {
+h1 .categoria:hover{
 color: #212330;
 }
 
-.categoria:visited h1 {
+h1 .categoria:visited {
 color: red;
 }
 
-.categoria:active h1 {
+h1 .categoria:active {
 color: yellow;
 }
 
