@@ -161,11 +161,11 @@ text-decoration: none;
 
 /* SEARCH-BAR */
 
-#header .search_bar {
+#header #search {
   float: right;
 }
 
-#header .search_bar  #search input[type="text"] {
+#header #search input[type="text"] {
   background: url(../images/icons/search-white.png) no-repeat 10px 6px #444;
   margin: 0.7em;
   border: 0 none;
@@ -181,7 +181,7 @@ text-decoration: none;
   transition: all 0.7s ease 0s;
 }
 
-#header .search_bar #search input[type="text"]:focus {
+#header #search input[type="text"]:focus {
   background: url(../images/icons/search-dark.png) no-repeat 10px 6px #fcfcfc;
   color: #6a6f75;
   width: 200px;

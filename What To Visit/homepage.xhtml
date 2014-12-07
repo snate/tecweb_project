@@ -20,12 +20,15 @@ LINK BREADCRUMB
   </head>
   <body>
     <div id="header">
-      <h1>WHAT TO VISIT</h1>
-      <span class="search_bar">
-        <form method="get" action="/search" id="search">
-          <input name="q" type="text" size="40" tabindex="1"/>
-        </form>
-      </span>
+      <h1>
+          WHAT TO VISIT
+      </h1>
+      <form method="get" action="/search">
+        <fieldset  id="search">
+          <label for="place">Cerca:</label>
+          <input name="place" id="place" type="text" size="40" tabindex="1"/>
+        </fieldset>
+      </form>
     </div>
     <div id="nav_home">
       <ul class="navmenu">

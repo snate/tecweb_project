@@ -20,14 +20,17 @@ METTERE A POSTO IL CONTENUTO SE È TROPPO POCO
   </head>
   <body>
     <div id="header">
-      <a href="homepage.xhtml" tabindex="1">
-        <h1> WHAT TO VISIT </h1>
-      </a>
-      <span class="search_bar">
-        <form method="get" action="/search" id="search">
-          <input name="q" type="text" size="40" tabindex="2"/>
-        </form>
-      </span>
+      <h1>
+        <a href="homepage.xhtml" tabindex="1">
+          WHAT TO VISIT
+        </a>
+      </h1>
+      <form method="get" action="/search">
+        <fieldset  id="search">
+          <label for="place">Cerca:</label>
+          <input name="place" id="place" type="text" size="40" tabindex="2"/>
+        </fieldset>
+      </form>
     </div>
     <div id="breadcrumb">
       Ti trovi in:

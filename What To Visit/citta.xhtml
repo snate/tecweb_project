@@ -22,8 +22,17 @@ LINK FOOTER
   </head>
   <body>
     <div id="header">
-      <a href="homepage.xhtml"><h1> WHAT TO VISIT </h1></a>
-      <span class="search_provvisorio">Cerca una località</span>
+      <h1>
+        <a href="homepage.xhtml">
+          WHAT TO VISIT
+        </a>
+      </h1>
+      <form method="get" action="/search">
+        <fieldset  id="search">
+          <label for="place">Cerca:</label>
+          <input name="place" id="place" type="text" size="40" tabindex="4"/>
+        </fieldset>
+      </form>
     </div>
     <div id="breadcrumb">
       Ti trovi in:
@@ -35,12 +44,12 @@ LINK FOOTER
       <div id="nav">
         <ul>
           <li class="nav_home">
-            <a href="homepage.xhtml" title="Torna alla pagina principale" tabindex="4">
+            <a href="homepage.xhtml" title="Torna alla pagina principale" tabindex="5">
               <span xml:lang="en">Home</span>
             </a>
           </li>
           <li class="nav_mare">
-            <a href="mare.xhtml" title="Vai alla pagina delle località marittime" tabindex="5">
+            <a href="mare.xhtml" title="Vai alla pagina delle località marittime" tabindex="6">
               Mare
             </a>
           </li>
@@ -48,7 +57,7 @@ LINK FOOTER
             Città
           </li>
           <li class="nav_mont">
-            <a href="montagna.xhtml" title="Vai alla pagina delle località montane" tabindex="6">
+            <a href="montagna.xhtml" title="Vai alla pagina delle località montane" tabindex="7">
               Montagna
             </a>
           </li>
@@ -87,19 +96,19 @@ LINK FOOTER
     <div id="footer">
       <ul>
         <li>
-          <a href="chisiamo.xhtml" title="Informazioni sul sito" tabindex="7">
+          <a href="chisiamo.xhtml" title="Informazioni sul sito" tabindex="8">
             Chi siamo
           </a>
         </li>
         <li>
-          <a href="PAGINA" tabindex="8">
+          <a href="PAGINA" tabindex="9">
             <span xml:lang="en"><abbr title="Frequently Asked Questions">
               FAQ
             </abbr></span>
           </a>
         </li>
         <li>
-          <a href="PAGINA" tabindex="9">
+          <a href="PAGINA" tabindex="10">
             Normativa sulla <span xml:lang="en">privacy</span>
           </a>
         </li>

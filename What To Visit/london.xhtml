@@ -21,8 +21,17 @@ LINK FOOTER
   </head>
   <body>
     <div id="header">
-      <a href="homepage.xhtml"><h1> WHAT TO VISIT </h1></a>
-      <span id="BARRADIRICERCA" >Cerca una località</span>
+      <h1>
+        <a href="homepage.xhtml">
+          WHAT TO VISIT
+        </a>
+      </h1>
+      <form method="get" action="/search">
+        <fieldset  id="search">
+          <label for="place">Cerca:</label>
+          <input name="place" id="place" type="text" size="40" tabindex="1"/>
+        </fieldset>
+      </form>
     </div>
     <div id="breadcrumb">
       Ti trovi in:
@@ -38,17 +47,17 @@ LINK FOOTER
       <div id="nav">
         <ul>
           <li>
-            <a href="homepage.xhtml" title="Torna alla pagina principale" tabindex="1">
+            <a href="homepage.xhtml" title="Torna alla pagina principale" tabindex="2">
               <span xml:lang="en">Home</span>
             </a>
             <ul>
               <li>
-                <a href="mare.xhtml" title="Vai alla pagina delle località marittime" tabindex="2">
+                <a href="mare.xhtml" title="Vai alla pagina delle località marittime" tabindex="3">
                   Mare
                 </a>
               </li>
               <li>
-                <a href="citta.xhtml" title="Vai alla pagina delle località cittadine" tabindex="3">
+                <a href="citta.xhtml" title="Vai alla pagina delle località cittadine" tabindex="4">
                   Città
                 </a>
                 <ul>
@@ -56,19 +65,19 @@ LINK FOOTER
                     Londra
                   </li>
                   <li>
-                    <a href="paris.xhtml" title="Scopri Parigi" tabindex="4">
+                    <a href="paris.xhtml" title="Scopri Parigi" tabindex="5">
                       Parigi
                     </a>
                   </li>
-				  <li>
-                    <a href="praga.xhtml" title="Scopri Praga" tabindex="5">
+				          <li>
+                    <a href="praga.xhtml" title="Scopri Praga" tabindex="6">
                       Praga
                     </a>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="montagna.xhtml" title="Vai alla pagina delle località montane" tabindex="6">
+                <a href="montagna.xhtml" title="Vai alla pagina delle località montane" tabindex="7">
                   Montagna
                 </a>
               </li>
@@ -184,44 +193,44 @@ LINK FOOTER
           </h1>
           <ul class="government">
             <li>
-              <a href="http://www.cityoflondon.gov.uk/Pages/default.aspx" title="Sito della città" tabindex="7">
+              <a href="http://www.cityoflondon.gov.uk/Pages/default.aspx" title="Sito della città" tabindex="8">
                 Londra
               </a> (EN)
             </li>
             <li>
-              <a href="http://www.visitlondon.com/it/" title="Sito per i turisti della città" tabindex="8">
+              <a href="http://www.visitlondon.com/it/" title="Sito per i turisti della città" tabindex="9">
                 Sito per turisti - Londra
               </a> (IT)
             </li>
             <li>
-              <a href="https://www.tfl.gov.uk/" title="Trasporti a Londra" tabindex="9">
+              <a href="https://www.tfl.gov.uk/" title="Trasporti a Londra" tabindex="10">
                 Trasporti a Londra
               </a> (EN)
             </li>
           </ul>
           <ul class="utility">
             <li>
-              <a href="http://www.londontown.com/" title="Offerte a Londra" tabindex="10">
+              <a href="http://www.londontown.com/" title="Offerte a Londra" tabindex="11">
                 Sito con offerte per la vita a Londra
               </a> (EN)
             </li>
             <li>
-              <a href="http://www.ministryofsound.com/" title="Sito del Ministry Club" tabindex="11">
+              <a href="http://www.ministryofsound.com/" title="Sito del Ministry Club" tabindex="12">
                 <span xml:lang="eng">Ministry Club</span>
               </a> (EN)
             </li>
             <li>
-              <a href="http://www.speakerscorner.net/" title="Sito dello Speakers' Corner" tabindex="12">
+              <a href="http://www.speakerscorner.net/" title="Sito dello Speakers' Corner" tabindex="13">
                 <span xml:lang="eng">Speakers' Corner</span>
               </a> (EN)
             </li>
             <li>
-              <a href="http://www.zsl.org/zsl-london-zoo" title="Zoo di Londra" tabindex="13">
+              <a href="http://www.zsl.org/zsl-london-zoo" title="Zoo di Londra" tabindex="14">
                 <span xml:lang="eng">London Zoo</span>
               </a> (EN)
             </li>
             <li>
-              <a href="http://www.changing-the-guard.com/dates-times.html" title="Orari del cambio della guardia" tabindex="14">
+              <a href="http://www.changing-the-guard.com/dates-times.html" title="Orari del cambio della guardia" tabindex="15">
                 Cambio della guardia
               </a> (EN)
             </li>
@@ -247,17 +256,17 @@ LINK FOOTER
     <div id="footer">
       <ul>
         <li>
-          <a href="chisiamo.xhtml" title="Informazioni sul sito" tabindex="15">
+          <a href="chisiamo.xhtml" title="Informazioni sul sito" tabindex="16">
             Chi siamo
           </a>
         </li>
         <li>
-          <a href="PAGINA" tabindex="16">
+          <a href="PAGINA" tabindex="17">
             <span xml:lang="en"><abbr title="Frequently Asked Questions">FAQ</abbr></span>
           </a>
         </li>
         <li>
-          <a href="PAGINA" tabindex="17">
+          <a href="PAGINA" tabindex="18">
             Normativa sulla <span xml:lang="en">privacy</span>
           </a>
         </li>

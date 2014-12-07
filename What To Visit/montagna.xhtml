@@ -22,8 +22,17 @@ LINK FOOTER
   </head>
   <body>
     <div id="header">
-      <a href="homepage.xhtml"><h1> WHAT TO VISIT </h1></a>
-      <span id="BARRADIRICERCA" >Cerca una località</span>
+      <h1>
+        <a href="homepage.xhtml">
+          WHAT TO VISIT
+        </a>
+      </h1>
+      <form method="get" action="/search">
+        <fieldset  id="search">
+          <label for="place">Cerca:</label>
+          <input name="place" id="place" type="text" size="40" tabindex="2"/>
+        </fieldset>
+      </form>
     </div>
     <div id="breadcrumb">
       Ti trovi in:
@@ -36,17 +45,17 @@ LINK FOOTER
       <div id="nav">
         <ul>
           <li>
-            <a href="homepage.xhtml" title="Torna alla pagina principale" tabindex="2">
+            <a href="homepage.xhtml" title="Torna alla pagina principale" tabindex="3">
               <span xml:lang="en">Home</span>
             </a>
 			      <ul>
               <li>
-                <a href="mare.xhtml" title="Vai alla pagina delle località marittime" tabindex="3">
+                <a href="mare.xhtml" title="Vai alla pagina delle località marittime" tabindex="4">
                   Mare
                 </a>
               </li>
               <li>
-                <a href="citta.xhtml" title="Vai alla pagina delle località cittadine" tabindex="4">
+                <a href="citta.xhtml" title="Vai alla pagina delle località cittadine" tabindex="5">
                   Città
                 </a>
               </li>
@@ -81,19 +90,19 @@ LINK FOOTER
     <div id="footer">
       <ul>
         <li>
-          <a href="chisiamo.xhtml" title="Informazioni sul sito" tabindex="5">
+          <a href="chisiamo.xhtml" title="Informazioni sul sito" tabindex="6">
             Chi siamo
           </a>
         </li>
         <li>
-          <a href="PAGINA" tabindex="6">
+          <a href="PAGINA" tabindex="7">
             <span xml:lang="en"><abbr title="Frequently Asked Questions">
               FAQ
             </abbr></span>
           </a>
         </li>
         <li>
-          <a href="PAGINA" tabindex="7">
+          <a href="PAGINA" tabindex="8">
             Normativa sulla <span xml:lang="en">privacy</span>
           </a>
         </li>
