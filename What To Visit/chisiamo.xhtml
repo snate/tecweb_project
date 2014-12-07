@@ -20,12 +20,18 @@ METTERE A POSTO IL CONTENUTO SE È TROPPO POCO
   </head>
   <body>
     <div id="header">
-      <a href="homepage.xhtml"><h1> WHAT TO VISIT </h1></a>
-      <span id="BARRADIRICERCA" >Cerca una località</span>
+      <a href="homepage.xhtml" tabindex="1">
+        <h1> WHAT TO VISIT </h1>
+      </a>
+      <span class="search_bar">
+        <form method="get" action="/search" id="search">
+          <input name="q" type="text" size="40" tabindex="2"/>
+        </form>
+      </span>
     </div>
     <div id="breadcrumb">
       Ti trovi in:
-      <a href="homepage.xhtml" title="Pagina principale">
+      <a href="homepage.xhtml" title="Pagina principale" tabindex="3">
         <span xml:lang="en">Home</span>
       </a>
       &gt; Chi Siamo
@@ -34,17 +40,18 @@ METTERE A POSTO IL CONTENUTO SE È TROPPO POCO
       <div id="nav">
         <ul>
           <li>
-            <a href="homepage.xhtml" title="Torna alla pagina principale">
+            <a href="homepage.xhtml" title="Torna alla pagina principale" tabindex="3">
               <span xml:lang="en">Home</span>
             </a>
 			 <ul>
             <li>
-              <a href="PAGINA"><span xml:lang="en">
+              <a href="PAGINA" tabindex="4"><span xml:lang="en">
                 <abbr title="Frequently Asked Questions">FAQ</abbr></span>
               </a>
             </li>
             <li>
-              <a href="PAGINA">
+              <!-- ATTENZIONE QUI!!! ATTENZIONE MANCA LINK -->
+              <a href="#" tabindex="5">
                 Normativa sulla <span xml:lang="en">privacy</span>
               </a>
             </li>
