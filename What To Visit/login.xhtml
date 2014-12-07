@@ -17,7 +17,9 @@
 </head>
 <body>
   <div id="header">
-    <a href="homepage.xhtml"><h1> WHAT TO VISIT </h1></a>
+    <a href="homepage.xhtml" tabindex="6">
+      <h1> WHAT TO VISIT </h1>
+    </a>
   </div>
 
     <div class="container">
@@ -27,30 +29,36 @@
           <p class="credentials"><span xml:lang="en">
             Username o Email :
           </span></p>
-          <p><input type="text" name="login" value="" /></p>
+          <p><input type="text" name="login" value="" tabindex="1"/></p>
           <p class="credentials"><span xml:lang="en">
             Password :
           </span></p>
-          <p><input type="password" name="password" value="" /></p>
-          <p class="submit"><span xml:lang="en"><input type="submit" name="sign-in" value="Login"/></span></p>
-          <p class="logout"><span xml:lang="en"><input type="submit" name="logout" value="Logout"/></span></p>
+          <p><input type="password" name="password" value="" tabindex="2"/></p>
+          <p class="submit"><span xml:lang="en">
+            <input type="submit" name="sign-in" value="Login" tabindex="3"/>
+          </span></p>
+          <p class="logout"><span xml:lang="en">
+            <input type="submit" name="logout" value="Logout" tabindex="4"/>
+          </span></p>
         </form>
       </div>
       <div class="login-help">
-        <p>Hai dimenticato la <span xml:lang="en"> Password? </span><a href="forgottenpwd.xhtml">Clicca qui per resettarla</a>.</p> <!-- TODO Pass Recovery Page -->
+        <p>Hai dimenticato la <span xml:lang="en"> Password? </span>
+          <a href="forgottenpwd.xhtml" tabindex="5">Clicca qui per resettarla</a>.
+        </p> <!-- TODO Pass Recovery Page -->
       </div>
     </div>
 
   <div id="footer">
     <ul>
       <li>
-        <a href="chisiamo.xhtml">Chi siamo</a>
+        <a href="chisiamo.xhtml" tabindex="7">Chi siamo</a>
       </li>
       <li>
-        <a href="PAGINA"><span xml:lang="en"><abbr title="Frequently Asked Questions">FAQ</abbr></span></a>
+        <a href="PAGINA" tabindex="8"><span xml:lang="en"><abbr title="Frequently Asked Questions">FAQ</abbr></span></a>
       </li>
       <li>
-        <a href="PAGINA">Normativa sulla <span xml:lang="en">privacy</span></a>
+        <a href="PAGINA" tabindex="9">Normativa sulla <span xml:lang="en">privacy</span></a>
       </li>
     </ul>
     <p>
