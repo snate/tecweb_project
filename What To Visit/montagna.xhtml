@@ -18,7 +18,8 @@ LINK FOOTER
     <meta name='reply-to' content='teamtecweb@gmail.com' />
     <meta name='Classification' content='Tourism' />
     <link rel="shortcut icon" href="../images/logo-icon.png"/>
-    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" media="handheld, screen and (max-width:480px), only screen and (max-device-width:480px)" type="text/css" href="../css/mlayout.css" />
   </head>
   <body>
     <div id="header">
@@ -27,19 +28,19 @@ LINK FOOTER
           WHAT TO VISIT
         </a>
       </h1>
+    </div>
+    <div id="breadcrumb">
+      <ul class="navmenu">
+        <li>Ti trovi in:<a href="homepage.xhtml" tabindex="6" title="Pagina principale">
+          <span xml:lang="en">Home</span>
+        </a>&gt; Montagna</li>
+      </ul>
       <form method="get" action="/search">
         <fieldset  id="search">
           <label for="place">Cerca:</label>
-          <input name="place" id="place" type="text" size="40" tabindex="2"/>
+          <input name="place" id="place" type="text" tabindex="1"/>
         </fieldset>
       </form>
-    </div>
-    <div id="breadcrumb">
-      Ti trovi in:
-      <a href="homepage.xhtml" title="Pagina principale">
-        <span xml:lang="en">Home</span>
-      </a>
-      &gt; Montagna
     </div>
     <div id="main">
       <div id="nav">
