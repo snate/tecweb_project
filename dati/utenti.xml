@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<utenti xmlns="http://www.protagonisti.com"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+  xs:schemaLocation="http://www.utenti.com utenti.xsd"/>
+  <user>
+    <username>Nate</username>
+    <password>gecko</password>
+    <registrationDate>2014-11-01</registrationDate>
+  </user>
+  <user>
+    <username>John Reese</username>
+    <password>koala</password>
+    <registrationDate>2010-05-24</registrationDate>
+    <comment>
+      <corpo>
+        Stiamo come i pazzi
+      </corpo>
+      <pubblicationDate>
+        2012-06-12
+      </pubblicationDate>
+      <corpo>
+        CAZZETTE, Terry B! - Blind Heart (Radio Edit)
+      </corpo>
+      <pubblicationDate>
+        2012-10-21
+      </pubblicationDate>
+    </comment>
+  </user>
+</utenti>
