@@ -5,4 +5,8 @@ _________________
 - Sito What To Visit ***ONLINE*** ---> [HomePage](http://grazianogrespan.github.io/TecWeb-forked)
 - Esempio di Geolocalizzazione ***ONLINE*** ---> [Geolocation](http://grazianogrespan.github.io/TecWeb-forked/Test/geolocation.html)
 
-Domanda: rendere l'h1 "WHAT TO VISIT" cliccabile così da fornire un ulteriore riferimento per tornare all'homepage?
+Pagine:
+- [ABOUTUS](http://grazianogrespan.github.io/TecWeb-forked/What%20To%20Visit/chisiamo.xhtml)
+- [HOMEPAGE](http://grazianogrespan.github.io/TecWeb-forked/What%20To%20Visit/homepage.xhtml)
+- [CATEGORY](http://grazianogrespan.github.io/TecWeb-forked/What%20To%20Visit/mare.xhtml)
+- [LEAVES](http://grazianogrespan.github.io/TecWeb-forked/What%20To%20Visit/zakynthos.xhtml)
