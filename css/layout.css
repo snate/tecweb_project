@@ -34,11 +34,11 @@ padding: 0 0.8em;
 color: #212330;
 }
 
-.navmenu {
+.breadmenu {
 list-style: none;
 }
 
-.navmenu li {
+.breadmenu li {
 float: left;
 height: 2em;
 padding: 0 0.8em;
@@ -46,17 +46,17 @@ font-size: 1.4em;
 text-transform: uppercase;
 }
 
-.navmenu li:first-child {
+.breadmenu li:first-child {
 padding: 0 0.8em 0 0;
 }
 
-.navmenu li a {
+.breadmenu li a {
 color: #14996A;
 text-decoration: none;
 font-weight: 700;
 }
 
-.navmenu li a:hover {
+.breadmenu li a:hover {
 text-decoration: underline;
 }
 
