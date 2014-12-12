@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="localita.xslt"?>
 <utenti xmlns="http://www.protagonisti.com"
   xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
-  xs:schemaLocation="http://www.utenti.com utenti.xsd"/>
+  xs:schemaLocation="http://www.utenti.com utenti.xsd">
   <user>
     <username>Nate</username>
     <password>gecko</password>
@@ -11,7 +12,7 @@
     <username>John Reese</username>
     <password>koala</password>
     <registrationDate>2010-05-24</registrationDate>
-    <comment>
+    <comment localita="Zante" num="1">
       <corpo>
         Stiamo come i pazzi
       </corpo>
