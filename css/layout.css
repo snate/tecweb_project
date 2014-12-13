@@ -38,7 +38,7 @@ color: #212330;
 list-style: none;
 }
 
-.navmenu li {
+#navmenu li {
 float: left;
 height: 2em;
 padding: 0 0.8em;
@@ -46,17 +46,17 @@ font-size: 1.4em;
 text-transform: uppercase;
 }
 
-.navmenu li:first-child {
+#navmenu li:first-child {
 padding: 0 0.8em 0 0;
 }
 
-.navmenu li a {
+#navmenu li a {
 color: #14996A;
 text-decoration: none;
 font-weight: 700;
 }
 
-.navmenu li a:hover {
+#navmenu li a:hover {
 text-decoration: underline;
 }
 
@@ -330,9 +330,8 @@ input[type=submit]:active {
   color: #545353;
   font-size: 0.7em;
 }
+
 /* INIZIO CSS LOCALITA */
-
-
 
 #nav {
 float: left;
@@ -353,27 +352,25 @@ padding-left: 1.4em;
 color: #fff;
 }
 
-
-
-#nav .nav_mare {
+#nav_mare {
 background-image: url(../images/icons/n_mare.png);
 background-repeat: no-repeat;
 background-position: left 0.1em;
 }
 
-#nav .nav_cit {
+#nav_cit {
 background-image: url(../images/icons/n_cit.png);
 background-repeat: no-repeat;
 background-position: left 0.1em;
 }
 
-#nav .nav_mont {
+#nav_mont {
 background-image: url(../images/icons/n_mont.png);
 background-repeat: no-repeat;
 background-position: left 0.1em;
 }
 
-#nav .nav_selected {
+#nav_selected {
 padding-left: 1.8em;
 background-image: url(../images/icons/n_pos.png);
 background-repeat: no-repeat;
