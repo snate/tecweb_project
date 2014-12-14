@@ -60,6 +60,12 @@ font-weight: 700;
 text-decoration: underline;
 }
 
+#skip{
+position: absolute;
+height: 0;
+overflow: hidden;
+}
+
 .categoria {
 display: block;
 float: left;
