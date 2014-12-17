@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="localita.xslt"?>
+<comments xmlns="http://www.protagonisti.com"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+  xs:schemaLocation="http://www.utenti.com utenti.xsd">
+  
+  <localita name="zante">
+    <comment user="John Reese">
+      <corpo>
+        Stiamo come i pazzi
+      </corpo>
+      <pubblicationDate>
+        2012-06-12
+      </pubblicationDate>
+    </comment>
+  </localita>
+
+  <localita name="londra">
+    <comment user="Nate">
+      <corpo>
+        CAZZETTE, Terry B! - Blind Heart (Radio Edit)
+      </corpo>
+      <pubblicationDate>
+        2012-10-21
+      </pubblicationDate>
+    </comment>
+  </localita>
+
+  <localita name="madonna">
+  </localita>
+
+  <localita name="praga">
+  </localita>
+
+  <localita name="parigi">
+  </localita>
+
+</comments>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="localita.xslt"?>
-<utenti xmlns="http://www.protagonisti.com"
+<?xml-stylesheet type="text/xsl" href="utenti.xslt"?>
+<utenti xmlns="http://www.utenti.com"
   xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
   xs:schemaLocation="http://www.utenti.com utenti.xsd">
   <user>
@@ -12,19 +12,5 @@
     <username>John Reese</username>
     <password>koala</password>
     <registrationDate>2010-05-24</registrationDate>
-    <comment localita="Zante" num="1">
-      <corpo>
-        Stiamo come i pazzi
-      </corpo>
-      <pubblicationDate>
-        2012-06-12
-      </pubblicationDate>
-      <corpo>
-        CAZZETTE, Terry B! - Blind Heart (Radio Edit)
-      </corpo>
-      <pubblicationDate>
-        2012-10-21
-      </pubblicationDate>
-    </comment>
   </user>
 </utenti>
