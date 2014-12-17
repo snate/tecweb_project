@@ -1,0 +1,53 @@
+MILESTONE
+Fine anno:
+  - Struttura finita tranne punti 1.3, 1
+  - Presentazione finita
+
+TODO LIST
+
+Struttura
+1 - FINIRE MARKUP -> MANCA IL PULSANTE DI LOGIN IN TUTTE LE PAGINE ED È FINITO
+1.1 - MIGLIORARE LAYOUT HOME
+1.1.1 - DOPPI LINK, sia nella breadcrumb che nel footer!
+1.1.2 - "Il nostro progetto" -> se c'è quello, a cosa serve la pagina "Chi siamo" ?
+1.2 - Decidere se scrivere due righette di testo per la privacy nel footer
+        anzichè creare una pagina ex novo (o crearla, Graziano aveva detto che
+        se ne sarebbe potuto occupare).
+1.3 - Idem per F.A.Q. , fare (alla fine) o rimuovere
+1.4 - Controllo di validazione di sicurezza; al momento (17/12/2014) sono valide
+        tutte le pagine XHTML e gli schemi presenti; il CSS non so, comunque
+        dev'essere ancora migliorato
+1.5 - Inserire "valido per XHTML","valido per CSS" in fondo alla pagina insieme
+        alla relativa immagine; quella di XHTML c'è già in /images
+
+-------------
+Presentazione
+2 - CSS
+3 - CSS mobile, da fare in base al CSS principale
+2.0,3.0 - Validazione codice
+
+-------------
+Comportamento
+
+XML
+Penso sia tutto ultimato, inutile elevare il grado di complessità; l'unica cosa
+fattibile per chi volesse esercitarsi sarebbe fare uno schema per le località
+presenti così da rendere più carina la ricerca da search bar descritta nel
+punto 4.
+
+PERL - In ordine di difficoltà:
+4 - Parte di Perl/CGI che effettua la ricerca
+5 - Parte di Perl/CGI che registra un utente verificando che il suo username non
+      sia già resistrato nel db
+6 - Parte di Perl/CGI che effettua il login
+7 - Parte di Perl/CGI che crea la pagina per lo zio che accede nella pagina del
+      suo profilo
+8 - Parte di Perl/CGI che carica commenti in un div per ogni località
+9 - Togliamo Password dimenticata e rimettiamola se avanza tempo, al massimo come
+      attività per qualcuno che ha qualcosa di avanzato da fare
+
+JAVASCRIPT
+TBA - dipende da cosa spiega la prof; si suppone Geolocalizzazione
+
+GROUP
+Dire se manca qualcosa o se qualcosa dei punti elencati è poco fattibile
