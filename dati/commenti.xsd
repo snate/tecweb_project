@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-  targetNamespace="http://www.utenti.com"
-  xmlns="http://www.utenti.com"
+  targetNamespace="http://www.commenti.com"
+  xmlns="http://www.commenti.com"
   elementFormDefault="qualified">
 
   <xsd:element name="comments" type="Tcomments" />
@@ -12,7 +12,9 @@
 
   <xsd:complexType name="Tlocalita"><xsd:sequence minOccurs="0" maxOccurs="unbounded">
     <xsd:element name="comment" type="Tcomment" />
-  </xsd:sequence></xsd:complexType>
+  </xsd:sequence>
+  <xsd:attribute name="nome" type="xsd:string" use="required" />
+  </xsd:complexType>
 
   <xsd:complexType name="Tcomment"><xsd:sequence>
     <xsd:element name="corpo" type="xsd:string" />
