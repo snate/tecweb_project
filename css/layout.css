@@ -542,7 +542,7 @@ input[type=submit]:active {
   font-size: 1.5em;
 }
 
-#aside a.link_out {
+#aside a{
   background-image: url(../images/icons/Link_out.png);
   background-repeat: no-repeat;
   background-size: 10px;
@@ -551,7 +551,7 @@ input[type=submit]:active {
   color: #fff;
 }
 
-.government li,.utility li {
+#government li,#utility li {
   list-style: none;
 }
 
