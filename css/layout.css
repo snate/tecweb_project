@@ -100,6 +100,7 @@ html,body {
   display: block;
   float: left;
   margin-top:10px;
+  margin-bottom: 0.15em;
   width: 32%;
   height: 700px;
   text-align: center;
@@ -180,8 +181,44 @@ h1 .categoria:visited {
 h1 .categoria:hover {
   color:white;
 }
-
 #footer {
+  clear:both;
+  border-top: 4px solid gray;
+  width:100%;
+  height: 2.5em;
+  background-color: #515151;
+}
+
+.footer_links ul{
+	list-style-type: none;	
+	margin-top: 0.5em;
+	float: left;
+}
+.footer_links li{
+	font-size: 1em;
+	border-right:solid;
+	border-color: white;
+	border-width: 1px;
+	display:inline;
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
+.footer_links li:first-child{
+	margin-left: 1em;
+}
+
+.footer_links li:last-child{
+	border: none;
+}
+
+.xhtml_valid{
+  margin-top: 0.2em;
+  float:right;
+  padding-right:10px;
+}
+
+/*#footer {
   margin-top: 1%;
   border-top: 4px solid gray;
   width:100%;
@@ -198,12 +235,8 @@ h1 .categoria:hover {
   font-size:1em;
   display: inline;
   padding-left:20px;
-}
+}*/
 
-.xhtml_valid{
-  float:right;
-  padding-right:10px;
-}
 /* SEARCH-BAR */
 
 #breadcrumb #search {
