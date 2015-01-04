@@ -492,6 +492,14 @@ input[type=submit]:active {
   padding-top: 1em;
 }
 
+#descr_loc a:link{
+	color: #343A90;
+}
+
+#descr_loc a:visited{
+	color: #990066;
+}
+
 .immagini {
   width:99%;
   height:200px;
