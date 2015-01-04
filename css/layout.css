@@ -1,14 +1,12 @@
 html,body {
   font-family: Open Sans Condensed, Arial, Helvetica, serif;
   color: #e6fff6;
-  background: #14996A;
+  background: #98B9FF;
   width:94%;
   height:100%;
   margin:auto;
 }
-a{
-  color:white;
-}
+
 * {
   margin: 0;
   padding: 0;
@@ -17,18 +15,21 @@ a{
 
 #header {
   height: 2.8em;
-  background-color: #14996a;
+  background-color: #98B9FF;
 }
 
 #header h1 {
   float: left;
   color: #fff;
-  font-weight: normal;
   text-transform: uppercase;
   font-size: 2em;
   padding: 0 0.5em;
 }
 
+#header h1 a{
+  color:white;
+  font-weight: bold;
+}
 .login_button{
   float: right;
   margin-top:5px;
@@ -37,9 +38,9 @@ a{
   color: white;
   font-weight: 700;
   font-size: 18px;
-  background: #297C45;
+  background: #032B93;
   border-radius: 5px;
-  border-bottom: 4px solid #1F4E2F;
+  border-bottom: 4px solid #000C4C;
   transition: 0.1s all ease;
 }
 
@@ -76,7 +77,7 @@ a{
 }
 
 #navmenu li a {
-  color: #14996A;
+  color: #1547B2;
   text-decoration: none;
   font-weight: 700;
 }
@@ -143,7 +144,6 @@ a{
 h1 .categoria {
   padding-top: 0.5em;
   padding-bottom: 0em;
-  color: #332E2E;
   font-size: 2em;
   font-weight: normal;
   text-transform: uppercase;
@@ -153,7 +153,6 @@ h1 .categoria {
 
 
 .categoria:hover{
-
   border-style:solid;
   border-width: 3px;
   border-radius: 5px;
@@ -172,6 +171,15 @@ h1 .categoria {
 h1 .categoria:active {
   color: #128BC6;
 }
+h1 .categoria:link {
+  color: #4C4C4C;
+}
+h1 .categoria:visited {
+  color: #4C4C4C;
+}
+h1 .categoria:hover {
+  color:white;
+}
 
 #footer {
   margin-top: 1%;
@@ -179,7 +187,7 @@ h1 .categoria:active {
   width:100%;
   text-align:center;
   display: inline-block;
-  background-color: #332E2E;
+  background-color: #515151;
 }
 .footer_links {
   padding-top:10px;
@@ -187,11 +195,9 @@ h1 .categoria:active {
 }
 .footer_links ul li{
   float:left;
-  color:white;
   font-size:1em;
   display: inline;
   padding-left:20px;
-
 }
 
 .xhtml_valid{
@@ -379,9 +385,7 @@ input[type=submit]:active {
   border-color:#2F2F2F;
   float: left;
   width: 20%;
-  padding-right: 1%;
-  padding-left:1%;
-  background: #444444;
+  background: #515151;
   height:100%;
 }
 
@@ -390,30 +394,43 @@ input[type=submit]:active {
   font-weight: normal;
   text-transform: uppercase;
   font-size: 1em;
-  padding-left:1em;
+  list-style-type:none;
 }
 
 #nav li {
-  padding-left: 1.8em;
+  padding-left: 1.4em;
   color: #fff;
 }
 
+a:link{
+  color: #00074F;
+  text-decoration: none;
+  font-weight:bold;
+}
+a:visited{
+  color: #C38D00;
+  font-weight:bold;
+}
+a:hover{
+  text-decoration: underline;
+  font-weight:bold;
+}
 #nav_mare {
   background-image: url(../images/icons/n_mare.png);
   background-repeat: no-repeat;
-  background-position: left 0.1em;
+  background-position: -4% top;
 }
 
 #nav_cit {
   background-image: url(../images/icons/n_cit.png);
   background-repeat: no-repeat;
-  background-position: left 0.1em;
+  background-position: -4% top;
 }
 
 #nav_mont {
   background-image: url(../images/icons/n_mont.png);
   background-repeat: no-repeat;
-  background-position: left 0.1em;
+  background-position: -4% top;
 }
 
 #nav_selected {
@@ -423,17 +440,7 @@ input[type=submit]:active {
   background-position: -0.4em;
 }
 
-#nav li a {
-  text-decoration: none;
-  color: #fff;
-}
-
-#nav li a:hover {
-  text-decoration: underline;
-}
-
 #content {
-
   margin-top:1%;
   border-style:solid;
   border-radius: 10px;
@@ -444,11 +451,11 @@ input[type=submit]:active {
   background-color: white;
 }
 #content h1 {
-  color: #14996a;
+  color: #515151;
   padding-left:25%;
 }
 #content h2 {
-  color: black;
+  color: #515151;
   padding-left:25%;
 }
 #content ul {
@@ -456,7 +463,7 @@ input[type=submit]:active {
   padding-left:27%;
 }
 #content ul li a{
-  color: black;
+  color: #1547B2;
   font-weight:bold;
 }
 #descr_loc {
@@ -493,11 +500,17 @@ input[type=submit]:active {
 }
 
 #descr_loc a:link{
-	color: #343A90;
+	color: #1547B2;
+  text-decoration: none;
+  font-weight:normal
 }
-
 #descr_loc a:visited{
-	color: #990066;
+  color: #C38D00;
+  font-weight:normal
+}
+#descr_loc a:hover{
+  text-decoration: underline;
+  font-weight:normal
 }
 
 .immagini {
@@ -535,12 +548,12 @@ input[type=submit]:active {
   border-style:solid;
   border-radius: 10px;
   float: right;
-  width: 14%;
+  width: 16.5%;
   margin-top:1%;
   padding-left: 1%;
   padding-bottom:1%;
   color: #E6FFF6;
-  background-color: #212330;
+  background-color: #515151;
 }
 
 #aside h1 {
@@ -556,7 +569,7 @@ input[type=submit]:active {
   background-size: 10px;
   background-position: right center;
   padding-right: 1em;
-  color: #fff;
+  font-weight:normal;
 }
 
 #government li,#utility li {
