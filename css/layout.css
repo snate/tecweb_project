@@ -152,7 +152,6 @@ h1 .categoria {
   line-height: 1em;
 }
 
-
 .categoria:hover{
   border-style:solid;
   border-width: 3px;
@@ -181,6 +180,7 @@ h1 .categoria:visited {
 h1 .categoria:hover {
   color:white;
 }
+
 #footer {
   clear:both;
   border-top: 4px solid gray;
