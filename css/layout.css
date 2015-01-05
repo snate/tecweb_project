@@ -13,7 +13,12 @@ html, body {
 }
 
 a:link{
+  color: white;
   outline: none;
+}
+
+a:visited{
+  color: #FFEECC;
 }
 
 a:hover{
@@ -33,7 +38,6 @@ a:hover{
 }
 
 #header h1 a{
-  color:white;
   font-weight: bold;
   text-decoration: none;
 }
@@ -87,7 +91,6 @@ a:hover{
 }
 
 #navmenu li a {
-  color: white;
   text-decoration: none;
   font-weight: 700;
 }
@@ -103,7 +106,6 @@ a:hover{
 }
 
 .categoria {
-  color: white;
   text-shadow: 2px 2px black;
   border-style:solid;
   border-width: 2px;
@@ -114,11 +116,11 @@ a:hover{
   margin-top:10px;
   margin-bottom: 0.15em;
   width: 29%;
-  height: 465px;
+  height: 700px;
   text-decoration: none;
   background-position: center;
   background-repeat: no-repeat;
-  
+
   -webkit-filter: saturate(120%) ; /* Google Chrome e Apple Safari */
   -moz-filter: saturate(120%) ; /* Mozilla Firefox */
   -ms-filter: saturate(120%) ; /* Microsoft Internet Explorer */
@@ -176,7 +178,7 @@ h1 .categoria {
 }
 
 .footer_links ul{
-	list-style-type: none;	
+	list-style-type: none;
 	margin-top: 0.5em;
 	float: left;
 }
@@ -200,7 +202,6 @@ h1 .categoria {
 }
 
 .footer_links a{
-	color: white;
 	text-decoration: none;
 }
 .footer_links a:hover{
@@ -418,7 +419,6 @@ input[type=submit]:active {
 }
 
 #nav a{
-	color:white;
 	font-weight: bold;
 	text-decoration: none;
 }
@@ -443,8 +443,13 @@ input[type=submit]:active {
   padding-left: 2%;
 }
 #content ul li a{
+  color: blue;
   font-weight:bold;
 }
+#content a:visited{
+  color:purple;
+}
+
 #descr_loc {
   border-style:solid;
   border-radius: 10px;
@@ -457,7 +462,7 @@ input[type=submit]:active {
   overflow: hidden;
   color: black/*#222222*/;
   background-color: #ffffff;
-  text-align: justify;
+  text-align: left;
 }
 
 #descr_loc h1 {
@@ -476,7 +481,12 @@ input[type=submit]:active {
 }
 
 #descr_loc h3 {
+  font-size: 1.5em;
   padding-top: 1em;
+}
+
+#descr_loc dt {
+  font-weight: bold;
 }
 
 .img_content {
@@ -522,12 +532,17 @@ input[type=submit]:active {
 }
 
 #aside a{
+  color: blue;
   background-image: url(../images/icons/Link_out.png);
   background-repeat: no-repeat;
   background-size: 10px;
   background-position: right center;
   padding-right: 1em;
   font-weight:normal;
+}
+
+#aside a:visited {
+  color: purple;
 }
 
 #government li,#utility li {
