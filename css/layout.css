@@ -105,7 +105,7 @@ a:hover{
   overflow: hidden;
 }
 
-.categoria {
+#c_mare,#c_cit,#c_mont {
   text-shadow: 2px 2px black;
   border-style:solid;
   border-width: 2px;
@@ -120,6 +120,46 @@ a:hover{
   text-decoration: none;
   background-position: center;
   background-repeat: no-repeat;
+  -webkit-filter: blur(1px) grayscale(60%); /* Google Chrome e Apple Safari */
+  -moz-filter: blur(1px) grayscale(60%); /* Mozilla Firefox */
+  -ms-filter: blur(1px) grayscale(60%); /* Microsoft Internet Explorer */
+  -o-filter: blur(1px) grayscale(60%); /* Opera */
+  filter: blur(1px) grayscale(60%); /* La proprietà standard */
+}
+
+#c_mare {
+  margin-left: /*1*/5%;
+  background-image: url(../images/HOME_BG_SEA.jpg);
+}
+
+#c_cit {
+  margin-right:1%;
+  margin-left:1%;
+  background-image: url(../images/HOME_BG_CITY.jpg);
+}
+
+#c_mont {
+  margin-right:0.5%;
+  background-image: url(../images/HOME_BG_MOUNTAIN.jpg);
+}
+
+h1 #c_cit,#c_mont,#c_mare {
+  padding-top: 0.5em;
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1em;
+  color:#666;
+}
+
+#c_cit:hover,#c_mont:hover,#c_mare:hover{
+  border-style:solid;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: #444;
+  color: white;
+  font-weight: bold;
 
   -webkit-filter: saturate(120%) ; /* Google Chrome e Apple Safari */
   -moz-filter: saturate(120%) ; /* Mozilla Firefox */
@@ -127,45 +167,7 @@ a:hover{
   -o-filter: saturate(120%); /* Opera */
   filter: saturate(120%) ; /* La proprietà standard */
   -webkit-transform: scale(1.02);
-}
 
-.c_mare {
-  margin-left: /*1*/5%;
-  background-image: url(../images/HOME_BG_SEA.jpg);
-}
-
-.c_cit {
-  margin-right:1%;
-  margin-left:1%;
-  background-image: url(../images/HOME_BG_CITY.jpg);
-}
-
-.c_mont {
-  margin-right:0.5%;
-  background-image: url(../images/HOME_BG_MOUNTAIN.jpg);
-}
-
-h1 .categoria {
-  padding-top: 0.5em;
-  font-size: 2em;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 1em;
-}
-
-.categoria:hover{
-  border-style:solid;
-  border-width: 2px;
-  border-radius: 5px;
-  border-color:black;
-  color: white;
-  font-weight: bold;
-  -webkit-filter: blur(1px) grayscale(60%); /* Google Chrome e Apple Safari */
-  -moz-filter: blur(1px) grayscale(60%); /* Mozilla Firefox */
-  -ms-filter: blur(1px) grayscale(60%); /* Microsoft Internet Explorer */
-  -o-filter: blur(1px) grayscale(60%); /* Opera */
-  filter: blur(1px) grayscale(60%); /* La proprietà standard */
 }
 
 #footer {
@@ -208,7 +210,7 @@ h1 .categoria {
 	text-decoration: underline;
 }
 
-.xhtml_valid{
+#xhtml_valid{
   margin-top: 0.2em;
   float:right;
   padding-right:10px;
