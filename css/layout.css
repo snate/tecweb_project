@@ -150,10 +150,9 @@ h1 #c_cit,#c_mont,#c_mare {
   text-transform: uppercase;
   text-align: center;
   line-height: 1em;
-  color:#666;
 }
 
-#c_cit:hover,#c_mont:hover,#c_mare:hover{
+#c_cit:hover, #c_mont:hover, #c_mare:hover{
   border-style:solid;
   border-width: 2px;
   border-radius: 5px;
