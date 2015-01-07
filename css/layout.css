@@ -14,7 +14,7 @@ html, body {
 
 a:link{
   color: white;
-  outline: none;
+  /*outline: none;*/
 }
 
 a:visited{
