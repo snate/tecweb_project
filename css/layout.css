@@ -490,6 +490,14 @@ input[type=submit]:active {
   font-weight: bold;
 }
 
+#descr_loc a {
+  color: blue;
+}
+
+#descr_loc a:visited {
+  color: purple;
+}
+
 .img_content {
   width:99%;
   height:300px;
