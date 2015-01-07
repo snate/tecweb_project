@@ -1,17 +1,12 @@
-<!--TO DO:
-HEADER > la barra di ricerca va in uno span da dimensionare opportunamente?
-METTERE A POSTO IL CONTENUTO SE È TROPPO POCO
--->
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Chi siamo - What To Visit </title>
-    <meta name="title" content="Chi siamo - What To Visit" />
+    <title>Mappa del sito - What To Visit </title>
+    <meta name="title" content="Mappa del sito - What To Visit" />
     <meta name="author" content="Graziano Grespan, Carlo Munarini, Federica Speggiorin, Sebastiano Valle" />
-    <meta name="description" content="Informazioni generali sul sito" />
-    <meta name="keywords" content="Introducing, About us, Chi siamo, What To Visit, Viaggi" />
+    <meta name="description" content="Mappa del sito What To Visit" />
+    <meta name="keywords" content="mappa, What To Visit, Viaggi" />
     <meta name="robots" content="index,follow" />
     <meta name='reply-to' content='teamtecweb@gmail.com' />
     <meta name='Classification' content='Tourism' />
@@ -35,7 +30,7 @@ METTERE A POSTO IL CONTENUTO SE È TROPPO POCO
 
         <li>Ti trovi in:<a href="homepage.xhtml" title="Pagina principale">
           <span xml:lang="en">Home</span>
-        </a>&gt; Chi Siamo</li>
+        </a>&gt; Mappa del sito</li>
       </ul>
       <form method="post" action="http://localhost/cgi-bin/search.pl">
         <fieldset  id="search">
@@ -44,15 +39,16 @@ METTERE A POSTO IL CONTENUTO SE È TROPPO POCO
         </fieldset>
       </form>
     </div>
-	<div id="nav">
-	    <ul>
+      <div id="nav">
+        <ul>
           <li>
             <a href="homepage.xhtml" title="Pagina principale" tabindex="2">
               <span xml:lang="en">Home</span>
             </a>
             <ul>
-              <li id="nav_selected">
-                Chi siamo
+              <li>
+			  <a href="chisiamo.xhtml" title="Informazioni sul sito" tabindex="">
+                Chi siamo</a>
               </li>
               <li>
                 <a href="PAGINA" title="Frequently Asked Questions" tabindex="3"><span xml:lang="en">
@@ -61,32 +57,45 @@ METTERE A POSTO IL CONTENUTO SE È TROPPO POCO
               </li>
               <li>
                 <!-- ATTENZIONE QUI!!! ATTENZIONE MANCA LINK -->
-                <a href="#" title="Normativa sulla privacy" tabindex="4">
+                <a href="#" title="Informazioni sulla privacy" tabindex="4">
                   Normativa sulla <span xml:lang="en">privacy</span>
                 </a>
               </li>
-			  <li>
-                <a href="mappa.xhtml" title="Mappa del sito" tabindex="5">
-				Mappa del sito</a>
+			   <li id="nav_selected">
+                Mappa del sito
               </li>
             </ul>
           </li>
         </ul>
       </div>
       <div id="content">
-        <h1>
-          Informazioni su <span xml:lang="en">What To Visit</span>
-        </h1>
-        <p>
-          <span xml:lang="en">What To Visit</span> presentarvi le località
-          di mare, di città e di montagna più piacevoli dove
-          poter trascorrere le vostre vacanze.
-        </p>
-        <p>
-          Per ogni luogo sono indicate delle particolarità del
-          luogo: accedendo tramite i link sulla barra a lato, potrete scoprire
-          cosa ha da offrirvi ogni meta indicata nel nostro sito.
-        </p>
+		<ul id="mappa_sito">
+			<li><a href="homepage.xhtml" title="Pagina principale" tabindex="">Home</a>
+			<ul>
+				<li><a href="mare.xhtml" title="Pagina delle località marittime" tabindex="">Mare</a>
+					<ul>
+						<li><a href="zakynthos.xhtml" title="Scopri Zante" tabindex="">Zante</a></li>
+					</ul>
+				</li>
+				<li><a href="citta.xhtml" title="Pagina delle località cittadine" tabindex="">Città</a>
+					<ul>
+						<li><a href="london.xhtml" title="Scopri Londra" tabindex="">Londra</a></li>
+						<li><a href="paris.xhtml" title="Scopri Parigi" tabindex="">Parigi</a></li>
+						<li><a href="praga.xhtml" title="Scopri Praga" tabindex="">Praga</a></li>
+					</ul>
+				</li>
+				<li><a href="montagna.xhtml" title="Pagina delle località montane" tabindex="">Montagna</a>
+					<ul>
+						<li><a href="madonnadicampiglio.xhtml" title="Scopri Madonna di Campiglio" tabindex="">Madonna di Campiglio</a></li>
+					</ul>
+				</li>
+			</ul>
+			</li>
+			<li><a href="login.xhtml" title="Pagina di login" tabindex=""><span xml:lang="en">Login</span></a></li>
+			<li><a href="chisiamo.xhtml" title="Informazioni sul sito" tabindex="">Chi siamo</a></li>
+			<li><a href="xxx" title="Frequently Asked Questions" tabindex=""><abbr title="Frequently Asked Questions">F.A.Q.</abbr></a></li>
+			<li><a href="xxx" title="Informazioni sulla privacy" tabindex="">Normativa sulla privacy</a></li>
+		</ul>
       </div>
     <div id="footer">
       <div id="xhtml_valid">

@@ -451,6 +451,18 @@ input[type=submit]:active {
   color:purple;
 }
 
+#content #mappa_sito {
+	padding-top: 2em;
+}
+
+#content #mappa_sito ul{
+	padding-top: 0em;
+}
+
+#content #mappa_sito ul ul{
+	list-style-type: none;
+}
+
 #descr_loc {
   border-style:solid;
   border-radius: 10px;
