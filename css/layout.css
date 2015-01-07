@@ -13,12 +13,12 @@ html, body {
 }
 
 a:link{
-  color: white;
+  color: #FFFF66;
   /*outline: none;*/
 }
 
 a:visited{
-  color: #FFEECC;
+  color: white;
 }
 
 a:hover{
