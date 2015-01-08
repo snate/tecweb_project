@@ -120,11 +120,14 @@ a:hover{
   text-decoration: none;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-filter: blur(1px) grayscale(60%); /* Google Chrome e Apple Safari */
-  -moz-filter: blur(1px) grayscale(60%); /* Mozilla Firefox */
-  -ms-filter: blur(1px) grayscale(60%); /* Microsoft Internet Explorer */
-  -o-filter: blur(1px) grayscale(60%); /* Opera */
-  filter: blur(1px) grayscale(60%); /* La proprietà standard */
+  
+  -webkit-filter: saturate(120%) ; /* Google Chrome e Apple Safari */
+  -moz-filter: saturate(120%) ; /* Mozilla Firefox */
+  -ms-filter: saturate(120%) ; /* Microsoft Internet Explorer */
+  -o-filter: saturate(120%); /* Opera */
+  filter: saturate(120%) ; /* La proprietà standard */
+  -webkit-transform: scale(1.02);
+  
 }
 
 #c_mare {
@@ -160,12 +163,11 @@ h1 #c_cit,#c_mont,#c_mare {
   color: white;
   font-weight: bold;
 
-  -webkit-filter: saturate(120%) ; /* Google Chrome e Apple Safari */
-  -moz-filter: saturate(120%) ; /* Mozilla Firefox */
-  -ms-filter: saturate(120%) ; /* Microsoft Internet Explorer */
-  -o-filter: saturate(120%); /* Opera */
-  filter: saturate(120%) ; /* La proprietà standard */
-  -webkit-transform: scale(1.02);
+  -webkit-filter: blur(1px) grayscale(60%); /* Google Chrome e Apple Safari */
+  -moz-filter: blur(1px) grayscale(60%); /* Mozilla Firefox */
+  -ms-filter: blur(1px) grayscale(60%); /* Microsoft Internet Explorer */
+  -o-filter: blur(1px) grayscale(60%); /* Opera */
+  filter: blur(1px) grayscale(60%); /* La proprietà standard */
 
 }
 
@@ -388,7 +390,7 @@ input[type=submit]:active {
 /* INIZIO CSS LOCALITA */
 
 #nav {
-  border-radius:10px;
+  border-radius: 10px 0px 0px 10px;
   margin-top:1%;
   border-right: 4px solid ;
   border-color:#2F2F2F;
@@ -465,7 +467,7 @@ input[type=submit]:active {
 
 #descr_loc {
   border-style:solid;
-  border-radius: 10px;
+  border-radius: 0px 10px 10px 0px;
   margin-top:1%;
   float: left;
   width: 58%;
