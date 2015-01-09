@@ -16,25 +16,25 @@ foreach $pair (@pairs) {
 
 local($place) = $input{"place"};
 if($place eq "paris" || $place eq "parigi") {
-  $url = "../public_html/paris.xhtml";
+  $url = "../paris.xhtml";
   print "Location: $url\n\n";
 }
 if($place eq "london" || $place eq "londra") {
-  $url = "../public_html/london.xhtml";
+  $url = "../london.xhtml";
   print "Location: $url\n\n";
 }
 if($place eq "zakynthos" || $place eq "zante") {
-  $url = "../public_html/zakynthos.xhtml";
+  $url = "../zakynthos.xhtml";
   print "Location: $url\n\n";
 }
 if($place eq "madonna di campiglio" || $place eq "madonnadicampiglio" ||
     $place eq "madonna") {
-  $url = "../public_html/madonnadicampiglio.xhtml";
+  $url = "../madonnadicampiglio.xhtml";
   print "Location: $url\n\n";
 }
 if($place eq "prague" || $place eq "praga") {
-  $url = "../public_html/praga.xhtml";
+  $url = "../praga.xhtml";
   print "Location: $url\n\n";
 }
-$url = "../public_html/homepage.xhtml";
+$url = "../homepage.xhtml";
 print "Location: $url\n\n";
