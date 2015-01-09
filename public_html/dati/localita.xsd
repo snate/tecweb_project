@@ -1,12 +1,175 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   targetNamespace="http://www.localita.com"
   xmlns="http://www.localita.com"
   elementFormDefault="qualified">
 
-  <xsd:element name="localita" type="Tlocalita"/>
+<xsd:element name="localita" type="Tlocalita" />
 
-  <xsd:complexType name="Tlocalita"><xsd:sequence maxOccurs="unbounded">
-    <xsd:element name="place" type="xsd:string">
-  </xsd:sequence></xsd:complexType>
+<xsd:complexType name="Tlocalita">
+	<xsd:sequence maxOccurs="unbounded">
+		<xsd:element name="place" type="Tplace" />
+	</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="Tplace">
+	<xsd:sequence>
+		<xsd:element name="descrizione" type="Tdescrizione" />
+		<xsd:element name="link" type="Tlink" />
+		<xsd:element name="info" type="Tinfo" />
+	</xsd:sequence>
+	<xsd:attribute name="categoria" type="Tcategoria" use="required" />
+</xsd:complexType>
+
+<xsd:simpleType name="Tcategoria">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="Mare"/>
+		<xsd:enumeration value="Città"/>
+		<xsd:enumeration value="Montagna"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:complexType name="Tdescrizione">
+	<xsd:sequence>
+		<xsd:element name="img" type="Timg" />
+		<xsd:element name="h1" type="Tcategoria" />
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="h2" type="Th" />
+			<xsd:element name="h3" type="Th" />
+			<xsd:element name="p" type="Tp" />
+			<xsd:element name="img" type="Timg"/>
+			<xsd:element name="dl" type="Tdl" />
+		</xsd:choice>	
+	</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="Timg">
+	<xsd:attribute name="src" type="xsd:anyURI" />
+	<xsd:attribute name="alt" type="xsd:string" />
+	<xsd:attribute name="id" type="xsd:string" use="optional"/>
+	<xsd:attribute name="class" type="xsd:string"  use="optional"/>
+</xsd:complexType>
+
+<xsd:complexType name="Th" mixed="true">
+	<xsd:choice minOccurs="0" maxOccurs="unbounded">
+		<xsd:element name="span" type="Tspan" />
+		<xsd:element name="abbr" type="Tabbr" />
+	</xsd:choice>
+</xsd:complexType>
+
+<xsd:complexType name="Tp" mixed="true">
+	<xsd:choice minOccurs="0" maxOccurs="unbounded">
+		<xsd:element name="span" type="Tspan" />
+		<xsd:element name="abbr" type="Tabbr" />
+		<xsd:element name="a" type="Ta" />
+		<xsd:element name="em" type="Tem" />
+	</xsd:choice>
+</xsd:complexType>
+
+<xsd:complexType name="Tspan" mixed="true">
+	<xsd:choice minOccurs="0" maxOccurs="unbounded">
+		<xsd:element name="abbr" type="Tabbr"/>
+	</xsd:choice>	
+	<xsd:attribute name="lang" type="xsd:string" />
+	<xsd:attribute name="class" type="xsd:string" use="optional" />
+</xsd:complexType>
+
+<xsd:complexType name="Tabbr" >
+	<xsd:simpleContent>
+		<xsd:extension base="xsd:string">
+			<xsd:attribute name="title" type="xsd:string" />
+		</xsd:extension>	
+	</xsd:simpleContent>
+</xsd:complexType>
+
+<xsd:complexType name="Ta" mixed="true">
+	<xsd:choice minOccurs="0">
+		<xsd:element name="span" type="Tspan" />
+		<xsd:element name="abbr" type="Tabbr" />
+	</xsd:choice>
+	<xsd:attribute name="href" type="xsd:anyURI" />
+	<xsd:attribute name="title" type="xsd:string" />
+	<xsd:attribute name="tabindex" type="xsd:positiveInteger" />
+</xsd:complexType>
+
+<xsd:complexType name="Tem" mixed="true">
+	<xsd:choice minOccurs="0" maxOccurs="unbounded">
+		<xsd:element name="span" type="Tspan"/>
+	</xsd:choice>	
+</xsd:complexType>
+
+<xsd:complexType name="Tdl">
+	<xsd:sequence maxOccurs="unbounded">
+		<xsd:element name="dt" type="Th" />
+		<xsd:element name="dd" type="Tdd" />
+	</xsd:sequence>
+	<xsd:attribute name="id" type="xsd:string" use="optional" />
+	<xsd:attribute name="class" type="xsd:string" use="optional" />	
+</xsd:complexType>
+
+<xsd:complexType name="Tdd" mixed="true">
+	<xsd:choice minOccurs="0" maxOccurs="unbounded">
+		<xsd:element name="span" type="Tspan" />
+		<xsd:element name="abbr" type="Tabbr" />
+		<xsd:element name="img" type="Timg" />
+		<xsd:element name="a" type="Ta" />
+		<xsd:element name="em" type="Tem" />
+	</xsd:choice>
+</xsd:complexType>
+
+<xsd:complexType name="Tlink">
+	<xsd:sequence>
+		<xsd:element name="h1" type="Th1link" />
+		<xsd:element name="ul" type="Tullink"  maxOccurs="2"/>
+	</xsd:sequence>
+</xsd:complexType>
+
+<xsd:simpleType name="Th1link">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="Link utili:" />
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:complexType name="Tullink">
+	<xsd:sequence>
+		<xsd:element name="li" type="Tlilink" maxOccurs="unbounded"/>
+	</xsd:sequence>
+	<xsd:attribute name="id" type="Tidlink" />
+</xsd:complexType>
+
+<xsd:simpleType name="Tidlink">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="government" />
+		<xsd:enumeration value="utility" />
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:complexType name="Tlilink">
+	<xsd:sequence>
+	 <xsd:element name="a" type="Ta" />
+	</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="Tinfo">
+	<xsd:sequence>
+		<xsd:element name="h1" type="xsd:string" />
+		<xsd:element name="dl" type="Tdlinfo" />
+	</xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="Tdlinfo">
+	<xsd:sequence maxOccurs="unbounded">
+		<xsd:element name="dt" type="xsd:string" />
+		<xsd:element name="dd" type="Tddlink" />
+	</xsd:sequence>
+	<xsd:attribute name="class" type="xsd:string" fixed="info" />	
+</xsd:complexType>
+
+<xsd:complexType name="Tddlink" mixed="true">
+	<xsd:choice minOccurs="0" maxOccurs="unbounded">
+		<xsd:element name="span" type="Tspan" />
+		<xsd:element name="abbr" type="Tabbr" />
+	</xsd:choice>
+</xsd:complexType>
+
 </xsd:schema>
