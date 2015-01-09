@@ -22,7 +22,7 @@ a:visited{
 }
 
 a:hover{
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 #header {
@@ -40,10 +40,6 @@ a:hover{
 #header h1 a{
   font-weight: bold;
   text-decoration: none;
-}
-
-#header h1 a:hover{
-	text-decoration: underline;
 }
 
 .login_button{
@@ -66,7 +62,7 @@ a:hover{
 }
 
 #breadcrumb {
-  border-radius: 15px;
+  border-radius: 5px;
   height: 2em;
   overflow: hidden;
   background-color: #177245;
@@ -96,7 +92,7 @@ a:hover{
 }
 
 #navmenu li a:hover{
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 #skip{
@@ -120,11 +116,14 @@ a:hover{
   text-decoration: none;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-filter: blur(1px) grayscale(60%); /* Google Chrome e Apple Safari */
-  -moz-filter: blur(1px) grayscale(60%); /* Mozilla Firefox */
-  -ms-filter: blur(1px) grayscale(60%); /* Microsoft Internet Explorer */
-  -o-filter: blur(1px) grayscale(60%); /* Opera */
-  filter: blur(1px) grayscale(60%); /* La proprietà standard */
+  
+  -webkit-filter: saturate(120%) ; /* Google Chrome e Apple Safari */
+  -moz-filter: saturate(120%) ; /* Mozilla Firefox */
+  -ms-filter: saturate(120%) ; /* Microsoft Internet Explorer */
+  -o-filter: saturate(120%); /* Opera */
+  filter: saturate(120%) ; /* La proprietà standard */
+  -webkit-transform: scale(1.02);
+  
 }
 
 #c_mare {
@@ -143,7 +142,7 @@ a:hover{
   background-image: url(../images/HOME_BG_MOUNTAIN.jpg);
 }
 
-h1 #c_cit,#c_mont,#c_mare {
+#c_cit,#c_mont,#c_mare {
   padding-top: 0.5em;
   font-size: 2em;
   font-weight: bold;
@@ -159,13 +158,13 @@ h1 #c_cit,#c_mont,#c_mare {
   border-color: #444;
   color: white;
   font-weight: bold;
+  text-decoration: underline;
 
-  -webkit-filter: saturate(120%) ; /* Google Chrome e Apple Safari */
-  -moz-filter: saturate(120%) ; /* Mozilla Firefox */
-  -ms-filter: saturate(120%) ; /* Microsoft Internet Explorer */
-  -o-filter: saturate(120%); /* Opera */
-  filter: saturate(120%) ; /* La proprietà standard */
-  -webkit-transform: scale(1.02);
+  -webkit-filter: blur(1px) grayscale(60%); /* Google Chrome e Apple Safari */
+  -moz-filter: blur(1px) grayscale(60%); /* Mozilla Firefox */
+  -ms-filter: blur(1px) grayscale(60%); /* Microsoft Internet Explorer */
+  -o-filter: blur(1px) grayscale(60%); /* Opera */
+  filter: blur(1px) grayscale(60%); /* La proprietà standard */
 
 }
 
@@ -227,9 +226,9 @@ h1 #c_cit,#c_mont,#c_mare {
   border: 0 none;
   color: #d7d7d7;
   width: 100px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   -webkit-transition: all 0.7s ease 0s;
   -moz-transition: all 0.7s ease 0s;
   -o-transition: all 0.7s ease 0s;
@@ -388,9 +387,9 @@ input[type=submit]:active {
 /* INIZIO CSS LOCALITA */
 
 #nav {
-  border-radius:10px;
+  border-radius: 5px 0px 0px 5px;
   margin-top:1%;
-  border-right: 4px solid ;
+  border-right: 0px solid ;
   border-color:#2F2F2F;
   float: left;
   width: 20%;
@@ -431,7 +430,7 @@ input[type=submit]:active {
 #content {
   margin-top:1%;
   border-style:solid;
-  border-radius: 10px;
+  border-radius: 5px;
   border-color:black;
   color: #515151;
   height:100%;
@@ -465,7 +464,7 @@ input[type=submit]:active {
 
 #descr_loc {
   border-style:solid;
-  border-radius: 10px;
+  border-radius: 0px 5px 5px 0px;
   margin-top:1%;
   float: left;
   width: 58%;
@@ -534,7 +533,7 @@ input[type=submit]:active {
 
 #aside {
   border-style:solid;
-  border-radius: 10px;
+  border-radius: 5px;
   float: right;
   width: 16.5%;
   margin-top:1%;
