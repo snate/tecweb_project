@@ -1,23 +1,14 @@
-window.onload = init;
 
-function init(){
-  search();
-};
+var searchbar = document.getElementById('place');
 
-function search(){
-  var searchbar = document.getElementById('place');
-  searchbar.value = "Nome località";
-  searchbar.firstTime = "true";
-  searchbar.oldClass = searchbar.className;
+searchbar.value = "Nome località";
+searchbar.className = "emphasized";
+
+searchbar.onfocus = function(){
+  searchbar.value = "";
   searchbar.className = "emphasized";
-  searchbar.onfocus = focusSearch;
-};
-
-function focusSearch(){
-  var searchbar = document.getElementById('place');
-  if(searchbar.firstTime) {
-    searchbar.firstTime = false;
-    searchbar.value = "";
-    searchbar.className = searchbar.oldClass;
-  }
+}
+searchbar.onblur = function(){
+  searchbar.value = "Nome località";
+  searchbar.className = "emphasized";
 };
