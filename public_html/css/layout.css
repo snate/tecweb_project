@@ -103,6 +103,10 @@ a:hover{
   transition: all 0.7s ease 0s;
 }
 
+.emphasized {
+
+}
+
 #navmenu {
   list-style-type: none;
 }
