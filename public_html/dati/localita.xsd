@@ -14,7 +14,7 @@
 
 <xsd:complexType name="Tplace">
 	<xsd:sequence>
-		<xsd:element name="descrizione" type="Tdescrizione" />
+		<xsd:element name="contenuto" type="Tcontenuto" />
 		<xsd:element name="link" type="Tlink" />
 		<xsd:element name="info" type="Tinfo" />
 	</xsd:sequence>
@@ -29,6 +29,13 @@
 	</xsd:restriction>
 </xsd:simpleType>
 
+<xsd:complexType name="Tcontenuto">
+	<xsd:sequence>
+		<xsd:element name="descrizione" type="Tdescrizione" />
+		<xsd:element name="commento" type="Tcommento" minOccurs="0" />
+	</xsd:sequence>
+</xsd:complexType>
+
 <xsd:complexType name="Tdescrizione">
 	<xsd:sequence>
 		<xsd:element name="img" type="Timg" />
@@ -39,7 +46,7 @@
 			<xsd:element name="p" type="Tp" />
 			<xsd:element name="img" type="Timg"/>
 			<xsd:element name="dl" type="Tdl" />
-		</xsd:choice>	
+		</xsd:choice>
 	</xsd:sequence>
 </xsd:complexType>
 
@@ -62,7 +69,7 @@
 		<xsd:element name="span" type="Tspan" />
 		<xsd:element name="abbr" type="Tabbr" />
 		<xsd:element name="a" type="Ta" />
-		<xsd:element name="em" type="Tem" />
+		<xsd:element name="em" type="Th" />
 	</xsd:choice>
 </xsd:complexType>
 
@@ -83,19 +90,13 @@
 </xsd:complexType>
 
 <xsd:complexType name="Ta" mixed="true">
-	<xsd:choice minOccurs="0">
+	<xsd:choice minOccurs="0" maxOccurs="unbounded">
 		<xsd:element name="span" type="Tspan" />
 		<xsd:element name="abbr" type="Tabbr" />
 	</xsd:choice>
 	<xsd:attribute name="href" type="xsd:anyURI" />
 	<xsd:attribute name="title" type="xsd:string" />
 	<xsd:attribute name="tabindex" type="xsd:positiveInteger" />
-</xsd:complexType>
-
-<xsd:complexType name="Tem" mixed="true">
-	<xsd:choice minOccurs="0" maxOccurs="unbounded">
-		<xsd:element name="span" type="Tspan"/>
-	</xsd:choice>	
 </xsd:complexType>
 
 <xsd:complexType name="Tdl">
@@ -113,7 +114,7 @@
 		<xsd:element name="abbr" type="Tabbr" />
 		<xsd:element name="img" type="Timg" />
 		<xsd:element name="a" type="Ta" />
-		<xsd:element name="em" type="Tem" />
+		<xsd:element name="em" type="Th" />
 	</xsd:choice>
 </xsd:complexType>
 
@@ -170,6 +171,14 @@
 		<xsd:element name="span" type="Tspan" />
 		<xsd:element name="abbr" type="Tabbr" />
 	</xsd:choice>
+</xsd:complexType>
+
+<xsd:complexType name="Tcommento">
+	<xsd:sequence>
+		<xsd:element name="corpo" type="xsd:string" />
+		<xsd:element name="dataPubblicazione" type="xsd:date" />
+	</xsd:sequence>
+	<xsd:attribute name="user" type="xsd:string" use="required" />
 </xsd:complexType>
 
 </xsd:schema>

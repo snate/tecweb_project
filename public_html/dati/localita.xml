@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="localita.xsl"?>
 <localita xmlns="http://www.localita.com"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
 xsd:schemaLocation="http://www.localita.com localita.xsd">
 
 <place categoria="Città">
+	<contenuto>
 	<descrizione>
 		<img src="../images/london_1.jpg" alt="Foto di Londra" id="img_presentazione" />
 		<h1>Città</h1>
@@ -96,6 +98,15 @@ xsd:schemaLocation="http://www.localita.com localita.xsd">
 		</dd>
 		</dl>
 	</descrizione>	
+		<commento user="Nate">
+			<corpo>
+			CAZZETTE, Terry B! - Blind Heart (Radio Edit)
+			</corpo>
+			<dataPubblicazione>
+			2012-10-21
+			</dataPubblicazione>
+		</commento>
+  	</contenuto>	
 		 
 	<link>
 		<h1>Link utili:</h1>
@@ -129,6 +140,7 @@ xsd:schemaLocation="http://www.localita.com localita.xsd">
 </place>
 
 <place categoria="Città">	
+	<contenuto>
 	<descrizione>
 		<img src="../images/parigi_0.jpg" alt="Foto di Parigi" id="img_presentazione" />
 		<h1>Città</h1>
@@ -191,6 +203,7 @@ xsd:schemaLocation="http://www.localita.com localita.xsd">
 		</p>
 		<img src="../images/parigi_3.jpg" alt="Louvre di Parigi" class="img_content"/>
 	</descrizione>
+	</contenuto>
 	
 	<link>
 		<h1>Link utili:</h1>
@@ -248,6 +261,7 @@ xsd:schemaLocation="http://www.localita.com localita.xsd">
 </place>
 	
 <place categoria="Città"> 	  
+	<contenuto>
 	<descrizione>
 		<img src="../images/praga_0.jpg" alt="Foto di Praga" id="img_presentazione" />
         <h1>Città</h1>
@@ -322,6 +336,7 @@ xsd:schemaLocation="http://www.localita.com localita.xsd">
 		</p>
 		<img src="../images/praga_4.jpg" alt="Karlovy Lázně, la discoteca più grande dell'est Europa" class="img_content"/>
 	</descrizione>
+	</contenuto>
 	
 	<link>
 		<h1>Link utili:</h1>
@@ -374,6 +389,7 @@ xsd:schemaLocation="http://www.localita.com localita.xsd">
 </place>
 
 <place categoria="Mare">	  
+	<contenuto>
 	<descrizione>
 		<img src="../images/zante_pres.jpg" alt="Foto di Zante" id="img_presentazione" />
 		<h1>Mare</h1>
@@ -401,6 +417,16 @@ xsd:schemaLocation="http://www.localita.com localita.xsd">
         </p>
 		<img src="../images/zante_2.png" alt="Paint Party al Rescue Club" class="img_content"/>
 	</descrizione>
+	
+		<commento user="John Reese">
+			<corpo>
+			Stiamo come i pazzi
+			</corpo>
+			<dataPubblicazione>
+			2012-06-12
+			</dataPubblicazione>
+		</commento>
+	</contenuto>
 	
 	<link>
 		<h1>Link utili:</h1>
@@ -448,6 +474,7 @@ xsd:schemaLocation="http://www.localita.com localita.xsd">
 </place>
 
 <place categoria="Montagna">  
+	<contenuto>
 	<descrizione>
 		<img src="../images/campiglio_0.jpg" alt="Foto di Madonna di Campiglio" id="img_presentazione" />
 		<h1>Montagna</h1>
@@ -488,6 +515,7 @@ xsd:schemaLocation="http://www.localita.com localita.xsd">
 		</p>
 		<img src="../images/campiglio_vitanotturna.jpg" alt="Vita notturna Madonna di Campiglio" class="img_content"/>
 	</descrizione>
+	</contenuto>
 	
 	<link>
 		<h1>Link utili:</h1>
