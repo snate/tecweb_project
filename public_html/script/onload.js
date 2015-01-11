@@ -8,6 +8,8 @@ function search(){
   var searchbar = document.getElementById('place');
   searchbar.value = "Nome località";
   searchbar.firstTime = "true";
+  searchbar.oldClass = searchbar.className;
+  searchbar.className = "emphasized";
   searchbar.onfocus = focusSearch;
 };
 
@@ -16,5 +18,6 @@ function focusSearch(){
   if(searchbar.firstTime) {
     searchbar.firstTime = false;
     searchbar.value = "";
+    searchbar.className = searchbar.oldClass;
   }
 };
