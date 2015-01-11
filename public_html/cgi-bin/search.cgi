@@ -1,21 +1,12 @@
 #!/usr/bin/perl -w
-
-$buffer = $ENV{'QUERY_STRING'};
+use CGI;
+use CGI ":all";
+use CGI::Carp qw(fatalsToBrowser);
 my %input;
 my $url;
-my $page;
-@pairs = split(/&/, $buffer);
-foreach $pair (@pairs) {
-  ($name, $value) = split(/=/, $pair);
-  $value =~ tr/+/ /;
-  $value =~ s/%([a-fA-F0-9][a-fA-F0-9])/pack("C", hex($1))/g;
-  $value = lc $value;
-  $name =~ tr/+/ /;
-  $name =~ s/%([a-fA-F0-9][a-fA-F0-9])/pack("C",hex($1))/g;
-  $input{$name} = $value;
-}
+my $page = new CGI;
 
-local($place) = $input{"place"};
+my $place = lc $page->param('place');
 if($place eq "paris" || $place eq "parigi") {
   $url = "../paris.xhtml";
   print "Location: $url\n\n";
@@ -37,10 +28,6 @@ if($place eq "prague" || $place eq "praga") {
   $url = "../praga.xhtml";
   print "Location: $url\n\n";
 }
-use CGI;
-use CGI ":all";
-use CGI::Carp qw(fatalsToBrowser);
-$page = new CGI;
 #die "Fatal errors are now sent to browser";
 print $page->header(-charset=>'UTF-8'),
       $page->start_html(
@@ -81,7 +68,7 @@ print $page->header(-charset=>'UTF-8'),
       $page->div({-id=>'breadcrumb'},
         ul({-id=>'navmenu'},
           li(
-            a({-href=>'homepage.xhtml',-title=>'Pagina principale'},
+            a({-href=>'../homepage.xhtml',-title=>'Pagina principale'},
               span({lang=>'en'},
                 "Home"
               ),
@@ -103,24 +90,24 @@ print $page->header(-charset=>'UTF-8'),
       $page->div({-id=>'nav'},
         ul(
           li(
-            a({-href=>'homepage.xhtml',-title=>'Pagina principale'},
+            a({-href=>'../homepage.xhtml',-title=>'Pagina principale'},
               span({-lang=>'en'},
                 "Home"
               ),
             ),
             ul(
               li(
-                a({-href=>'mare.xhtml',-title=>'Pagina delle località marittime'},
+                a({-href=>'../mare.xhtml',-title=>'Pagina delle località marittime'},
                   "Mare"
                 ),
               ),
               li(
-                a({-href=>'mare.xhtml',-title=>'Pagina delle località cittadine'},
+                a({-href=>'../citta.xhtml',-title=>'Pagina delle località cittadine'},
                   "Citt&#224;"
                 ),
               ),
               li(
-                a({-href=>'montagna.xhtml',-title=>'Pagina delle località montane'},
+                a({-href=>'../montagna.xhtml',-title=>'Pagina delle località montane'},
                   "Montagna"
                 ),
               ),
@@ -133,7 +120,12 @@ print $page->header(-charset=>'UTF-8'),
           "Nessun risultato trovato",
         ),
         p(
-          "Siamo spiacenti, prova a riformulare la tua ricerca o torna alla homepage",
+          "Siamo spiacenti, prova a riformulare la tua ricerca o torna alla",
+          a({-href=>'../homepage.xhtml',-title=>'Pagina principale'},
+            span({-lang=>'en'},
+              "homepage",
+            ),
+          ),
         ),
       ), "\n",
       $page->div({-id=>'footer'},
