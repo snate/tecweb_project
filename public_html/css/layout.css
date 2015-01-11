@@ -63,7 +63,7 @@ a:hover{
   padding: 0 0.8em;
   height: 2.2em;
 
-  /* 
+  /*
   background-color: #E0E0E0;
   border: 0.12em solid #CACACA;
   overflow: hidden;
@@ -104,7 +104,7 @@ a:hover{
 }
 
 .emphasized {
-
+  font-style: italic;
 }
 
 #navmenu {
@@ -154,7 +154,7 @@ a:hover{
   margin: 0.14em;
   display: block;
   background-color: #2ECC71;
-  border-radius: 0.14em; 
+  border-radius: 0.14em;
   color: #ECF0F1;
   text-decoration: none;
   text-transform: uppercase;
