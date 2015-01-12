@@ -8,20 +8,20 @@
     <html xmlns="http://www.w3.org/1999/xhtml"  xml:lang="it" lang="it">
       <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Visualizzo commenti</title>
-        <meta name="title" content="Commenti su localita" />
-        <meta name="description" content="Prova per XSLT" />
-        <meta name="keywords" content="commenti" />
+        <title>Visualizza commenti</title>
+        <meta name="title" content="Commenti sulle localita" />
+        <meta name="description" content="Commenti sulle località" />
+        <meta name="keywords" content="commenti, What To Visit, località" />
         <meta name="language" content="italian it" />
-        <meta name="author" content="Nate" />
+        <meta name="author" content="Graziano Grespan, Carlo Munarini, Federica Speggiorin, Sebastiano Valle" />
       </head>
       <body>
-        <p>Hello</p>
         <xsl:for-each select="c:comments/c:localita">
-          <h1>
-            <xsl:value-of select="@nome" />
-          </h1>
-          <xsl:for-each select="c:comment">
+			<div>
+			<xsl:attribute name="id">
+				nome_<xsl:value-of select="@nome" />
+			</xsl:attribute>
+			<xsl:for-each select="c:comment">
             <p>
               <xsl:value-of select="@user" />
               <xsl:text> - </xsl:text>
@@ -33,6 +33,7 @@
               <xsl:value-of select="c:corpo" />
             </p>
           </xsl:for-each>
+		  </div>
         </xsl:for-each>
       </body>
     </html>
