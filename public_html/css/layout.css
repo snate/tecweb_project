@@ -409,6 +409,16 @@ input[type=submit]:active {
 }
 
 #content {
+  float: left;
+  color: #444;
+  margin-left: 2%;
+  width: 78%;
+}
+
+#content h1 {
+  font-size: 3em;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 #content ul {
@@ -459,7 +469,8 @@ input[type=submit]:active {
 
 #descr_loc h3 {
   font-family: 'Roboto';
-  font-size: 1em;
+  font-size: 1.4em;
+  padding-top: 0.5em;
 }
 
 #descr_loc dt {
@@ -477,10 +488,18 @@ input[type=submit]:active {
 }
 
 .img_content {
-  width: 98%;
+  width: 25em;
+  height: 10em;
+  float: left;
+  clear: left;
+  border-radius: 0.2em;
+  margin: 1em 1em 0.8em 0;
+
+  /* OLD STYLE */
+  /* width: 98%;
   height: 17em;
   border-radius: 0.2em;
-  margin: 1em auto;
+  margin: 1em auto; */
 }
 
 #img_presentazione {
@@ -587,17 +606,6 @@ input[type=submit]:active {
 	text-decoration: underline;
 }
 
-#content {
-  margin-top:1%;
-  border-style:solid;
-  border-radius: 5px;
-  border-color:black;
-  color: #515151;
-  height:100%;
-  background-color: white;
-  padding-left: 25%;
-}
-
 #content ul {
   padding-top:1%;
   padding-left: 2%;
@@ -620,11 +628,6 @@ input[type=submit]:active {
 
 #content #mappa_sito ul ul{
 	list-style-type: none;
-}
-
-#descr_loc h3 {
-  font-size: 1.5em;
-  padding-top: 1em;
 }
 
 #descr_loc dt {
