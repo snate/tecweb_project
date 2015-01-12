@@ -8,24 +8,24 @@ my $page = new CGI;
 
 my $place = lc $page->param('place');
 if($place eq "paris" || $place eq "parigi") {
-  $url = "../paris.xhtml";
+  $url = "../paris.html";
   print "Location: $url\n\n";
 }
 if($place eq "london" || $place eq "londra") {
-  $url = "../london.xhtml";
+  $url = "../london.html";
   print "Location: $url\n\n";
 }
 if($place eq "zakynthos" || $place eq "zante") {
-  $url = "../zakynthos.xhtml";
+  $url = "../zakynthos.html";
   print "Location: $url\n\n";
 }
 if($place eq "madonna di campiglio" || $place eq "madonnadicampiglio" ||
     $place eq "madonna") {
-  $url = "../madonnadicampiglio.xhtml";
+  $url = "../madonnadicampiglio.html";
   print "Location: $url\n\n";
 }
 if($place eq "prague" || $place eq "praga") {
-  $url = "../praga.xhtml";
+  $url = "../praga.html";
   print "Location: $url\n\n";
 }
 #die "Fatal errors are now sent to browser";
@@ -60,7 +60,7 @@ print $page->header(-charset=>'UTF-8'),
       ),
       $page->div({-id=>'header'},
         h1(
-          a({-href=>'homepage.xhtml',-title=>'Pagina principale'},
+          a({-href=>'homepage.html',-title=>'Pagina principale'},
             "WHAT TO VISIT",
           )
         ),
@@ -68,7 +68,7 @@ print $page->header(-charset=>'UTF-8'),
       $page->div({-id=>'breadcrumb'},
         ul({-id=>'navmenu'},
           li(
-            a({-href=>'../homepage.xhtml',-title=>'Pagina principale'},
+            a({-href=>'../homepage.html',-title=>'Pagina principale'},
               span({lang=>'en'},
                 "Home"
               ),
@@ -90,24 +90,24 @@ print $page->header(-charset=>'UTF-8'),
       $page->div({-id=>'nav'},
         ul(
           li(
-            a({-href=>'../homepage.xhtml',-title=>'Pagina principale'},
+            a({-href=>'../homepage.html',-title=>'Pagina principale'},
               span({-lang=>'en'},
                 "Home"
               ),
             ),
             ul(
               li(
-                a({-href=>'../mare.xhtml',-title=>'Pagina delle località marittime'},
+                a({-href=>'../mare.html',-title=>'Pagina delle località marittime'},
                   "Mare"
                 ),
               ),
               li(
-                a({-href=>'../citta.xhtml',-title=>'Pagina delle località cittadine'},
+                a({-href=>'../citta.html',-title=>'Pagina delle località cittadine'},
                   "Citt&#224;"
                 ),
               ),
               li(
-                a({-href=>'../montagna.xhtml',-title=>'Pagina delle località montane'},
+                a({-href=>'../montagna.html',-title=>'Pagina delle località montane'},
                   "Montagna"
                 ),
               ),
@@ -121,7 +121,7 @@ print $page->header(-charset=>'UTF-8'),
         ),
         p(
           "Siamo spiacenti, prova a riformulare la tua ricerca o torna alla",
-          a({-href=>'../homepage.xhtml',-title=>'Pagina principale'},
+          a({-href=>'../homepage.html',-title=>'Pagina principale'},
             span({-lang=>'en'},
               "homepage",
             ),
