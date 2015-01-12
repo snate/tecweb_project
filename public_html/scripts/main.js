@@ -1,12 +1,17 @@
-window.onload = init;
+// GLOBALS
 
-function init(){
-    search();
-  };
-  var searchbar = document.getElementById('place');
+var geo = require(['geolocation'], function (geolocation){});
+var searchbar = document.getElementById('place');
+
+//FUNCTIONS
+
+window.onload = load;
+
+function load(){  //ho dovuto rinominare la funzione a causa di conflitti con altre libs
+  search();
+};
 
 function search(){
-  var searchbar = document.getElementById('place');
   searchbar.value = "Nome località";
   searchbar.holder = true;
   searchbar.oldClass = searchbar.className;   //salvo vecchia classe (estensibilità)
@@ -16,7 +21,6 @@ function search(){
 };
 
 function searchFocus(){
-  var searchbar = document.getElementById('place');
   if(searchbar.holder) {
     searchbar.value = "";
     searchbar.className = searchbar.oldClass;
@@ -24,7 +28,6 @@ function searchFocus(){
 };
 
 function searchBlur(){
-  var searchbar = document.getElementById('place');
   if(searchbar.value == "") {
     searchbar.value = "Nome località";
     searchbar.className += " emphasized";
