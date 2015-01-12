@@ -3,7 +3,7 @@ window.onload = load;
 var lc=document.getElementById('nav_selected').innerHTML;
 var loc=lc.toLowerCase(lc);
 
-function load(){ 
+function load(){
   visualizza_c();
 };
 
@@ -13,7 +13,7 @@ function visualizza_c(){
 	if (window.ActiveXObject || // codice per IE
 			xhttp.responseType == "msxml-document") {
 		text = xml.transformNode(xsl);
-		content=text.getElementById("nome_".loc);
+		content=text.getElementById("nome_"+loc);
 		document.getElementById("comments").innerHTML = content;
 	} // codice per Chrome, Firefox, Opera, etc.
 	else if (document.implementation &&
@@ -21,7 +21,7 @@ function visualizza_c(){
 		xsltProcessor = new XSLTProcessor();
 		xsltProcessor.importStylesheet(xsl);
 		text= xsltProcessor.transformToFragment(xml, document);
-		content=text.getElementById("nome_".loc);
+		content=text.getElementById("nome_"+loc);
 		document.getElementById("comments").appendChild(content);
 	}
 }
