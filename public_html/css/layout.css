@@ -1,6 +1,9 @@
-﻿html, body {
+﻿/*TO DO > ALLINEARE LABEL SEARCHBAR CON CASELLA*/
+
+html, body {
   font-family: Open Sans Condensed, Arial, Helvetica, serif;
   background-color: /* #2ECC71 */ #ECF0F1;
+  color: #444;
 }
 
 * {
@@ -61,17 +64,8 @@ a:hover{
   /* border-bottom: 0.12em solid #CACACA; */
   overflow: hidden;
   padding: 0 0.8em;
-  height: 2.2em;
-
-  /*
-  background-color: #E0E0E0;
-  border: 0.12em solid #CACACA;
-  overflow: hidden;
-  margin: 0.4em 0.8em;
-  padding: 0 0.2em;
-  border-radius: 0.3em;
-  height: 2em;
-  */
+  height: 1.8em;
+  font-family: 'Roboto';
 }
 
 #breadcrumb #search {
@@ -79,23 +73,27 @@ a:hover{
   margin-top: 0.1em;
 }
 
+#breadcrumb #search label {
+  font-size: 0.84em;
+}
+
 #breadcrumb #search input[type="text"]{
-  background: url(../images/icons/search-white.png) no-repeat 10px 6px #444;
-  height: 1.95em;
+  background: url(../images/icons/search-white.png) no-repeat 0.6em 0.24em #444;
+  height: 1.5em;
   margin: 0.2em;
-  padding-left: 35px;
-  border: 0 none;
+  padding-left: 2.4em;
+  border: 0;
   color: #d7d7d7;
-  width: 100px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  width: 7em;
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  border-radius: 0.3em;
 }
 
 #breadcrumb #search input[type="text"]:focus {
-  background: url(../images/icons/search-dark.png) no-repeat 10px 6px #fcfcfc;
+  background: url(../images/icons/search-dark.png) no-repeat 0.6em 0.24em #fcfcfc;
   color: #6a6f75;
-  width: 200px;
+  width: 13em;
   outline: none; // rimuove il bordo blu dovuto al focus su input
   -webkit-transition: all 0.7s ease 0s;
   -moz-transition: all 0.7s ease 0s;
@@ -109,14 +107,21 @@ a:hover{
 
 #navmenu {
   list-style-type: none;
+  float: left;
+  margin-top: 0.2em;
 }
 
 #navmenu li {
   float: left;
-  height: 2em;
+  height: 1.6em;
   padding: 0 0.8em;
-  font-size: 1.4em;
+  font-size: 0.9em;
+  font-weight: 700;
+
+  /*
+  font-size: 1em;
   text-transform: uppercase;
+  */
 }
 
 #navmenu li:first-child {
@@ -197,7 +202,8 @@ a:hover{
 #footer {
   clear: both;
   width: 100%;
-  background-color: #2C3E50;
+  background-color: /* #2C3E50 */ #34495E;
+  height: 2.5em;
 }
 
 #footer ul{
@@ -382,6 +388,9 @@ input[type=submit]:active {
 /* INIZIO CSS LOCALITA */
 
 #nav {
+  float: left;
+  width: 20%;
+  background-color: #444;
 }
 
 #nav ul {
@@ -421,15 +430,36 @@ input[type=submit]:active {
 }
 
 #descr_loc {
+  float: left;
+  width: 60%;
+  padding: 0.5em 1%;
+  overflow: hidden;
+  color: #444;
 }
 
 #descr_loc h1 {
+  display: block;
+  float: right;
+  position: relative;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0.3em 2%;
+  padding: 0.1em 0.6em;
+  color: #FFF;
+  font-size: 1em;
+  background-color: #2ECC71;
+  border-radius: 0.3em;
 }
 
 #descr_loc h2 {
+  font-size: 3em;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 #descr_loc h3 {
+  font-family: 'Roboto';
+  font-size: 1em;
 }
 
 #descr_loc dt {
@@ -438,13 +468,26 @@ input[type=submit]:active {
 #descr_loc a {
 }
 
+#descr_loc p {
+  font-family: 'Roboto';
+  font-size: 0.9em;
+}
+
 #descr_loc a:visited {
 }
 
 .img_content {
+  width: 98%;
+  height: 17em;
+  border-radius: 0.2em;
+  margin: 1em auto;
 }
 
 #img_presentazione {
+  width: 98%;
+  height: 15em;
+  border-radius: 0.2em;
+  overflow: hidden;
 }
 
 #aside {
@@ -470,3 +513,185 @@ input[type=submit]:active {
 
 .square {
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#nav ul {
+  margin-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 1em;
+  list-style-type:none;
+}
+
+#nav li {
+  padding-left: 1.4em;
+  color: white;
+}
+
+#nav_selected {
+  padding-left: 2em;
+  background-image: url(../images/icons/n_pos.png);
+  background-repeat: no-repeat;
+  background-position: -0.3em;
+}
+
+#nav a{
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#nav a:hover{
+	text-decoration: underline;
+}
+
+#content {
+  margin-top:1%;
+  border-style:solid;
+  border-radius: 5px;
+  border-color:black;
+  color: #515151;
+  height:100%;
+  background-color: white;
+  padding-left: 25%;
+}
+
+#content ul {
+  padding-top:1%;
+  padding-left: 2%;
+}
+#content ul li a{
+  color: blue;
+  font-weight:bold;
+}
+#content a:visited{
+  color:purple;
+}
+
+#content #mappa_sito {
+	padding-top: 2em;
+}
+
+#content #mappa_sito ul{
+	padding-top: 0em;
+}
+
+#content #mappa_sito ul ul{
+	list-style-type: none;
+}
+
+#descr_loc h3 {
+  font-size: 1.5em;
+  padding-top: 1em;
+}
+
+#descr_loc dt {
+  font-weight: bold;
+}
+
+#descr_loc a {
+  color: blue;
+}
+
+#descr_loc a:visited {
+  color: purple;
+}
+
+#aside {
+  border-style:solid;
+  border-radius: 5px;
+  float: right;
+  width: 16.5%;
+  margin-top:1%;
+  padding-left: 1%;
+  padding-bottom:1%;
+  color: black;
+  background-color: #CFE5DD;
+}
+
+#aside h1 {
+  padding-top: 0.38em;
+  padding-bottom: 0.5em;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+#aside a{
+  color: blue;
+  background-image: url(../images/icons/Link_out.png);
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: right center;
+  padding-right: 1em;
+  font-weight:normal;
+}
+
+#aside a:visited {
+  color: purple;
+}
+
+#government li,#utility li {
+  list-style-type: none;
+}
+
+.info dt {
+  float: left;
+  margin-right: 0.3em;
+}
+
+.info dd {
+  float. left;
+  clear: right;
+}
+
+.square {
+  vertical-align: super;
+  font-size: 0.7em;
+}
+
+
+
+
