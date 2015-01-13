@@ -45,6 +45,7 @@ a:hover{
 }
 
 .login_button{
+  visibility: hidden;
   float: right;
   margin-top: 0.35em;
   margin-right: 0.9em;
@@ -389,8 +390,13 @@ input[type=submit]:active {
 
 #nav {
   float: left;
-  width: 20%;
+  /* width: 20%; */
+  /* NAV A SX NON STACCATO */
   background-color: #444;
+
+  width: 19%;
+  margin: 0.5em 0 0 1%;
+  border-radius: 0.2em;
 }
 
 #nav ul {
@@ -510,6 +516,14 @@ input[type=submit]:active {
 }
 
 #aside {
+  border-radius: 0.2em;
+  float: right;
+  width: 16%;
+  margin: 0.5em 1% 0 0;
+  padding: 0 0 1% 1%;
+  padding-bottom: 1%;
+  color: #444;
+  background-color: #E0E0E0;
 }
 
 #aside h1 {
@@ -640,18 +654,6 @@ input[type=submit]:active {
 
 #descr_loc a:visited {
   color: purple;
-}
-
-#aside {
-  border-style:solid;
-  border-radius: 5px;
-  float: right;
-  width: 16.5%;
-  margin-top:1%;
-  padding-left: 1%;
-  padding-bottom:1%;
-  color: black;
-  background-color: #CFE5DD;
 }
 
 #aside h1 {

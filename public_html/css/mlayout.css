@@ -1,7 +1,9 @@
-html {
+/*TO DO > ALLINEARE LABEL SEARCHBAR CON CASELLA*/
+
+html, body {
   font-family: Open Sans Condensed, Arial, Helvetica, serif;
-  color: #e6fff6;
-  background: #212330;
+  background-color: /* #2ECC71 */ #ECF0F1;
+  color: #444;
 }
 
 * {
@@ -10,182 +12,199 @@ html {
   border: 0;
 }
 
+a:link{
+  color: #27AE60;
+}
+
+a:visited{
+  color: #2ECC71;
+}
+
+a:hover{
+  color: #2ECC71;
+}
+
 #header {
+  background-color: #27AE60;
+  height: 4em;
   overflow: hidden;
-  height: 2.8em;
-  background-color: yellow;
 }
 
 #header h1 {
-  position: relative;
   float: left;
-  color: #fff;
-  font-weight: normal;
+  color: #E0E0E0;
   text-transform: uppercase;
-  font-size: 2em;
-  padding: 0 0.5em;
+  font-size: 3em;
+  font-weight: normal;
+  width: 5em;
+  margin: 0 auto;
+
+  padding: 0;
+}
+
+#header h1 a{
+  color: #E0E0E0;
+
+  text-decoration: none;
+}
+
+.login_button{
+  float: right;
+  margin-top: 0.35em;
+  margin-right: 0.9em;
+  padding: 0.2em 1.4em;
+  color: white;
+  font-size: 1.1em;
+  background-color: #2ECC71;
+  border-radius: 0.3em;
+}
+
+.login_button:active{
+
 }
 
 #breadcrumb {
-  height: 2em;
-  overflow: hidden;
-  background-color: #e6fff6;
-  padding: 0 0.8em;
-  color: #212330;
+  height: 0;
+  visibility: hidden;
 }
-
-.navmenu {
-  list-style: none;
-}
-
-.navmenu li {
-  float: left;
-  height: 2em;
-  padding: 0 0.8em;
-  font-size: 1.4em;
-  text-transform: uppercase;
-}
-
-.navmenu li:first-child {
-  padding: 0 0.8em 0 0;
-}
-
-.navmenu li a {
-  color: #14996A;
-  text-decoration: none;
-  font-weight: 700;
-}
-
-.navmenu li a:hover {
-  text-decoration: underline;
-}
-
-.categoria {
-  display: block;
-  float: left;
-  width: 33.2%;
-  margin-right: 0.2%;
-  height: 700px;
-  text-align: center;
-  text-decoration: none;
-  background-color: #14996A;
-  background-position: center;
-  background-repeat: no-repeat;
-  backgound-size: 100%;
-}
-
-.c_cit {
-  background-image: url(../images/HOME_BG_CITY.jpg);
-}
-
-.c_mont {
-  margin-right: 0;
-  background-image: url(../images/HOME_BG_MOUNTAIN.jpg);
-  background-position-x: right;
-}
-
-.c_mare {
-  background-image: url(../images/HOME_BG_SEA.jpg);
-  background-position-y: -6em;
-}
-
-h1 .categoria {
-  padding-top: 0.5em;
-  color: #e6fff6;
-  font-size: 2em;
-  font-weight: normal;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 1em;
-}
-
-h1 .categoria:hover{
-  color: #212330;
-}
-
-h1 .categoria:visited {
-  color: red;
-}
-
-h1 .categoria:active {
-  color: yellow;
-}
-
-#footer {
-  display: inline-block;
-  padding: 0.5em;
-  background-color: #212330;
-}
-
-.footer_progetto, .footer_privacy {
-  width: 30%;
-  padding-right: 1%;
-  float: left;
-}
-
-.footer_privacy {
-  padding: 0 0.5%;
-}
-
-.footer_info {
-  width: 18%;
-  padding: 0 0.5%;
-  float: left;
-}
-
-#footer h1 {
-  color: #fff;
-  font-weight: normal;
-  text-transform: uppercase;
-  font-size: 1.4em;
-}
-
-.footer_info ul {
-  list-style: none;
-  padding-left: 0.4em;
-}
-
-.footer_info ul li {
-  font-size: 1em;
-}
-
-.footer_info ul li a {
-  color: #e6fff6;
-  text-decoration: none;
-}
-
-.footer_info ul li a:hover {
-  text-decoration:underline;
-}
-
-/* SEARCH-BAR */
 
 #breadcrumb #search {
-  float: right;
+}
+
+#breadcrumb #search label {
 }
 
 #breadcrumb #search input[type="text"]{
-  background: url(../images/icons/search-white.png) no-repeat 10px 6px #444;
-  height: 1.95em;
-  margin: 0.25em;
-  padding-left: 35px;
-  border: 0 none;
-  color: #d7d7d7;
-  width: 100px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
+}
+
+#breadcrumb #search input[type="text"]:focus {
+}
+
+.emphasized {
+}
+
+#navmenu {
+}
+
+#navmenu li {
+}
+
+#navmenu li:first-child {
+}
+
+#navmenu li a {
+}
+
+#navmenu li a:hover{
+}
+
+#skip{
+}
+
+.nomeprovvisoriocategoriehome {
+  float: left;
+  clear: both;
+  width: 100%;
+  height: 6em;
+  background-color: #000000;
+  background-position: center;
+  background-size: 100%;
+
+  margin: 0;
+  border-radius: 0;
+  text-align: left;
+}
+
+.nomeprovvisoriocategoriehome a {
+  display: block;
+  background-color: #2ECC71;
+  border-radius: 0 0.2em 0.2em 0;
+  color: #ECF0F1;
+  width: 6em;
+  padding-left: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 0.8em;
+
+  margin: 0.3em 0;
+}
+
+#c_mare {
+  background-image: url(../images/HOME_BG_SEA.png);
+  background-position: center -10em;
+/* ATTENZIONE IMG IN PNG - PESA - CAMBIARE POI */
+}
+
+#c_cit {
+  background-image: url(../images/HOME_BG_CITY.png);
+/* ATTENZIONE IMG IN PNG - PESA - CAMBIARE POI */
+}
+
+#c_mont {
+  background-image: url(../images/HOME_BG_MOUNTAIN.png);
+/* ATTENZIONE IMG IN PNG - PESA - CAMBIARE POI */
+}
+
+#c_cit,#c_mont,#c_mare {
+}
+
+#c_cit:hover, #c_mont:hover, #c_mare:hover{
+  background-color: #ffffff;
+  background-size: 110%;
   -webkit-transition: all 0.7s ease 0s;
   -moz-transition: all 0.7s ease 0s;
   -o-transition: all 0.7s ease 0s;
   transition: all 0.7s ease 0s;
 }
 
-#breadcrumb #search input[type="text"]:focus {
-  background: url(../images/icons/search-dark.png) no-repeat 10px 6px #fcfcfc;
-  color: #6a6f75;
-  width: 200px;
-  outline: none; // rimuove il bordo blu dovuto al focus su input
+.foothome {
+  position: relative;
+  bottom: 0;
+}
+
+#footer {
+  clear: both;
+  width: 100%;
+  background-color: /* #2C3E50 */ #34495E;
+  height: 2.5em;
+}
+
+#footer ul{
+  list-style-type: none;
+  margin-top: 0.5em;
+  float: left;
+}
+
+#footer li{
+  font-size: 1em;
+  border-right: solid;
+  border-color: #27AE60;
+  border-width: 1px;
+  display:inline;
+  padding: 0 0.8em;
+}
+
+#footer li:first-child{
+  margin-left: 1em;
+}
+
+#footer li:last-child{
+  border: none;
+}
+
+#footer a{
+  text-decoration: none;
+}
+
+#footer a:hover{
+  text-decoration: underline;
+}
+
+#xhtml_valid{
+  margin-top: 0.2em;
+  float:right;
+  padding-right: 0.7em;
 }
 
 /* INIZIO CSS PAGINA DI LOGIN */
@@ -329,147 +348,304 @@ input[type=submit]:active {
   color: #545353;
   font-size: 0.7em;
 }
+
 /* INIZIO CSS LOCALITA */
-
-
 
 #nav {
   float: left;
-  width: 20%;
-  padding-right: 1%;
-  background-color: #212330;
+  background-color: #444;
+
+  width: 0;
+  height: 0;
+  visibility: hidden;
 }
 
 #nav ul {
-  margin: 0.5em;
-  font-weight: normal;
-  text-transform: uppercase;
-  font-size: 1.5em;
 }
 
 #nav li {
-  padding-left: 1.4em;
-  color: #fff;
 }
 
-
-
-#nav .nav_mare {
-  background-image: url(../images/icons/n_mare.png);
-  background-repeat: no-repeat;
-  background-position: left 0.1em;
+#nav_selected {
 }
 
-#nav .nav_cit {
-  background-image: url(../images/icons/n_cit.png);
-  background-repeat: no-repeat;
-  background-position: left 0.1em;
+#nav a{
 }
 
-#nav .nav_mont {
-  background-image: url(../images/icons/n_mont.png);
-  background-repeat: no-repeat;
-  background-position: left 0.1em;
-}
-
-#nav .nav_selected {
-  padding-left: 1.8em;
-  background-image: url(../images/icons/n_pos.png);
-  background-repeat: no-repeat;
-  background-position: 0.6em 0.1em;
-}
-
-#nav li a {
-  text-decoration: none;
-  color: #fff;
-}
-
-#nav li a:hover {
-  text-decoration: underline;
+#nav a:hover{
 }
 
 #content {
   float: left;
-  width: 79%;
-  color: #E6FFF6;
-  background-color: #212330;
+  color: #444;
+  width: 100%;
+}
+
+#content h1 {
+  font-size: 3em;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+#content ul {
+}
+
+#content ul li a{
+}
+
+#content a:visited{
+}
+
+#content #mappa_sito {
+}
+
+#content #mappa_sito ul{
+}
+
+#content #mappa_sito ul ul{
 }
 
 #descr_loc {
   float: left;
-  width: 78%;
-  padding: 0 1% 1em 1%;
+  width: 100%;
   overflow: hidden;
-  color: #222222;
-  background-color: #ffffff;
+  color: #444;
+
+  padding: 0;
 }
 
 #descr_loc h1 {
   display: block;
-  float: right;
+  float: left;
   position: relative;
-  top: 0.4em;
   font-weight: normal;
   text-transform: uppercase;
-  font-size: 1.5em;
+  margin: 0.3em 0;
+  padding: 0.1em 0.8em 0.1em 0.4em;
+  color: #FFF;
+  font-size: 1em;
+  background-color: #2ECC71;
+  border-radius: 0.2em;
 }
 
 #descr_loc h2 {
+  font-size: 2em;
+  text-transform: uppercase;
   font-weight: normal;
-  font-size: 3em;
+  clear: left;
+  padding-left: 0.18em;
 }
 
 #descr_loc h3 {
-  padding-top: 1em;
+  font-family: 'Roboto';
+  font-size: 1.4em;
+  padding: 0.5em 0 0 0.3em;
 }
 
-.immagini {
-  width: 45em;
-  height: 18em;
-  margin: 1em auto 0em auto;
-  overflow: hidden;
+#descr_loc dt {
 }
 
-.immagini img {
+#descr_loc a {
+}
+
+#descr_loc p {
+  font-family: 'Roboto';
+  font-size: 0.9em;
+  padding: 0 0.5em;
+}
+
+#descr_loc a:visited {
+}
+
+.img_content {
   width: 100%;
-  margin: 0 auto;
+  height: 10em;
+  float: left;
+  clear: both;
+  border-radius: 0;
+  margin: 1em 0;
+
+  /* OLD STYLE */
+  /* width: 98%;
+  height: 17em;
+  border-radius: 0.2em;
+  margin: 1em auto; */
 }
 
 #img_presentazione {
-  height: 14em;
-  overflow: hidden;
-}
-
-#img_presentazione img {
   width: 100%;
+  height: 10em;
+  overflow: hidden;
+
+  border-radius: 0;
 }
 
 #aside {
-  float: left;
-  width: 19%;
-  padding-left: 1%;
-  color: #E6FFF6;
-  background-color: #212330;
+}
+
+#aside h1 {
+}
+
+#aside a{
+}
+
+#aside a:visited {
+}
+
+#government li,#utility li {
+}
+
+.info dt {
+}
+
+.info dd {
+}
+
+.square {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#nav ul {
+  margin-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 1em;
+  list-style-type:none;
+}
+
+#nav li {
+  padding-left: 1.4em;
+  color: white;
+}
+
+#nav_selected {
+  padding-left: 2em;
+  background-image: url(../images/icons/n_pos.png);
+  background-repeat: no-repeat;
+  background-position: -0.3em;
+}
+
+#nav a{
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#nav a:hover{
+	text-decoration: underline;
+}
+
+#content ul {
+  padding-top:1%;
+  padding-left: 2%;
+}
+#content ul li a{
+  color: blue;
+  font-weight:bold;
+}
+#content a:visited{
+  color:purple;
+}
+
+#content #mappa_sito {
+	padding-top: 2em;
+}
+
+#content #mappa_sito ul{
+	padding-top: 0em;
+}
+
+#content #mappa_sito ul ul{
+	list-style-type: none;
+}
+
+#descr_loc dt {
+  font-weight: bold;
+}
+
+#descr_loc a {
+  color: blue;
+}
+
+#descr_loc a:visited {
+  color: purple;
+}
+
+#aside {
+  border-radius: 0;
+  float: right;
+  width: 98%;
+  padding: 0.5em 1%;
+  color: black;
+  background-color: #CFE5DD;
 }
 
 #aside h1 {
   padding-top: 0.38em;
+  padding-bottom: 0.5em;
   font-weight: normal;
   text-transform: uppercase;
   font-size: 1.5em;
 }
 
-#aside a.link_out {
+#aside a{
+  color: blue;
   background-image: url(../images/icons/Link_out.png);
   background-repeat: no-repeat;
   background-size: 10px;
   background-position: right center;
   padding-right: 1em;
-  color: #fff;
+  font-weight:normal;
 }
 
-.government li,.utility li {
-  list-style: none;
+#aside a:visited {
+  color: purple;
+}
+
+#government li,#utility li {
+  list-style-type: none;
 }
 
 .info dt {
@@ -487,4 +663,6 @@ input[type=submit]:active {
   font-size: 0.7em;
 }
 
-/* OCCHIO ALLA STORIA COLONNA - DARE COLORE NAV A MAIN */
+
+
+
