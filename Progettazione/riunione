@@ -1,0 +1,46 @@
+##########
+EVERYWHERE:
+- Togliere login e puttanate varie
+
+##########
+FAQ:
+- Fare
+
+##########
+PRIVACY:
+- Fare
+
+##########
+HOMEPAGE:
+
+Modifica struttura:
+- Togliere breadcrumb
+- Spostare barra di ricerca ed elementi breadcrumb
+
+Presentazione:
+- Fixare dimensioni immagini
+
+##########
+CATEGORIE
+Modifica struttura:
+- Dare un id #current_page in span nella breadcrumb
+
+Modifica comportamento:
+- Elenca localita' di categoria per vicinanza in ordine crescente
+- Aggiungi chiave per categoria
+
+##########
+LOCALITA'
+
+Modifica struttura:
+- Spostare immagini dentro i p
+- Dare un id #current_page in span nella breadcrumb (esempio in Londra)
+- Inverti h1, h2 in #descr_loc
+- Togliere secondo livello di navigazione da nav
+- Spostare div commenti
+- Fare form inserimento commenti
+
+Modifica comportamento:
+- Cercare #current_loc e non #nav_selected
+- Mostra la cartina della localita' con geolocalizzazione con distanza SOLAMENTE da localita'
+- Pulsantino da mettere in JS per i commenti per visualizzarli a pezzettini oppure, se non ci sono, mettere avviso "Nessun commento zio"
