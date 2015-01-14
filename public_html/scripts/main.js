@@ -2,7 +2,7 @@
 
 var geo = require(['geolocation'], function (geolocation){});
 var searchbar = document.getElementById('place');
-var loc = document.getElementById('nav_selected').innerHTML.trim().toLowerCase();
+var loc = document.getElementById('nav_selected');
 
 //FUNCTIONS
 
@@ -10,7 +10,8 @@ window.onload = load;
 
 function load(){  //ho dovuto rinominare la funzione a causa di conflitti con altre libs
   search();
-  visualizza_c();
+  if(loc!=null)
+    visualizza_c();
 };
 
 function search(){
@@ -39,6 +40,7 @@ function searchBlur(){
 };
 
 function visualizza_c(){
+  loc = loc.innerHTML.trim().toLowerCase();
   xml=loadXMLDoc("dati/commenti.xml");
   xsl=loadXMLDoc("dati/commenti.xsl");
   if (window.ActiveXObject || // codice per IE
