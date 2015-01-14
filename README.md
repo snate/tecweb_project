@@ -6,9 +6,9 @@ _________________
 - Esempio di Geolocalizzazione ***ONLINE*** ---> [Geolocation](http://grazianogrespan.github.io/TecWeb-forked/Test/geolocation.html)
 
 Pagine:
-- [ABOUTUS](http://grazianogrespan.github.io/TecWeb-forked/public_html/chisiamo.xhtml)
-- [HOMEPAGE](http://grazianogrespan.github.io/TecWeb-forked/public_html/homepage.xhtml)
-- [CATEGORY](http://grazianogrespan.github.io/TecWeb-forked/public_html/mare.xhtml)
-- [LEAVES](http://grazianogrespan.github.io/TecWeb-forked/public_html/zakynthos.xhtml)
+- [ABOUTUS](http://grazianogrespan.github.io/TecWeb-forked/public_html/chisiamo.html)
+- [HOMEPAGE](http://grazianogrespan.github.io/TecWeb-forked/public_html/homepage.html)
+- [CATEGORY](http://grazianogrespan.github.io/TecWeb-forked/public_html/mare.html)
+- [LEAVES](http://grazianogrespan.github.io/TecWeb-forked/public_html/zakynthos.html)
 
 asda
