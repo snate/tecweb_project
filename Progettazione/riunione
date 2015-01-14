@@ -37,7 +37,7 @@ Modifica struttura:
 - FATTO Dare un id #current_page in span nella breadcrumb (esempio in Londra)
 - FATTO Inverti h1, h2 in #descr_loc
 - FATTO Togliere secondo livello di navigazione da nav
-- Spostare div commenti
+- FATTO Spostare div commenti
 - Fare form inserimento commenti
 
 Modifica comportamento:
