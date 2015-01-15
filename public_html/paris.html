@@ -148,8 +148,25 @@ LINK FOOTER
 	      Psiche del Canova.
 		   <img src="images/parigi_3.jpg" alt="Louvre di Parigi" class="img_content"/>
       </p>
-    </div>
 	<div id="comments">
+		<form action="cgi-bin/inserimento_commenti.cgi" method="post">
+			<fieldset>
+				<legend>Inserisci il tuo commento</legend>
+				<div>
+					<label for="user">Username:</label>
+					<input type="text" name="user" id="user" />
+				</div>
+				<div>
+					<label for="comment">Testo del commento:</label>
+					<textarea name="comment" id="comment" rows="5" cols="40"></textarea>
+				</div>
+				<div>
+				<input type="submit" value="Submit" />
+				<input type="reset" value="Annulla" />
+				</div>
+			</fieldset>
+		</form>
+    </div>	
     </div>
     <div id="aside">
         <h1>

@@ -118,9 +118,26 @@ LINK FOOTER
         Il <span xml:lang="fr">Des Alpes Mood Club</span>,  la Zangola, il <span xml:lang="en">Cliffangher Club</span>, la Cantina del <span xml:lang="fr">Suisse</span> sono i luoghi di ritrovo più acclamati della notte di
         Madonna di Campiglio. Il tutto per concludere al meglio una giornata nel fascino delle grandi occasioni e del divertimento più mondano.
       </p>
+    <div id="comments">
+		<form action="cgi-bin/inserimento_commenti.cgi" method="post">
+			<fieldset>
+				<legend>Inserisci il tuo commento</legend>
+				<div>
+					<label for="user">Username:</label>
+					<input type="text" name="user" id="user" />
+				</div>
+				<div>
+					<label for="comment">Testo del commento:</label>
+					<textarea name="comment" id="comment" rows="5" cols="40"></textarea>
+				</div>
+				<div>
+				<input type="submit" value="Submit" />
+				<input type="reset" value="Annulla" />
+				</div>
+			</fieldset>
+		</form>
     </div>
-	<div id="comments">
-    </div>
+	</div>
     <div id="aside">
       <h1>
         Link utili:
