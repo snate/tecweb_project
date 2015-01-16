@@ -2,16 +2,25 @@
 
 var geo = require(['geolocation'], function (geolocation){});
 var searchbar = document.getElementById('place');
-var loc = document.getElementById('nav_selected');
+var loc = document.getElementById('current_page');
+var userIn=document.getElementById('user');
+var commentIn=document.getElementById('comment');
+var formIn=document.getElementById('formcompl');
+var annullaIn=document.getElementById('annulla');
 
 //FUNCTIONS
 
 window.onload = load;
 
 function load(){  //ho dovuto rinominare la funzione a causa di conflitti con altre libs
-  search();
-  if(loc!=null)
-    visualizza_c();
+	search();
+	if(loc!=null){
+		visualizza_c();
+		userIn.onblur=blurUser;
+		commentIn.onblur=blurComment;
+		formIn.onsubmit=clickSubmit;
+		annullaIn.onclick=delAll;
+	}
 };
 
 function search(){
@@ -38,6 +47,9 @@ function searchBlur(){
   } else
     searchbar.holder = false;
 };
+
+
+/*Script commenti degli utenti*/
 
 function visualizza_c(){
   loc = loc.innerHTML.trim().toLowerCase();
@@ -71,3 +83,67 @@ function loadXMLDoc(file){
   xhttp.send("");
   return xhttp.responseXML;
 };
+
+function blurUser(){
+	if(!checkUser()){
+		document.getElementById('err_user').innerHTML="Inserire uno username";
+	}
+	else{
+		document.getElementById('err_user').innerHTML="";
+	}
+};
+
+function checkUser(){
+	var user=document.getElementById('user').value;
+	if (user==""){
+		return false;
+	}
+	else{
+		return true;
+	}
+};
+
+function blurComment(){
+	if(!checkComment()){
+		document.getElementById('err_comment').innerHTML="E' obbligatorio inserire un testo per il commento";
+	}
+	else{
+		document.getElementById('err_comment').innerHTML="";
+	}
+};
+
+function checkComment(){
+	var comment=document.getElementById('comment').value;
+	if (comment==""){
+		return false;
+	}
+	else{
+		return true;
+	}
+};
+
+function clickSubmit(){
+	var corretto=checkAll();
+	if(corretto)
+		return true;
+	alert('Impossibile inviare il commento.\n Controllare i dati immessi.');
+	doAll();
+	return false;
+};
+
+function checkAll(){
+	return checkUser() && checkComment();
+};
+
+function doAll(){
+	blurUser();
+	blurComment();
+};
+
+/*si occupa di cancellare non solo i campi ma anche i messaggi di errore*/
+function delAll(){
+	document.getElementById('err_user').innerHTML="";
+	document.getElementById('err_comment').innerHTML="";
+	return true;
+}
+
