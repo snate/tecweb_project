@@ -119,8 +119,20 @@ LINK FOOTER
         Madonna di Campiglio. Il tutto per concludere al meglio una giornata nel fascino delle grandi occasioni e del divertimento più mondano.
       </p>
     <div id="comments">
-		<div id="visualizza_commenti">
+		<form action="">
+			<fieldset>
+			<label for="see_comments">Visualizza commenti:</label>
+			<input type="button" value="Visualizza commenti" id="see_comments" />
+			</fieldset>
+		</form>
+		<div id="visualizza_commenti" class="hidden">	
 		</div>
+		<form action="">
+			<fieldset>
+			<label for="hide_comments">Nascondi commenti:</label>
+			<input type="button" value="Nascondi commenti" id="hide_comments" />
+			</fieldset>
+		</form>
 		<form action="">
 			<fieldset>
 			<label for="new_comment">Inserisci il tuo commento:</label>

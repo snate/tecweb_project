@@ -700,6 +700,8 @@ input[type=submit]:active {
 /*NASCONDE IL FORM PER INSERIRE UN NUOVO COMMENTO*/
 .hidden{
 	visibility: hidden;
+	height: 0px;
+	width: 0px;
 }
 
 

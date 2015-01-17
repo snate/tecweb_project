@@ -8,6 +8,8 @@ var commentIn=document.getElementById('comment');
 var formIn=document.getElementById('formcompl');
 var annullaIn=document.getElementById('annulla');
 var nuovoIn=document.getElementById('new_comment');
+var visualizzaIn=document.getElementById('see_comments');
+var nascondiIn=document.getElementById('hide_comments');
 
 //FUNCTIONS
 
@@ -16,7 +18,8 @@ window.onload = load;
 function load(){  //ho dovuto rinominare la funzione a causa di conflitti con altre libs
 	search();
 	if(loc!=null){
-		visualizza_c();
+		visualizzaIn.onclick=visualizza_c;
+		nascondiIn.onclick=nascondi_c;
 		nuovoIn.onclick=visualizza_form;
 		userIn.onblur=blurUser;
 		commentIn.onblur=blurComment;
@@ -54,6 +57,7 @@ function searchBlur(){
 /*Script commenti degli utenti*/
 
 function visualizza_c(){
+  document.getElementById('visualizza_commenti').setAttribute('class',"");
   loc = loc.innerHTML.trim().toLowerCase();
   xml=loadXMLDoc("dati/commenti.xml");
   xsl=loadXMLDoc("dati/commenti.xsl");
@@ -85,6 +89,10 @@ function loadXMLDoc(file){
   xhttp.send("");
   return xhttp.responseXML;
 };
+
+function nascondi_c(){
+	document.getElementById('visualizza_commenti').setAttribute('class',"hidden");
+}
 
 function visualizza_form(){
 	formIn.setAttribute('class', "");	

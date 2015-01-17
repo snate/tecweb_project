@@ -118,8 +118,20 @@ LINK FOOTER
        <img src="images/zante_2.png" alt="Paint Party al Rescue Club" class="img_content"/>
 	  </p>
 	<div id="comments">
-		<div id="visualizza_commenti">
+		<form action="">
+			<fieldset>
+			<label for="see_comments">Visualizza commenti:</label>
+			<input type="button" value="Visualizza commenti" id="see_comments" />
+			</fieldset>
+		</form>
+		<div id="visualizza_commenti" class="hidden">	
 		</div>
+		<form action="">
+			<fieldset>
+			<label for="hide_comments">Nascondi commenti:</label>
+			<input type="button" value="Nascondi commenti" id="hide_comments" />
+			</fieldset>
+		</form>
 		<form action="">
 			<fieldset>
 			<label for="new_comment">Inserisci il tuo commento:</label>
