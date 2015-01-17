@@ -61,7 +61,7 @@ function visualizza_c(){
       xhttp.responseType == "msxml-document") {
     text = xml.transformNode(xsl);
     content=text.getElementById("nome_"+loc);
-    document.getElementById("comments").innerHTML = content;
+    document.getElementById("visualizza_commenti").innerHTML = content;
   } // codice per Chrome, Firefox, Opera, etc.
   else if (document.implementation &&
       document.implementation.createDocument){
@@ -69,7 +69,7 @@ function visualizza_c(){
     xsltProcessor.importStylesheet(xsl);
     text= xsltProcessor.transformToFragment(xml, document);
     content=text.getElementById("nome_"+loc);
-    document.getElementById("comments").appendChild(content);
+    document.getElementById("visualizza_commenti").appendChild(content);
   }
 };
 
