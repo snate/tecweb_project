@@ -697,4 +697,9 @@ input[type=submit]:active {
   font-size: 0.7em;
 }
 
+/*NASCONDE IL FORM PER INSERIRE UN NUOVO COMMENTO*/
+.hidden{
+	visibility: hidden;
+}
+
 

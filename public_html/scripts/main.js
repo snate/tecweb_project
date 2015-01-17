@@ -7,6 +7,7 @@ var userIn=document.getElementById('user');
 var commentIn=document.getElementById('comment');
 var formIn=document.getElementById('formcompl');
 var annullaIn=document.getElementById('annulla');
+var nuovoIn=document.getElementById('new_comment');
 
 //FUNCTIONS
 
@@ -16,6 +17,7 @@ function load(){  //ho dovuto rinominare la funzione a causa di conflitti con al
 	search();
 	if(loc!=null){
 		visualizza_c();
+		nuovoIn.onclick=visualizza_form;
 		userIn.onblur=blurUser;
 		commentIn.onblur=blurComment;
 		formIn.onsubmit=clickSubmit;
@@ -84,6 +86,10 @@ function loadXMLDoc(file){
   return xhttp.responseXML;
 };
 
+function visualizza_form(){
+	formIn.setAttribute('class', "");	
+}
+
 function blurUser(){
 	if(!checkUser()){
 		document.getElementById('err_user').innerHTML="Inserire uno username";
@@ -144,6 +150,7 @@ function doAll(){
 function delAll(){
 	document.getElementById('err_user').innerHTML="";
 	document.getElementById('err_comment').innerHTML="";
+	formIn.setAttribute('class', "hidden");
 	return true;
 }
 

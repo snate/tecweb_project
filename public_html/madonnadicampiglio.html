@@ -119,7 +119,13 @@ LINK FOOTER
         Madonna di Campiglio. Il tutto per concludere al meglio una giornata nel fascino delle grandi occasioni e del divertimento più mondano.
       </p>
     <div id="comments">
-		<form method="post" action="cgi-bin/inserimento_commento.cgi" id="formcompl">
+		<form action="">
+			<fieldset>
+			<label for="new_comment">Inserisci il tuo commento:</label>
+			<input type="button" value="Inserisci il tuo commento" id="new_comment" />
+			</fieldset>
+		</form>
+		<form class="hidden" method="post" action="cgi-bin/inserimento_commento.cgi" id="formcompl">
 			<fieldset>
 				<legend>Inserisci il tuo commento</legend>
 				<div>
