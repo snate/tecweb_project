@@ -16,6 +16,9 @@ var località = {
 
 //FUNCTIONS
 
+/**
+ * @return {string}
+ */
 function CalcolaDistanza(mylat,mylon,lat,lon){
 
   Number.prototype.toRad = function() {
@@ -34,14 +37,14 @@ function CalcolaDistanza(mylat,mylon,lat,lon){
   var d = (R * c).toFixed(1);
 
   return d;
-};
+}
 
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.watchPosition(showPosition);
   } else
     alert("Geolocation is not supported by this browser.");
-};
+}
 
 function showPosition(position) {
   var mapholder = document.getElementById('mapholder');
@@ -88,7 +91,7 @@ function showPosition(position) {
     return  arr[j++].innerHTML = località.name + " : " + località.distance + " Km";
   });
 
-};
+}
 
 function SortPlaces(){
   var sortedlist = _.sortBy(località,function(località){return Math.floor(località.distance)});
@@ -97,4 +100,4 @@ function SortPlaces(){
   _.each(sortedlist,function(sortedlist){
     return  arr2[k++].innerHTML = sortedlist.name + " : " + sortedlist.distance + " Km";
   });
-};
+}

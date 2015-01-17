@@ -688,7 +688,7 @@ input[type=submit]:active {
 }
 
 .info dd {
-  float. left;
+  float: left;
   clear: right;
 }
 

@@ -26,7 +26,7 @@ function load(){  //ho dovuto rinominare la funzione a causa di conflitti con al
 		formIn.onsubmit=clickSubmit;
 		annullaIn.onclick=delAll;
 	}
-};
+}
 
 function search(){
   searchbar.value = "Nome località";
@@ -35,14 +35,14 @@ function search(){
   searchbar.className += " emphasized";
   searchbar.onfocus = searchFocus;            //assegno cosa fare onfocus
   searchbar.onblur = searchBlur;
-};
+}
 
 function searchFocus(){
   if(searchbar.holder) {
     searchbar.value = "";
     searchbar.className = searchbar.oldClass;
   }
-};
+}
 
 function searchBlur(){
   if(searchbar.value == "") {
@@ -51,7 +51,7 @@ function searchBlur(){
     searchbar.holder = true;
   } else
     searchbar.holder = false;
-};
+}
 
 
 /*Script commenti degli utenti*/
@@ -75,7 +75,7 @@ function visualizza_c(){
     content=text.getElementById("nome_"+loc);
     document.getElementById("visualizza_commenti").appendChild(content);
   }
-};
+}
 
 function loadXMLDoc(file){
   if (window.ActiveXObject){
@@ -88,7 +88,7 @@ function loadXMLDoc(file){
   // aiuto per IE11
   xhttp.send("");
   return xhttp.responseXML;
-};
+}
 
 function nascondi_c(){
 	document.getElementById('visualizza_commenti').setAttribute('class',"hidden");
@@ -105,17 +105,12 @@ function blurUser(){
 	else{
 		document.getElementById('err_user').innerHTML="";
 	}
-};
+}
 
 function checkUser(){
 	var user=document.getElementById('user').value;
-	if (user==""){
-		return false;
-	}
-	else{
-		return true;
-	}
-};
+	return user != "";
+}
 
 function blurComment(){
 	if(!checkComment()){
@@ -124,17 +119,12 @@ function blurComment(){
 	else{
 		document.getElementById('err_comment').innerHTML="";
 	}
-};
+}
 
 function checkComment(){
 	var comment=document.getElementById('comment').value;
-	if (comment==""){
-		return false;
-	}
-	else{
-		return true;
-	}
-};
+	return comment != "";
+}
 
 function clickSubmit(){
 	var corretto=checkAll();
@@ -143,16 +133,16 @@ function clickSubmit(){
 	alert('Impossibile inviare il commento.\n Controllare i dati immessi.');
 	doAll();
 	return false;
-};
+}
 
 function checkAll(){
 	return checkUser() && checkComment();
-};
+}
 
 function doAll(){
 	blurUser();
 	blurComment();
-};
+}
 
 /*si occupa di cancellare non solo i campi ma anche i messaggi di errore*/
 function delAll(){

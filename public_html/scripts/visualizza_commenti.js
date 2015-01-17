@@ -1,11 +1,11 @@
 window.onload = load;
 
 var lc=document.getElementById('nav_selected').innerHTML;
-var loc=lc.toLowerCase(lc);
+var loc=lc.toLowerCase();
 
 function load(){
   visualizza_c();
-};
+}
 
 function visualizza_c(){
 	xml=loadXMLDoc("dati/commenti.xml");
