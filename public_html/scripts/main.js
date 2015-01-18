@@ -95,7 +95,7 @@ function nascondi_c(){
 }
 
 function visualizza_form(){
-	formIn.setAttribute('class', "");	
+	formIn.setAttribute('class', "");
 }
 
 function blurUser(){
@@ -151,4 +151,3 @@ function delAll(){
 	formIn.setAttribute('class', "hidden");
 	return true;
 }
-

@@ -704,4 +704,36 @@ input[type=submit]:active {
 	width: 0px;
 }
 
+#aside #geolocation #mapholder {
+  display: none;
+  position: absolute;
+  margin-top:1%;
+  height:21%;
+  width:15%;
+  border: 2px solid #27AE60;
+}
 
+#aside #geolocation #geodata {
+  padding-top:80%;
+}
+
+#nav #geolocation #mapholder {
+  display: none;
+  position: absolute;
+  margin-top:1%;
+  margin-left:1%;
+  height:21%;
+  width:16%;
+  border: 2px solid #27AE60;
+}
+
+#nav #geolocation #geodata {
+  padding-top:70%;
+  margin-left: 5%;
+  margin-bottom:5%;
+
+}
+
+#nav #geolocation #geodata p{
+  color:white;
+}
