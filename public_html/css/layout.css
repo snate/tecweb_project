@@ -737,3 +737,13 @@ input[type=submit]:active {
 #nav #geolocation #geodata p{
   color:white;
 }
+
+#paragraph_title{
+  font-weight: bold;
+  margin-top:1%;
+  margin-bottom:1%
+}
+
+#paragraph_notes{
+  font-style: italic;
+}
