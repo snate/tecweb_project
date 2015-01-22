@@ -453,13 +453,14 @@ input[type=submit]:active {
   color: #444;
 }
 
-#descr_loc h1 {
+#descr_loc h2 {
   display: block;
   float: right;
   position: relative;
   font-weight: normal;
   text-transform: uppercase;
   margin: 0.3em 2%;
+  margin-top: -3.2em;
   padding: 0.1em 0.6em;
   color: #FFF;
   font-size: 1em;
@@ -467,7 +468,7 @@ input[type=submit]:active {
   border-radius: 0.3em;
 }
 
-#descr_loc h2 {
+#descr_loc h1 {
   font-size: 3em;
   text-transform: uppercase;
   font-weight: normal;
@@ -539,17 +540,59 @@ input[type=submit]:active {
 }
 
 .info dt {
+  float: left;
+  clear: left;
+  margin-right: 0.3em;
 }
 
 .info dd {
+  float: left;
+  clear: right;
 }
 
 .square {
 }
 
+#comments input[type="submit"] {
+color: #FFF;
+font-size: 0.9em;
+font-weight: bold;
+font-family: 'Roboto';
+margin: 0.3em;
+padding: 0.2em 0.6em;
+border-radius: 0.2em;
+background-color: #2ECC71;
+}
 
+#comments input[type="reset"] {
+color: #FFF;
+font-size: 0.9em;
+font-weight: bold;
+font-family: 'Roboto';
+margin: 0.3em;
+padding: 0.2em 0.6em;
+border-radius: 0.2em;
+background-color: #E84444;
+}
 
+#comments input[type="text"] {
+background-color: #444;
+height: 1.5em;
+margin: 0.2em;
+padding: 0.1em 0.4em 0.1em 0.6em;
+color: #d7d7d7;
+width: 7em;
+border-radius: 0.2em;
+}
 
+#comments textarea {
+font-family: Arial;
+background-color: #444;
+border-radius: 0.2em;
+margin: 0.2em;
+padding: 0.1em 0.4em 0.1em 0.6em;
+color: #d7d7d7;
+}
 
 
 
@@ -669,27 +712,18 @@ input[type=submit]:active {
   background-image: url(../images/icons/Link_out.png);
   background-repeat: no-repeat;
   background-size: 10px;
-  background-position: right center;
+  background-position: right 0.6em;
   padding-right: 1em;
   font-weight:normal;
 }
 
 #aside a:visited {
   color: purple;
+  background-image: url(../images/icons/Link_out_visited.png);
 }
 
 #government li,#utility li {
   list-style-type: none;
-}
-
-.info dt {
-  float: left;
-  margin-right: 0.3em;
-}
-
-.info dd {
-  float: left;
-  clear: right;
 }
 
 .square {
