@@ -768,8 +768,9 @@ color: #d7d7d7;
 
 }
 
-#nav #geolocation #geodata p{
+#nav #geolocation #geodata ul,li{
   color:white;
+  list-style-type: none;
 }
 
 #paragraph_title{
