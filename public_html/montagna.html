@@ -20,8 +20,7 @@ LINK FOOTER
     <link rel="shortcut icon" href="images/logo-icon.png"/>
     <link rel="stylesheet" media="all" type="text/css" href="css/layout.css" />
     <link rel="stylesheet" media="handheld, screen and (max-width:480px), only screen and (max-device-width:480px)" type="text/css" href="css/mlayout.css" />
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300" rel="stylesheet" type="text/css" />
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:700,400|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <div id="header">
@@ -33,11 +32,19 @@ LINK FOOTER
       <div class="login_button">Login</div>
     </div>
     <div id="breadcrumb">
-      <ul id="navmenu">
-        <li>Ti trovi in:<a href="homepage.html" title="Pagina principale">
-          <span xml:lang="en">Home</span>
-        </a>&gt; Montagna</li>
-      </ul>
+      <div id="navigation">
+        <p>Ti trovi in:</p>
+        <ul>
+          <li>
+            <a href="homepage.html" title="Pagina principale">
+              <span xml:lang="en">Home</span>
+            </a>
+          </li>
+          <li>
+            &gt; Montagna
+          </li>
+        </ul>
+      </div>
       <form method="get" action="cgi-bin/search.cgi">
         <fieldset  id="search">
           <label for="place">Cerca:</label>
