@@ -13,7 +13,7 @@ html, body {
 }
 
 a:link{
-  color: #27AE60;
+  color: #2F965A;
 }
 
 a:visited{
@@ -25,7 +25,7 @@ a:hover{
 }
 
 #header {
-  background-color: #27AE60;
+  background-color: /* #27AE60 */ #2F965A;
   height: 2.8em;
 }
 
@@ -64,11 +64,11 @@ a:hover{
 }
 
 #header #main-menu li a:hover{
-  color: blue;
+  color: #2F965A;
 }
 
 #header #main-menu li a:visited{
-  color: purple;
+  color: #2ECC71;
 }
 
 #header #search {
@@ -124,16 +124,22 @@ a:hover{
   background-color: #E0E0E0;
   /* border-bottom: 0.12em solid #CACACA; */
   overflow: hidden;
-  padding: 0 0.8em;
+  padding: 0 1em;
   height: 1.8em;
+
   font-family: 'Roboto';
+  font-size: 0.9em;
 }
 
 #breadcrumb p {
+  height: 1.8em;
+  line-height: 1.8em;
   float: left;
 }
 
 #breadcrumb ul {
+  height: 1.8em;
+  line-height: 1.8em;
   float: left;
 }
 
@@ -148,15 +154,15 @@ a:hover{
 }
 
 #breadcrumb li a {
-  color: #fff;
+  color: #2F965A;
 }
 
 #breadcrumb li a:hover{
-  color: blue;
+  color: #2F965A;
 }
 
 #breadcrumb li a:visited{
-  color: purple;
+  color: #2ECC71;
 }
 
 #breadcrumb #search {
@@ -267,7 +273,7 @@ a:hover{
 #footer {
   clear: both;
   width: 100%;
-  background-color: /* #2C3E50 */ #34495E;
+  background-color: #D5D5D5;
   height: 2.5em;
 }
 
@@ -549,9 +555,15 @@ input[type=submit]:active {
 }
 
 #descr_loc dt {
+  font-weight: bold;
 }
 
 #descr_loc a {
+  color: #2F965A;
+}
+
+#descr_loc a:visited {
+  color: #2ECC71;
 }
 
 #descr_loc p {
@@ -589,29 +601,56 @@ input[type=submit]:active {
   padding-bottom: 1%;
   color: #444;
   background-color: #E0E0E0;
+  overflow: hidden;
+
 }
 
 #aside h1 {
+  padding-top: 0.4em;
+  padding-bottom: 0.2em;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  clear: both;
 }
 
 #aside a{
+  color: #2F965A;
+  background-image: url(../images/icons/Link_out.png);
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: right 0.6em;
+  padding-right: 1em;
+  font-weight:normal;
 }
 
 #aside a:visited {
+  color: #2ECC71;
+  background-image: url(../images/icons/Link_out_visited.png);
 }
 
-#government li,#utility li {
+#government li, #utility li {
+  list-style-type: none;
+
+  font-family: 'Roboto';
+  font-size: 0.9em;
 }
 
 .info dt {
   float: left;
   clear: left;
   margin-right: 0.3em;
+
+  font-family: 'Roboto';
+  font-size: 0.9em;
 }
 
 .info dd {
   float: left;
   clear: right;
+
+  font-family: 'Roboto';
+  font-size: 0.9em;
 }
 
 .square {
@@ -752,11 +791,11 @@ clear: both;
   padding-left: 2%;
 }
 #content ul li a{
-  color: blue;
+  color: #2F965A;
   font-weight:bold;
 }
 #content a:visited{
-  color:purple;
+  color: #2ECC71;
 }
 
 #content #mappa_sito {
@@ -769,45 +808,6 @@ clear: both;
 
 #content #mappa_sito ul ul{
 	list-style-type: none;
-}
-
-#descr_loc dt {
-  font-weight: bold;
-}
-
-#descr_loc a {
-  color: blue;
-}
-
-#descr_loc a:visited {
-  color: purple;
-}
-
-#aside h1 {
-  padding-top: 0.38em;
-  padding-bottom: 0.5em;
-  font-weight: normal;
-  text-transform: uppercase;
-  font-size: 1.5em;
-}
-
-#aside a{
-  color: blue;
-  background-image: url(../images/icons/Link_out.png);
-  background-repeat: no-repeat;
-  background-size: 10px;
-  background-position: right 0.6em;
-  padding-right: 1em;
-  font-weight:normal;
-}
-
-#aside a:visited {
-  color: purple;
-  background-image: url(../images/icons/Link_out_visited.png);
-}
-
-#government li,#utility li {
-  list-style-type: none;
 }
 
 .square {
