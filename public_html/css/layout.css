@@ -708,12 +708,12 @@ clear: both;
   padding-right: 1.2em;
 } /**/
 
-#paragraph_title{
+.paragraph_title{
   font-weight: bold;
   margin-top:1%;
   margin-bottom:1%
 }
 
-#paragraph_notes{
+.paragraph_notes{
   font-style: italic;
 }
