@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="commenti.xsl"?>
+<c:comments xmlns="http://www.commenti.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://www.commenti.com" xs:schemaLocation="http://www.commenti.com commenti.xsd">
+
+  <localita nome="zakynthos">
+    <comment user="John Reese">
+      <corpo>
+        Stiamo come i pazzi
+      </corpo>
+      <pubblicationDate>
+        2012-06-12
+      </pubblicationDate>
+    </comment>
+  </localita>
+
+  <localita nome="london">
+    <comment user="Nate">
+      <corpo>
+        CAZZETTE, Terry B! - Blind Heart (Radio Edit)
+      </corpo>
+      <pubblicationDate>
+        2012-10-21
+      </pubblicationDate>
+    </comment>
+  </localita>
+
+  <localita nome="madonnadicampiglio">
+    <comment user="Fede">
+      <corpo>
+        Commento Madonna di Campiglio
+      </corpo>
+      <pubblicationDate>
+        2012-06-14
+      </pubblicationDate>
+    </comment>
+    <comment user="Pippo">
+      <corpo>prova prova prova</corpo>
+      <pubblicationDate>2004-10-02</pubblicationDate>
+    </comment>
+</localita>
+
+  <localita nome="praga">
+  <comment user="Fede">
+      <corpo>
+        Commento Praga
+      </corpo>
+      <pubblicationDate>
+        2012-06-12
+      </pubblicationDate>
+    </comment>
+  </localita>
+
+  <localita nome="paris">
+  <comment user="Fede">
+      <corpo>
+        Commento Parigi
+      </corpo>
+      <pubblicationDate>
+        2012-06-12
+      </pubblicationDate>
+    </comment>
+  </localita>
+
+</c:comments>
