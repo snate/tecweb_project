@@ -28,8 +28,7 @@ if(document.getElementById("content"))
       "Praga" : {"name": "Praga","loc":"Città","lat": 50.0755381,"lon": 14.4378005},
       "Campiglio" : {"name": "Madonna di Campiglio","loc":"Montagna","lat": 46.2302584,"lon": 10.826401},
       "Londra"  : {"name": "Londra","loc":"Città","lat": 51.5073509, "lon": -0.1277583},
-      "Zante" : {"name": "Zante","loc":"Mare","lat": 37.7875637, "lon": 20.8978593},
-      "Ibiza" : {"name": "Ibiza","loc":"Mare","lat": 38.9067339, "lon": 1.4205983 }
+      "Zante" : {"name": "Zante","loc":"Mare","lat": 37.7875637, "lon": 20.8978593}
     };
 
     // FUNCTIONS
@@ -58,7 +57,7 @@ if(document.getElementById("content"))
 
     function getLocation() {
       if (navigator.geolocation) {
-        navigator.geolocation.watchPosition(showPosition);
+        navigator.geolocation.getCurrentPosition(showPosition);
       }else
         alert("Geolocation is not supported by this browser.");
       };
