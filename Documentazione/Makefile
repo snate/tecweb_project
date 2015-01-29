@@ -11,5 +11,6 @@ clean:
 	rm -f *.toc
 	rm -f *.out
 	rm -f *.log
+	rm -f *.pdf
 	rm sections/*.aux
 	

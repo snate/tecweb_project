@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="commenti.xsl"?>
-<comments xmlns="http://www.commenti.com"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
-  xs:schemaLocation="http://www.commenti.com commenti.xsd">
+<c:comments xmlns="http://www.commenti.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://www.commenti.com" xs:schemaLocation="http://www.commenti.com commenti.xsd">
 
   <localita nome="zakynthos">
     <comment user="John Reese">
@@ -35,7 +33,11 @@
         2012-06-14
       </pubblicationDate>
     </comment>
-  </localita>
+    <comment user="Pippo">
+      <corpo>prova prova prova</corpo>
+      <pubblicationDate>2004-10-02</pubblicationDate>
+    </comment>
+</localita>
 
   <localita nome="praga">
   <comment user="Fede">
@@ -59,4 +61,4 @@
     </comment>
   </localita>
 
-</comments>
+</c:comments>

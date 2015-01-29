@@ -59,7 +59,7 @@ function searchBlur(){
 function visualizza_c(){
   document.getElementById('visualizza_commenti').setAttribute('class',"");
   loc = loc.innerHTML.trim().toLowerCase();
-  xml=loadXMLDoc("dati/commenti.xml");
+  xml=loadXMLDoc("cgi-bin/commenti.xml");
   xsl=loadXMLDoc("dati/commenti.xsl");
   if (window.ActiveXObject || // codice per IE
       xhttp.responseType == "msxml-document") {
