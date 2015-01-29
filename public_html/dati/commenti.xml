@@ -4,7 +4,7 @@
   xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
   xs:schemaLocation="http://www.commenti.com commenti.xsd">
 
-  <localita nome="zante">
+  <localita nome="zakynthos">
     <comment user="John Reese">
       <corpo>
         Stiamo come i pazzi
@@ -15,7 +15,7 @@
     </comment>
   </localita>
 
-  <localita nome="londra">
+  <localita nome="london">
     <comment user="Nate">
       <corpo>
         CAZZETTE, Terry B! - Blind Heart (Radio Edit)
@@ -26,13 +26,13 @@
     </comment>
   </localita>
 
-  <localita nome="madonna di campiglio">
-  <comment user="Fede">
+  <localita nome="madonnadicampiglio">
+    <comment user="Fede">
       <corpo>
         Commento Madonna di Campiglio
       </corpo>
       <pubblicationDate>
-        2012-06-12
+        2012-06-14
       </pubblicationDate>
     </comment>
   </localita>
@@ -48,7 +48,7 @@
     </comment>
   </localita>
 
-  <localita nome="parigi">
+  <localita nome="paris">
   <comment user="Fede">
       <corpo>
         Commento Parigi
