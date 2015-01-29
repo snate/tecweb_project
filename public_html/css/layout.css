@@ -25,7 +25,7 @@ a:hover{
 }
 
 #header {
-  background-color: /* #27AE60 */ #2F965A;
+  background-color: /* #2F965A */ #2ECC71;
   height: 2.8em;
   overflow: hidden;
 }
@@ -41,7 +41,6 @@ a:hover{
 
 #header h1 a{
   color: #E0E0E0;
-
   text-decoration: none;
 }
 
@@ -71,10 +70,14 @@ a:hover{
   color: #fff;
 }
 
-#header #main-menu li a:hover{
-  color: #2F965A;
+#header #main-menu li:hover {
+  color: #2ECC71;
   background-color: #fff;
-  border-top: 0.2em solid #2F965A;
+  border-top: 0.2em solid #2ECC71;
+}
+
+#header #main-menu li:hover a {
+  color: #2F965A;
 }
 
 #header #main-menu li a:visited{
@@ -112,22 +115,6 @@ a:hover{
   -moz-transition: all 0.7s ease 0s;
   -o-transition: all 0.7s ease 0s;
   transition: all 0.7s ease 0s;
-}
-
-.login_button{
-  visibility: hidden;
-  float: right;
-  margin-top: 0.35em;
-  margin-right: 0.9em;
-  padding: 0.2em 1.4em;
-  color: white;
-  font-size: 1.1em;
-  background-color: #2ECC71;
-  border-radius: 0.3em;
-}
-
-.login_button:active{
-
 }
 
 #breadcrumb {
@@ -234,13 +221,20 @@ a:hover{
 .nomeprovvisoriocategoriehome a {
   margin: 0.14em;
   display: block;
-  background-color: #2ECC71;
+  background-color: #2F965A;
   border-radius: 0.14em;
+  border: 0.1em solid #ECF0F1;
   color: #ECF0F1;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: normal;
   font-size: 1.5em;
+}
+
+.nomeprovvisoriocategoriehome a:hover, .nomeprovvisoriocategoriehome a:visited {
+  background-color: #2ECC71;
+  border-color: #ECF0F1;
+  color: #ECF0F1;
 }
 
 #c_mare {
@@ -272,7 +266,7 @@ a:hover{
 #footer {
   clear: both;
   width: 100%;
-  background-color: #ECF0F1;
+  background-color: #2ECC71;
   height: 2.5em;
 }
 
@@ -299,27 +293,27 @@ a:hover{
 
 #footer li a {
   text-decoration: none;
-  line-height: 2.5em;
+  line-height: 3.2em;
   display: block;
-  height: 2.2em;
-  border-bottom: 0.3em solid #2F965A;
-
+  height: 2.5em;
+  border-bottom: 0.3em solid #fff;
+  color: #fff;
   font-family: 'Roboto';
   font-size: 0.9em;
 }
 
 #footer li a:hover {
-  height: 2.3em;
-  border-bottom: 0.2em solid #2ECC71;
+  height: 2.6em;
+  border-bottom: 0.2em solid #fff;
 }
 
 #footer li a:visited {
-  border-color: #2ECC71;
+  border-color: #fff;
 }
 
 #xhtml_valid{
   float: right;
-  padding-right: 0.7em;
+  padding: 0.3em 0.7em 0 0;
 }
 
 /* INIZIO CSS LOCALITA */
@@ -327,8 +321,6 @@ a:hover{
 #nav {
   clear: left;
   float: left;
-  /* width: 20%; */
-  /* NAV A SX NON STACCATO */
   background-color: #444;
 
   width: 19%;
@@ -337,18 +329,33 @@ a:hover{
 }
 
 #nav ul {
+  margin-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 1em;
+  list-style-type:none;
 }
 
 #nav li {
+  padding-left: 1.4em;
+  color: white;
 }
 
 #nav_selected {
+  padding-left: 2em;
+  background-image: url(../images/icons/n_pos.png);
+  background-repeat: no-repeat;
+  background-position: -0.3em 40%;
 }
 
 #nav a{
+	font-weight: bold;
+	text-decoration: none;
 }
 
 #nav a:hover{
+	text-decoration: underline;
 }
 
 #content {
@@ -365,21 +372,28 @@ a:hover{
 }
 
 #content ul {
+  padding-top:1%;
+  padding-left: 2%;
 }
 
 #content ul li a{
+  color: #2F965A;
+  font-weight:bold;
 }
-
 #content a:visited{
+  color: #2ECC71;
 }
 
 #content #mappa_sito {
+	padding-top: 2em;
 }
 
 #content #mappa_sito ul{
+	padding-top: 0em;
 }
 
 #content #mappa_sito ul ul{
+	list-style-type: none;
 }
 
 #descr_loc {
@@ -524,6 +538,8 @@ a:hover{
 }
 
 .square {
+  vertical-align: super;
+  font-size: 0.7em;
 }
 
 
@@ -642,65 +658,6 @@ clear: both;
 
 
 
-#nav ul {
-  margin-top: 0.5em;
-  padding-bottom: 0.5em;
-  font-weight: normal;
-  text-transform: uppercase;
-  font-size: 1em;
-  list-style-type:none;
-}
-
-#nav li {
-  padding-left: 1.4em;
-  color: white;
-}
-
-#nav_selected {
-  padding-left: 2em;
-  background-image: url(../images/icons/n_pos.png);
-  background-repeat: no-repeat;
-  background-position: -0.3em 40%;
-}
-
-#nav a{
-	font-weight: bold;
-	text-decoration: none;
-}
-
-#nav a:hover{
-	text-decoration: underline;
-}
-
-#content ul {
-  padding-top:1%;
-  padding-left: 2%;
-}
-#content ul li a{
-  color: #2F965A;
-  font-weight:bold;
-}
-#content a:visited{
-  color: #2ECC71;
-}
-
-#content #mappa_sito {
-	padding-top: 2em;
-}
-
-#content #mappa_sito ul{
-	padding-top: 0em;
-}
-
-#content #mappa_sito ul ul{
-	list-style-type: none;
-}
-
-.square {
-  vertical-align: super;
-  font-size: 0.7em;
-}
-
 /*NASCONDE IL FORM PER INSERIRE UN NUOVO COMMENTO*/
 .hidden{
 	visibility: hidden;
@@ -743,6 +700,7 @@ clear: both;
 
   font-family: 'Roboto';
   font-size: 0.9em;
+  padding-top: 0.4em;
 } /**/
 
 #mapholder a{

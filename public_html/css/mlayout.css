@@ -25,8 +25,8 @@ a:hover{
 }
 
 #header {
-  background-color: #27AE60;
-  height: 7em;
+  background-color: #2ECC71;
+  height: 5.5em;
   overflow: hidden;
 }
 
@@ -36,32 +36,113 @@ a:hover{
   text-transform: uppercase;
   font-size: 3em;
   font-weight: normal;
-  width: 5em;
-  margin: 0 auto;
-
   padding: 0;
 }
 
 #header h1 a{
   color: #E0E0E0;
-
   text-decoration: none;
 }
 
-.login_button{
+
+
+
+
+
+
+
+
+
+
+
+
+#header #main-menu {
+  margin: 0 0.5em;
+  float: left;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+#header #main-menu li {
+  list-style-type: none;
+  float: left;
+  padding: 0 0.5em;
+  height: 1.9em;
+}
+
+#header #main-menu li:first-child {
+}
+
+#header #main-menu li a {
+  display: block;
+  text-decoration: none;
+  height: 1.7em;
+  line-height: 1.5em;
+  border-top: 0.2em solid #fff;
+  color: #fff;
+}
+
+#header #main-menu li:hover {
+  color: #2ECC71;
+  background-color: #fff;
+  border-top: 0.2em solid #2ECC71;
+}
+
+#header #main-menu li:hover a {
+  color: #2F965A;
+}
+
+#header #main-menu li a:visited{
+  color: #fff;
+}
+
+#header #search {
   float: right;
-  margin-top: 0.35em;
-  margin-right: 0.9em;
-  padding: 0.2em 1.4em;
-  color: white;
-  font-size: 1.1em;
-  background-color: #2ECC71;
+  margin-top: 0.1em;
+}
+
+#header #search label {
+  font-size: 1em;
+}
+
+#header #search input[type="text"]{
+  background: url(../images/icons/search-white.png) no-repeat 0.6em 0.24em #444;
+  height: 2.6em;
+  margin: 0.2em;
+  padding-left: 2.4em;
+  border: 0;
+  color: #d7d7d7;
+  width: 7em;
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
   border-radius: 0.3em;
 }
 
-.login_button:active{
-
+#header #search input[type="text"]:focus {
+  background: url(../images/icons/search-dark.png) no-repeat 0.6em 0.24em #fcfcfc;
+  color: #6a6f75;
+  width: 13em;
+  outline: none; // rimuove il bordo blu dovuto al focus su input
+  -webkit-transition: all 0.7s ease 0s;
+  -moz-transition: all 0.7s ease 0s;
+  -o-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #breadcrumb {
   height: 0;
@@ -103,30 +184,29 @@ a:hover{
 
 .nomeprovvisoriocategoriehome {
   float: left;
-  clear: both;
   width: 100%;
-  height: 16em;
+  height: 10em;
   background-color: #000000;
   background-position: center;
-  background-size: 100%;
+  background-size: 15em;
 
   margin: 0;
   border-radius: 0;
-  text-align: left;
+  text-align: center;
+  clear: both;
 }
 
 .nomeprovvisoriocategoriehome a {
+  margin: 0.2em 0.6em;
   display: block;
-  background-color: #2ECC71;
-  border-radius: 0 0.2em 0.2em 0;
+  background-color: #2F965A;
+  border-radius: 0.14em;
+  border: 0.1em solid #ECF0F1;
   color: #ECF0F1;
-  width: 5em;
-  padding-left: 0.5em;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: normal;
-  font-size: 2em;
-  margin: 0.5em 0;
+  font-size: 1.5em;
 }
 
 #c_mare {
@@ -206,178 +286,51 @@ a:hover{
   padding-right: 0.7em;
 }
 
-/* INIZIO CSS PAGINA DI LOGIN */
-
-.container {
-  margin: 1% auto;
-  width: 50%;
-}
-
-.login {
-  position: relative;
-  margin: 0 auto;
-  padding: 5% 5% 5%;
-  width: 45%;
-  background: #EAEAEA;
-  border-radius: 3px;
-}
-
-.login:before {
-  content: '';
-  position: absolute;
-  top: -3%;
-  right: -3%;
-  bottom: -3%;
-  left: -3%;
-  z-index: -1;
-  background: rgba(0, 0, 0, 0.08);
-  border-radius: 4px;
-}
-
-.login h1 {
-  margin: -5% -5% 5%;
-  line-height: 200%;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #555;
-  text-align: center;
-  background: #f3f3f3;
-  border-bottom: 1px solid #cfcfcf;
-  border-radius: 3px 3px 0 0;
-}
-
-.login p {
-  margin: 7% 0 0;
-}
-
-.login p:first-child {
-  margin-top: 7%;
-}
-
-.login p.submit {
-  text-align: center;
-}
-
-.login p.logout {
-  text-align: center;
-}
-
-.login-help {
-  margin: 20px 0;
-  font-size: 11px;
-  color: white;
-  text-align: center;
-  text-shadow: 0 1px #2a85a1;
-}
-
-.login-help a {
-  color: #cce7fa;
-  text-decoration: none;
-}
-
-.login-help a:hover {
-  text-decoration: underline;
-}
-
-.credentials {
-  color: #545353;
-  font-size: 0.9em;
-  font-weight: bold;
-}
-
-.login input[type=text], input[type=password] {
-  margin: 5px;
-  padding: 0 10px;
-  width:90%;
-  height: 35px;
-  color: #404040;
-  background: white;
-  border: 1px solid;
-  border-color: #c4c4c4 #d1d1d1 #d4d4d4;
-  border-radius: 2px;
-  outline: 5px solid #eff4f7;
-}
-
-.login input[type=text]:focus, input[type=password]:focus {
-  border-color: #7dc9e2;
-  outline-color: #dceefc;
-  outline-offset: 0;
-}
-
-input[name=sign-in] {
-  margin-top: 3%;
-  padding: 0 18px;
-  height: 35px;
-  font-size: 15px;
-  font-weight: bold;
-  color: white;
-  text-shadow: 0 1px #545353;
-  background: #5D4BD8;
-  border: 1px solid;
-  border-color: #545353;
-  outline: 0;
-  width:96%;
-  border-radius: 2px;
-}
-input[name=logout] {
-  margin-top: 3%;
-  padding: 0 18px;
-  height: 35px;
-  font-size: 15px;
-  font-weight: bold;
-  color: white;
-  text-shadow: 0 1px #545353;
-  background: #FE3F44;
-  border: 1px solid;
-  border-color: #545353;
-  outline: 0;
-  width:96%;
-  border-radius: 2px;
-}
-
-input[type=submit]:active {
-  background: #cde5ef;
-  border-color: #9eb9c2 #b3c0c8 #b4ccce;
-  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
-  color:black;
-}
-
-.info_login {
-  color: #545353;
-  font-size: 0.7em;
-}
-
 /* INIZIO CSS LOCALITA */
 
 #nav {
   float: left;
   background-color: #444;
-
-  width: 0;
+  margin: 0;
+  border-radius: 0;
   height: 0;
-  visibility: hidden;
 }
 
 #nav ul {
+  margin-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 1em;
+  list-style-type:none;
 }
 
 #nav li {
+  padding-left: 1.4em;
+  color: white;
 }
 
 #nav_selected {
+  padding-left: 2em;
+  background-image: url(../images/icons/n_pos.png);
+  background-repeat: no-repeat;
+  background-position: -0.3em 40%;
 }
 
 #nav a{
+  font-weight: bold;
+  text-decoration: none;
 }
 
 #nav a:hover{
+  text-decoration: underline;
 }
 
 #content {
   float: left;
   color: #444;
-  width: 100%;
+  margin-left: 2%;
+  width: 78%;
 }
 
 #content h1 {
@@ -387,21 +340,28 @@ input[type=submit]:active {
 }
 
 #content ul {
+  padding-top:1%;
+  padding-left: 2%;
 }
 
 #content ul li a{
+  color: #2F965A;
+  font-weight:bold;
 }
-
 #content a:visited{
+  color: #2ECC71;
 }
 
 #content #mappa_sito {
+  padding-top: 2em;
 }
 
 #content #mappa_sito ul{
+  padding-top: 0em;
 }
 
 #content #mappa_sito ul ul{
+  list-style-type: none;
 }
 
 #descr_loc {
@@ -409,11 +369,10 @@ input[type=submit]:active {
   width: 100%;
   overflow: hidden;
   color: #444;
-
   padding: 0;
 }
 
-#descr_loc h1 {
+#descr_loc h2 {
   display: block;
   float: left;
   position: relative;
@@ -425,9 +384,10 @@ input[type=submit]:active {
   font-size: 1em;
   background-color: #2ECC71;
   border-radius: 0.2em;
+  clear: right;
 }
 
-#descr_loc h2 {
+#descr_loc h1 {
   font-size: 2em;
   text-transform: uppercase;
   font-weight: normal;
