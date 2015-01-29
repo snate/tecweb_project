@@ -27,6 +27,7 @@ a:hover{
 #header {
   background-color: /* #27AE60 */ #2F965A;
   height: 2.8em;
+  overflow: hidden;
 }
 
 #header h1 {
@@ -45,30 +46,39 @@ a:hover{
 }
 
 #header #main-menu {
-  margin: 0.2em 0.5em;
+  margin: 0 0.5em;
   float: left;
   font-size: 1.5em;
   text-transform: uppercase;
 }
 
 #header #main-menu li {
+  list-style-type: none;
   float: left;
   padding: 0 0.5em;
+  height: 1.9em;
 }
 
 #header #main-menu li:first-child {
 }
 
 #header #main-menu li a {
+  display: block;
+  text-decoration: none;
+  height: 1.7em;
+  line-height: 1.5em;
+  border-top: 0.2em solid #fff;
   color: #fff;
 }
 
 #header #main-menu li a:hover{
   color: #2F965A;
+  background-color: #fff;
+  border-top: 0.2em solid #2F965A;
 }
 
 #header #main-menu li a:visited{
-  color: #2ECC71;
+  color: #fff;
 }
 
 #header #search {
@@ -144,6 +154,7 @@ a:hover{
 }
 
 #breadcrumb li {
+  list-style-type: none;
   float: left;
   padding: 0 0.2em;
   color: #444;
@@ -253,18 +264,6 @@ a:hover{
   transition: all 0.7s ease 0s;
 }
 
-#c_mare:hover {
-  background-image: url(../images/HOME_BG_SEA_HOVER.jpg);
-}
-
-#c_cit:hover {
-  background-image: url(../images/HOME_BG_CITY_HOVER.jpg);
-}
-
-#c_mont:hover {
-  background-image: url(../images/HOME_BG_MOUNTAIN_HOVER.jpg);
-}
-
 .foothome {
   position: absolute;
   bottom: 0;
@@ -273,22 +272,19 @@ a:hover{
 #footer {
   clear: both;
   width: 100%;
-  background-color: #D5D5D5;
+  background-color: #ECF0F1;
   height: 2.5em;
 }
 
 #footer ul{
   list-style-type: none;
-  margin-top: 0.5em;
   float: left;
 }
 
 #footer li{
   font-size: 1em;
-  border-right: solid;
-  border-color: #27AE60;
-  border-width: 1px;
-  display:inline;
+  display: block;
+  float: left;
   padding: 0 0.8em;
 }
 
@@ -300,160 +296,30 @@ a:hover{
   border: none;
 }
 
-#footer a{
+
+#footer li a {
   text-decoration: none;
+  line-height: 2.5em;
+  display: block;
+  height: 2.2em;
+  border-bottom: 0.3em solid #2F965A;
+
+  font-family: 'Roboto';
+  font-size: 0.9em;
 }
 
-#footer a:hover{
-  text-decoration: underline;
+#footer li a:hover {
+  height: 2.3em;
+  border-bottom: 0.2em solid #2ECC71;
+}
+
+#footer li a:visited {
+  border-color: #2ECC71;
 }
 
 #xhtml_valid{
-  margin-top: 0.2em;
-  float:right;
+  float: right;
   padding-right: 0.7em;
-}
-
-/* INIZIO CSS PAGINA DI LOGIN */
-
-.container {
-  margin: 1% auto;
-  width: 50%;
-}
-
-.login {
-  position: relative;
-  margin: 0 auto;
-  padding: 5% 5% 5%;
-  width: 45%;
-  background: #EAEAEA;
-  border-radius: 3px;
-}
-
-.login:before {
-  content: '';
-  position: absolute;
-  top: -3%;
-  right: -3%;
-  bottom: -3%;
-  left: -3%;
-  z-index: -1;
-  background: rgba(0, 0, 0, 0.08);
-  border-radius: 4px;
-}
-
-.login h1 {
-  margin: -5% -5% 5%;
-  line-height: 200%;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #555;
-  text-align: center;
-  background: #f3f3f3;
-  border-bottom: 1px solid #cfcfcf;
-  border-radius: 3px 3px 0 0;
-}
-
-.login p {
-  margin: 7% 0 0;
-}
-
-.login p:first-child {
-  margin-top: 7%;
-}
-
-.login p.submit {
-  text-align: center;
-}
-
-.login p.logout {
-  text-align: center;
-}
-
-.login-help {
-  margin: 20px 0;
-  font-size: 11px;
-  color: white;
-  text-align: center;
-  text-shadow: 0 1px #2a85a1;
-}
-
-.login-help a {
-  color: #cce7fa;
-  text-decoration: none;
-}
-
-.login-help a:hover {
-  text-decoration: underline;
-}
-
-.credentials {
-  color: #545353;
-  font-size: 0.9em;
-  font-weight: bold;
-}
-
-.login input[type=text], input[type=password] {
-  margin: 5px;
-  padding: 0 10px;
-  width:90%;
-  height: 35px;
-  color: #404040;
-  background: white;
-  border: 1px solid;
-  border-color: #c4c4c4 #d1d1d1 #d4d4d4;
-  border-radius: 2px;
-  outline: 5px solid #eff4f7;
-}
-
-.login input[type=text]:focus, input[type=password]:focus {
-  border-color: #7dc9e2;
-  outline-color: #dceefc;
-  outline-offset: 0;
-}
-
-input[name=sign-in] {
-  margin-top: 3%;
-  padding: 0 18px;
-  height: 35px;
-  font-size: 15px;
-  font-weight: bold;
-  color: white;
-  text-shadow: 0 1px #545353;
-  background: #5D4BD8;
-  border: 1px solid;
-  border-color: #545353;
-  outline: 0;
-  width:96%;
-  border-radius: 2px;
-}
-input[name=logout] {
-  margin-top: 3%;
-  padding: 0 18px;
-  height: 35px;
-  font-size: 15px;
-  font-weight: bold;
-  color: white;
-  text-shadow: 0 1px #545353;
-  background: #FE3F44;
-  border: 1px solid;
-  border-color: #545353;
-  outline: 0;
-  width:96%;
-  border-radius: 2px;
-}
-
-input[type=submit]:active {
-  background: #cde5ef;
-  border-color: #9eb9c2 #b3c0c8 #b4ccce;
-  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
-  color:black;
-}
-
-.info_login {
-  color: #545353;
-  font-size: 0.7em;
 }
 
 /* INIZIO CSS LOCALITA */
@@ -566,6 +432,11 @@ input[type=submit]:active {
   color: #2ECC71;
 }
 
+#descr_loc a:hover {
+  color: #2ECC71;
+  text-decoration: none;
+}
+
 #descr_loc p {
   font-family: 'Roboto';
   font-size: 0.9em;
@@ -631,7 +502,6 @@ input[type=submit]:active {
 
 #government li, #utility li {
   list-style-type: none;
-
   font-family: 'Roboto';
   font-size: 0.9em;
 }
@@ -713,10 +583,26 @@ float: left;
 clear: both;
 }
 
-
 #comments label {
 float: left;
 clear: both;
+}
+
+#err_user, #err_comment {
+  float: left;
+  margin-left: 0.1em;
+  font-family: 'Roboto';
+  font-size: 0.9em;
+  background-image: url(../images/icons/Error.png);
+  background-repeat: no-repeat;
+  background-position: left 50%;
+  padding: 0.4em 0 0 1.3em;
+  background-size: 1.1em;
+  color: #e84444;
+}
+
+#err_comment {
+  clear: both;
 }
 
 
@@ -774,7 +660,7 @@ clear: both;
   padding-left: 2em;
   background-image: url(../images/icons/n_pos.png);
   background-repeat: no-repeat;
-  background-position: -0.3em;
+  background-position: -0.3em 40%;
 }
 
 #nav a{
@@ -852,10 +738,17 @@ clear: both;
 
 }
 
-#nav #geolocation #geodata ul,li{
-  color:white;
+#geodata li{
   list-style-type: none;
-}
+
+  font-family: 'Roboto';
+  font-size: 0.9em;
+} /**/
+
+#mapholder a{
+  background-position: right 0.2em;
+  padding-right: 1.2em;
+} /**/
 
 #paragraph_title{
   font-weight: bold;

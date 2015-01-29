@@ -1,4 +1,4 @@
-// GLOBALS
+﻿// GLOBALS
 
 var _ = require(['underscore'], function (underscore){});
 
@@ -170,7 +170,7 @@ if(document.getElementById("content"))
                 return  geodl.childNodes[k++].innerHTML = sortedlist.name + " : " + sortedlist.distance + " Km";
               });
             }else
-              geodl.childNodes[0].innerHTML = currentloc.name + " è lontana " + currentloc.distance + " Km da te.";
+              geodl.childNodes[0].innerHTML = currentloc.name + " dista " + currentloc.distance + " Km dalla tua posizione.";
             };
 
             getLocation();
