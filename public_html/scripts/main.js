@@ -59,6 +59,7 @@ function searchBlur(){
 function visualizza_c(){
   document.getElementById('visualizza_commenti').setAttribute('class',"");
   loc = loc.innerHTML.trim().toLowerCase();
+  loc = getNome(loc);
   xml=loadXMLDoc("cgi-bin/commenti.xml");
   xsl=loadXMLDoc("dati/commenti.xsl");
   if (window.ActiveXObject || // codice per IE
@@ -75,6 +76,16 @@ function visualizza_c(){
     content=text.getElementById("nome_"+loc);
     document.getElementById("visualizza_commenti").appendChild(content);
   }
+}
+
+function getNome(loc) {
+  var locNomi = new Array();
+  locNomi["londra"] = "london";
+  locNomi["madonna di campiglio"] = "london";
+  locNomi["zante"] = "zakynthos";
+  locNomi["praga"] = "praga";
+  locNomi["parigi"] = "paris";
+  return locNomi[loc];
 }
 
 function loadXMLDoc(file){
