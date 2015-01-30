@@ -13,8 +13,8 @@ elementFormDefault="qualified">
 </xsd:complexType>
 
 <xsd:complexType name="Tlocalita">
-	<xsd:sequence>
-		<xsd:element name="comment" type="Tcomment" minOccurs="0" maxOccurs="unbounded"/>
+	<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+		<xsd:element name="comment" type="Tcomment" />
 	</xsd:sequence>
 	<xsd:attribute name="nome" type="xsd:string" use="required" />
 </xsd:complexType>

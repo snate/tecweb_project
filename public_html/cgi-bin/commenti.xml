@@ -37,6 +37,10 @@
       <corpo>prova prova prova</corpo>
       <pubblicationDate>2004-10-02</pubblicationDate>
     </comment>
+    <comment user="Pippo2">
+      <corpo>CommentoMADONNA</corpo>
+      <pubblicationDate>2004-10-03</pubblicationDate>
+    </comment>
 </localita>
 
   <localita nome="praga">

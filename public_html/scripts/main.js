@@ -10,6 +10,8 @@ var annullaIn=document.getElementById('annulla');
 var nuovoIn=document.getElementById('new_comment');
 var visualizzaIn=document.getElementById('see_comments');
 var nascondiIn=document.getElementById('hide_comments');
+var spanErrUser = document.getElementById('err_user');
+var spanErrComm = document.getElementById('err_comment');
 
 //FUNCTIONS
 
@@ -61,7 +63,7 @@ function visualizza_c(){
   loc = loc.innerHTML.trim().toLowerCase();
   loc = getNome(loc);
   xml=loadXMLDoc("cgi-bin/commenti.xml");
-  xsl=loadXMLDoc("dati/commenti.xsl");
+  xsl=loadXMLDoc("cgi-bin/commenti.xsl");
   if (window.ActiveXObject || // codice per IE
       xhttp.responseType == "msxml-document") {
     text = xml.transformNode(xsl);
@@ -106,10 +108,12 @@ function visualizza_form(){
 
 function blurUser(){
 	if(!checkUser()){
-		document.getElementById('err_user').innerHTML="Inserire uno username";
+	  spanErrUser.innerHTML="Inserire uno username";
+      spanErrUser.className="";
 	}
 	else{
-		document.getElementById('err_user').innerHTML="";
+	  spanErrUser.innerHTML="";
+      spanErrUser.className="hidden";
 	}
 }
 
@@ -120,10 +124,12 @@ function checkUser(){
 
 function blurComment(){
 	if(!checkComment()){
-		document.getElementById('err_comment').innerHTML="E' obbligatorio inserire un testo per il commento";
+	  spanErrComm.innerHTML="E' obbligatorio inserire un testo per il commento";
+      spanErrComm.className="";
 	}
 	else{
-		document.getElementById('err_comment').innerHTML="";
+	  spanErrComm.innerHTML="";
+      spanErrComm.className="hidden";
 	}
 }
 
@@ -134,8 +140,10 @@ function checkComment(){
 
 function clickSubmit(){
 	var corretto=checkAll();
-	if(corretto)
-		return true;
+	if(corretto) {
+      alert("Inserimento avvenuto correttamente");
+      return true;
+    }
 	alert('Impossibile inviare il commento.\n Controllare i dati immessi.');
 	doAll();
 	return false;
