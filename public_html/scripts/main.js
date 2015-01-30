@@ -79,12 +79,7 @@ function visualizza_c(){
 }
 
 function getNome(loc) {
-  var locNomi = new Array();
-  locNomi["londra"] = "london";
-  locNomi["madonna di campiglio"] = "london";
-  locNomi["zante"] = "zakynthos";
-  locNomi["praga"] = "praga";
-  locNomi["parigi"] = "paris";
+  var locNomi = {"londra":"london","madonna di campiglio":"madonnadicampiglio","zante":"zakynthos","praga":"praga","parigi":"paris"};
   return locNomi[loc];
 }
 

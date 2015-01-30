@@ -22,12 +22,10 @@
 \documentclass[
 article,
 10pt, % Main document font size
-a4paper, % Paper type, use 'letterpaper' for US Letter paper
 oneside, % One page layout (no page indentation)
-%twoside, % Two page layout (page indentation for binding and different headers)
-headinclude,footinclude, % Extra spacing for the header and footer
 BCOR5mm, % Binding correction
 ]{scrartcl}
+\usepackage[a4paper,margin=3cm]{geometry}
 \usepackage[italian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
@@ -59,7 +57,7 @@ Sebastiano Valle 1050123}
 
 \maketitle % Print the title/author/date block
 
-\setcounter{tocdepth}{2} % Set the depth of the table of contents to show sections and subsections only
+\setcounter{page}{1} % Set the depth of the table of contents to show sections and subsections only
 
 \tableofcontents % Print the table of contents
 
