@@ -1,20 +1,45 @@
-\section{Individuazione degli utenti e delle loro esigenze}
+\section{Struttura}
 Di seguito sono illustrate le modalità di progettazione della struttura delle
 pagine all'interno del sito.
 
-\subsection{Parti comuni a tutte}
+\subsection{Parti comuni a tutte le pagine}
 Tutte le pagine sono state scritte seguendo lo standard \textit{XHTML 1.0 Strict} e come codifica è stata scelta UTF-8 dal momento che nel sito sono
 presenti parole accentate.
 Una sezione \textbf{head} ed una sezione \textbf{body} sono state inserite in
 tutte le pagine con la stessa struttura.
 
-\subsubsection{Head}
-Sono presenti i seguenti tag in tutte le pagine:
+\subsubsection{Head} %TODO @Graziano @Carlo
+Sono presenti i seguenti tag nelle sezioni head di tutte le pagine:
 \begin{itemize}
-\item title : permette di visualizzare sulla finestra del browser il titolo della pagina visualizzata, dal particolare al generale
-\item meta title : anch'esso dal particolare al generale 
-%TODO
+\item \textbf{title:} permette di visualizzare sulla finestra del browser il titolo della pagina visualizzata, dal particolare al generale
+\item \textbf{meta title:} indica il titolo della pagina in un eventuale snippet, anch'esso dal particolare al generale
+\item \textbf{meta description:} in questo tag viene inserita la breve descrizione della pagina visualizzata in un eventuale snippet
+\item \textbf{meta author:} in questo tag sono indicati i componenti del gruppo
+\item \textbf{meta keywords:} parole che aiutano un motore di ricerca a trovare la pagina grazie a dei termini di importanza focale
+\item \textbf{meta robots:} tag che indica ad un eventuale spider se indicizzare la pagina e se seguire i link da essa uscenti
+\item \textbf{meta keywords:} parole che aiutano un motore di ricerca a trovare la pagina grazie a dei termini di importanza focale
+\item \textbf{meta reply-to:} %TODO@Graziano
+\item \textbf{meta Classification:} tag che serve ad indicare l'argomento trattato dalle pagine del sito
+\item \textbf{meta viewport:} %TODO@Carlo
+\item \textbf{link shortcut icon:} icona visibile a fianco al titolo della scheda nel browser, aiuta a identificare meglio le schede di \textit{What To Visit} se un utente avesse più schede aperte nel suo browser
+\item \textbf{link stylesheet:} collegamento a foglio di stile CSS %TODO@Carlo
 \end{itemize}
 
 \subsubsection{Body}
+Affinchè l'utente si sentisse il meno disorientato possibile all'interno di \textit{What To Visit}, si è cercato di progettare il sito con un layout essenziale e che mettesse in primo piano il contenuto aspettato in tutte le pagine.
+Sono presenti questi elementi strutturali nei corpi di tutte le pagine:
+\begin{itemize}
+\item un header, dove vi è il logo del sito;
+\item un'ampia parte centrale, dove vengono visualizzati i contenuti richiesti dall'utente;
+\item un footer, dove sono presenti link ed informazioni di poco rilievo e un'indicazione riguardo la validità della pagina.
+\end{itemize}
 
+\subsection{Homepage}
+Come pagina principale del sito, si è pensato di esporre in primo piano all'utente la scelta delle tre categorie delle località.
+A partire da queste l'utente può arrivare nelle pagine delle categorie, dove può trovare le liste delle località presenti in queste.
+
+Dal momento che la homepage è l'unica pagina facilmente riconoscibile data la sua struttura con tre titoli di indirizzamento, la breadcrumb è stata omessa perchè si è assunto che gli utenti riuscissero a dedurre che si trovano nella homepage quando vi sono dentro (anche grazie all'URL).
+
+Per poter comunque fornire collegamenti alle pagine che non sono di contenuto ma che sono significative (Chi Siamo e F.A.Q.), i link a queste sono stati inseriti nell'header della pagina a fianco del logo; in questo modo, anche se sono di importanza secondaria rispetto ai tre pannelli visualizzati nella pagina, rimangono comunque nella parte visibile del sito quando questo viene aperto (\texttt{http://en.wikipedia.org/wiki/Above\_the\_fold\#In\_web\_design}).
+
+Nel footer, oltre alle indicazioni di validità della pagina, sono stati lasciati i link restanti alle pagine che non sono di contenuto.
