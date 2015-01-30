@@ -80,8 +80,8 @@ a:hover{
   color: #2F965A;
 }
 
-#header #main-menu li a:visited{
-  color: #fff;
+#header #main-menu li:hover a:visited{
+  color: #2ECC71;
 }
 
 #header #search {
@@ -499,7 +499,7 @@ a:hover{
   clear: both;
 }
 
-#aside a{
+#aside a {
   color: #2F965A;
   background-image: url(../images/icons/Link_out.png);
   background-repeat: no-repeat;
