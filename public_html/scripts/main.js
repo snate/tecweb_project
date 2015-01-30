@@ -2,7 +2,7 @@
 
 var geo = require(['geolocation'], function (geolocation){});
 var searchbar = document.getElementById('place');
-var loc = document.getElementById('current_page');
+var loc = document.getElementById('current_page').innerHTML;
 var userIn=document.getElementById('user');
 var commentIn=document.getElementById('comment');
 var formIn=document.getElementById('formcompl');
@@ -60,14 +60,18 @@ function searchBlur(){
 
 function visualizza_c(){
   document.getElementById('visualizza_commenti').setAttribute('class',"");
-  loc = loc.innerHTML.trim().toLowerCase();
-  loc = getNome(loc);
   xml=loadXMLDoc("cgi-bin/commenti.xml");
   xsl=loadXMLDoc("cgi-bin/commenti.xsl");
   if (window.ActiveXObject || // codice per IE
       xhttp.responseType == "msxml-document") {
     text = xml.transformNode(xsl);
-    content=text.getElementById("nome_"+loc);
+    var nomeLoc = loc.innerHTML.trim().toLowerCase();
+    nomeLoc = getNome(nomeLoc);
+     content=text.getElementById("nome_"+nomeLoc);
+    if(content.innerHTML == "") {
+      content = document.createElement("div");
+      content.innerHTML = "Non ci sono commenti da visualizzare";
+    }
     document.getElementById("visualizza_commenti").innerHTML = content;
   } // codice per Chrome, Firefox, Opera, etc.
   else if (document.implementation &&
@@ -75,7 +79,13 @@ function visualizza_c(){
     xsltProcessor = new XSLTProcessor();
     xsltProcessor.importStylesheet(xsl);
     text= xsltProcessor.transformToFragment(xml, document);
-    content=text.getElementById("nome_"+loc);
+    nomeLoc = loc.trim().toLowerCase();
+    nomeLoc = getNome(nomeLoc);
+    content=text.getElementById("nome_"+nomeLoc);
+    if(content.innerHTML == "") {
+      content = document.createElement("div");
+      content.innerHTML = "Non ci sono commenti da visualizzare";
+    }
     document.getElementById("visualizza_commenti").appendChild(content);
   }
 }
