@@ -1,0 +1,89 @@
+\section{Comportamento}
+
+\subsection{Geolocalizzazione}
+In questo progetto abbiamo inoltre deciso di implementare un modulo che fa uso delle API HTML5 per la geolocalizzazione. L'introduzione di tale caratteristica ha il puro scopo di migliorare la qualità del sito; in assenza di questa, l'utente avrà comunque accesso a tutte le funzionalità di base.
+\begin{flushleft}
+Grazie al modulo in questione, dopo aver acconsentito a fornire i dati sulla propria posizione e a seconda della pagina in cui si trova, all'utente verranno mostrate diverse informazioni.
+\end{flushleft}
+
+\begin{flushleft}
+In particolare, spostandosi sulle pagine “mare.html”o “citta.html”oppure “montagna.html” verranno visualizzate:
+\begin{itemize}
+\item\textit{una mappa a livello stradale avente tanti marker quante sono le località recensite all'interno della sezione appena raggiunta ed il marker che segnala la posizione attuale;
+\item una descrizione recante per ognuna delle località della sezione, la distanza in km dalla posizione attuale.}
+\end{itemize}
+\end{flushleft}
+\begin{flushleft}
+In alternativa, spostandosi sulle pagine delle località recensite (es: “praga.html”) verranno visualizzate:
+\end{flushleft}
+\begin{itemize}
+\item\textit{una mappa a livello stradale ad un livello di zoom maggiore rispetto al precedente ed un solo marker posizionato nel centro della città considerata;
+\item una piccola descrizione che informa sulla distanza tra la città considerata e la posizione attuale.}
+\end{itemize}
+È stato scelto di utilizzare Google Maps poiché gli utenti hanno una maggiore
+familiarità con le mappe offerte da Google\footnote{ Fonte: comScore Mobile
+Metrix, analisi effettuata negli Stati Uniti a Giugno 2014.}, per la qualità
+della documentazione relativa alle API offerta da Google e perchè l'utente con
+queste mappe riesce facilmente a spostarsi, aumentare il dettaglio di zoom
+oppure passare in modalità StreetView in modo semplice ed immediato.
+
+\subsubsection{L'implementazione del modulo in dettaglio}
+
+Il linguaggio di programmazione utilizzato per sviluppare il componente è \textbf{JavaScript}. Per svolgere più leggermente l'attività di codifica è stata inclusa una libreria di utilità, underscore.js (\textit{http://underscorejs.org/}).
+Vi è un unico script che viene inizializzato al caricamento della pagina ed è valido sia per le pagine di sezione, (es: “mare.html”) sia per le pagine delle località turistiche (es: “praga.html”).
+Questo è stato possibile attraverso la ricerca di un id presente solamente nelle pagine relative alle categorie, ma assente nelle pagine delle località. In tal modo lo script è in grado di discriminare se la pagina è di una categoria o di una località.
+
+\begin{flushleft}
+Per ottenere i dati voluti abbiamo dovuto realizzare una base-dati con le informazioni delle località recensite attraverso un oggetto JavaScript così formato:
+\end{flushleft}
+\begin{verbatim}
+   var località = {
+       "Parigi": {
+	          "name": "Parigi",
+	          "loc":"Città",
+	          "lat": 48.856614,
+	          "lon":  2.3522219
+       }
+   }
+\end{verbatim}
+\begin{flushleft}
+La funzione principale dalla quale estrapoliamo poi tutti i dati è \textit{getLocation()}.
+
+Invocando questa funzione viene innanzitutto verificato se il browser supporta la geolocalizzazione, fornendo un messaggio di errore nel caso in cui non la supportasse; se invece il browser supporta questa funzionalità, viene chiamata la funzione \textit{navigator.geolocation.getCurrentPosition(showPosition}) la quale recupera latitudine e longitudine della posizione attuale del dispositivo utilizzato dall'utente.
+\end{flushleft}
+\begin{flushleft}
+La funzione \textit{CalcolaDistanza(mylat,mylon,lat,lon)}, come dice il nome, si occupa di calcolare la distanza fra 2 coordinate geografiche; essa prende come argomenti latitudine e longitudine dei due punti desiderati ed attraverso la formula dell'emisenoverso ne restituisce la distanza in km.
+\end{flushleft}
+
+\begin{flushleft}
+La funzione \textit{showPosition(position)} ha lo scopo di creare l'interfaccia per i dati ed è infatti la funzione più corposa dello script; essa effettua :
+\end{flushleft}
+\begin{itemize}
+\item l'inizializzazione e successivamente la collocazione  della mappa con i marker nel documento HTML;
+\item il filtraggio delle sole località da considerare;
+\item il riordinamento per distanza minore dalla posizione attuale delle località nelle pagine di sezione;
+\item la creazione e la collocazione degli elementi html che costituiscono le informazioni di distanza.
+\end{itemize}
+
+\begin{flushleft}
+La funzionalità di geolocalizzazione offerta da \textit{What To Visit} è stata testata con i browser Google-Chrome ver.40+, Firefox ver.35+ sia in versione desktop che mobile.
+\end{flushleft}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
