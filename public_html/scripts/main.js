@@ -12,7 +12,6 @@ var visualizzaIn=document.getElementById('see_comments');
 var nascondiIn=document.getElementById('hide_comments');
 var spanErrUser = document.getElementById('err_user');
 var spanErrComm = document.getElementById('err_comment');
-var nomeLoc = loc.trim().toLowerCase();
 var f=true;
 
 //FUNCTIONS
@@ -24,6 +23,7 @@ function load(){  //ho dovuto rinominare la funzione a causa di conflitti con al
 	insertDate();
 	if(loc!=null){
     loc = loc.innerHTML;
+    var nomeLoc = loc.trim().toLowerCase();
 		visualizzaIn.onclick=visualizza_c;
 		nascondiIn.onclick=nascondi_c;
 		nuovoIn.onclick=visualizza_form;
