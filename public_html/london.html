@@ -26,7 +26,7 @@
 			</a>
 		</h1>
     </div>
-	
+
     <div id="breadcrumb" >
         Ti trovi in:
         <span xml:lang="en">
@@ -42,7 +42,7 @@
 			</fieldset>
 		</form>
     </div>
-	
+
     <div id="nav">
 		<a id="skip" href="#descr_loc" title="Salta la navigazione">Salta la navigazione</a>
 		<ul>
@@ -70,7 +70,7 @@
 			</li>
 		</ul>
     </div>
-	
+
     <div id="descr_loc">
 		<img src="images/london_1.jpg" alt="Foto di Londra" id="img_presentazione" />
 		<h1>
@@ -172,7 +172,7 @@
 				a LED.
 			</dd>
 		</dl>
-		
+
 		<div id="comments">
 			<form action="">
 				<fieldset>
@@ -190,8 +190,8 @@
 			</form>
 			<form action="">
 				<fieldset>
-					<label for="new_comment">Inserisci il tuo commento:</label>
-					<input type="button" value="Inserisci il tuo commento" id="new_comment" />
+					<label for="new_comment">Pubblica il tuo commento:</label>
+					<input type="button" value="Pubblica il tuo commento" id="new_comment" />
 				</fieldset>
 			</form>
 			<form class="hidden" method="post" action="cgi-bin/inserimento_commento.cgi" id="formcompl">
@@ -199,6 +199,7 @@
 					<legend>Inserisci il tuo commento</legend>
 					<div>
 						<input type="hidden" name="localita" id="localita" value="london" />
+            <input type="hidden" name="pubdate" id="pubdate" value="" />
 						<label for="user">Username:</label>
 						<input type="text" name="user" id="user" />
 						<span class="hidden" id="err_user"></span>
@@ -209,14 +210,14 @@
 						<span class="hidden" id="err_comment"></span>
 					</div>
 					<div>
-						<input type="submit" value="Submit" />
+						<input type="submit" value="Pubblica" />
 						<input type="reset" value="Annulla" id="annulla"/>
 					</div>
 				</fieldset>
 			</form>
 		</div>
     </div>
-	
+
     <div id="aside">
 		<div id="geolocation">
         <div id="mapholder"></div>
@@ -283,7 +284,7 @@
 			</li>
         </ul>
     </div>
-	
+
     <div id="footer">
         <ul>
 			<li>
