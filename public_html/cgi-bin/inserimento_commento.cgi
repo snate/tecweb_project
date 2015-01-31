@@ -8,6 +8,8 @@ my $url;
 my $page = new CGI;
 my $user = $page->param('user');
 my $comment = $page->param('comment');
+my $date = $page->param('pubdate');
+my $loc = $page->param('localita');
 
 my $file = 'commenti.xml';
 my $parser = XML::LibXML->new();
@@ -17,13 +19,13 @@ my $root = $doc->getDocumentElement;
 
 $doc->documentElement->setNamespace("http://www.commenti.com","c");
 
-my $query = "//c:localita[\@nome='madonnadicampiglio']";
+my $query = "//c:localita[\@nome='" . $loc . "']";
 
 my $father = $doc->findnodes($query)->get_node(1);
 
 my $fragment = "<comment user=\"" . $user . "\">
                 <corpo>" . $comment . "</corpo>
-                <pubblicationDate>2004-10-02</pubblicationDate>
+                <pubblicationDate>" . $date . "</pubblicationDate>
                </comment>\n";
 
 my $newnode = $parser->parse_balanced_chunk($fragment);
