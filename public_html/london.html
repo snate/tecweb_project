@@ -16,6 +16,14 @@
     <link rel="stylesheet" media="all" type="text/css" href="css/layout.css" />
     <link rel="stylesheet" media="handheld, screen and (max-width:480px), only screen and (max-device-width:480px)" type="text/css" href="css/mlayout.css" />
     <link href='http://fonts.googleapis.com/css?family=Roboto:700,400|Open+Sans+Condensed:300' rel='stylesheet' type='text/css' />
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="scripts/require.js"></script>
+    <script type="text/javascript">
+    require.config({
+      baseUrl: "scripts"
+    });
+    </script>
+    <script type="text/javascript" src="scripts/main.js"></script>
 </head>
 
 <body>
@@ -314,14 +322,5 @@
 			<img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict"/></a>
         </div>
     </div>
-
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script type="text/javascript" src="scripts/require.js"></script>
-    <script type="text/javascript">
-    require.config({
-      baseUrl: "scripts"
-    });
-    </script>
-    <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
