@@ -2,7 +2,7 @@
 
 var geo = require(['geolocation'], function (geolocation){});
 var searchbar = document.getElementById('place');
-var loc = document.getElementById('current_page').innerHTML;
+var loc = document.getElementById('current_page');
 var userIn=document.getElementById('user');
 var commentIn=document.getElementById('comment');
 var formIn=document.getElementById('formcompl');
@@ -23,6 +23,7 @@ function load(){  //ho dovuto rinominare la funzione a causa di conflitti con al
 	search();
 	insertDate();
 	if(loc!=null){
+    loc = loc.innerHTML;
 		visualizzaIn.onclick=visualizza_c;
 		nascondiIn.onclick=nascondi_c;
 		nuovoIn.onclick=visualizza_form;
