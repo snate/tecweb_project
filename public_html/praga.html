@@ -178,13 +178,15 @@
 					<legend>Inserisci il tuo commento</legend>
 					<div>
 						<input type="hidden" name="localita" id="localita" value="praga" />
-						<label for="user">Username:</label>
-						<input type="text" name="user" id="user" /><span id="err_user"></span>
-					</div>
-					<div>
-						<label for="comment">Testo del commento:</label>
-						<textarea name="comment" id="comment" rows="5" cols="40"></textarea><span id="err_comment"></span>
-					</div>
+            <label for="user">Username:</label>
+            <input type="text" name="user" id="user" />
+            <span class="hidden" id="err_user"></span>
+          </div>
+          <div>
+            <label for="comment">Testo del commento:</label>
+            <textarea name="comment" id="comment" rows="5" cols="40"></textarea>
+            <span class="hidden" id="err_comment"></span>
+          </div>
 					<div>
 						<input type="submit" value="Submit" />
 						<input type="reset" value="Annulla" id="annulla"/>
