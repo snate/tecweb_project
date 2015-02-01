@@ -46,43 +46,38 @@ a:hover{
 }
 
 #header #main-menu {
-  margin: 0 0.5em;
-  float: left;
-  font-size: 1.5em;
-  text-transform: uppercase;
+float: left;
+list-style-type: none;
 }
 
 #header #main-menu li {
-  list-style-type: none;
-  float: left;
-  padding: 0 0.5em;
-  height: 1.9em;
+float: left;
+padding: 0 0.4em;
 }
 
 #header #main-menu li:first-child {
 }
 
 #header #main-menu li a {
-  display: block;
-  text-decoration: none;
-  height: 1.7em;
-  line-height: 1.5em;
-  border-top: 0.2em solid #fff;
-  color: #fff;
+margin: 0.16em 0 0 0;
+display: block;
+background-color: #2F965A;
+border-radius: 0.24em;
+border: 0.1em solid #ECF0F1;
+color: #ECF0F1;
+text-decoration: none;
+padding: 0 0.3em;
+text-transform: uppercase;
+font-weight: normal;
+font-size: 1.5em;
 }
 
-#header #main-menu li:hover {
-  color: #2ECC71;
-  background-color: #fff;
-  border-top: 0.2em solid #2ECC71;
-}
-
-#header #main-menu li:hover a {
-  color: #2F965A;
+#header #main-menu a:hover {
+background-color: #2ECC71;
 }
 
 #header #main-menu li:hover a:visited{
-  color: #2ECC71;
+background-color: #2ECC71;
 }
 
 #header #search {
@@ -367,6 +362,11 @@ a:hover{
   font-weight: normal;
 }
 
+#content p {
+  font-family: 'Roboto';
+  font-size: 0.9em;
+}
+
 #content ul {
   padding-top:1%;
   padding-left: 2%;
@@ -394,15 +394,58 @@ a:hover{
 }
 
 #content #mappa_sito {
-	padding-top: 2em;
+  padding-top: 0.5em;
+  list-style-type: none;
 }
 
-#content #mappa_sito ul{
-	padding-top: 0em;
+#content #mappa_sito li {
+  padding-bottom: 0.2em;
+}
+
+#content #mappa_sito li a{
+  line-height: 1.4em;
+  font-size: 1.4em;
+}
+
+#content #mappa_sito ul {
+  padding: 0 0 0 2%;
+}
+
+#content #mappa_sito ul li a {
+  line-height: 1em;
+  font-size: 1em;
+  text-transform: none;
+  font-family: 'Roboto';
+  font-weight: bold;
 }
 
 #content #mappa_sito ul ul{
-	list-style-type: none;
+  list-style-type: none;
+}
+
+#content #mappa_sito ul ul li a {
+  line-height: 1em;
+  font-size: 1em;
+  text-transform: none;
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-size: 0.9em;
+}
+
+#content dl {
+  margin: 1em 1% 1em 0;
+  font-family: 'Roboto';
+}
+
+#content dt {
+  list-style-type: none;
+  font-weight: bold;
+}
+
+#content dd {
+  list-style-type: none;
+  font-size: 0.9em;
+  padding: 0.3em 0 1em 1em;
 }
 
 #descr_loc {
