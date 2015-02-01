@@ -57,43 +57,30 @@ a:hover{
 
 
 #header #main-menu {
-  margin: 0 0.5em;
-  float: left;
-  font-size: 1.5em;
-  text-transform: uppercase;
+
 }
 
 #header #main-menu li {
-  list-style-type: none;
-  float: left;
-  padding: 0 0.5em;
-  height: 1.9em;
+
 }
 
 #header #main-menu li:first-child {
 }
 
 #header #main-menu li a {
-  display: block;
-  text-decoration: none;
-  height: 1.7em;
-  line-height: 1.5em;
-  border-top: 0.2em solid #fff;
-  color: #fff;
+
 }
 
 #header #main-menu li:hover {
-  color: #2ECC71;
-  background-color: #fff;
-  border-top: 0.2em solid #2ECC71;
+
 }
 
 #header #main-menu li:hover a {
-  color: #2F965A;
+
 }
 
 #header #main-menu li a:visited{
-  color: #fff;
+
 }
 
 #header #search {
@@ -307,41 +294,27 @@ a:hover{
 /* INIZIO CSS LOCALITA */
 
 #nav {
-  float: left;
-  background-color: #444;
-  margin: 0;
-  border-radius: 0;
-  height: 0;
+
 }
 
 #nav ul {
-  margin-top: 0.5em;
-  padding-bottom: 0.5em;
-  font-weight: normal;
-  text-transform: uppercase;
-  font-size: 1em;
-  list-style-type:none;
+
 }
 
 #nav li {
-  padding-left: 1.4em;
-  color: white;
+
 }
 
 #nav_selected {
-  padding-left: 2em;
-  background-image: url(../images/icons/n_pos.png);
-  background-repeat: no-repeat;
-  background-position: -0.3em 40%;
+
 }
 
 #nav a {
-  font-weight: bold;
-  text-decoration: none;
+
 }
 
 #nav a:hover {
-  text-decoration: underline;
+
 }
 
 #content {
@@ -525,37 +498,6 @@ a:hover{
 
 
 
-
-#nav ul {
-  margin-top: 0.5em;
-  padding-bottom: 0.5em;
-  font-weight: normal;
-  text-transform: uppercase;
-  font-size: 1em;
-  list-style-type:none;
-}
-
-#nav li {
-  padding-left: 1.4em;
-  color: white;
-}
-
-#nav_selected {
-  padding-left: 2em;
-  background-image: url(../images/icons/n_pos.png);
-  background-repeat: no-repeat;
-  background-position: -0.3em;
-}
-
-#nav a{
-	font-weight: bold;
-	text-decoration: none;
-}
-
-#nav a:hover{
-	text-decoration: underline;
-}
-
 #content ul {
   padding-top:1%;
   padding-left: 2%;
@@ -671,4 +613,100 @@ border: 2px solid #2ECC71;
 #geodata li{
   width: 90%;
   margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#main-menu, #nav {
+  /* critical sizing and position styles */
+  width: 70%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: -70%;
+  z-index: 0;
+
+  list-style: none;
+  background: #111;
+}
+
+#nav {
+  margin: 0;
+}
+
+#header #main-menu li, #nav li {
+  width: 200px;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #000;
+}
+
+#header #main-menu li a, #nav li a {
+  /* non-critical appearance styles */
+  display: block;
+  padding: 1em;
+  background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.2s, background 0.5s;
+}
+
+#menu-trigger, #nav-trigger {
+  /* critical styles - hide the checkbox input */
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+label[for="menu-trigger"], label[for="nav-trigger"] {
+  /* critical positioning styles */
+  position: fixed;
+  left: 15px;
+  top: 15px;
+  z-index: 2;
+  visibility: visible;
+  
+  /* non-critical apperance styles */
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+  background-size: contain;
+}
+
+#menu-trigger + label, #nav-trigger + label {
+  transition: left 0.2s;
+}
+
+#menu-trigger:checked + label, #nav-trigger:checked + label {
+  left: 72%;
+}
+
+#menu-trigger:checked ~ #main-menu {
+  left: 0;
+  box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+}
+
+ #nav-trigger:checked ~ #nav {
+  left: 0;
+  box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
 }

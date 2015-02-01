@@ -752,3 +752,37 @@ clear: both;
 .paragraph_notes{
   font-style: italic;
 }
+
+
+
+
+#menu-trigger {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+label[for="menu-trigger"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
