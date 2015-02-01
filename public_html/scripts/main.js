@@ -12,6 +12,8 @@ var visualizzaIn=document.getElementById('see_comments');
 var nascondiIn=document.getElementById('hide_comments');
 var spanErrUser = document.getElementById('err_user');
 var spanErrComm = document.getElementById('err_comment');
+var linkU = document.getElementById('utility');
+var linkG = document.getElementById('government');
 var f=true;
 
 //FUNCTIONS
@@ -22,8 +24,8 @@ function load(){  //ho dovuto rinominare la funzione a causa di conflitti con al
 	search();
 	insertDate();
 	if(loc!=null){
-    loc = loc.innerHTML;
-    var nomeLoc = loc.trim().toLowerCase();
+    	loc = loc.innerHTML;
+    	var nomeLoc = loc.trim().toLowerCase();
 		visualizzaIn.onclick=visualizza_c;
 		nascondiIn.onclick=nascondi_c;
 		nuovoIn.onclick=visualizza_form;
@@ -31,6 +33,7 @@ function load(){  //ho dovuto rinominare la funzione a causa di conflitti con al
 		commentIn.onblur=blurComment;
 		formIn.onsubmit=clickSubmit;
 		annullaIn.onclick=delAll;
+		extLink();
 	}
 }
 
@@ -50,6 +53,27 @@ function search(){
 	searchbar.className += " emphasized";
 	searchbar.onfocus = searchFocus;            //assegno cosa fare onfocus
 	searchbar.onblur = searchBlur;
+}
+
+function extLink() {
+	linksG = linkG.getElementsByTagName("a");
+	linksU = linkU.getElementsByTagName("a");
+	for(var i = 0; i < linksU.length; i++) {
+		linksU[i].onclick = function(){
+			popUp(this.getAttribute("href"));
+			return false;
+		}
+	}
+	for(var i = 0; i < linksU.length; i++) {
+		linksG[i].onclick = function(){
+			popUp(this.getAttribute("href"));
+			return false;
+		}
+	}
+}
+
+function popUp(url) {
+	window.open(url,'_blank');
 }
 
 function searchFocus(){
