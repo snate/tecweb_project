@@ -1,19 +1,19 @@
 // GLOBALS
 
-var geo = require(['geolocation'], function (geolocation){});
-var searchbar = document.getElementById('place');
-var loc = document.getElementById('current_page');
-var userIn=document.getElementById('user');
-var commentIn=document.getElementById('comment');
-var formIn=document.getElementById('formcompl');
-var annullaIn=document.getElementById('annulla');
-var nuovoIn=document.getElementById('new_comment');
-var visualizzaIn=document.getElementById('see_comments');
-var nascondiIn=document.getElementById('hide_comments');
-var spanErrUser = document.getElementById('err_user');
-var spanErrComm = document.getElementById('err_comment');
-var linkU = document.getElementById('utility');
-var linkG = document.getElementById('government');
+var geo;
+var searchbar;
+var loc;
+var userIn;
+var commentIn;
+var formIn;
+var annullaIn;
+var nuovoIn;
+var visualizzaIn;
+var nascondiIn;
+var spanErrUser;
+var spanErrComm;
+var linkU;
+var linkG;
 var f=true;
 
 //FUNCTIONS
@@ -21,6 +21,7 @@ var f=true;
 window.onload = load;
 
 function load(){  //ho dovuto rinominare la funzione a causa di conflitti con altre libs
+  init();
 	search();
 	insertDate();
 	if(loc!=null){
@@ -35,6 +36,22 @@ function load(){  //ho dovuto rinominare la funzione a causa di conflitti con al
 		annullaIn.onclick=delAll;
 		extLink();
 	}
+}
+function init() {
+  geo = require(['geolocation'], function (geolocation){});
+  searchbar = document.getElementById('place');
+  loc = document.getElementById('current_page');
+  userIn=document.getElementById('user');
+  commentIn=document.getElementById('comment');
+  formIn=document.getElementById('formcompl');
+  annullaIn=document.getElementById('annulla');
+  nuovoIn=document.getElementById('new_comment');
+  visualizzaIn=document.getElementById('see_comments');
+  nascondiIn=document.getElementById('hide_comments');
+  spanErrUser = document.getElementById('err_user');
+  spanErrComm = document.getElementById('err_comment');
+  linkU = document.getElementById('utility');
+  linkG = document.getElementById('government');
 }
 
 function insertDate(){
