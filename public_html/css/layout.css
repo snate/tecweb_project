@@ -22,6 +22,7 @@ a:visited{
 
 a:hover{
   color: #2ECC71;
+  text-decoration: none;
 }
 
 #header {
@@ -122,11 +123,11 @@ a:hover{
   background-color: #E0E0E0;
   /* border-bottom: 0.12em solid #CACACA; */
   overflow: hidden;
-  padding: 0 1em;
   height: 1.8em;
 
   font-family: 'Roboto';
   font-size: 0.9em;
+  padding: 0.2em 1% 0 1%;
 }
 
 #breadcrumb p {
@@ -152,21 +153,9 @@ a:hover{
   padding-left: 0.5em;
 }
 
-#breadcrumb li a {
-  color: #2F965A;
-}
-
-#breadcrumb li a:hover{
-  color: #2F965A;
-}
-
-#breadcrumb li a:visited{
-  color: #2ECC71;
-}
-
 #breadcrumb #search {
   float: right;
-  margin-top: 0.1em;
+  margin-top: -1.3em;
 }
 
 #breadcrumb #search label {
@@ -267,7 +256,7 @@ a:hover{
 #footer {
   clear: both;
   width: 100%;
-  background-color: #2ECC71;
+  background-color: #2F965A;
   height: 2.5em;
 }
 
@@ -391,21 +380,17 @@ a:hover{
   border-radius: 0.2em;
 }
 
-#content li{
+#content li {
   padding-bottom: 1em;
   list-style-type: none;
 }
 
-#content ul li a{
+#content ul li a {
   font-size: 2em;
   text-transform: uppercase;
   font-weight: normal;
   line-height: 2.3em;
   padding-left: 0.5em;
-}
-
-#content a:visited{
-  color: #2ECC71;
 }
 
 #content #mappa_sito {
@@ -462,19 +447,6 @@ a:hover{
   font-weight: bold;
 }
 
-#descr_loc a {
-  color: #2F965A;
-}
-
-#descr_loc a:visited {
-  color: #2ECC71;
-}
-
-#descr_loc a:hover {
-  color: #2ECC71;
-  text-decoration: none;
-}
-
 #descr_loc p {
   font-family: 'Roboto';
   font-size: 0.9em;
@@ -489,8 +461,6 @@ a:hover{
   float: left;
   clear: left;
   border-radius: 0.2em;
-  /* margin: 1em 1em 0.8em 0; */
-
   margin: -1.5em 1em 0.2em 0;
 }
 
@@ -524,18 +494,16 @@ a:hover{
 }
 
 #aside a {
-  color: #2F965A;
+  /* color: #2F965A; */
   background-image: url(../images/icons/Link_out.png);
   background-repeat: no-repeat;
   background-size: 10px;
-  background-position: right 0.6em;
+  background-position: right 0.5em;
   padding-right: 1em;
-  font-weight:normal;
 }
 
-#aside a:visited {
-  color: #2ECC71;
-  background-image: url(../images/icons/Link_out_visited.png);
+#aside a:hover {
+  background-image: url(../images/icons/Link_out_hover.png);
 }
 
 #government li, #utility li {
