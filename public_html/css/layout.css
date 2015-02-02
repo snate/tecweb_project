@@ -1,7 +1,7 @@
 ﻿/*TO DO > ALLINEARE LABEL SEARCHBAR CON CASELLA*/
 
 html, body {
-  font-family: Open Sans Condensed, Arial, Helvetica, serif;
+  font-family: Roboto, Arial, Helvetica, serif;
   background-color: /* #2ECC71 */ #ECF0F1;
   color: #444;
 }
@@ -29,6 +29,7 @@ a:hover{
   background-color: /* #2F965A */ #2ECC71;
   height: 2.8em;
   overflow: hidden;
+  font-family: Open Sans Condensed;
 }
 
 #header h1 {
@@ -116,11 +117,9 @@ background-color: #2ECC71;
 
 #breadcrumb {
   background-color: #E0E0E0;
-  /* border-bottom: 0.12em solid #CACACA; */
   overflow: hidden;
   height: 1.8em;
 
-  font-family: 'Roboto';
   font-size: 0.9em;
   padding: 0.2em 1% 0 1%;
 }
@@ -201,6 +200,7 @@ background-color: #2ECC71;
   background-position: center;
   background-size: 16em;
   border-radius: 0.14em;
+  font-family: Open Sans Condensed;
 }
 
 .homepanel a {
@@ -283,7 +283,6 @@ background-color: #2ECC71;
   height: 2.5em;
   border-bottom: 0.3em solid #fff;
   color: #fff;
-  font-family: 'Roboto';
   font-size: 0.9em;
 }
 
@@ -320,6 +319,7 @@ background-color: #2ECC71;
   text-transform: uppercase;
   font-size: 1em;
   list-style-type:none;
+  font-family: Open Sans Condensed;
 }
 
 #nav li {
@@ -354,16 +354,17 @@ background-color: #2ECC71;
   font-size: 3em;
   text-transform: uppercase;
   font-weight: normal;
+  font-family: Open Sans Condensed;
 }
 
 #content h2 {
   font-size: 2em;
   text-transform: uppercase;
   font-weight: normal;
+  font-family: Open Sans Condensed;
 }
 
 #content p {
-  font-family: 'Roboto';
   font-size: 0.9em;
 }
 
@@ -391,6 +392,7 @@ background-color: #2ECC71;
   font-weight: normal;
   line-height: 2.3em;
   padding-left: 0.5em;
+  font-family: Open Sans Condensed;
 }
 
 #content #mappa_sito {
@@ -434,7 +436,6 @@ background-color: #2ECC71;
 
 #content dl {
   margin: 1em 1% 1em 0;
-  font-family: 'Roboto';
 }
 
 #content dt {
@@ -469,29 +470,48 @@ background-color: #2ECC71;
   font-size: 1em;
   background-color: #2ECC71;
   border-radius: 0.3em;
+  font-family: Open Sans Condensed;
 }
 
 #descr_loc h1 {
   font-size: 3em;
   text-transform: uppercase;
   font-weight: normal;
+  font-family: Open Sans Condensed;
 }
 
 #descr_loc h3 {
-  font-family: 'Roboto';
   font-size: 1.4em;
   padding-top: 0.5em;
-
   clear: both;
   padding-left: 16.7em;
 }
 
+#descr_loc dl {
+  padding-top: 0.5em;
+  clear: both;
+  font-size: 0.9em;
+}
+
 #descr_loc dt {
   font-weight: bold;
+  padding-left: 26em;
+}
+
+#descr_loc dd {
+  margin-bottom: 0.5em;
+}
+
+#descr_loc dd .img_content {
+  width: 25em;
+  height: 10em;
+  float: left;
+  clear: left;
+  border-radius: 0.2em;
+  margin: -0.9em 1em 2em 0;
 }
 
 #descr_loc p {
-  font-family: 'Roboto';
   font-size: 0.9em;
 }
 
@@ -524,7 +544,6 @@ background-color: #2ECC71;
   color: #444;
   background-color: #E0E0E0;
   overflow: hidden;
-
 }
 
 #aside h1 {
@@ -534,6 +553,7 @@ background-color: #2ECC71;
   text-transform: uppercase;
   font-size: 1.5em;
   clear: both;
+  font-family: Open Sans Condensed;
 }
 
 #aside a {
@@ -551,7 +571,6 @@ background-color: #2ECC71;
 
 #government li, #utility li {
   list-style-type: none;
-  font-family: 'Roboto';
   font-size: 0.9em;
 }
 
@@ -559,16 +578,12 @@ background-color: #2ECC71;
   float: left;
   clear: left;
   margin-right: 0.3em;
-
-  font-family: 'Roboto';
   font-size: 0.9em;
 }
 
 .info dd {
   float: left;
   clear: right;
-
-  font-family: 'Roboto';
   font-size: 0.9em;
 }
 
