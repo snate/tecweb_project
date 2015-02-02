@@ -1,10 +1,9 @@
 /*TO DO > ALLINEARE LABEL SEARCHBAR CON CASELLA*/
 
 html, body {
-  font-family: Open Sans Condensed, Arial, Helvetica, serif;
+  font-family: Roboto, Arial, Helvetica, serif;
   background-color: /* #2ECC71 */ #ECF0F1;
   color: #444;
-
   padding-top: 2.5em;
 }
 
@@ -36,6 +35,7 @@ a:hover{
   top: 0;
   left: 0;
   right: 0;
+  font-family: Open Sans Condensed;
 }
 
 #header h1 {
@@ -330,7 +330,6 @@ label[for="searchbar-trigger"] {
   height: auto;
   border: 0;
   color: #fff;
-  font-family: 'Roboto';
   font-size: 0.9em;
 }
 
@@ -351,56 +350,6 @@ label[for="searchbar-trigger"] {
   background-color: #2F965A;
 }
 
-/* INIZIO CSS LOCALITA */
-
-#nav {
-
-}
-
-#nav ul {
-
-}
-
-#nav li {
-
-}
-
-#nav_selected {
-
-}
-
-#nav a {
-
-}
-
-#nav a:hover {
-
-}
-
-#content ul {
-  padding-top:1%;
-  padding-left: 2%;
-}
-#content ul li a{
-  color: blue;
-  font-weight:bold;
-}
-#content a:visited{
-  color:purple;
-}
-
-#content #mappa_sito {
-	padding-top: 2em;
-}
-
-#content #mappa_sito ul{
-	padding-top: 0em;
-}
-
-#content #mappa_sito ul ul{
-	list-style-type: none;
-}
-
 #content {
   float: left;
   color: #444;
@@ -409,9 +358,23 @@ label[for="searchbar-trigger"] {
 }
 
 #content h1 {
-  font-size: 3em;
+  font-size: 2em;
   text-transform: uppercase;
   font-weight: normal;
+  clear: left;
+  padding-left: 0.18em;
+}
+
+#content p {
+  padding: 0.3em 0 1em 1em;
+}
+
+#content h2 {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-family: Open Sans Condensed;
+  padding-left: 0.4em;
 }
 
 #content ul {
@@ -419,24 +382,44 @@ label[for="searchbar-trigger"] {
   padding-left: 2%;
 }
 
-#content ul li a{
-  color: #2F965A;
-  font-weight:bold;
-}
-#content a:visited{
-  color: #2ECC71;
-}
-
 #content #mappa_sito {
-  padding-top: 2em;
+  padding-top: 0.5em;
+  list-style-type: none;
 }
 
-#content #mappa_sito ul{
-  padding-top: 0em;
+#content #mappa_sito li {
+  padding-bottom: 0.2em;
+}
+
+#content #mappa_sito li a{
+  line-height: 1.4em;
+  font-size: 1.4em;
+}
+
+#content #mappa_sito ul {
+  padding: 0 0 0 2em;
+}
+
+#content #mappa_sito ul li a {
+  line-height: 1em;
+  font-size: 1em;
+  text-transform: none;
+  font-family: 'Roboto';
+  font-weight: bold;
 }
 
 #content #mappa_sito ul ul{
   list-style-type: none;
+  padding-left: 2em;
+}
+
+#content #mappa_sito ul ul li a {
+  line-height: 1em;
+  font-size: 1em;
+  text-transform: none;
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-size: 0.9em;
 }
 
 #descr_loc {
@@ -472,17 +455,35 @@ label[for="searchbar-trigger"] {
 }
 
 #descr_loc h3 {
-  font-family: 'Roboto';
   font-size: 1.4em;
   padding: 0.5em 0 0 0.3em;
 }
 
+#descr_loc dl {
+  padding: 0.5em;
+  clear: both;
+  font-size: 0.9em;
+}
+
 #descr_loc dt {
   font-weight: bold;
+  padding: 0;
+}
+
+#descr_loc dd {
+  margin-bottom: 0.5em;
+}
+
+#descr_loc dd .img_content {
+  width: 100%;
+  height: 10em;
+  float: left;
+  clear: both;
+  border-radius: 0;
+  margin: 1em 0;
 }
 
 #descr_loc p {
-  font-family: 'Roboto';
   font-size: 0.9em;
   padding: 0 0.5em;
   clear: both;
