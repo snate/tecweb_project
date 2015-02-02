@@ -23,9 +23,9 @@ window.onload = load;
 function load(){  //ho dovuto rinominare la funzione a causa di conflitti con altre libs
   init();
 	search();
-	insertDate();
-	homeLink(); // funzione carlo - correggetemi
+	homeLink();
 	if(loc!=null){
+		insertDate();
     	loc = loc.innerHTML;
     	var nomeLoc = loc.trim().toLowerCase();
 		visualizzaIn.onclick=visualizza_c;
@@ -74,18 +74,16 @@ function search(){
 	searchbar.onblur = searchBlur;
 }
 
-/* FUNZIONE CARLO - CORREGGETEMI */
 function homeLink() {
-	linksH = document.getElementsByTagName("h1");
+	var linksH = document.getElementsByTagName("h1");
 	for(var i = 0; i < linksH.length; i++) {
-		if (this.getAttribute("class") == 'homepanel')  {
+		if (linksH[i].getAttribute("class") == 'homepanel')  {
 			linksH[i].onclick = function(){
-				window.open(this.getElementsByTagName("a")[0].getAttribute("href"));
+				window.open(this.getElementsByTagName("a")[0].getAttribute("href"),"_self");
 			}
 		}
 	}
 }
-/* FUNZIONE CARLO - CORREGGETEMI */
 
 
 function extLink() {
