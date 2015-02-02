@@ -2,7 +2,6 @@
 use CGI;
 use CGI ":all";
 use CGI::Carp qw(fatalsToBrowser);
-my %input;
 my $url;
 my $page = new CGI;
 
@@ -28,20 +27,22 @@ if($place eq "prague" || $place eq "praga") {
   $url = "../praga.html";
   print "Location: $url\n\n";
 }
-#die "Fatal errors are now sent to browser";
+
 print $page->header(-charset=>'UTF-8'),
       $page->start_html(
           -head => [
             Link({-rel=>'shortcut icon',
-              -href=>'images/logo-icon.png'}),
+              -href=>'../images/logo-icon.png'}),
             Link({-rel=>'stylesheet',
-              -href=>'http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300'}),
-            Link({-rel=>'stylesheet',
-              -href=>'http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300'}),
+              -href=>'http://fonts.googleapis.com/css?family=Roboto:700,400|Open+Sans+Condensed:300'}),
             Link({-rel=>'stylesheet',
               -href=>'../css/layout.css', -media=>'all'}),
             Link({-rel=>'stylesheet',
               -href=>'../css/mlayout.css', -media=>'handheld, screen and (max-width:480px), only screen and (max-device-width:480px)'}),
+          ],
+          -script => [
+            {-type=>'text/javascript', -src=>"../scripts/main.js"},
+            {-type=>'text/javascript', -src=>"../scripts/require.js"},
           ],
           -title => 'Pagina non trovata - What To Visit',
           -dtd=>[ '-//W3C//DTD XHTML 1.0 Strict//EN',
@@ -54,7 +55,8 @@ print $page->header(-charset=>'UTF-8'),
             'title' => 'Pagina non trovata - What To Visit',
             'robots' => 'no index',
             'reply-to' => 'teamtecweb@gmail.com',
-            'Classification' => 'Tourism'
+            'Classification' => 'Tourism',
+            'viewport' => 'width=device-width,initial-scale=1'
           },
           -author => 'teamtecweb@gmail.com'
       ),
@@ -66,16 +68,13 @@ print $page->header(-charset=>'UTF-8'),
         ),
       ), "\n",
       $page->div({-id=>'breadcrumb'},
-        ul({-id=>'navmenu'},
-          li(
-            a({-href=>'../homepage.html',-title=>'Pagina principale'},
+        "Ti trovi in: ",
+          a({-href=>'../homepage.html',-title=>'Pagina principale'},
               span({lang=>'en'},
                 "Home"
               ),
             ),
-            " &gt; Ricerca"
-          )
-        ),
+            " &gt; Ricerca",
         start_form(
               -method=>'get',
               -action=>'search.cgi',),
@@ -123,12 +122,41 @@ print $page->header(-charset=>'UTF-8'),
           "Siamo spiacenti, prova a riformulare la tua ricerca o torna alla",
           a({-href=>'../homepage.html',-title=>'Pagina principale'},
             span({-lang=>'en'},
-              "homepage",
+              "homepage"
             ),
-          ),
+          ),".",
         ),
       ), "\n",
-      $page->div({-id=>'footer'},
+      $page->div({-id=>'footer',-class=>'foothome'},
+        ul(
+          li(
+            a({-href=>'../chisiamo.html',-title=>'Informazioni sul sito'},
+              "Chi siamo",
+            )
+          ),
+          li(
+            a({-href=>'../faq.html',-title=>'FAQ'},
+              span({-lang=>'en'},
+                abbr({-title=>'Frequently Asked Questions'},
+                  "F.A.Q."
+                )
+              )
+            )
+          ),
+          li(
+            a({-href=>'../privacy.html',-title=>'Informazioni sulla privacy'},
+              "Normativa sulla",
+              span({-lang=>'en'},
+                "privacy"
+                )
+            )
+          ),
+          li(
+            a({-href=>'../mappa.html',-title=>'Mappa del sito'},
+              "Mappa del sito",
+            )
+          ),
+        ),
         div({-id=>'xhtml_valid'},
           a({-href=>'http://validator.w3.org/check?uri=referer'},
             img(
