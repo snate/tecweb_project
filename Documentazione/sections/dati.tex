@@ -34,3 +34,22 @@ lo script scrive la modifica sul file XML e reindirizza l'utente alla pagina
 della località in cui ha inserito il commento.
 
 \subsection{Barra di ricerca}
+L'utente durante la navigazione nel sito ha a disposizione anche una barra di
+ricerca; tramite questa, può scrivere il nome di una località (case
+insensitive in lingua italiana o in lingua originale) e venire reindirizzato
+direttamente alla pagina della località ricercata; se la ricerca non dovesse
+trovare nessun risultato, l'utente deve visualizzare una pagina che lo informi
+che la ricerca non è andata a buon fine.
+
+Per ottenere questo risultato, è stato scritto uno script in Perl utilizzando
+la tecnologia \textbf{CGI} per acquisire il parametro \texttt{\$place} dove è
+presente la richiesta effettuata dall'utente e, in caso di ricerca fallita,
+per creare la pagina da far visualizzare all'utente.
+
+Lo script inizialmente confronta la stringa ricevuta in input con delle
+alternative prefissate; se la stringa passata corrisponde ad una di queste,
+allora l'utente viene reindirizzato alla località cercata con successo.
+In caso contrario, si esegue una stampa di una pagina con la sezione
+head composta come quella nelle altre pagine, header come nelle pagine
+secondarie, breadcrumb, nav con possibilità di andare nelle pagine delle
+categorie, corpo (dove si informa l'utente di cosa è successo) e footer.
