@@ -1,0 +1,36 @@
+\section{Back-end}
+Per quanto riguarda la programmazione lato server, il sito \textit{What To
+Visit} offre due funzionalità: con la prima l'utente può inserire commenti,
+mentre con la seconda si permette all'utente di accedere alla pagina di una
+località tramite una searchbar.
+
+\subsection{Inserimento commenti}
+Dal momento che il sito offre la funzionalità di visualizzare commenti inseriti
+dagli utenti, questi devono essere salvati in uno o più file nel server. Più
+precisamente, ogni commento viene salvato in un file XML chiamato
+\texttt{commenti.xml} presente nel server.
+Questo documento, valido rispetto allo schema \texttt{commenti.xsd}
+(progettato seguendo il modello "\textit{Tende alla Veneziana}), contiene
+delle liste di commenti divisi per località; ogni commento, a sua volta,
+possiede un corpo, un utente che l'ha scritto e una data in cui è stato
+scritto (nel formato AAAA-MM-GG come anticipato nella sezione
+\ref{sec:requisiti}). Naturalmente, all'inizio una località può non avere
+alcun commento oppure, se qualche commento dovesse essere rimosso per cause di
+forza maggiore (ad esempio illegalità o perchè viola i diritti d'autore di un
+individuo, come specificato nella pagina della Normativa della Privacy), un
+tag \texttt{localita} può rimanere senza commenti.
+
+Lo script di inserimento commenti è stato scritto in Perl utilizzando la
+tecnologia \textbf{CGI} (Common Gateway Interface), in modo da riuscire
+facilmente a ottenere i dati passati con la form per inserire un commento
+presente nelle pagine delle località.
+
+Successivamente lo script procede utilizzando la libreria \textbf{LibXML}, con
+le cui funzionalità legge il file dei commenti e cerca il nodo
+\texttt{localita} in cui inserire il commento con una query XPath.
+Una volta trovato, viene creato il frammento XML da aggiungere alla lista dei
+commenti già presenti per la stessa località. Una volta aggiunto il commento,
+lo script scrive la modifica sul file XML e reindirizza l'utente alla pagina
+della località in cui ha inserito il commento.
+
+\subsection{Barra di ricerca}
