@@ -87,8 +87,8 @@ function homeLink() {
 
 
 function extLink() {
-	linksG = linkG.getElementsByTagName("a");
-	linksU = linkU.getElementsByTagName("a");
+	var linksG = linkG.getElementsByTagName("a");
+	var linksU = linkU.getElementsByTagName("a");
 	for(var i = 0; i < linksU.length; i++) {
 		linksU[i].onclick = function(){
 			popUp(this.getAttribute("href"));
