@@ -35,7 +35,7 @@ function load(){  //ho dovuto rinominare la funzione a causa di conflitti con al
 		commentIn.onblur=blurComment;
 		formIn.onsubmit=clickSubmit;
 		annullaIn.onclick=delAll;
-		extLink();		
+		extLink();
 	}
 }
 
@@ -121,7 +121,35 @@ function searchBlur(){
 		searchbar.holder = true;
 	} else
 		searchbar.holder = false;
-	}
+}
+
+function createCookie(name, value, days) {
+    var expires;
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toGMTString();
+    }
+    else {
+      expires = "";
+    }
+    document.cookie = name + "=" + value + expires + "; path=/";
+};
+
+function getCookie(c_name) {
+    if (document.cookie.length > 0) {
+      c_start = document.cookie.indexOf(c_name + "=");
+      if (c_start != -1) {
+        c_start = c_start + c_name.length + 1;
+        c_end = document.cookie.indexOf(";", c_start);
+        if (c_end == -1) {
+          c_end = document.cookie.length;
+        }
+        return unescape(document.cookie.substring(c_start, c_end));
+      }
+    }
+    return "";
+};
 
 	/*Script commenti degli utenti*/
 	function visualizza_c(){
@@ -184,6 +212,8 @@ function searchBlur(){
 			}
 
 			function visualizza_form(){
+        if(getCookie("username"))
+          userIn.value = getCookie("username");
 				formIn.setAttribute('class', "");
 			}
 
@@ -222,6 +252,7 @@ function searchBlur(){
 			function clickSubmit(){
 				var corretto=checkAll();
 				if(corretto) {
+          createCookie("username",userIn.value,15);
 					alert("Inserimento avvenuto correttamente");
 					return true;
 				}
@@ -246,4 +277,3 @@ function searchBlur(){
 				formIn.setAttribute('class', "hidden");
 				return true;
 			}
-			
