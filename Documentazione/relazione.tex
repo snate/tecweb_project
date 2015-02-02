@@ -33,6 +33,7 @@ BCOR5mm, % Binding correction
 \usetikzlibrary{shapes}
 \usepackage{amsmath}
 \usepackage{xspace}
+\usepackage[usestackEOL]{stackengine}
 \newcommand{\A}{\ensuremath{\mathcal{A}}\xspace}
 \newcommand{\B}{\ensuremath{\mathcal{B}}\xspace}
 \newcommand\pa[1]{\ensuremath{\left(#1\right)}}
@@ -71,8 +72,11 @@ Sebastiano Valle 1050123}
 
 \setcounter{page}{1} % Set the depth of the table of contents to show sections and subsections only
 
-Indirizzo: \texttt{http://tecnologie-web.studenti.math.unipd.it/tecweb/$\sim$svalle/homepage.html}
+{\raggedleft\vfill\Longstack[l]{%
+Indirizzo: \texttt{http://tecnologie-web.studenti.math.unipd.it/tecweb/$\sim$svalle/homepage.html} \\
 Email referente: \texttt{sebastiano.valle@hotmail.it}
+}
+\raggedright{}
 \newpage{}
 \tableofcontents % Print the table of contents
 
