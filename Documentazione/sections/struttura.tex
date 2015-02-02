@@ -3,7 +3,7 @@ Di seguito sono illustrate le modalità di progettazione della struttura delle
 pagine all'interno del sito.
 
 \subsection{Struttura organizzativa}
-Il sito è stato progettato secondo la seguente struttura gerarchica (non sono state indicate tutte le località, anche perchè è la direzione in cui il sito potrebbe più facilmente estendersi):
+Il sito è stato progettato secondo la seguente struttura gerarchica (non sono state indicate tutte le località, anche perché è la direzione in cui il sito potrebbe più facilmente estendersi):
 \begin{figure}[h!]
     \centering
     \input{sections/gerarchia}
@@ -29,7 +29,6 @@ Sono presenti i seguenti tag nelle sezioni head di tutte le pagine:
 \item \textbf{meta author:} in questo tag sono indicati i componenti del gruppo
 \item \textbf{meta keywords:} parole che aiutano un motore di ricerca a trovare la pagina grazie a dei termini di importanza focale
 \item \textbf{meta robots:} tag che indica ad un eventuale spider se indicizzare la pagina e se seguire i link da essa uscenti
-\item \textbf{meta keywords:} parole che aiutano un motore di ricerca a trovare la pagina grazie a dei termini di importanza focale
 \item \textbf{meta reply-to:} indica l’indirizzo di posta elettronica dell’autore del documento
 \item \textbf{meta Classification:} tag che serve ad indicare l'argomento trattato dalle pagine del sito
 \item \textbf{meta viewport:} elemento orientato all'ottimizzazione del sito per dispositivi multipli, indicando al browser come controllare dimensioni e scala della pagina
@@ -71,6 +70,14 @@ La parte centrale della pagine è divisa a sua volta in due parti:
 \subsubsection{Pagine secondarie}
 Il footer di queste pagine non presenta altre informazioni oltre alle indicazioni alla validazione. Questo poichè tutti i collegamenti alle altre pagine secondarie sono già presenti nel blocco di navigazione.
 
+In particolare sono presenti quattro pagine secondarie all'interno del sito:
+\begin{itemize}
+\item{Chi siamo:} spiega brevemente l'obiettivo del sito \textit{What To Visit} 
+\item{Faq:} il cui contenuto è costituito da una lista di definizioni. Essa presenta una serie di domante frequenti sul sito e le relative risposte.
+\item{Normativa sulla privacy:} %TODO Graziano
+\item{Mappa del sito:} il suo contenuto è costituito da una lista non ordinata di tutti i link presenti all'interno del sito. Essi sono presentati in ordine di "importanza": homepage, link alle tre categorie con relativa sottolista contenente le singole località, ed infine link alle pagine secondarie.
+\end{itemize}
+
 \subsubsection{Categorie di località}\label{sec:categorieStruct}
 In queste pagine, il blocco navigazione contiene anche una parte dove si può vedere in una mappa dove si trovano le località \textit{solamente} per quella categoria di località; questa parte verrà approfondita nella sezione ``Geolocalizzazione''.
 
@@ -104,5 +111,3 @@ Il footer è uguale a quello delle pagine di categorie di località (sezione \re
 
 Questa pagina è stata pensata (con leggere modifiche) anche per assistere l'utente e fornirgli il link alla mappa del sito in caso di errore 404, ma naturalmente non è stato possibile adottare questa soluzione nel progetto poichè non si hanno i permessi per modificare l'\texttt{.htaccess} del server TecWeb.
 
-%TODO Fede: Mappa / F.A.Q.
-%TODO Graziano: Privacy
