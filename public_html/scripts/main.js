@@ -1,4 +1,4 @@
-// GLOBALS
+﻿// GLOBALS
 
 var geo;
 var searchbar;
@@ -34,9 +34,10 @@ function load(){  //ho dovuto rinominare la funzione a causa di conflitti con al
 		commentIn.onblur=blurComment;
 		formIn.onsubmit=clickSubmit;
 		annullaIn.onclick=delAll;
-		extLink();
+		extLink();		
 	}
 }
+
 function init() {
   geo = require(['geolocation'], function (geolocation){});
   searchbar = document.getElementById('place');
