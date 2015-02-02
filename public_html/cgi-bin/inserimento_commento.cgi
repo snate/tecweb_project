@@ -35,9 +35,6 @@ open OUT,">$file" || die("error");
 print OUT $doc->toString;
 close OUT;
 
-print "Content-type: text/html\n\n";
-print $father->toString;
-print "<p>OK</p>";
-print $doc->toString;
+print "Location: ../" . $loc . ".html \n\n";
 
 exit;
