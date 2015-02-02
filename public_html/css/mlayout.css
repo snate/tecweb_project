@@ -30,7 +30,7 @@ a:hover{
 #header {
   background-color: #2ECC71;
   height: 5em;
-  box-shadow: 0 0.4em 0.4em 0 rgba(0,0,0,0.3);
+  box-shadow: 0 0.2em 0.2em 0 rgba(0,0,0,0.2);
   overflow: visible;
   position: fixed;
   top: 0;
@@ -63,7 +63,7 @@ a:hover{
   z-index: 0;
   list-style: none;
   background: #2F965A;
-  box-shadow: 0 0.4em 0.4em 0 rgba(0,0,0,0.3);
+  box-shadow: 0 0.2em 0.2em 0 rgba(0,0,0,0.1);
   -webkit-transition: all 0.7s ease 0s;
   -moz-transition: all 0.7s ease 0s;
   -o-transition: all 0.7s ease 0s;
@@ -116,7 +116,7 @@ label[for="menu-trigger"] {
 
 #menu-trigger:checked ~ #main-menu {
   height: auto;
-  box-shadow: 0.2em 0.2em 0.3em 0 rgba(0,0,0,0.3);
+  box-shadow: 0.2em 0.2em 0.3em 0 rgba(0,0,0,0.1);
 }
 
 #searchbar-trigger {
@@ -138,7 +138,7 @@ label[for="searchbar-trigger"] {
   background-size: contain;
 }
 
-#header #search {
+#header #search, #breadcrumb #search {
   width: 100%;
   height: 0;
   position: fixed;
@@ -149,18 +149,23 @@ label[for="searchbar-trigger"] {
   z-index: 0;
   list-style: none;
   background: #2F965A;
-  box-shadow: 0 0.4em 0.4em 0 rgba(0,0,0,0.3);
+  box-shadow: 0 0.2em 0.2em 0 rgba(0,0,0,0.1);
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
-#header #search label {
+#breadcrumb #search {
+  top: 5.5em;
+  z-index: 2;
+}
+
+#header #search label, #breadcrumb #search label {
   display: none;
 }
 
-#header #search input[type="text"]{
+#header #search input[type="text"], #breadcrumb #search input[type="text"] {
   background: url(../images/icons/search-white.png) no-repeat 0.6em 0.6em #444;
   height: 2.4em;
   margin: 0;
@@ -171,7 +176,7 @@ label[for="searchbar-trigger"] {
   border-radius: 0;
 }
 
-#header #search input[type="text"]:focus {
+#header #search input[type="text"]:focus, #breadcrumb #search input[type="text"]:focus {
   background: url(../images/icons/search-dark.png) no-repeat 0.6em 0.6em #fcfcfc;
   color: #6a6f75;
   width: 100%;
@@ -209,23 +214,6 @@ label[for="searchbar-trigger"] {
   height: auto;
 }
 
-#breadcrumb #search {
-  height: 0;
-  visibility: hidden;
-}
-
-#breadcrumb #search label {
-}
-
-#breadcrumb #search input[type="text"]{
-}
-
-#breadcrumb #search input[type="text"]:focus {
-}
-
-.emphasized {
-}
-
 #navmenu {
 }
 
@@ -244,7 +232,7 @@ label[for="searchbar-trigger"] {
 #skip{
 }
 
-.nomeprovvisoriocategoriehome {
+.homepanel {
   float: left;
   width: 100%;
   height: 10em;
@@ -258,7 +246,7 @@ label[for="searchbar-trigger"] {
   clear: both;
 }
 
-.nomeprovvisoriocategoriehome a {
+.homepanel a {
   margin: 0.2em 0.6em;
   display: block;
   background-color: #2F965A;
@@ -583,57 +571,6 @@ label[for="searchbar-trigger"] {
   font-size: 0.7em;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #aside #geolocation #mapholder {
 display: none;
 position: relative;
@@ -672,68 +609,104 @@ border: 2px solid #2ECC71;
 
 
 
-#nav {
-  /* critical sizing and position styles */
-  width: 70%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: -70%;
-  z-index: 0;
 
-  list-style: none;
-  background: #111;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #nav {
+  width: 100%;
+  height: 0;
+  border-radius: 0;
   margin: 0;
-}
-
-#nav li {
-  width: 200px;
-  border-top: 1px solid #111;
-  border-bottom: 1px solid #000;
-}
-
-#nav li a {
-  /* non-critical appearance styles */
-  display: block;
-  padding: 1em;
-  background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
-  color: white;
-  font-size: 1.2em;
-  text-decoration: none;
-  transition: color 0.2s, background 0.5s;
-}
-
-#nav-trigger {
-  /* critical styles - hide the checkbox input */
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-}
-
-label[for="nav-trigger"] {
-  /* critical positioning styles */
   position: fixed;
-  left: 15px;
-  top: 15px;
-  z-index: 2;
-  visibility: visible;
-  
-  /* non-critical apperance styles */
-  height: 30px;
-  width: 30px;
-  cursor: pointer;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
-  background-size: contain;
+  top: 5em;
+  left: 0;
+  z-index: 0;
+  list-style: none;
 }
 
-#nav-trigger + label {
-  transition: left 0.2s;
+#nav ul {
+  margin: 0;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  background-color: #2F965A;
+  box-shadow: 0 0.2em 0.2em 0 rgba(0,0,0,0.1);
+  -webkit-transition: all 0.7s ease 0s;
+  -moz-transition: all 0.7s ease 0s;
+  -o-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s;
 }
 
-#nav-trigger:checked + label {
-  left: 72%;
+#nav ul li {
+  padding: 0;
+  float: none;
+  text-align: center;
+}
+
+#nav ul li:first-child {
+  padding-top: 1.5em;
+  float: none;
+}
+
+#nav ul li:first-child a {
+  border-width: 0.1em 0;
+}
+
+#nav ul li a {
+  padding: 0.3em 1em;
+  transition: color 0.2s, background 0.5s;
+  margin: 0;
+  border-radius: 0;
+  border-width: 0 0 0.1em 0;
+  display: block;
+  background-color: #2F965A;
+  border-color: #ECF0F1;
+  border-style: solid;
+  color: #ECF0F1;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 1.5em;
+}
+
+#nav ul ul li:first-child {
+  padding-top: 0;
+}
+
+#nav ul ul li:first-child a {
+  padding-top: 0.6em;
+  border-width: 0;
+}
+
+#nav ul li:first-child #nav_selected {
+  padding: 0.3em 1em;
+  transition: color 0.2s, background 0.5s;
+  margin: 0;
+  border-radius: 0;
+  border-width: 0 0 0.1em 0;
+  border-color: #ECF0F1;
+  border-style: solid;
+  display: block;
+  background-color: #2F965A;
+  color: #ECF0F1;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 1.5em;
+}
+
+#menu-trigger:checked ~ ul, 
+#menu-trigger:checked ~ ul ul {
+  height: auto;
+  box-shadow: 0.2em 0.2em 0.3em 0 rgba(0,0,0,0.2);
 }

@@ -191,7 +191,7 @@ background-color: #2ECC71;
   overflow: hidden;
 }
 
-.nomeprovvisoriocategoriehome {
+.homepanel {
   float: left;
   width: 31.3%;
   height: 18em;
@@ -203,7 +203,7 @@ background-color: #2ECC71;
   border-radius: 0.14em;
 }
 
-.nomeprovvisoriocategoriehome a {
+.homepanel a {
   margin: 0.14em;
   display: block;
   background-color: #2F965A;
@@ -216,7 +216,7 @@ background-color: #2ECC71;
   font-size: 1.5em;
 }
 
-.nomeprovvisoriocategoriehome a:hover, .nomeprovvisoriocategoriehome a:visited {
+.homepanel a:hover, .homepanel a:visited {
   background-color: #2ECC71;
   border-color: #ECF0F1;
   color: #ECF0F1;
@@ -770,6 +770,19 @@ label[for="menu-trigger"] {
   position: absolute;
 }
 
+#searchbar-trigger {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+label[for="searchbar-trigger"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  position: absolute;
+}
 
 
 

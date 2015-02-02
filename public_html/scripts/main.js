@@ -24,6 +24,7 @@ function load(){  //ho dovuto rinominare la funzione a causa di conflitti con al
   init();
 	search();
 	insertDate();
+	homeLink(); // funzione carlo - correggetemi
 	if(loc!=null){
     	loc = loc.innerHTML;
     	var nomeLoc = loc.trim().toLowerCase();
@@ -72,6 +73,20 @@ function search(){
 	searchbar.onfocus = searchFocus;            //assegno cosa fare onfocus
 	searchbar.onblur = searchBlur;
 }
+
+/* FUNZIONE CARLO - CORREGGETEMI */
+function homeLink() {
+	linksH = document.getElementsByTagName("h1");
+	for(var i = 0; i < linksH.length; i++) {
+		if (this.getAttribute("class") == 'homepanel')  {
+			linksH[i].onclick = function(){
+				window.open(this.getElementsByTagName("a")[0].getAttribute("href"));
+			}
+		}
+	}
+}
+/* FUNZIONE CARLO - CORREGGETEMI */
+
 
 function extLink() {
 	linksG = linkG.getElementsByTagName("a");
