@@ -327,11 +327,18 @@ background-color: #2ECC71;
   color: white;
 }
 
-#nav_selected {
-  padding-left: 2em;
-  background-image: url(../images/icons/n_pos.png);
+#nav_selected, #cat_selected {
   background-repeat: no-repeat;
-  background-position: -0.3em 40%;
+  background-position: left center;
+  background-size: 1em;
+}
+
+#nav_selected {
+  background-image: url(../images/icons/nav_selected.png);
+}
+
+#cat_selected {
+  background-image: url(../images/icons/cat_selected.png);
 }
 
 #nav a{
@@ -603,13 +610,8 @@ background-color: #2ECC71;
   font-weight: bold;
   padding: 0.2em 0.6em;
   border-radius: 0.2em;
-  background-color: #2F965A;
   font-family: "Roboto";
   margin: 0.2em;
-}
-
-#comments #hide_comments {
-  background-color: #C9C9C9;
 }
 
 #comments input[type="submit"] {
@@ -689,7 +691,7 @@ clear: both;
   float: left;
   padding: 0.1em 0.6em;
   color: #fff;
-  background-color: rgb(46, 204, 113);
+  background-color: #2ecc71;
   border-radius: 0.2em;
   font-weight: normal;
   font-size: 0.6em;
@@ -697,6 +699,18 @@ clear: both;
 }
 #comments #visualizza_commenti li p {
   padding-left: 1em;
+}
+
+#comments .com-running {
+  background-color: #2ecc71;
+}
+
+#comments .com-runnable {
+  background-color: #2F965A;
+}
+
+#comments .com-notrunnable {
+  background-color: #c9c9c9;
 }
 
 #comments #formcompl fieldset legend {
