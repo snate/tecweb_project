@@ -16,23 +16,25 @@
         <meta name="author" content="Graziano Grespan, Carlo Munarini, Federica Speggiorin, Sebastiano Valle" />
       </head>
       <body>
-        <xsl:for-each select="c:comments/c:localita">
-			<div>
-			<xsl:attribute name="id">nome_<xsl:value-of select="@nome" /></xsl:attribute>
-			<xsl:for-each select="c:comment">
-            <p>
+      <xsl:for-each select="c:comments/c:localita">
+      <ul>
+        <xsl:attribute name="id">commenti_<xsl:value-of select="@nome" /></xsl:attribute>
+        <xsl:for-each select="c:comment">
+          <li>
+            <div>
               <xsl:value-of select="@user" />
               <xsl:text> - </xsl:text>
               <span class="pubdate">
                 <xsl:value-of select="c:pubblicationDate" />
               </span>
-            </p>
+            </div>
             <p>
               <xsl:value-of select="c:corpo" />
             </p>
-          </xsl:for-each>
-		  </div>
+          </li>
         </xsl:for-each>
+		  </ul>
+      </xsl:for-each>
       </body>
     </html>
   </xsl:template>
