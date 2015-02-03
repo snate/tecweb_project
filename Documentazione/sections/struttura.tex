@@ -14,6 +14,82 @@ Per ogni pagina allo stesso livello gerarchico (ovvero sulla stessa fascia verti
 
 È opportuno osservare che solo dei sottoinsiemi di località mutuamente esclusivi sono figli di ogni categoria di località; la figura non rappresenta chiaramente questa distinzione per non essere di difficile comprensione.
 
+\subsection{Progettazione della struttura delle pagine}
+Durante le attività di progetto, le pagine del sito sono state codificate
+facendo riferimento ai capitoli 6 (``\textit{XHTML and Semantic Markup}") e 8
+(``\textit{Tighter, Firmer Pages Guaranteed: Structure and Semantics}") di
+\textit{Designing with Web Standards}\footnote{Jeffrey Zeldman, Ethan Marcotte 
+- \textit{Designing with Web Standards}, Terza Edizione \textbf{[2009]}}.
+
+\subsubsection{XHTML and Semantic Markup}
+Sono state seguite le seguenti indicazioni:
+\begin{itemize}
+\item ogni documento XHTML inizia con un \texttt{DOCTYPE} corretto e facente
+riferimento a XHTML \texttt{1.0} Strict (come previsto dalle specifiche del
+progetto);
+\item ogni dichiarazione \texttt{DOCTYPE} è seguita dal namespace XHTML, con
+l'indicazione che nelle pagine verrà utilizzata la lingua italiana (se non
+diversamente specificato per alcune parti di testo, in cui sarà indicato con
+uno span apposito);
+\item per la codifica dei caratteri è stata utilizzata UTF-8, in quanto
+potevano essere presenti anche caratteri stranieri non presenti nel comune ISO
+Latin 1 oltre alle lettere accentate;
+\item tutti gli elementi e gli attributi sono stati scritti in
+\textit{lowercase}, siccome XHTML \textbf{è} case sensitive, mentre il loro
+contenuto può avere indistintamente lettere maiuscole o minuscole;
+\item tutti i valori degli attributi hanno un valore (possibilmente vuoto) e
+sono racchiusi tra virgolette e tutti i caratteri speciali sono stati generati
+utilizzando le rispettive entità e non venendo inseriti direttamente;
+\item tutti i tag sono aperti e chiusi nell'ordine giusto, anche quelli vuoti;
+\item nessun commento ha due \textit{dash} consecutivi al suo interno;
+\item gli elementi sono stati inseriti all'interno della pagina in una
+struttura tale che questa fosse appropriata per il contenuto che gli elementi
+rappresentano e non per come verranno visualizzati (a tal fine non sono stati
+utilizzati elementi o  attributi presentazionali o di comportamento ma
+solamente semantici).
+\end{itemize}
+
+\subsubsection{Tighter, Firmer Pages Guaranteed: Structure and Semantics}
+Sono state seguite le seguenti indicazioni:
+\begin{itemize}
+\item i tag \texttt{div} sono stati intesi come divisioni di elementi aventi
+un comune scopo all'interno del documento e non come blocchi da comporre
+affinchè la pagina sia ``bella" da vedere;
+\item si è cercato di scegliere nomi semanticamente appropriati per \texttt{id}
+e \texttt{class}, evitando di attribuire ad un id il valore ``giallo" o il
+valore ``pippo";
+\item gli attributi \texttt{id} e \texttt{class} sono stati usati per il
+motivo per cui sono stati creati: gli id individuano un elemento che svolge un
+ruolo semanticamente unico nella pagina, mentre una classe attribuisce ad un
+elemento delle caratteristiche che condivide con altri elementi;
+\item per la ``\textit{Sticky Note Theory}", ogni elemento che viene marcato
+con un id è preferibilmente soggetto a essere coinvolto in regole CSS o ad
+essere cercato in qualche script;
+\item dal momento che gli \texttt{id} sono molto potenti per creare ancore nel
+documento, effettuare query su CSS e JavaScript, si è cercato di usare un id
+anzichè una classe ogniqualvolta possibile (usando identificatori ben-formati);
+\item le pagine del sito sono state strutturate in modo tale che i contenuti
+siano facilmente comprensibili logicamente sia per utenti svantaggiati che
+utilizzano screen reader, così come per i motori di ricerca, con titoli
+ordinati con importanza progressiva e altri aiuti che verranno approfonditi
+nella sezione ``Accessibilità";
+\item le pagine contengono elementi che sono riusabili in altre pagine, così
+da:
+  \begin{enumerate}
+  \item non dover scrivere una generica struttura per ogni pagina prodotta;
+  \item evitare disorientamento all'utente.
+  \end{enumerate}
+\item proprio perchè vengono preferiti gli \texttt{id} agli attributi
+\texttt{class}, si è cercato di evitare il fenomeno chiamato
+``\textit{classitis}" da Jeffrey Zeldman, ovvero quando troppi elementi
+facilmente raggruppabili come figli di un unico elemento condividono la stessa
+classe, basta applicare un id all'elemento padre anzichè applicare la singola
+classe a tutti gli elementi figli;
+\item si è cercato di evitare anche il fenomeno chiamato ``\textit{divitis}",
+ovvero una tendenza ad inserire tag \texttt{div} e \texttt{span} dovunque,
+anche dove non vi sono elementi in relazione tra loro o, più genericamente, dove non è strettamente necessario.
+\end{itemize}
+
 \subsection{Parti comuni a tutte le pagine}
 Tutte le pagine sono state scritte seguendo lo standard \textit{XHTML 1.0 Strict} e come codifica è stata scelta UTF-8 dal momento che nel sito sono
 presenti parole accentate.
@@ -75,7 +151,7 @@ In particolare sono presenti quattro pagine secondarie all'interno del sito:
 \item{Chi siamo:} spiega brevemente l'obiettivo del sito \textit{What To Visit} 
 \item{Faq:} il cui contenuto è costituito da una lista di definizioni. Essa presenta una serie di domante frequenti sul sito e le relative risposte.
 \item{Normativa sulla privacy:} %TODO Graziano
-\item{Mappa del sito:} il suo contenuto è costituito da una lista non ordinata di tutti i link presenti all'interno del sito. Essi sono presentati in ordine di "importanza": homepage, link alle tre categorie con relativa sottolista contenente le singole località, ed infine link alle pagine secondarie.
+\item{Mappa del sito:} il suo contenuto è costituito da una lista non ordinata di tutti i link presenti all'interno del sito. Essi sono presentati in ordine di ``importanza'': homepage, link alle tre categorie con relativa sottolista contenente le singole località, ed infine link alle pagine secondarie.
 \end{itemize}
 
 \subsubsection{Categorie di località}\label{sec:categorieStruct}
@@ -110,4 +186,3 @@ Il footer è uguale a quello delle pagine di categorie di località (sezione \re
 \end{enumerate}
 
 Questa pagina è stata pensata (con leggere modifiche) anche per assistere l'utente e fornirgli il link alla mappa del sito in caso di errore 404, ma naturalmente non è stato possibile adottare questa soluzione nel progetto poichè non si hanno i permessi per modificare l'\texttt{.htaccess} del server TecWeb.
-
