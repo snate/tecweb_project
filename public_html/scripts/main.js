@@ -235,6 +235,7 @@ function nascondi_c(){
 	var com= document.getElementById("nome_"+nomeLoc);
 	vis_com.removeChild(com);
 	f=true;
+  visualizzaIn.value = "Visualizza commenti";
 }
 
 function visualizza_form(){
