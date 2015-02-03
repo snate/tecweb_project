@@ -688,6 +688,7 @@ clear: both;
   font-size: 0.6em;
   margin: 0.4em 1em 0 -5em;
 }
+
 #comments #visualizza_commenti li p {
   padding-left: 1em;
 }
@@ -763,44 +764,20 @@ clear: both;
 
 
 
-
-
-
-/*NASCONDE IL FORM PER INSERIRE UN NUOVO COMMENTO*/
 .hidden{
-	visibility: hidden;
-	height: 0px;
-	width: 0px;
+  display: none;
+  visibility: hidden;
+  height: 0;
+  width: 0;
 }
 
 #aside #geolocation #mapholder {
   display: none;
-  position: absolute;
-  margin-top:1%;
-  height:21%;
-  width:15%;
+  position: relative;
+  margin-top: 0.5em;
+  height: 14.5em;
+  width: 90%;
   border: 2px solid #27AE60;
-}
-
-#aside #geolocation #geodata {
-  padding-top:80%;
-}
-
-#nav #geolocation #mapholder {
-  display: none;
-  position: absolute;
-  margin-top:1%;
-  margin-left:1%;
-  height:21%;
-  width:16%;
-  border: 2px solid #27AE60;
-}
-
-#nav #geolocation #geodata {
-  padding-top:70%;
-  margin-left: 5%;
-  margin-bottom:5%;
-
 }
 
 #geodata li{

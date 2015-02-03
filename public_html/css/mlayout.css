@@ -260,19 +260,16 @@ label[for="searchbar-trigger"] {
 }
 
 #c_mare {
-  background-image: url(../images/HOME_BG_SEA.png);
+  background-image: url(../images/HOME_BG_SEA.jpg);
   background-position: center -10em;
-/* ATTENZIONE IMG IN PNG - PESA - CAMBIARE POI */
 }
 
 #c_cit {
-  background-image: url(../images/HOME_BG_CITY.png);
-/* ATTENZIONE IMG IN PNG - PESA - CAMBIARE POI */
+  background-image: url(../images/HOME_BG_CITY.jpg);
 }
 
 #c_mont {
-  background-image: url(../images/HOME_BG_MOUNTAIN.png);
-/* ATTENZIONE IMG IN PNG - PESA - CAMBIARE POI */
+  background-image: url(../images/HOME_BG_MOUNTAIN.jpg);
 }
 
 #c_cit,#c_mont,#c_mare {
@@ -492,6 +489,14 @@ label[for="searchbar-trigger"] {
 #descr_loc a:visited {
 }
 
+#comments {
+  margin: 3em 0.5em 1em 0.5em;
+}
+
+#comments label[for="see_comments"], #comments label[for="hide_comments"], #comments label[for="new_comment"] {
+  display: none;
+}
+
 .img_content {
   width: 100%;
   height: 10em;
@@ -583,11 +588,6 @@ border: 2px solid #2ECC71;
 
 #aside #geolocation #geodata {
   clear: both;
-}
-
-#geodata li{
-  width: 90%;
-  margin: 0 auto;
 }
 
 
