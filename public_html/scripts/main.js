@@ -22,21 +22,22 @@ window.onload = load;
 
 function load(){  //ho dovuto rinominare la funzione a causa di conflitti con altre libs
   init();
-	search();
-	homeLink();
-	if(loc!=null){
-		insertDate();
-    	loc = loc.innerHTML;
-    	var nomeLoc = loc.trim().toLowerCase();
-		visualizzaIn.onclick=visualizza_c;
-		nascondiIn.onclick=nascondi_c;
-		nuovoIn.onclick=visualizza_form;
-		userIn.onblur=blurUser;
-		commentIn.onblur=blurComment;
-		formIn.onsubmit=clickSubmit;
-		annullaIn.onclick=delAll;
-		extLink();
-	}
+  search();
+  homeLink();
+  if(loc!=null){
+    insertDate();
+    loc = loc.innerHTML;
+    var nomeLoc = loc.trim().toLowerCase();
+    visualizzaIn.onclick=visualizza_c;
+    nascondiIn.onclick=nascondi_c;
+    nuovoIn.onclick=visualizza_form;
+    userIn.onblur=blurUser;
+    commentIn.onblur=blurComment;
+    formIn.onsubmit=clickSubmit;
+    annullaIn.onclick=delAll;
+    extLink();
+    colorButtons();
+  }
 }
 
 function init() {
@@ -104,6 +105,12 @@ function extLink() {
 
 function popUp(url) {
 	window.open(url,'_blank');
+}
+
+function colorButtons() {
+  visualizzaIn.className = "com-runnable";
+  nuovoIn.className = "com-runnable";
+  nascondiIn.className = "com-notrunnable";
 }
 
 function searchFocus(){
@@ -204,11 +211,16 @@ function showSome(content) {
     if(content.shown < content.dim) {
       content.childNodes[content.shown].className = "";
       content.shown++;
+      nascondiIn.className = "com-runnable";
     }
-  if(content.shown < content.dim)
+  if(content.shown < content.dim) {
     visualizzaIn.value = "Visualizza altri commenti";
-  else
+    visualizzaIn.className = "com-running"
+  }
+  else {
     visualizzaIn.value = "Non ci sono altri commenti da visualizzare";
+    visualizzaIn.className = "com-notrunnable";
+  }
 }
 
 function getNome(loc) {
@@ -235,12 +247,16 @@ function nascondi_c(){
 	vis_com.removeChild(com);
 	f=true;
   visualizzaIn.value = "Visualizza commenti";
+  if(content != "")
+    visualizzaIn.className = "com-runnable";
+  nascondiIn.className = "com-notrunnable";
 }
 
 function visualizza_form(){
   if(getCookie("username"))
     userIn.value = getCookie("username");
 	formIn.setAttribute('class', "");
+  nuovoIn.className = "com-running";
 }
 
 function blurUser(){
