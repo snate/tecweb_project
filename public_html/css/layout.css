@@ -198,7 +198,7 @@ background-color: #2ECC71;
   text-align: center;
   background-color: #000000;
   background-position: center;
-  background-size: 16em;
+  background-size: 20em;
   border-radius: 0.14em;
   font-family: Open Sans Condensed;
 }
@@ -236,7 +236,7 @@ background-color: #2ECC71;
 
 #c_cit:hover, #c_mont:hover, #c_mare:hover{
   background-color: #ffffff;
-  background-size: 18em;
+  background-size: 22em;
   -webkit-transition: all 0.7s ease 0s;
   -moz-transition: all 0.7s ease 0s;
   -o-transition: all 0.7s ease 0s;

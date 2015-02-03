@@ -706,6 +706,20 @@ border: 2px solid #2ECC71;
   font-size: 1.5em;
 }
 
+#nav_selected, #cat_selected {
+  background-repeat: no-repeat;
+  background-position: 0.4em center;
+  background-size: 1em;
+}
+
+#nav_selected {
+  background-image: url(../images/icons/nav_selected.png);
+}
+
+#cat_selected {
+  background-image: url(../images/icons/cat_selected.png);
+}
+
 #menu-trigger:checked ~ ul, 
 #menu-trigger:checked ~ ul ul {
   height: auto;
