@@ -160,12 +160,12 @@ function visualizza_c(){
 			  xhttp.responseType == "msxml-document") {
 			text = xml.transformNode(xsl);
 			nomeLoc = getNome(nomeLoc);
-			content=text.getElementById("nome_"+nomeLoc);
+			content=text.getElementById("commenti_"+nomeLoc);
 			if(content.innerHTML == "") {
 				content = document.createElement("div");
 				content.innerHTML = "Non ci sono commenti da visualizzare";
 			}
-      content.dim = content.childNodes.length/2;
+      content.dim = content.childElementCount;
       content.shown = 0;
       for(var j = 0; j < content.childNodes.length; j++) {
         content.childNodes[j].className = "hidden";
@@ -180,12 +180,12 @@ function visualizza_c(){
 			text= xsltProcessor.transformToFragment(xml, document);
 			nomeLoc = loc.trim().toLowerCase();
 			nomeLoc = getNome(nomeLoc);
-			content=text.getElementById("nome_"+nomeLoc);
+			content=text.getElementById("commenti_"+nomeLoc);
 			if(content.innerHTML == "") {
 				content = document.createElement("div");
 				content.innerHTML = "Non ci sono commenti da visualizzare";
 			}
-      content.dim = content.childNodes.length/2;
+      content.dim = content.childElementCount;
       content.shown = 0;
       for(var i = 0; i < content.childNodes.length; i++) {
         content.childNodes[i].className = "hidden";
@@ -202,8 +202,7 @@ function visualizza_c(){
 function showSome(content) {
   for(var i = 0; i < 2; i++)
     if(content.shown < content.dim) {
-      content.childNodes[content.shown*2].className = "";
-      content.childNodes[content.shown*2+1].className = "";
+      content.childNodes[content.shown].className = "";
       content.shown++;
     }
   if(content.shown < content.dim)
@@ -232,7 +231,7 @@ function loadXMLDoc(file){
 
 function nascondi_c(){
 	var vis_com=document.getElementById('visualizza_commenti');
-	var com= document.getElementById("nome_"+nomeLoc);
+	var com= document.getElementById("commenti_"+nomeLoc);
 	vis_com.removeChild(com);
 	f=true;
   visualizzaIn.value = "Visualizza commenti";
