@@ -341,15 +341,6 @@ background-color: #2ECC71;
   background-image: url(../images/icons/cat_selected.png);
 }
 
-#nav a{
-	font-weight: bold;
-	text-decoration: none;
-}
-
-#nav a:hover{
-	text-decoration: underline;
-}
-
 #content {
   float: left;
   color: #444;
