@@ -85,7 +85,6 @@ function homeLink() {
 	}
 }
 
-
 function extLink() {
 	var linksG = linkG.getElementsByTagName("a");
 	var linksU = linkU.getElementsByTagName("a");
@@ -151,75 +150,102 @@ function getCookie(c_name) {
     return "";
 };
 
-	/*Script commenti degli utenti*/
-	function visualizza_c(){
-		if(f){
-			document.getElementById('visualizza_commenti').setAttribute('class',"");
-			xml=loadXMLDoc("cgi-bin/commenti.xml");
-			xsl=loadXMLDoc("cgi-bin/commenti.xsl");
-			if (window.ActiveXObject || // codice per IE
-				xhttp.responseType == "msxml-document") {
-					text = xml.transformNode(xsl);
-					nomeLoc = getNome(nomeLoc);
-					content=text.getElementById("nome_"+nomeLoc);
-					if(content.innerHTML == "") {
-						content = document.createElement("div");
-						content.innerHTML = "Non ci sono commenti da visualizzare";
-					}
-					document.getElementById("visualizza_commenti").innerHTML = content;
-				} // codice per Chrome, Firefox, Opera, etc.
-				else if (document.implementation &&
-					document.implementation.createDocument){
-						xsltProcessor = new XSLTProcessor();
-						xsltProcessor.importStylesheet(xsl);
-						text= xsltProcessor.transformToFragment(xml, document);
-						nomeLoc = loc.trim().toLowerCase();
-						nomeLoc = getNome(nomeLoc);
-						content=text.getElementById("nome_"+nomeLoc);
-						if(content.innerHTML == "") {
-							content = document.createElement("div");
-							content.innerHTML = "Non ci sono commenti da visualizzare";
-						}
-						document.getElementById("visualizza_commenti").appendChild(content);
-					}
-				}
-				f=false;
+/*Script commenti degli utenti*/
+function visualizza_c(){
+	if(f){
+		document.getElementById('visualizza_commenti').setAttribute('class',"");
+		xml=loadXMLDoc("cgi-bin/commenti.xml");
+		xsl=loadXMLDoc("cgi-bin/commenti.xsl");
+		if (window.ActiveXObject || // codice per IE
+			  xhttp.responseType == "msxml-document") {
+			text = xml.transformNode(xsl);
+			nomeLoc = getNome(nomeLoc);
+			content=text.getElementById("nome_"+nomeLoc);
+			if(content.innerHTML == "") {
+				content = document.createElement("div");
+				content.innerHTML = "Non ci sono commenti da visualizzare";
 			}
-
-			function getNome(loc) {
-				var locNomi = {"londra":"london","madonna di campiglio":"madonnadicampiglio","zante":"zakynthos","praga":"praga","parigi":"paris"};
-				return locNomi[loc];
+      content.dim = content.childNodes.length/2;
+      content.shown = 0;
+      for(var j = 0; j < content.childNodes.length; j++) {
+        content.childNodes[j].className = "hidden";
+      }
+      showSome(content);
+			document.getElementById("visualizza_commenti").innerHTML = content;
+		} // codice per Chrome, Firefox, Opera, etc.
+		else if (document.implementation &&
+			  document.implementation.createDocument){
+			xsltProcessor = new XSLTProcessor();
+			xsltProcessor.importStylesheet(xsl);
+			text= xsltProcessor.transformToFragment(xml, document);
+			nomeLoc = loc.trim().toLowerCase();
+			nomeLoc = getNome(nomeLoc);
+			content=text.getElementById("nome_"+nomeLoc);
+			if(content.innerHTML == "") {
+				content = document.createElement("div");
+				content.innerHTML = "Non ci sono commenti da visualizzare";
 			}
+      content.dim = content.childNodes.length/2;
+      content.shown = 0;
+      for(var i = 0; i < content.childNodes.length; i++) {
+        content.childNodes[i].className = "hidden";
+      }
+      showSome(content);
+			document.getElementById("visualizza_commenti").appendChild(content);
+		}
+    f=false;
+	}
+  else
+    showSome(content);
+}
 
-			function loadXMLDoc(file){
-				if (window.ActiveXObject){
-					xhttp = new ActiveXObject("Msxml2.XMLHTTP");
-				} else {
-					xhttp = new XMLHttpRequest();
-				}
-				xhttp.open("GET", file, false);
-				try { xhttp.responseType = "msxml-document"} catch(err) {}
-				// aiuto per IE11
-				xhttp.send("");
-				return xhttp.responseXML;
-			}
+function showSome(content) {
+  for(var i = 0; i < 2; i++)
+    if(content.shown < content.dim) {
+      content.childNodes[content.shown*2].className = "";
+      content.childNodes[content.shown*2+1].className = "";
+      content.shown++;
+    }
+  if(content.shown < content.dim)
+    visualizzaIn.value = "Visualizza altri commenti";
+  else
+    visualizzaIn.value = "Non ci sono altri commenti da visualizzare";
+}
 
-			function nascondi_c(){
-				var vis_com=document.getElementById('visualizza_commenti');
-				var com= document.getElementById("nome_"+nomeLoc);
-				vis_com.removeChild(com);
-				f=true;
-			}
+function getNome(loc) {
+	var locNomi = {"londra":"london","madonna di campiglio":"madonnadicampiglio","zante":"zakynthos","praga":"praga","parigi":"paris"};
+	return locNomi[loc];
+}
 
-			function visualizza_form(){
-        if(getCookie("username"))
-          userIn.value = getCookie("username");
-				formIn.setAttribute('class', "");
-			}
+function loadXMLDoc(file){
+	if (window.ActiveXObject){
+		xhttp = new ActiveXObject("Msxml2.XMLHTTP");
+	} else {
+		xhttp = new XMLHttpRequest();
+	}
+	xhttp.open("GET", file, false);
+	try { xhttp.responseType = "msxml-document"} catch(err) {}
+	// aiuto per IE11
+  xhttp.send("");
+	return xhttp.responseXML;
+}
 
-			function blurUser(){
-				if(!checkUser()){
-					spanErrUser.innerHTML="Inserire uno username";
+function nascondi_c(){
+	var vis_com=document.getElementById('visualizza_commenti');
+	var com= document.getElementById("nome_"+nomeLoc);
+	vis_com.removeChild(com);
+	f=true;
+}
+
+function visualizza_form(){
+  if(getCookie("username"))
+    userIn.value = getCookie("username");
+	formIn.setAttribute('class', "");
+}
+
+function blurUser(){
+	if(!checkUser()){
+		spanErrUser.innerHTML="Inserire uno username";
 					spanErrUser.className="";
 				}
 				else{
@@ -228,52 +254,52 @@ function getCookie(c_name) {
 				}
 			}
 
-			function checkUser(){
-				var user=document.getElementById('user').value;
-				return user != "";
-			}
+function checkUser(){
+	var user=document.getElementById('user').value;
+	return user != "";
+}
 
-			function blurComment(){
-				if(!checkComment()){
-					spanErrComm.innerHTML="E' obbligatorio inserire un testo per il commento";
-					spanErrComm.className="";
-				}
-				else{
-					spanErrComm.innerHTML="";
-					spanErrComm.className="hidden";
-				}
-			}
+function blurComment(){
+	if(!checkComment()){
+		spanErrComm.innerHTML="E' obbligatorio inserire un testo per il commento";
+		spanErrComm.className="";
+	}
+	else{
+		spanErrComm.innerHTML="";
+		spanErrComm.className="hidden";
+	}
+}
 
-			function checkComment(){
-				var comment=document.getElementById('comment').value;
-				return comment != "";
-			}
+function checkComment(){
+	var comment=document.getElementById('comment').value;
+	return comment != "";
+}
 
-			function clickSubmit(){
-				var corretto=checkAll();
-				if(corretto) {
-          createCookie("username",userIn.value,15);
-					alert("Inserimento avvenuto correttamente");
-					return true;
-				}
-				alert('Impossibile inviare il commento.\n Controllare i dati immessi.');
-				doAll();
-				return false;
-			}
+function clickSubmit(){
+	var corretto=checkAll();
+	if(corretto) {
+    createCookie("username",userIn.value,15);
+		alert("Inserimento avvenuto correttamente");
+		return true;
+	}
+	alert('Impossibile inviare il commento.\n Controllare i dati immessi.');
+	doAll();
+	return false;
+}
 
-			function checkAll(){
-				return checkUser() && checkComment();
-			}
+function checkAll(){
+	return checkUser() && checkComment();
+}
 
-			function doAll(){
-				blurUser();
-				blurComment();
-			}
+function doAll(){
+	blurUser();
+	blurComment();
+}
 
-			/*si occupa di cancellare non solo i campi ma anche i messaggi di errore*/
-			function delAll(){
-				document.getElementById('err_user').innerHTML="";
-				document.getElementById('err_comment').innerHTML="";
-				formIn.setAttribute('class', "hidden");
-				return true;
-			}
+/*si occupa di cancellare non solo i campi ma anche i messaggi di errore*/
+function delAll(){
+	document.getElementById('err_user').innerHTML="";
+	document.getElementById('err_comment').innerHTML="";
+	formIn.setAttribute('class', "hidden");
+	return true;
+}
