@@ -95,7 +95,7 @@ function extLink() {
 			return false;
 		}
 	}
-	for(var i = 0; i < linksU.length; i++) {
+	for(var i = 0; i < linksG.length; i++) {
 		linksG[i].onclick = function(){
 			popUp(this.getAttribute("href"));
 			return false;
