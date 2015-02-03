@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:c="http://www.commenti.com">
   <xsl:output method='html' version='1.0' encoding='UTF-8' indent='yes'
     doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
@@ -23,7 +23,7 @@
           <li>
             <div>
               <xsl:value-of select="@user" />
-              <xsl:text> - </xsl:text>
+              <xsl:text>: </xsl:text>
               <span class="pubdate">
                 <xsl:value-of select="c:pubblicationDate" />
               </span>

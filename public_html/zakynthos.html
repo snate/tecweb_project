@@ -121,44 +121,45 @@
 		</p>
 
 		<div id="comments">
+			<h1>Commenti</h1>
 			<form action="">
 				<fieldset>
-					<label for="see_comments">Visualizza commenti:</label>
 					<input type="button" value="Visualizza commenti" id="see_comments" />
+					<label for="see_comments">Visualizza commenti:</label>
+				</fieldset>
+			</form>
+			<form action="">
+				<fieldset>
+					<input type="button" value="Nascondi commenti" id="hide_comments" />
+					<label for="hide_comments">Nascondi commenti:</label>
+				</fieldset>
+			</form>
+			<form action="">
+				<fieldset>
+				<input type="button" value="Pubblica il tuo commento" id="new_comment" />
+				<label for="new_comment">Pubblica il tuo commento:</label>
 				</fieldset>
 			</form>
 			<div id="visualizza_commenti" class="hidden">
 			</div>
-			<form action="">
-				<fieldset>
-					<label for="hide_comments">Nascondi commenti:</label>
-					<input type="button" value="Nascondi commenti" id="hide_comments" />
-				</fieldset>
-			</form>
-			<form action="">
-				<fieldset>
-					<label for="new_comment">Pubblica il tuo commento:</label>
-					<input type="button" value="Pubblica il tuo commento" id="new_comment" />
-				</fieldset>
-			</form>
 			<form class="hidden" method="post" action="cgi-bin/inserimento_commento.cgi" id="formcompl">
 				<fieldset>
 					<legend>Inserisci il tuo commento</legend>
 					<div>
-						<input type="hidden" name="localita" id="localita" value="zakynthos" />
-            <input type="hidden" name="pubdate" id="pubdate" value="" />
-            <label for="user">Username:</label>
-            <input type="text" name="user" id="user" />
-            <span class="hidden" id="err_user"></span>
-          </div>
-          <div>
-            <label for="comment">Testo del commento:</label>
-            <textarea name="comment" id="comment" rows="5" cols="40"></textarea>
-            <span class="hidden" id="err_comment"></span>
-          </div>
+						<input type="hidden" name="localita" id="localita" value="madonnadicampiglio" />
+            					<input type="hidden" name="pubdate" id="pubdate" value="" />
+						<label for="user">Username:</label>
+						<input type="text" name="user" id="user" />
+						<span class="hidden" id="err_user"></span>
+					</div>
 					<div>
-						<input type="submit" value="Pubblica" />
-						<input type="reset" value="Annulla" id="annulla"/>
+						<label for="comment">Testo del commento:</label>
+						<textarea name="comment" id="comment" rows="5" cols="40"></textarea>
+						<span class="hidden" id="err_comment"></span>
+					</div>
+					<div>
+					<input type="submit" value="Pubblica" />
+					<input type="reset" value="Annulla" id="annulla"/>
 					</div>
 				</fieldset>
 			</form>
