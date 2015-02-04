@@ -434,6 +434,10 @@ background-color: #2ECC71;
   margin: 1em 1% 1em 0;
 }
 
+#content dl a {
+  font-weight: bold;
+}
+
 #content dt {
   list-style-type: none;
   font-weight: bold;
