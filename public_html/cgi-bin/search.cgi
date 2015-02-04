@@ -62,7 +62,7 @@ print $page->header(-charset=>'UTF-8'),
       ),
       $page->div({-id=>'header'},
         h1(
-          a({-href=>'homepage.html',-title=>'Pagina principale'},
+          a({-href=>'../homepage.html',-title=>'Pagina principale'},
             "WHAT TO VISIT",
           )
         ),

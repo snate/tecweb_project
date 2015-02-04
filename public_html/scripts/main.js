@@ -175,6 +175,7 @@ function visualizza_c(){
 		if (window.ActiveXObject || // codice per IE
 			  xhttp.responseType == "msxml-document") {
 			text = xml.transformNode(xsl);
+      nomeLoc = loc.trim().toLowerCase();
 			nomeLoc = getNome(nomeLoc);
 			content=text.getElementById("commenti_"+nomeLoc);
 			if(content.innerHTML == "") {
