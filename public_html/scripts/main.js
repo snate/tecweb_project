@@ -179,7 +179,8 @@ function visualizza_c(){
 			content=text.getElementById("commenti_"+nomeLoc);
 			if(content.innerHTML == "") {
 				content = document.createElement("div");
-				content.innerHTML = "Non ci sono commenti da visualizzare";
+        if(document.getElementById("visualizza_commenti").childElementCount == 0)
+				  content.innerHTML = "Non ci sono commenti da visualizzare";
 			}
       content.dim = content.childElementCount;
       content.shown = 0;
@@ -199,7 +200,8 @@ function visualizza_c(){
 			content=text.getElementById("commenti_"+nomeLoc);
 			if(content.innerHTML == "") {
 				content = document.createElement("div");
-				content.innerHTML = "Non ci sono commenti da visualizzare";
+        if(document.getElementById("visualizza_commenti").childElementCount == 0)
+				  content.innerHTML = "Non ci sono commenti da visualizzare";
 			}
       content.dim = content.childElementCount;
       content.shown = 0;
