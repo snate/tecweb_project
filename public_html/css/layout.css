@@ -2,7 +2,7 @@
 
 html, body {
   font-family: Roboto, Arial, Helvetica, serif;
-  background-color: /* #2ECC71 */ #ECF0F1;
+  background-color: #FFF;
   color: #444;
 }
 
@@ -26,7 +26,7 @@ a:hover{
 }
 
 #header {
-  background-color: /* #2F965A */ #2ECC71;
+  background-color: #2ECC71;
   height: 2.8em;
   overflow: hidden;
   font-family: Open Sans Condensed;
@@ -34,7 +34,7 @@ a:hover{
 
 #header h1 {
   float: left;
-  color: #E0E0E0;
+  color: #FFF;
   text-transform: uppercase;
   font-size: 2em;
   font-weight: normal;
@@ -42,7 +42,7 @@ a:hover{
 }
 
 #header h1 a{
-  color: #E0E0E0;
+  color: #FFF;
   text-decoration: none;
 }
 
@@ -64,8 +64,8 @@ margin: 0.16em 0 0 0;
 display: block;
 background-color: #2F965A;
 border-radius: 0.24em;
-border: 0.1em solid #ECF0F1;
-color: #ECF0F1;
+border: 0.1em solid #FFF;
+color: #FFF;
 text-decoration: none;
 padding: 0 0.3em;
 text-transform: uppercase;
@@ -92,10 +92,10 @@ background-color: #2ECC71;
 }
 
 #header #search input[type="text"]{
-  background: url(../images/icons/search-white.png) no-repeat 0.6em 0.8em #444;
+  background-color: #444;
   height: 2.6em;
   margin: 0.2em;
-  padding-left: 2.4em;
+  padding: 0 2.4em 0 0.3em;
   border: 0;
   color: #d7d7d7;
   width: 7em;
@@ -157,20 +157,17 @@ background-color: #2ECC71;
 }
 
 #breadcrumb #search input[type="text"]{
-  background: url(../images/icons/search-white.png) no-repeat 0.6em 0.24em #444;
+  background-color: #444;
   height: 1.5em;
   margin: 0.2em;
-  padding-left: 2.4em;
+  padding: 0 2.4em 0 0.3em;
   border: 0;
   color: #d7d7d7;
   width: 7em;
-  -webkit-border-radius: 0.3em;
-  -moz-border-radius: 0.3em;
   border-radius: 0.3em;
 }
 
 #breadcrumb #search input[type="text"]:focus {
-  background: url(../images/icons/search-dark.png) no-repeat 0.6em 0.24em #fcfcfc;
   color: #6a6f75;
   width: 13em;
   outline: none; /*rimuove il bordo blu dovuto al focus su input*/
@@ -208,8 +205,8 @@ background-color: #2ECC71;
   display: block;
   background-color: #2F965A;
   border-radius: 0.14em;
-  border: 0.1em solid #ECF0F1;
-  color: #ECF0F1;
+  border: 0.1em solid #FFF;
+  color: #FFF;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: normal;
@@ -218,8 +215,8 @@ background-color: #2ECC71;
 
 .homepanel a:hover, .homepanel a:visited {
   background-color: #2ECC71;
-  border-color: #ECF0F1;
-  color: #ECF0F1;
+  border-color: #FFF;
+  color: #FFF;
 }
 
 #c_mare {
@@ -251,7 +248,7 @@ background-color: #2ECC71;
 #footer {
   clear: both;
   width: 100%;
-  background-color: #2F965A;
+  background-color: #1d653c;
   height: 2.5em;
 }
 
@@ -305,8 +302,7 @@ background-color: #2ECC71;
 #nav {
   clear: left;
   float: left;
-  background-color: #444;
-
+  background-color: #1d653c;
   width: 19%;
   margin: 0.5em 0 0 1%;
   border-radius: 0.2em;
@@ -324,6 +320,11 @@ background-color: #2ECC71;
 
 #nav li {
   padding-left: 1.4em;
+  color: white;
+}
+
+
+#nav li a {
   color: white;
 }
 
@@ -834,9 +835,34 @@ label[for="searchbar-trigger"] {
   position: absolute;
 }
 
+#header legend, #breadcrumb legend, #nav legend {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
 
+#search_submit {
+background-image: url(../images/icons/search-white.png);
+background-repeat: no-repeat;
+background-size: 1.1em;
+background-color: transparent;
+color: #444;
+text-indent: -10em;
+}
 
+#header #search_submit {
+background-position: 0.5em center;
+height: 1.8em;
+width: 1.8em;
+margin-left: -2.8em;
+}
 
+#breadcrumb #search_submit {
+background-position: 0.2em center;
+height: 1.4em;
+width: 1.4em;
+margin-left: -2.3em;
+}
 
 
 
