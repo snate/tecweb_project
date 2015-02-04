@@ -1,4 +1,39 @@
-\section{Comportamento}
+\section{Front-end}
+Gli scripts introdotti per la parte front-end, interamente sviluppata in \textbf{JavaScript}, offrono funzionalità che permettono una migliore esperienza per l'utente.
+
+
+Nello specifico sono state inserite le seguenti features:
+\begin {itemize}
+\item un cookie per il salvataggio del nome utente al momento della pubblicazione di un nuovo commento
+\item il placeholder nella barra di ricerca località
+\item uno script relativo ai commenti utente che si occupa di controllare, caricare e nascondere i dati inseriti nella form di pubblicazione 
+\item un modulo che effettua la geolocalizzazione 
+\end {itemize} 
+Per ogni caratteristica sopra elencata si è cercato di separare il codice nel modo più chiaro possibile; a tal fine si è scelto di utilizzare la libreria require.js (\textit{http://requirejs.org}) che si occupa essenzialmente di caricare files situati in percorsi diversi modularizzando quindi i vari scripts.
+
+
+Require.js si è dimostrato un valido \textit{module loader} anche per la sua estesa compatibilità con i browsers ( IE 6+, Firefox 2+, Safari 3.2+, Chrome 3+, Opera 10+ ) .
+
+\subsection{Gestione cookie}
+Per immagazzinare persistentemente la username dell'utente abbiamo deciso di creare un cookie. 
+
+Lo scopo di questo è velocizzare la compilazione di un commento infatti: l'utilizzatore, avendo pubblicato una prima volta, alla sua seconda troverà già riempito il campo nome utente.
+ 
+Nei nostri scripts sono state implementate una funzione per l'inizializzazione ed una per il recupero/lettura del cookie appena creato.
+
+
+In fase di creazione del cookie, oltre alla coppia chiave-valore abbiamo aggiunto come terzo parametro una data di scadenza impostata a 15 giorni.
+La funzione di recupero restituisce il valore del cookie se questo è presente, successivamente il valore verrà inserito nel documento html e l'utente vedrà la username già compilata.
+
+\subsection{ Inserimento placeholder in barra di ricerca}
+
+Poichè il nostro progetto è conforme allo standard xhtml 1.0 strict ed  il tag \textit{placeholder} non vi è definito, abbiamo dovuto usare Javascript per riuscire nel nostro intento di includerlo.
+
+
+Grazie ai metodi \textit{onblur} ed \textit{onfocus} abbiamo potuto forzare il valore di input della nostra barra di ricerca a seconda che questa si trovi in focus oppure no.
+
+
+\subsection{Visualizzazione dei commenti (lato client)}
 
 \subsection{Geolocalizzazione}
 In questo progetto abbiamo inoltre deciso di implementare un modulo che fa uso delle API HTML5 per la geolocalizzazione. L'introduzione di tale caratteristica ha il puro scopo di migliorare la qualità del sito; in assenza di questa, l'utente avrà comunque accesso a tutte le funzionalità di base.
@@ -29,7 +64,7 @@ oppure passare in modalità StreetView in modo semplice ed immediato.
 
 \subsubsection{L'implementazione del modulo in dettaglio}
 
-Il linguaggio di programmazione utilizzato per sviluppare il componente è \textbf{JavaScript}. Per svolgere più leggermente l'attività di codifica è stata inclusa una libreria di utilità, underscore.js (\textit{http://underscorejs.org/}).
+Per svolgere più leggermente l'attività di codifica è stata inclusa una libreria di utilità, underscore.js (\textit{http://underscorejs.org}).
 Vi è un unico script che viene inizializzato al caricamento della pagina ed è valido sia per le pagine di sezione, (es: “mare.html”) sia per le pagine delle località turistiche (es: “praga.html”).
 Questo è stato possibile attraverso la ricerca di un id presente solamente nelle pagine relative alle categorie, ma assente nelle pagine delle località. In tal modo lo script è in grado di discriminare se la pagina è di una categoria o di una località.
 
