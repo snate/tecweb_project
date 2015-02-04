@@ -13,7 +13,7 @@ html, body {
 }
 
 a:link{
-  color: #2F965A;
+  color: #1d653c;
 }
 
 a:visited{
@@ -26,7 +26,7 @@ a:hover{
 }
 
 #header {
-  background-color: #2ECC71;
+  background-color: #1d653c;
   height: 2.8em;
   overflow: hidden;
   font-family: Open Sans Condensed;
@@ -62,7 +62,7 @@ padding: 0 0.4em;
 #header #main-menu li a {
 margin: 0.16em 0 0 0;
 display: block;
-background-color: #2F965A;
+background-color: #1d653c;
 border-radius: 0.24em;
 border: 0.1em solid #FFF;
 color: #FFF;
@@ -92,23 +92,18 @@ background-color: #2ECC71;
 }
 
 #header #search input[type="text"]{
-  background-color: #444;
+  background-color: #fff;
   height: 2.6em;
   margin: 0.2em;
-  padding: 0 2.4em 0 0.3em;
-  border: 0;
-  color: #d7d7d7;
+  padding: 0 1.8em 0 0.6em;
+  color: #1d653c;
   width: 7em;
-  -webkit-border-radius: 0.3em;
-  -moz-border-radius: 0.3em;
   border-radius: 0.3em;
 }
 
 #header #search input[type="text"]:focus {
-  background: url(../images/icons/search-dark.png) no-repeat 0.6em 0.8em #fcfcfc;
-  color: #6a6f75;
   width: 13em;
-  outline: none; /*rimuove il bordo blu dovuto al focus su input*/
+  outline: none;
   -webkit-transition: all 0.7s ease 0s;
   -moz-transition: all 0.7s ease 0s;
   -o-transition: all 0.7s ease 0s;
@@ -157,20 +152,18 @@ background-color: #2ECC71;
 }
 
 #breadcrumb #search input[type="text"]{
-  background-color: #444;
+  background-color: #fff;
   height: 1.5em;
   margin: 0.2em;
-  padding: 0 2.4em 0 0.3em;
-  border: 0;
-  color: #d7d7d7;
+  padding: 0 1.8em 0 0.6em;
+  color: #1d653c;
   width: 7em;
   border-radius: 0.3em;
 }
 
 #breadcrumb #search input[type="text"]:focus {
-  color: #6a6f75;
   width: 13em;
-  outline: none; /*rimuove il bordo blu dovuto al focus su input*/
+  outline: none;
   -webkit-transition: all 0.7s ease 0s;
   -moz-transition: all 0.7s ease 0s;
   -o-transition: all 0.7s ease 0s;
@@ -203,7 +196,7 @@ background-color: #2ECC71;
 .homepanel a {
   margin: 0.14em;
   display: block;
-  background-color: #2F965A;
+  background-color: #1d653c;
   border-radius: 0.14em;
   border: 0.1em solid #FFF;
   color: #FFF;
@@ -556,7 +549,6 @@ background-color: #2ECC71;
 }
 
 #aside a {
-  /* color: #2F965A; */
   background-image: url(../images/icons/Link_out.png);
   background-repeat: no-repeat;
   background-size: 10px;
@@ -699,7 +691,7 @@ clear: both;
 }
 
 #comments .com-runnable {
-  background-color: #2F965A;
+  background-color: #1d653c;
 }
 
 #comments .com-notrunnable {
@@ -842,7 +834,7 @@ label[for="searchbar-trigger"] {
 }
 
 #search_submit {
-background-image: url(../images/icons/search-white.png);
+background-image: url(../images/icons/searchbar_icon.png);
 background-repeat: no-repeat;
 background-size: 1.1em;
 background-color: transparent;
