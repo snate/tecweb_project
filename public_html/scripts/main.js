@@ -24,8 +24,9 @@ function load(){  //ho dovuto rinominare la funzione a causa di conflitti con al
   init();
   search();
   homeLink();
-  if(loc!=null){
+  if(document.getElementById("geodata") != null)
     geo = require(['geolocation'], function (geolocation){});
+  if(loc!=null){
     insertDate();
     loc = loc.innerHTML;
     var nomeLoc = loc.trim().toLowerCase();
