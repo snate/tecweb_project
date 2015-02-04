@@ -252,7 +252,8 @@ function loadXMLDoc(file){
 function nascondi_c(){
 	var vis_com=document.getElementById('visualizza_commenti');
 	var com= document.getElementById("commenti_"+nomeLoc);
-	vis_com.removeChild(com);
+  if(com != null)
+    vis_com.removeChild(com);
 	f=true;
   visualizzaIn.value = "Visualizza commenti";
   if(content != "")
