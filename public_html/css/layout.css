@@ -87,7 +87,8 @@ background-color: #2ECC71;
 }
 
 #header #search label {
-  font-size: 1em;
+  height: 0;
+  width: 0;
   visibility: hidden;
 }
 
@@ -148,7 +149,8 @@ background-color: #2ECC71;
 }
 
 #breadcrumb #search label {
-  font-size: 0.84em;
+  height: 0;
+  width: 0;
 }
 
 #breadcrumb #search input[type="text"]{
@@ -764,14 +766,22 @@ clear: both;
   width: 0;
 }
 
-#aside #geolocation #mapholder {
+#geolocation #mapholder {
   display: none;
   position: relative;
-  margin-top: 0.5em;
   height: 14.5em;
   width: 90%;
   border: 2px solid #27AE60;
 }
+
+#aside #geolocation #mapholder {
+  margin-top: 0.5em;
+}
+
+#nav #geolocation #mapholder {
+  margin: 0.5em;
+}
+
 
 #geodata li{
   list-style-type: none;
