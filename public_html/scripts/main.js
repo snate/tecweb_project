@@ -89,18 +89,26 @@ function homeLink() {
 function extLink() {
 	var linksG = linkG.getElementsByTagName("a");
 	var linksU = linkU.getElementsByTagName("a");
+  var descrLoc = document.getElementById("descr_loc");
+  var linksL = descrLoc.getElementsByTagName("a");
 	for(var i = 0; i < linksU.length; i++) {
 		linksU[i].onclick = function(){
 			popUp(this.getAttribute("href"));
 			return false;
 		}
 	}
-	for(var i = 0; i < linksG.length; i++) {
-		linksG[i].onclick = function(){
-			popUp(this.getAttribute("href"));
-			return false;
-		}
-	}
+  for(var i = 0; i < linksG.length; i++) {
+    linksG[i].onclick = function(){
+      popUp(this.getAttribute("href"));
+      return false;
+    }
+  }
+  for(var i = 0; i < linksL.length; i++) {
+    linksL[i].onclick = function(){
+      popUp(this.getAttribute("href"));
+      return false;
+    }
+  }
 }
 
 function popUp(url) {
