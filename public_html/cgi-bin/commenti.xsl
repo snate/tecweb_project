@@ -23,7 +23,6 @@
           <li>
             <div>
               <xsl:value-of select="@user" />
-              <xsl:text> - </xsl:text>
               <span class="pubdate">
                 <xsl:value-of select="c:pubblicationDate" />
               </span>
