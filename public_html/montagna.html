@@ -40,10 +40,16 @@
 		<a href="homepage.html" title="Pagina principale">
 		<span xml:lang="en">Home</span></a>
 		&gt; Montagna
-    <input type="checkbox" id="searchbar-trigger"/>
-    <label for="searchbar-trigger"></label>
+		<form>
+			<fieldset>
+				<legend>Cerca</legend>
+				<!-- LABEL??? -->
+				<input type="checkbox" id="searchbar-trigger"/>
+			</fieldset>
+		</form>	
       <form method="get" action="cgi-bin/search.cgi">
         <fieldset  id="search">
+			<legend>Cerca</legend>
           <label for="place">Cerca:</label>
           <input name="place" id="place" type="text" tabindex="1"/>
         <input name="" id="search_submit" type="submit" value="Vai" tabindex="2"/>
@@ -52,9 +58,14 @@
     </div>
 
     <div id="nav">
-    <input type="checkbox" id="menu-trigger"/>
-    <label for="menu-trigger"></label>
 	    <a id="skip" href="#content" title="Salta la navigazione">Salta la navigazione</a>
+		<form>
+			<fieldset>
+				<legend>Menù</legend>
+				<!-- LABEL??? -->
+				<input type="checkbox" id="menu-trigger"/>
+			</fieldset>
+		</form>	
 		<ul>
 			<li>
 				<a href="homepage.html" title="Pagina principale" tabindex="3">
