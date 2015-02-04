@@ -45,7 +45,7 @@
         Montagna
         </a>
         &gt; <span id="current_page">Madonna di Campiglio</span>
-		<form>
+		<form action="">
 			<fieldset>
 				<legend>Cerca</legend>
 				<!-- label -->
@@ -143,21 +143,14 @@
         </p>
 
 		<div id="comments">
-			<h1>Commenti</h1>
-			<form action="">
-				<fieldset>
-					<legend>Visualizza commenti</legend>
-					<input type="button" value="Visualizza commenti" id="see_comments" />
-				</fieldset>
-				<fieldset>
-					<legend>Nascondi commenti</legend>
-					<input type="button" value="Nascondi commenti" id="hide_comments" />
-				</fieldset>
-				<fieldset>
-					<legend>Pubblica il tuo commento</legend>
-					<input type="button" value="Pubblica il tuo commento" id="new_comment" />
-				</fieldset>
-			</form>
+      <form action="">
+        <fieldset>
+          <legend>Commenti</legend>
+          <input type="button" value="Visualizza commenti" id="see_comments" />
+          <input type="button" value="Nascondi commenti" id="hide_comments" />
+          <input type="button" value="Pubblica il tuo commento" id="new_comment" />
+        </fieldset>
+      </form>
 			<div id="visualizza_commenti" class="hidden">
 			</div>
 			<form class="hidden" method="post" action="cgi-bin/inserimento_commento.cgi" id="formcompl">
