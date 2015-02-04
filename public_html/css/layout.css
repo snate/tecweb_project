@@ -73,11 +73,7 @@ font-weight: normal;
 font-size: 1.5em;
 }
 
-#header #main-menu a:hover {
-background-color: #2ECC71;
-}
-
-#header #main-menu li:hover a:visited{
+#header #main-menu a:hover, #header #main-menu a:visited {
 background-color: #2ECC71;
 }
 
@@ -90,6 +86,8 @@ background-color: #2ECC71;
   height: 0;
   width: 0;
   visibility: hidden;
+  float: left;
+  color: #fff;
 }
 
 #header #search input[type="text"]{
@@ -151,6 +149,9 @@ background-color: #2ECC71;
 #breadcrumb #search label {
   height: 0;
   width: 0;
+  visibility: hidden;
+  float: left;
+  color: #fff;
 }
 
 #breadcrumb #search input[type="text"]{
@@ -180,6 +181,7 @@ background-color: #2ECC71;
   position: absolute;
   height: 0;
   overflow: hidden;
+  color: #fff;
 }
 
 .homepanel {
@@ -462,7 +464,7 @@ background-color: #2ECC71;
   padding: 0.1em 0.6em;
   color: #FFF;
   font-size: 1em;
-  background-color: #2ECC71;
+  background-color: #1D653C;
   border-radius: 0.3em;
   font-family: Open Sans Condensed;
 }
@@ -509,7 +511,8 @@ background-color: #2ECC71;
   font-size: 0.9em;
 }
 
-#descr_loc a:visited {
+#descr_loc a {
+  font-weight: bold;
 }
 
 .img_content {
@@ -785,16 +788,20 @@ clear: both;
 
 #geodata li{
   list-style-type: none;
-
   font-family: 'Roboto';
   font-size: 0.9em;
   padding-top: 0.4em;
-} /**/
+}
+
+#nav #geodata li{
+  text-transform: none;
+  padding-left: 0.5em;
+}
 
 #mapholder a{
   background-position: right 0.2em;
   padding-right: 1.2em;
-} /**/
+}
 
 .paragraph_title{
   font-weight: bold;
@@ -841,6 +848,7 @@ label[for="searchbar-trigger"] {
   height: 0;
   width: 0;
   visibility: hidden;
+  color: #fff;
 }
 
 #search_submit {

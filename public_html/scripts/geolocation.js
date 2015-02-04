@@ -1,4 +1,4 @@
-// GLOBALS
+﻿// GLOBALS
 var _ = require(['underscore'], function (underscore){});
 
 var mylat;
@@ -142,7 +142,7 @@ function getLocation() {
         if(flag){
           var k=0;
           _.each(sortedlist,function(sortedlist){
-            return  geodl.childNodes[k++].innerHTML = sortedlist.name + " : " + sortedlist.distance + " Km";
+            return  geodl.childNodes[k++].innerHTML = sortedlist.name + ": " + sortedlist.distance + " Km";
           });
         }else
           geodl.childNodes[0].innerHTML = currentloc.name + " è lontana " + currentloc.distance + " Km da te.";
