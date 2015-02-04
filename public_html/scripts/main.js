@@ -25,6 +25,7 @@ function load(){  //ho dovuto rinominare la funzione a causa di conflitti con al
   search();
   homeLink();
   if(loc!=null){
+    geo = require(['geolocation'], function (geolocation){});
     insertDate();
     loc = loc.innerHTML;
     var nomeLoc = loc.trim().toLowerCase();
@@ -41,7 +42,6 @@ function load(){  //ho dovuto rinominare la funzione a causa di conflitti con al
 }
 
 function init() {
-  geo = require(['geolocation'], function (geolocation){});
   searchbar = document.getElementById('place');
   loc = document.getElementById('current_page');
   userIn=document.getElementById('user');
