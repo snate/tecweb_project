@@ -1,0 +1,103 @@
+\section{Test effettuati} %TODO Graziano, Federica, Carlo i test effettuati da voi
+In questa sezione si elencano i test effettuati per ogni prodotto di progetto.
+Per i test di accessibilità eseguiti in remoto, il sito è stato caricato su
+GitHub Pages.
+
+\subsection{Validazione XHTML}
+Ogni pagina è stata validata con il tool offerto da W3C all'indirizzo
+\texttt{http://validator.w3.org/\#validate\_by\_input}.
+
+\subsection{Validazione CSS}
+Ogni foglio di stile CSS è stato validato con il tool offerto da W3C
+all'indirizzo
+\texttt{https://jigsaw.w3.org/css-validator/\#validate\_by\_input}.
+
+\subsection{Validazione XML e XSD}
+Il file XML dove sono salvati i commenti è stato validato rispetto al suo
+schema XSD con il tool offerto da \textit{freeformatter.com} all'indirizzo
+\texttt{http://www.freeformatter.com/xml-validator-xsd.html}.
+
+\subsection{Validazione XSLT}
+Il file XSLT che permette di trasformare il file XML dove sono salvati i
+commenti è stato validato (si è anche verificato il suo corretto
+funzionamento) con il tool offerto da \textit{freeformatter.com} all'indirizzo
+\texttt{http://www.freeformatter.com/xsl-transformer.html}.
+
+\subsection{JavaScript}
+Ogni script JavaScript è stato analizzato tramite il tool di analisi statica di
+\textit{WebStorm}, affinchè venissero trovati errori e miglioramenti al codice.
+
+Ogni frammento di codice è stato testato in locale ed in remoto non tralasciando alcun valore nel dominio dei possibili valori in ingresso. Ogni
+test è stato effettuato tenendo visibile la \textbf{Javascript Console} del
+browser, così da notare eventuali warning o errori nel codice. I test hanno
+avuto esito positivo sul prodotto finale.
+
+\subsection{Perl e CGI}
+Ciascuno degli script Perl e CGI è stato verificato in locale, con esiti
+positivi.
+
+\subsection{Cynthia Says}
+Uno dei tool che è stato utilizzato per l'accessibilità delle pagine è Cynthia
+Says, inserendo l'URL di ogni pagina caricata su GitHub Pages e richiedendo la
+conformità a WCAG 2.0 AAA. Questa scelta è dovuta al fatto che i tentativi per
+verificare l'accessibilità di una pagina sono limitati a 10 nell'arco di 24
+ore.
+Di seguito vengono riportati i risultati ottenuti per \textbf{tutte} le pagine
+del sito:
+
+\begin{center}
+\begin{tabular}[h!]{ | l | c | }
+  \hline
+  Conformità & Esito \\
+  \hline
+  WCAG 2.0 A & Conforme \\
+  \hline
+  WCAG 2.0 AA & Conforme \\
+  \hline
+  WCAG 2.0 AAA & Non conforme \\
+  \hline
+\end{tabular}
+\end{center}
+
+Le pagine del sito non sono conformi a WCAG 2.0 AAA poichè:
+\begin{enumerate}
+\item \textit{Cynthia Says} non riconosceva come pagine di aiuto ``Mappa del
+sito" e ``F.A.Q.";
+\item il contrasto richiesto per il terzo grado di accessibilità era troppo
+elevato per poter garantire una resa grafica piacevole del sito.
+\end{enumerate}
+
+\subsection{WAVE}
+WAVE (Web Accessibility Evaluation Tool) è uno strumento offerto da
+\textit{WebAIM} (WEB Accessibility In Mind) per verificare l'accessibilità
+delle pagine. Questo strumento analizza una pagina e fornisce errori,
+avvertimenti (warnings), caratteristiche positive, struttura basilare di una
+pagina e indicazioni sul contrasto.
+
+Più in particolare, sono stati corretti gli errori trovati (relativi agli
+standard 508 e WCAG) non relativi alla lingua delle pagine, dal momento che
+nonostante il tag html fosse ben-formato e contenente l'indicazione sulla
+lingua utilizzata nella pagina in modo corretto, il sito continuava a
+segnalare il falso positivo.
+
+I warnings sono stati corretti solo se effettivamente utili; questo dal
+momento che sono stati introdotti volutamente titoli o link ridondanti per
+aiutare l'utente a capire dove si trova e che l'uso dei tabindex viene
+segnalato come warning, anche se questi sono stati messi per permettere
+all'utente di raggiungere subito i link della pagina più rilevanti, saltando
+elementi di navigazione o breadcrumb a seconda dei casi.
+
+I contrasti dei colori sono stati regolati per riuscire a superare almeno il
+livello di accessibilità WCAG 2.0 AA.
+
+\subsection{Fangs}
+\textit{Fangs} è un'estensione per i browser che consente di visualizzare un
+sito nello stesso modo in cui verrebbe visualizzato da uno screen reader,
+fornendo il testo come sarebbe letto da questo dispositivo, la lista delle
+intestazioni e la lista dei link presenti nella pagina.
+
+Sono state controllate tutte le pagine, con esito positivo: le intestazioni
+seguono l'ordine logico pensato dai componenti del gruppo, i link sono
+visualizzati nell'ordine aspettato e non sono presenti elementi estranei nel
+testo corrispondente all'audio che sentirebbe un utente con screen reader,
+mentre gli aiuti come il ``salta la navigazione" sono presenti.
