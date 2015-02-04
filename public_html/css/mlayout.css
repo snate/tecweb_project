@@ -180,7 +180,7 @@ label[for="searchbar-trigger"] {
   background: url(../images/icons/search-dark.png) no-repeat 0.6em 0.6em #fcfcfc;
   color: #6a6f75;
   width: 100%;
-  outline: none; // rimuove il bordo blu dovuto al focus su input
+  outline: none; /*rimuove il bordo blu dovuto al focus su input*/
   -webkit-transition: all 0.7s ease 0s;
   -moz-transition: all 0.7s ease 0s;
   -o-transition: all 0.7s ease 0s;
@@ -568,7 +568,7 @@ label[for="searchbar-trigger"] {
 }
 
 .info dd {
-  float. left;
+  float:; left;
   clear: right;
 }
 
