@@ -194,12 +194,16 @@ function mobileSearch() {
 function visualizza_c(){
 	if(f){
     document.getElementById('visualizza_commenti').setAttribute('class',"");
-    xml=loadXMLDoc("cgi-bin/commenti.xml");
-    xsl=loadXMLDoc("cgi-bin/commenti.xsl");
 		if (window.ActiveXObject || "ActiveXObject" in window) {
-      alert("Spiacente, non posso visualizzare i commenti nel tuo browser");
+			error_content = document.createElement("div");
+			error_content.innerHTML = "Spiacenti non siamo in grado di visualizzare i commenti per il tuo browser";
+			padre=document.getElementById("visualizza_commenti");
+			if(padre.childElementCount==0)
+				padre.appendChild(error_content);
 			return;
-    }
+		}
+		xml=loadXMLDoc("cgi-bin/commenti.xml");
+		xsl=loadXMLDoc("cgi-bin/commenti.xsl");
 		if (document.implementation &&
 			  document.implementation.createDocument){
 			xsltProcessor = new XSLTProcessor();
