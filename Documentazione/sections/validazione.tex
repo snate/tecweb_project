@@ -45,8 +45,9 @@ ore.
 Di seguito vengono riportati i risultati ottenuti per \textbf{tutte} le pagine
 del sito:
 
+\begin{table}[h!]
 \begin{center}
-\begin{tabular}[h!]{ | l | c | }
+\begin{tabular}{ | l | c | }
   \hline
   Conformità & Esito \\
   \hline
@@ -57,7 +58,9 @@ del sito:
   WCAG 2.0 AAA & Non conforme \\
   \hline
 \end{tabular}
+\caption{Conformità allo standard WAI 2.0 X WCAG}
 \end{center}
+\end{table}
 
 Le pagine del sito non sono conformi a WCAG 2.0 AAA poichè:
 \begin{enumerate}
@@ -90,7 +93,7 @@ elementi di navigazione o breadcrumb a seconda dei casi.
 I contrasti dei colori sono stati regolati per riuscire a superare almeno il
 livello di accessibilità WCAG 2.0 AA.
 
-\subsection{Fangs}
+\subsection{Fangs}\label{sec:fangs}
 \textit{Fangs} è un'estensione per i browser che consente di visualizzare un
 sito nello stesso modo in cui verrebbe visualizzato da uno screen reader,
 fornendo il testo come sarebbe letto da questo dispositivo, la lista delle
@@ -101,3 +104,9 @@ seguono l'ordine logico pensato dai componenti del gruppo, i link sono
 visualizzati nell'ordine aspettato e non sono presenti elementi estranei nel
 testo corrispondente all'audio che sentirebbe un utente con screen reader,
 mentre gli aiuti come il ``salta la navigazione" sono presenti.
+
+\subsection{Lynx}\label{sec:lynx}
+Le pagine del sito sono state anche navigate tramite il browser testuale
+\texttt{lynx}, affinchè si potesse verificare la facilità d'uso di
+\textit{What To Visit} anche per gli utenti che fanno uso di questo
+strumento di navigazione.
