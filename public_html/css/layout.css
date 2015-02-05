@@ -825,11 +825,18 @@ clear: both;
   display: none;
 }
 
-#header legend, #breadcrumb legend, #nav legend {
+#header legend, #nav legend {
   height: 0;
   width: 0;
   visibility: hidden;
   color: #fff;
+}
+
+#breadcrumb legend {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  color: #1D653C;
 }
 
 #search_submit {
