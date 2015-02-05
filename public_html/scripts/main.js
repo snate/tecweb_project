@@ -193,6 +193,9 @@ function mobileSearch() {
 /*Script commenti degli utenti*/
 function visualizza_c(){
 	if(f){
+    document.getElementById('visualizza_commenti').setAttribute('class',"");
+    xml=loadXMLDoc("cgi-bin/commenti.xml");
+    xsl=loadXMLDoc("cgi-bin/commenti.xsl");
 		if (window.ActiveXObject || "ActiveXObject" in window)
 			return;
 		if (document.implementation &&
