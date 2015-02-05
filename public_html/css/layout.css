@@ -820,32 +820,8 @@ clear: both;
 
 
 
-#menu-trigger {
-  height: 0;
-  width: 0;
-  visibility: hidden;
-  position: absolute;
-}
-
-label[for="menu-trigger"] {
-  height: 0;
-  width: 0;
-  visibility: hidden;
-  position: absolute;
-}
-
-#searchbar-trigger {
-  height: 0;
-  width: 0;
-  visibility: hidden;
-  position: absolute;
-}
-
-label[for="searchbar-trigger"] {
-  height: 0;
-  width: 0;
-  visibility: hidden;
-  position: absolute;
+#trigger-form {
+  display: none;
 }
 
 #header legend, #breadcrumb legend, #nav legend {

@@ -34,6 +34,13 @@
 			WHAT TO VISIT
 			</a>
 		</h1>
+		<form action="" id="trigger-form">
+			<fieldset>
+				<legend>Attivazione menù mobile</legend>
+				<input type="button" id="menu-trigger"/>
+				<input type="button" id="searchbar-trigger"/>
+			</fieldset>
+		</form>	
     </div>
 
     <div id="breadcrumb" >
@@ -45,13 +52,6 @@
         <a href="mare.html" title="Pagina delle località marittime">Mare</a>
         &gt;
         <span id="current_page">Zante</span>
-		<form action="">
-			<fieldset>
-				<legend>Cerca</legend>
-				<label for="searchbar-trigger">Cerca</label>
-				<input type="checkbox" id="searchbar-trigger"/>
-			</fieldset>
-		</form>
         <form method="get" action="cgi-bin/search.cgi">
 			<fieldset  id="search">
 				<legend>Cerca</legend>
@@ -64,13 +64,6 @@
 
     <div id="nav">
 		<a id="skip" href="#descr_loc" title="Salta la navigazione">Salta la navigazione</a>
-		<form action="">
-			<fieldset>
-				<legend>Menù</legend>
-				<label for="menu-trigger">Menù</label>
-				<input type="checkbox" id="menu-trigger"/>
-			</fieldset>
-		</form>	
 		<ul>
 			<li>
 				<a href="homepage.html" title="Pagina principale" tabindex="2">
