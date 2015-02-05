@@ -66,6 +66,15 @@ print $page->header(-charset=>'UTF-8'),
             "WHAT TO VISIT",
           )
         ),
+        start_form(-action=>'',),
+        fieldset(
+          legend(
+              'Attivazione men&#xF9; mobile'
+          ),
+          input({-id=>'menu-trigger',type=>'button',value=>''}),
+          input({-id=>'searchbar-trigger',type=>'button',value=>''})
+        ),
+        end_form(),
       ), "\n",
       $page->div({-id=>'breadcrumb'},
         "Ti trovi in: ",
@@ -82,31 +91,32 @@ print $page->header(-charset=>'UTF-8'),
             label({-for=>'place'},
               "Cerca"
             ),
-            input({-name=>'place',-id=>'place',type=>'text',-tabindex=>'1'})
+            input({-name=>'place',-id=>'place',type=>'text',-tabindex=>'1'}),
+            input({-id=>'search_submit',type=>'submit',-value=>'Vai',-tabindex=>'2'})
           ),
         end_form(),
         ), "\n",
       $page->div({-id=>'nav'},
         ul(
           li(
-            a({-href=>'../homepage.html',-title=>'Pagina principale'},
+            a({-href=>'../homepage.html',-title=>'Pagina principale',-tabindex=>'4'},
               span({-lang=>'en'},
                 "Home"
               ),
             ),
             ul(
               li(
-                a({-href=>'../mare.html',-title=>'Pagina delle località marittime'},
+                a({-href=>'../mare.html',-title=>'Pagina delle località marittime',-tabindex=>'5'},
                   "Mare"
                 ),
               ),
               li(
-                a({-href=>'../citta.html',-title=>'Pagina delle località cittadine'},
+                a({-href=>'../citta.html',-title=>'Pagina delle località cittadine',-tabindex=>'6'},
                   "Citt&#224;"
                 ),
               ),
               li(
-                a({-href=>'../montagna.html',-title=>'Pagina delle località montane'},
+                a({-href=>'../montagna.html',-title=>'Pagina delle località montane',-tabindex=>'7'},
                   "Montagna"
                 ),
               ),
@@ -120,7 +130,7 @@ print $page->header(-charset=>'UTF-8'),
         ),
         p(
           "Siamo spiacenti, prova a riformulare la tua ricerca o torna alla",
-          a({-href=>'../homepage.html',-title=>'Pagina principale'},
+          a({-href=>'../homepage.html',-title=>'Pagina principale',-tabindex=>'3'},
             span({-lang=>'en'},
               "homepage"
             ),
@@ -130,12 +140,12 @@ print $page->header(-charset=>'UTF-8'),
       $page->div({-id=>'footer',-class=>'foothome'},
         ul(
           li(
-            a({-href=>'../chisiamo.html',-title=>'Informazioni sul sito'},
+            a({-href=>'../chisiamo.html',-title=>'Informazioni sul sito',-tabindex=>'8'},
               "Chi siamo",
             )
           ),
           li(
-            a({-href=>'../faq.html',-title=>'FAQ'},
+            a({-href=>'../faq.html',-title=>'FAQ',-tabindex=>'9'},
               span({-lang=>'en'},
                 abbr({-title=>'Frequently Asked Questions'},
                   "F.A.Q."
@@ -144,7 +154,7 @@ print $page->header(-charset=>'UTF-8'),
             )
           ),
           li(
-            a({-href=>'../privacy.html',-title=>'Informazioni sulla privacy'},
+            a({-href=>'../privacy.html',-title=>'Informazioni sulla privacy',-tabindex=>'10'},
               "Normativa sulla",
               span({-lang=>'en'},
                 "privacy"
@@ -152,7 +162,7 @@ print $page->header(-charset=>'UTF-8'),
             )
           ),
           li(
-            a({-href=>'../mappa.html',-title=>'Mappa del sito'},
+            a({-href=>'../mappa.html',-title=>'Mappa del sito',-tabindex=>'11'},
               "Mappa del sito",
             )
           ),
