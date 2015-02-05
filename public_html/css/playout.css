@@ -1,0 +1,56 @@
+﻿#breadcrumb {
+  padding-left: ;
+}
+
+#header #search, #breadcrumb #search {
+  display: none;
+}
+
+#skip{
+  display: none;
+}
+
+/* INIZIO CSS LOCALITA */
+
+#nav {
+  display: none;
+}
+
+#content {
+  margin: 0.5em 1%;
+  width: 98%;
+}
+
+#descr_loc {
+  width: 98%;
+  padding: 0.5em 1%;
+}
+
+#aside {
+  width: 98%;
+  margin: 0.5em 1%;
+}
+
+#comments #see_comments, #comments #hide_comments, #comments #new_comment {
+  display: none;
+}
+
+#formcompl {
+  display: none;
+}
+
+#geolocation #mapholder {
+  width: 22em;
+}
+
+
+
+
+
+
+
+
+
+
+
+

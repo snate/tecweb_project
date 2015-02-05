@@ -473,7 +473,7 @@ background-color: #2ECC71;
   font-family: Open Sans Condensed;
 }
 
-#descr_loc h1 {
+#descr_loc h1, #comments form legend {
   font-size: 3em;
   text-transform: uppercase;
   font-weight: normal;
@@ -711,6 +711,7 @@ clear: both;
 #comments #formcompl fieldset legend {
   font-size: 1.5em;
   font-family: Open Sans Condensed;
+  text-transform: none;
   clear: both;
   padding-top: 0.4em;
   padding-bottom: 0.2em;
