@@ -193,28 +193,9 @@ function mobileSearch() {
 /*Script commenti degli utenti*/
 function visualizza_c(){
 	if(f){
-		document.getElementById('visualizza_commenti').setAttribute('class',"");
-		xml=loadXMLDoc("cgi-bin/commenti.xml");
-		xsl=loadXMLDoc("cgi-bin/commenti.xsl");
-		if (window.ActiveXObject/*codice per IE*/) {
-			text = xml.transformNode(xsl);
-      nomeLoc = loc.trim().toLowerCase();
-			nomeLoc = getNome(nomeLoc);
-      content = text.querySelector("#commenti_"+nomeLoc);
-			if(content.innerHTML == "") {
-				content = document.createElement("div");
-        if(document.getElementById("visualizza_commenti").childElementCount == 0)
-				  content.innerHTML = "Non ci sono commenti da visualizzare";
-			}
-      content.dim = content.childElementCount;
-      content.shown = 0;
-      for(var j = 0; j < content.childNodes.length; j++) {
-        content.childNodes[j].className = "hidden";
-      }
-      showSome(content);
-			document.getElementById("visualizza_commenti").innerHTML = content;
-		} // codice per Chrome, Firefox, Opera, etc.
-		else if (document.implementation &&
+		if (window.ActiveXObject || "ActiveXObject" in window)
+			return;
+		if (document.implementation &&
 			  document.implementation.createDocument){
 			xsltProcessor = new XSLTProcessor();
 			xsltProcessor.importStylesheet(xsl);
