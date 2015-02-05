@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Mappa del sito - What To Visit </title>
+    <meta name="title" content="Mappa del sito - What To Visit" />
+    <meta name="author" content="Graziano Grespan, Carlo Munarini, Federica Speggiorin, Sebastiano Valle" />
+    <meta name="description" content="Mappa del sito What To Visit" />
+    <meta name="keywords" content="mappa, What To Visit, Viaggi" />
+    <meta name="robots" content="index,follow" />
+    <meta name='reply-to' content='teamtecweb@gmail.com' />
+    <meta name='Classification' content='Tourism' />
+	<meta id="viewport" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+    <link rel="shortcut icon" href="images/logo-icon.png"/>
+    <link rel="stylesheet" media="all" type="text/css" href="css/layout.css" />
+    <link rel="stylesheet" media="print" type="text/css" href="css/playout.css" />
+    <link rel="stylesheet" media="handheld, screen and (max-width:480px), only screen and (max-device-width:480px)" type="text/css" href="css/mlayout.css" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:700,400|Open+Sans+Condensed:300' rel='stylesheet' type='text/css' />
+    <script type="text/javascript" src="scripts/require.js"></script>
+    <script type="text/javascript">
+      require.config({
+        baseUrl: "scripts"
+      });
+    </script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+</head>
+
+<body>
+
+    <div id="header">
+		<h1>
+			<a href="homepage.html" title="Pagina principale">WHAT TO VISIT</a>
+		</h1>
+		<form action="" id="trigger-form">
+			<fieldset>
+				<legend>Attivazione menù mobile</legend>
+        <input type="button" id="menu-trigger" value="Apri menù"/>
+        <input type="button" id="searchbar-trigger" value="Apri ricerca"/>
+        <input type="submit" id="submit-trigger" value=" "/>
+			</fieldset>
+		</form>	
+    </div>
+	
+    <div id="breadcrumb" >
+		Ti trovi in: 
+		<span xml:lang="en"><a href="homepage.html" title="Pagina principale">Home</a></span>
+		&gt; Mappa del sito
+		<form method="get" action="cgi-bin/search.cgi">
+			<fieldset  id="search">
+				<legend>Cerca</legend>
+				<label for="place">Cerca:</label>
+				<input name="place" id="place" type="text" tabindex="1"/>
+        <input name="" id="search_submit" type="submit" value="Vai" tabindex="2"/>
+			</fieldset>
+		</form>
+    </div>
+     
+	<div id="nav">
+		<a id="skip" href="#content" title="Salta la navigazione">Salta la navigazione</a>
+        <ul>
+			<li>
+				<a href="homepage.html" title="Pagina principale">
+				<span xml:lang="en">Home</span>
+				</a>
+            <ul>
+				<li>
+					<a href="chisiamo.html" title="Informazioni sul sito">
+					Chi siamo</a>
+				</li>
+				<li>
+					<a href="faq.html" title="Frequently Asked Questions"><span xml:lang="en">
+					<abbr title="Frequently Asked Questions">F.A.Q.</abbr></span>
+					</a>
+				</li>
+				<li>
+                    <a href="privacy.html" title="Informazioni sulla privacy">
+					Normativa sulla <span xml:lang="en">privacy</span>
+					</a>
+				</li>
+				<li id="nav_selected">
+					Mappa del sito
+				</li>
+            </ul>
+			</li>
+        </ul>
+    </div>
+	
+      <div id="content">
+		<ul id="mappa_sito">
+			<li><a href="homepage.html" title="Pagina principale" tabindex="3">Home</a>
+			<ul>
+				<li><a href="mare.html" title="Pagina delle località marittime" tabindex="7">Mare</a>
+					<ul>
+						<li><a href="zakynthos.html" title="Scopri Zante" tabindex="10">Zante</a></li>
+					</ul>
+				</li>
+				<li><a href="citta.html" title="Pagina delle località cittadine" tabindex="8">Città</a>
+					<ul>
+						<li><a href="london.html" title="Scopri Londra" tabindex="11">Londra</a></li>
+						<li><a href="paris.html" title="Scopri Parigi" tabindex="12">Parigi</a></li>
+						<li><a href="praga.html" title="Scopri Praga" tabindex="13">Praga</a></li>
+					</ul>
+				</li>
+				<li><a href="montagna.html" title="Pagina delle località montane" tabindex="9">Montagna</a>
+					<ul>
+						<li><a href="madonnadicampiglio.html" title="Scopri Madonna di Campiglio" tabindex="14">Madonna di Campiglio</a></li>
+					</ul>
+				</li>
+			</ul>
+			</li>
+			<li><a href="chisiamo.html" title="Informazioni sul sito" tabindex="4">Chi siamo</a></li>
+			<li><a href="faq.html" title="Frequently Asked Questions" tabindex="5"><abbr title="Frequently Asked Questions">F.A.Q.</abbr></a></li>
+			<li><a href="privacy.html" title="Informazioni sulla privacy" tabindex="6">Normativa sulla privacy</a></li>
+		</ul>
+      </div>
+	  
+    <div id="footer" class="foothome">
+		<div id="xhtml_valid">
+			<a href="http://validator.w3.org/check?uri=referer" title="Pagina di validazione del W3C">
+			<img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict"/></a>
+        </div>
+    </div>
+</body>
+</html>

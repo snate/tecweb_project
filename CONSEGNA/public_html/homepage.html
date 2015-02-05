@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>What To Visit </title>
+  <meta name="title" content="What To Visit" />
+  <meta name="author" content="Graziano Grespan, Carlo Munarini, Federica Speggiorin, Sebastiano Valle" />
+  <meta name="description" content="Homepage del sito" />
+  <meta name="keywords" content="Home, What To Visit, Viaggi, Mare, Montagna, Città" />
+  <meta name="robots" content="index,follow" />
+  <meta name='reply-to' content='teamtecweb@gmail.com' />
+  <meta name='Classification' content='Tourism' />
+  <meta id="viewport" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+  <link rel="shortcut icon" href="images/logo-icon.png"/>
+  <link rel="stylesheet" media="all" type="text/css" href="css/layout.css" />
+  <link rel="stylesheet" media="print" type="text/css" href="css/playout.css" />
+  <link rel="stylesheet" media="handheld, screen and (max-width:480px), only screen and (max-device-width:480px)" type="text/css" href="css/mlayout.css" />
+  <link href='http://fonts.googleapis.com/css?family=Roboto:700,400|Open+Sans+Condensed:300' rel='stylesheet' type='text/css' />
+  <script type="text/javascript" src="scripts/require.js"></script>
+  <script type="text/javascript">
+    require.config({
+      baseUrl: "scripts"
+    });
+  </script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+</head>
+
+<body>
+  <div id="header">
+    <h1>
+      WHAT TO VISIT
+    </h1>
+		<form action="" id="trigger-form">
+			<fieldset>
+				<legend>Attivazione menù mobile</legend>
+				<input type="button" id="menu-trigger" value="Apri menù"/>
+        <input type="button" id="searchbar-trigger" value="Apri ricerca"/>
+				<input type="submit" id="submit-trigger" value=" "/>
+			</fieldset>
+		</form>	
+    <a href="#c_mare" title="Salta la navigazione" id="skip">Salta la navigazione</a>
+    <ul id="main-menu">
+      <li><a href="chisiamo.html" tabindex="6" title="Informazioni sul sito">Chi siamo</a></li>
+      <li><a href="faq.html" tabindex="7" title="Domande frequenti">F.A.Q.</a></li>
+    </ul>
+    <form method="get" action="cgi-bin/search.cgi">
+      <fieldset  id="search">
+		<legend>Cerca</legend>	
+        <label for="place">Cerca:</label>
+        <input name="place" id="place" type="text" tabindex="1"/>
+        <input name="" id="search_submit" type="submit" value="Vai" tabindex="2"/>
+      </fieldset>
+    </form>
+  </div>
+  <h1 id="c_mare" class="homepanel">
+    <a href="mare.html" title="Pagina delle località marittime" tabindex="3">Mare</a>
+  </h1>
+  <h1 id="c_cit" class="homepanel">
+    <a href="citta.html" title="Pagina delle località cittadine" tabindex="4">Città</a>
+  </h1>
+  <h1 id="c_mont" class="homepanel">
+    <a href="montagna.html" title="Pagina delle località montane" tabindex="5">Montagna</a>
+  </h1>
+  <div id="footer" class="foothome">
+    <ul>
+      <li>
+        <a href="privacy.html" title="Informazioni sulla privacy" tabindex="8">Normativa sulla <span xml:lang="en">privacy</span></a>
+      </li>
+      <li>
+        <a href="mappa.html" title="Mappa del sito" tabindex="9">Mappa del sito</a>
+      </li>
+    </ul>
+    <div id="xhtml_valid">
+      <a href="http://validator.w3.org/check?uri=referer" title="Pagina di validazione del W3C">
+        <img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict"/>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+﻿#header #search, #breadcrumb #search {
+  display: none;
+}
+
+#skip{
+  display: none;
+}
+
+/* INIZIO CSS LOCALITA */
+
+#nav {
+  display: none;
+}
+
+#content {
+  margin: 0.5em 1%;
+  width: 98%;
+}
+
+#descr_loc {
+  width: 98%;
+  padding: 0.5em 1%;
+}
+
+#content dl * {
+  page-break-inside: avoid;
+}
+
+#descr_loc * {
+  page-break-inside: avoid;
+}
+
+#aside {
+  width: 98%;
+  margin: 0.5em 1%;
+}
+
+#aside h1, #government, #utility {
+  float: left;
+  clear: both;
+}
+
+#comments #see_comments, #comments #hide_comments, #comments #new_comment {
+  display: none;
+}
+
+#formcompl {
+  display: none;
+}
+
+#geolocation #mapholder {
+  width: 22em;
+}
+
+
+
+
+
+
+
+
