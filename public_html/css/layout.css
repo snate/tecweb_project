@@ -496,6 +496,7 @@ background-color: #2ECC71;
 #descr_loc dt {
   font-weight: bold;
   padding-left: 26em;
+  clear: left;
 }
 
 #descr_loc dd {
