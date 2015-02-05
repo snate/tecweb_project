@@ -36,7 +36,7 @@ a:hover{
   left: 0;
   right: 0;
   font-family: Open Sans Condensed;
-  z-index: 1;
+  z-index: 2;
 }
 
 #header h1 {
@@ -167,37 +167,31 @@ a:hover{
 }
 
 #header #search input[type="text"], #breadcrumb #search input[type="text"] {
-  background: url(../images/icons/search-white.png) no-repeat 0.6em 0.6em #444;
   height: 2.4em;
   margin: 0;
   padding-left: 2.4em;
   border: 0;
-  color: #d7d7d7;
   width: 100%;
   border-radius: 0;
 }
 
 #header #search input[type="text"]:focus, #breadcrumb #search input[type="text"]:focus {
-  background: url(../images/icons/search-dark.png) no-repeat 0.6em 0.6em #fcfcfc;
-  color: #6a6f75;
   width: 100%;
-  outline: none; /*rimuove il bordo blu dovuto al focus su input*/
-  -webkit-transition: all 0.7s ease 0s;
-  -moz-transition: all 0.7s ease 0s;
-  -o-transition: all 0.7s ease 0s;
-  transition: all 0.7s ease 0s;
-}
-
-#searchbar-trigger:checked + label {
-  background-image: url(../images/icons/searchbar_trigger_icon_active.png);
 }
 
 .s-attiva {
   height: 2em !important;
 }
 
+#header #search_submit {
+  margin: -2.2em 0 0 0.3em;
+  position: absolute;
+}
 
-
+#breadcrumb #search_submit {
+  margin: -1.94em 0 0 0.5em;
+  position: absolute;
+}
 
 
 
@@ -213,21 +207,6 @@ a:hover{
   background-color: #E0E0E0;
   padding: 0.2em 0.5em;
   height: auto;
-}
-
-#navmenu {
-}
-
-#navmenu li {
-}
-
-#navmenu li:first-child {
-}
-
-#navmenu li a {
-}
-
-#navmenu li a:hover{
 }
 
 #skip{
@@ -383,6 +362,8 @@ a:hover{
 
 #content ul li a {
   font-size: 1.7em;
+  float: left;
+  clear: both;
 }
 
 #content #mappa_sito {
@@ -644,7 +625,7 @@ border: 2px solid #2ECC71;
   position: fixed;
   top: 5em;
   left: 0;
-  z-index: 0;
+  z-index: 1;
   list-style: none;
 }
 
