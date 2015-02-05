@@ -14,7 +14,7 @@ html, body {
 }
 
 a:link{
-  color: #27AE60;
+  color: #1d653c;
 }
 
 a:visited{
@@ -27,7 +27,7 @@ a:hover{
 }
 
 #header {
-  background-color: #2ECC71;
+  background-color: #1d653c;
   height: 5em;
   box-shadow: 0 0.2em 0.2em 0 rgba(0,0,0,0.2);
   overflow: visible;
@@ -45,11 +45,19 @@ a:hover{
   font-size: 3em;
   font-weight: normal;
   padding: 0;
-  margin-left: 1.4em;
+  background-image: url(http://i.imgur.com/ZkwBhhW.png);
+  background-position: bottom center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 4em;
+  height: 1.8em;
+  text-indent: -10em;
+  overflow: hidden;
+  margin: -0.15em 0 0 0.3em;
 }
 
 #header h1 a{
-  color: #E0E0E0;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -62,7 +70,7 @@ a:hover{
   left: 0;
   z-index: 0;
   list-style: none;
-  background: #2F965A;
+  background: #1d653c;
   box-shadow: 0 0.2em 0.2em 0 rgba(0,0,0,0.1);
   -webkit-transition: all 0.7s ease 0s;
   -moz-transition: all 0.7s ease 0s;
@@ -100,8 +108,8 @@ a:hover{
 
 label[for="menu-trigger"] {
   position: fixed;
-  left: 1em;
-  top: 1.2em;
+  right: 4em;
+  top: 1.1em;
   z-index: 2;
   visibility: visible;  
   height: 2em;
@@ -113,11 +121,6 @@ label[for="menu-trigger"] {
 
 #menu-trigger:checked + label {
   background-image: url(../images/icons/menu_trigger_icon_active.png);
-}
-
-#menu-trigger:checked ~ #main-menu {
-  height: auto;
-  box-shadow: 0.2em 0.2em 0.3em 0 rgba(0,0,0,0.1);
 }
 
 #searchbar-trigger {
@@ -149,7 +152,7 @@ label[for="searchbar-trigger"] {
   left: 0;
   z-index: 0;
   list-style: none;
-  background: #2F965A;
+  background: #1d653c;
   box-shadow: 0 0.2em 0.2em 0 rgba(0,0,0,0.1);
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -192,8 +195,8 @@ label[for="searchbar-trigger"] {
   background-image: url(../images/icons/searchbar_trigger_icon_active.png);
 }
 
-#searchbar-trigger:checked ~ form #search {
-  height: 2em;
+.s-attiva {
+  height: 2em !important;
 }
 
 
@@ -250,10 +253,10 @@ label[for="searchbar-trigger"] {
 .homepanel a {
   margin: 0.2em 0.6em;
   display: block;
-  background-color: #2F965A;
+  background-color: #1d653c;
   border-radius: 0.14em;
-  border: 0.1em solid #ECF0F1;
-  color: #ECF0F1;
+  border: 0.1em solid #fff;
+  color: #fff;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: normal;
@@ -294,13 +297,13 @@ label[for="searchbar-trigger"] {
 #footer {
   clear: both;
   width: 100%;
-  background-color: #2F965A;
+  background-color: #1d653c;
   height: 2.5em;
 }
 
 #footer ul{
   list-style-type: none;
-  background-color: #2F965A;
+  background-color: #1d653c;
   margin: 0;
   padding-top: 1em;
   float: left;
@@ -346,7 +349,7 @@ label[for="searchbar-trigger"] {
   float: left;
   padding: 1em 0 0 5%;
   width: 95%;
-  background-color: #2F965A;
+  background-color: #1d653c;
 }
 
 #content {
@@ -648,7 +651,7 @@ border: 2px solid #2ECC71;
   height: 0;
   overflow: hidden;
   padding: 0;
-  background-color: #2F965A;
+  background-color: #1d653c;
   box-shadow: 0 0.2em 0.2em 0 rgba(0,0,0,0.1);
   -webkit-transition: all 0.7s ease 0s;
   -moz-transition: all 0.7s ease 0s;
@@ -678,10 +681,10 @@ border: 2px solid #2ECC71;
   border-radius: 0;
   border-width: 0 0 0.1em 0;
   display: block;
-  background-color: #2F965A;
-  border-color: #ECF0F1;
+  background-color: #1d653c;
+  border-color: #fff;
   border-style: solid;
-  color: #ECF0F1;
+  color: #fff;
   text-transform: uppercase;
   font-weight: normal;
   font-size: 1.5em;
@@ -702,11 +705,11 @@ border: 2px solid #2ECC71;
   margin: 0;
   border-radius: 0;
   border-width: 0 0 0.1em 0;
-  border-color: #ECF0F1;
+  border-color: #fff;
   border-style: solid;
   display: block;
-  background-color: #2F965A;
-  color: #ECF0F1;
+  background-color: #1d653c;
+  color: #fff;
   text-transform: uppercase;
   font-weight: normal;
   font-size: 1.5em;
@@ -726,8 +729,7 @@ border: 2px solid #2ECC71;
   background-image: url(../images/icons/cat_selected.png);
 }
 
-#menu-trigger:checked ~ ul, 
-#menu-trigger:checked ~ ul ul {
-  height: auto;
+.m-attivo {
+  height: auto !important;
   box-shadow: 0.2em 0.2em 0.3em 0 rgba(0,0,0,0.2);
 }
