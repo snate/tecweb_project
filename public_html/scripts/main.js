@@ -196,12 +196,11 @@ function visualizza_c(){
 		document.getElementById('visualizza_commenti').setAttribute('class',"");
 		xml=loadXMLDoc("cgi-bin/commenti.xml");
 		xsl=loadXMLDoc("cgi-bin/commenti.xsl");
-		if (window.ActiveXObject || // codice per IE
-			  xhttp.responseType == "msxml-document") {
+		if (window.ActiveXObject/*codice per IE*/) {
 			text = xml.transformNode(xsl);
       nomeLoc = loc.trim().toLowerCase();
 			nomeLoc = getNome(nomeLoc);
-			content=text.getElementById("commenti_"+nomeLoc);
+      content = text.querySelector("#commenti_"+nomeLoc);
 			if(content.innerHTML == "") {
 				content = document.createElement("div");
         if(document.getElementById("visualizza_commenti").childElementCount == 0)
@@ -222,7 +221,7 @@ function visualizza_c(){
 			text= xsltProcessor.transformToFragment(xml, document);
 			nomeLoc = loc.trim().toLowerCase();
 			nomeLoc = getNome(nomeLoc);
-			content=text.getElementById("commenti_"+nomeLoc);
+      content = text.querySelector("#commenti_"+nomeLoc);
 			if(content.innerHTML == "") {
 				content = document.createElement("div");
         if(document.getElementById("visualizza_commenti").childElementCount == 0)
@@ -278,6 +277,7 @@ function loadXMLDoc(file){
 }
 
 function nascondi_c(){
+  if(typeof nomeLoc == 'undefined') return;
 	var vis_com=document.getElementById('visualizza_commenti');
 	var com= document.getElementById("commenti_"+nomeLoc);
   if(com != null)

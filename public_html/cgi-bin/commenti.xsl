@@ -17,9 +17,7 @@
       </head>
       <body>
       <xsl:for-each select="c:comments/c:localita">
-      <ul>
-        <xsl:attribute name="id">commenti_<xsl:value-of select="@nome" /></xsl:attribute>
-        <xsl:for-each select="c:comment">
+      <ul><xsl:attribute name="id">commenti_<xsl:value-of select="@nome" /></xsl:attribute><xsl:for-each select="c:comment">
           <li>
             <div>
               <xsl:value-of select="@user" />
