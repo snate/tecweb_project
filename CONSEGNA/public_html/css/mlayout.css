@@ -651,8 +651,8 @@ border: 2px solid #2ECC71;
 
 #nav ul li a {
   padding: 0.3em 1em;
-  transition: all 0.2;
   border-width: 0 0 0.1em;
+  transition: all 0.2s;
   display: block;
   border-color: #FFF;
   border-style: solid;
