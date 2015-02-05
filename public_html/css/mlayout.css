@@ -43,7 +43,7 @@ a:hover{
   text-transform: uppercase;
   font-size: 3em;
   padding: 0;
-  background-image: url(http://i.imgur.com/ZkwBhhW.png);
+  background-image: url(../images/WTV_logo.png);
   background-position: bottom center;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -634,8 +634,6 @@ border: 2px solid #2ECC71;
   height: 0;
   overflow: hidden;
   padding: 0;
-  background-color: #1d653c;
-  box-shadow: 0 0.2em 0.2em 0 rgba(0,0,0,0.1);
   -webkit-transition: all 0.7s ease 0s;
   -moz-transition: all 0.7s ease 0s;
   -o-transition: all 0.7s ease 0s;
@@ -644,72 +642,46 @@ border: 2px solid #2ECC71;
 
 #nav ul li {
   padding: 0;
-  float: none;
   text-align: center;
 }
 
 #nav ul li:first-child {
   padding-top: 1.5em;
-  float: none;
 }
 
 #nav ul li:first-child a {
   border-width: 0.1em 0;
 }
 
+#nav ul ul li:first-child {
+  padding-top: 0em;
+}
+
 #nav ul li a {
   padding: 0.3em 1em;
-  transition: color 0.2s, background 0.5s;
-  margin: 0;
-  border-radius: 0;
-  border-width: 0 0 0.1em 0;
+  transition: color 0.2s ease 0s, #000 0.5s ease 0s;
+  border-width: 0 0 0.1em;
   display: block;
-  background-color: #1d653c;
-  border-color: #fff;
+  border-color: #FFF;
   border-style: solid;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: normal;
   font-size: 1.5em;
 }
 
-#nav ul ul li:first-child {
-  padding-top: 0;
-}
-
-#nav ul ul li:first-child a {
-  padding-top: 0.6em;
-  border-width: 0;
-}
-
-#nav ul li:first-child #nav_selected {
+#nav ul li #nav_selected {
   padding: 0.3em 1em;
+  border-width: 0.1em 0 0.1em 0;
   transition: color 0.2s, background 0.5s;
-  margin: 0;
-  border-radius: 0;
-  border-width: 0 0 0.1em 0;
+  font-size: 1.5em;
   border-color: #fff;
   border-style: solid;
-  display: block;
-  background-color: #1d653c;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: normal;
-  font-size: 1.5em;
-}
-
-#nav_selected, #cat_selected {
-  background-repeat: no-repeat;
   background-position: 0.4em center;
   background-size: 1em;
 }
 
-#nav_selected {
-  background-image: url(../images/icons/nav_selected.png);
-}
-
-#cat_selected {
-  background-image: url(../images/icons/cat_selected.png);
+#nav ul li #cat_selected {
+  transition: color 0.2s, background 0.5s;
+  background-position: 0.6em center;
+  background-size: 1.5em;
 }
 
 .m-attivo {
