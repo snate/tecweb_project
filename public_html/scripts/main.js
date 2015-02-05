@@ -173,20 +173,21 @@ function getCookie(c_name) {
 };
 
 function mobileMenu() {
-	if (menuM.getAttribute("class") == '')  {
-		if (document.getElementById("main-menu") != null)  {
-			document.getElementById("main-menu").className += " m-attivo";
-		}
-		if (document.getElementById("nav") != null)  {
-			document.getElementById("nav").className += " m-attivo";
-		}
-	}
+  var menu = document.getElementById("main-menu");
+  if(menu == null)
+    menu = document.getElementById("nav");
+  if(menu.className == "m-attivo")
+    menu.removeAttribute("class");
+  else
+    menu.className = "m-attivo";
 }
 
-function searchMenu() {
-	if (menuM.getAttribute("class") == '')  {
-		document.getElementById("search").className += " s-attiva";
-	}
+function mobileSearch() {
+  var cerca = document.getElementById("search");
+	if (cerca.className == "s-attiva")
+    cerca.removeAttribute("class");
+  else
+    cerca.className = "s-attiva";
 }
 
 /*Script commenti degli utenti*/
