@@ -1,25 +1,39 @@
 \section{Front-end}
-Gli scripts introdotti per la parte front-end, interamente sviluppata in \textbf{JavaScript}, offrono funzionalità che permettono una migliore esperienza per l'utente.
+Gli script introdotti per la parte front-end, interamente sviluppata in
+\textbf{JavaScript}, offrono funzionalità che permettono una migliore
+esperienza per l'utente.
 
 
 Nello specifico sono state inserite le seguenti features:
 \begin {itemize}
-\item un cookie per il salvataggio del nome utente al momento della pubblicazione di un nuovo commento
-\item il placeholder nella barra di ricerca località
-\item uno script relativo ai commenti utente che si occupa di controllare, caricare e nascondere i dati inseriti nella form di pubblicazione 
-\item un modulo che effettua la geolocalizzazione 
+\item un cookie per il salvataggio del nome utente al momento della
+pubblicazione di un nuovo commento;
+\item il placeholder nella barra di ricerca località;
+\item uno script relativo ai commenti utente che si occupa di controllare,
+caricare e nascondere i dati inseriti nella form di pubblicazione;
+\item un modulo che effettua la geolocalizzazione.
 \end {itemize} 
-Per ogni caratteristica sopra elencata si è cercato di separare il codice nel modo più chiaro possibile; a tal fine si è scelto di utilizzare la libreria require.js (\textit{http://requirejs.org}) che si occupa essenzialmente di caricare files situati in percorsi diversi modularizzando quindi i vari scripts.
+Per ogni caratteristica sopra elencata si è cercato di separare il codice nel
+modo più chiaro possibile; a tal fine si è scelto di utilizzare la libreria
+require.js (\textit{http://requirejs.org}) che si occupa essenzialmente di
+caricare files situati in percorsi diversi modularizzando quindi i vari
+script.
 
 
-Require.js si è dimostrato un valido \textit{module loader} anche per la sua estesa compatibilità con i browsers (IE 6+, Firefox 2+, Safari 3.2+, Chrome 3+, Opera 10+).
+Require.js si è dimostrato un valido \textit{module loader} anche per la sua
+estesa compatibilità con i browsers (IE 6+, Firefox 2+, Safari 3.2+, Chrome
+3+, Opera 10+).
 
 \subsection{Gestione cookie}
-Per immagazzinare persistentemente la username dell'utente abbiamo deciso di creare un cookie. 
+Per immagazzinare persistentemente la username dell'utente abbiamo deciso di
+creare un cookie.
 
-Lo scopo di questo è velocizzare la compilazione di un commento; infatti,l'utilizzatore, avendo pubblicato una prima volta, alla sua seconda troverà già riempito il campo nome utente.
+Lo scopo di questo è velocizzare la compilazione di un commento; infatti,
+l'utilizzatore, avendo pubblicato una prima volta, alla sua seconda troverà
+già riempito il campo nome utente.
 
-Nei nostri scripts sono state implementate una funzione per l'inizializzazione ed una per il recupero/lettura del cookie appena creato.
+Nei nostri script sono state implementate una funzione per l'inizializzazione
+ed una per il recupero/lettura del cookie appena creato.
 
 
 In fase di creazione del cookie, oltre alla coppia chiave-valore abbiamo aggiunto come terzo parametro una data di scadenza impostata a 15 giorni.
