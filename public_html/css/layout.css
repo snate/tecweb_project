@@ -787,11 +787,6 @@ clear: both;
   margin-top: 0.5em;
 }
 
-#nav #geolocation #mapholder {
-  margin: 0.5em;
-}
-
-
 #geodata li{
   list-style-type: none;
   font-family: 'Roboto';
@@ -799,9 +794,17 @@ clear: both;
   padding-top: 0.4em;
 }
 
+#nav #geolocation {
+  margin: 0.5em;
+}
+
 #nav #geodata li{
   text-transform: none;
-  padding-left: 0.5em;
+  padding-left: 0.2em;
+}
+
+#aside #geodata li{
+  padding-right: 0.5em;
 }
 
 #mapholder a{
