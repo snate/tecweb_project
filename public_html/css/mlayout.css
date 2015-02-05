@@ -1,5 +1,3 @@
-/*TO DO > ALLINEARE LABEL SEARCHBAR CON CASELLA*/
-
 html, body {
   font-family: Roboto, Arial, Helvetica, serif;
   background-color: /* #2ECC71 */ #ECF0F1;
@@ -113,11 +111,6 @@ a:hover{
   background-image: url(../images/icons/menu_trigger_icon.png);
   background-color: transparent;
   background-size: 100%;
-}
-
-/**/
-#menu-trigger:checked + label {
-  background-image: url(../images/icons/menu_trigger_icon_active.png);
 }
 
 #searchbar-trigger {
@@ -253,7 +246,7 @@ a:hover{
 }
 
 #c_cit,#c_mont,#c_mare {
- background-size: 100%;
+  background-size: 100%;
 }
 
 #c_cit:hover, #c_mont:hover, #c_mare:hover{
@@ -399,7 +392,6 @@ a:hover{
 
 #content #mappa_sito ul ul li a {
   line-height: 1em;
-  font-size: 1em;
   text-transform: none;
   font-family: 'Roboto';
   font-weight: normal;
@@ -553,7 +545,7 @@ a:hover{
 }
 
 .info dd {
-  float:; left;
+  float: left;
   clear: right;
 }
 
