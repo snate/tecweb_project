@@ -196,8 +196,10 @@ function visualizza_c(){
     document.getElementById('visualizza_commenti').setAttribute('class',"");
     xml=loadXMLDoc("cgi-bin/commenti.xml");
     xsl=loadXMLDoc("cgi-bin/commenti.xsl");
-		if (window.ActiveXObject || "ActiveXObject" in window)
+		if (window.ActiveXObject || "ActiveXObject" in window) {
+      alert("Spiacente, non posso visualizzare i commenti nel tuo browser");
 			return;
+    }
 		if (document.implementation &&
 			  document.implementation.createDocument){
 			xsltProcessor = new XSLTProcessor();
