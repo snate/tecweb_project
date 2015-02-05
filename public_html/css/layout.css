@@ -840,7 +840,7 @@ clear: both;
   height: 0;
   width: 0;
   visibility: hidden;
-  color: #1D653C;
+  color: #f00;
 }
 
 #search_submit {
