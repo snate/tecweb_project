@@ -107,6 +107,7 @@ label[for="menu-trigger"] {
   height: 2em;
   width: 2em;
   cursor: pointer;
+  text-indent: -30em;
   background-image: url(../images/icons/menu_trigger_icon.png);
 }
 
@@ -130,7 +131,7 @@ label[for="searchbar-trigger"] {
   top: 1.2em;
   z-index: 2;
   visibility: visible;
-  
+  text-indent: -30em;
   height: 2em;
   width: 2em;
   cursor: pointer;

@@ -15,6 +15,8 @@ var spanErrComm;
 var linkU;
 var linkG;
 var f=true;
+var menuM;
+var searchM;
 
 //FUNCTIONS
 
@@ -24,6 +26,8 @@ function load(){  //ho dovuto rinominare la funzione a causa di conflitti con al
   init();
   search();
   homeLink();
+  menuM.onclick=mobileMenu;
+  searchM.onclick=mobileSearch;
   if(document.getElementById("geodata") != null)
     geo = require(['geolocation'], function (geolocation){});
   if(loc!=null){
@@ -56,6 +60,8 @@ function init() {
   spanErrComm = document.getElementById('err_comment');
   linkU = document.getElementById('utility');
   linkG = document.getElementById('government');
+  menuM = document.getElementById('menu-trigger');
+  searchM = document.getElementById('searchbar-trigger');
 }
 
 function insertDate(){
@@ -165,6 +171,23 @@ function getCookie(c_name) {
     }
     return "";
 };
+
+function mobileMenu() {
+	if (menuM.getAttribute("class") == '')  {
+		if (document.getElementById("main-menu") != null)  {
+			document.getElementById("main-menu").className += " m-attivo";
+		}
+		if (document.getElementById("nav") != null)  {
+			document.getElementById("nav").className += " m-attivo";
+		}
+	}
+}
+
+function searchMenu() {
+	if (menuM.getAttribute("class") == '')  {
+		document.getElementById("search").className += " s-attiva";
+	}
+}
 
 /*Script commenti degli utenti*/
 function visualizza_c(){
