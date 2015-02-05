@@ -36,14 +36,12 @@ a:hover{
   left: 0;
   right: 0;
   font-family: Open Sans Condensed;
+  z-index: 1;
 }
 
 #header h1 {
-  float: left;
-  color: #E0E0E0;
   text-transform: uppercase;
   font-size: 3em;
-  font-weight: normal;
   padding: 0;
   background-image: url(http://i.imgur.com/ZkwBhhW.png);
   background-position: bottom center;
@@ -53,12 +51,13 @@ a:hover{
   height: 1.8em;
   text-indent: -10em;
   overflow: hidden;
-  margin: -0.15em 0 0 0.3em;
+  margin: -0.136em 0 0 0.5em;
 }
 
 #header h1 a{
-  color: #fff;
-  text-decoration: none;
+  display: block;
+  width: 4em;
+  height: 1.8em;
 }
 
 #header #main-menu {
@@ -102,14 +101,9 @@ a:hover{
 }
 
 #menu-trigger {
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-}
-
-label[for="menu-trigger"] {
   position: fixed;
   right: 4em;
-  top: 1.1em;
+  top: 0.7em;
   z-index: 2;
   visibility: visible;  
   height: 2em;
@@ -117,21 +111,19 @@ label[for="menu-trigger"] {
   cursor: pointer;
   text-indent: -30em;
   background-image: url(../images/icons/menu_trigger_icon.png);
+  background-color: transparent;
+  background-size: 100%;
 }
 
+/**/
 #menu-trigger:checked + label {
   background-image: url(../images/icons/menu_trigger_icon_active.png);
 }
 
 #searchbar-trigger {
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-}
-
-label[for="searchbar-trigger"] {
   position: fixed;
   right: 1em;
-  top: 1.2em;
+  top: 0.8em;
   z-index: 2;
   visibility: visible;
   text-indent: -30em;
@@ -139,7 +131,8 @@ label[for="searchbar-trigger"] {
   width: 2em;
   cursor: pointer;
   background-image: url(../images/icons/searchbar_trigger_icon.png);
-  background-size: contain;
+  background-color: transparent;
+  background-size: 100%;
 }
 
 #header #search, #breadcrumb #search {
@@ -158,6 +151,10 @@ label[for="searchbar-trigger"] {
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+
+#trigger-form {
+  display: block;
 }
 
 #breadcrumb #search {
@@ -447,7 +444,7 @@ label[for="searchbar-trigger"] {
   padding: 0.1em 0.8em 0.1em 0.4em;
   color: #FFF;
   font-size: 1em;
-  background-color: #2ECC71;
+  background-color: #1d653c;
   border-radius: 0.2em;
   clear: right;
 }
@@ -554,17 +551,15 @@ label[for="searchbar-trigger"] {
 }
 
 #aside a{
-  color: blue;
   background-image: url(../images/icons/Link_out.png);
   background-repeat: no-repeat;
   background-size: 10px;
   background-position: right center;
   padding-right: 1em;
-  font-weight:normal;
 }
 
-#aside a:visited {
-  color: purple;
+#aside a:hover {
+  background-image: url(../images/icons/Link_out_hover.png);
 }
 
 #government li,#utility li {
@@ -599,7 +594,14 @@ border: 2px solid #2ECC71;
   clear: both;
 }
 
+#nav #geolocation {
+  display: none;
+}
 
+#comments #see_comments, #comments #hide_comments, #comments #new_comment {
+    float: left;
+    clear: both;
+}
 
 
 
@@ -730,6 +732,11 @@ border: 2px solid #2ECC71;
 }
 
 .m-attivo {
+  height: auto !important;
+  box-shadow: 0.2em 0.2em 0.3em 0 rgba(0,0,0,0.2);
+}
+
+.m-attivo ul {
   height: auto !important;
   box-shadow: 0.2em 0.2em 0.3em 0 rgba(0,0,0,0.2);
 }
