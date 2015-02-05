@@ -38,6 +38,7 @@
       <w>alternativa</w>
       <w>altitudine</w>
       <w>altre</w>
+      <w>altri</w>
       <w>altrimenti</w>
       <w>altro</w>
       <w>amanti</w>
@@ -55,6 +56,7 @@
       <w>aperto</w>
       <w>appassionati</w>
       <w>appieno</w>
+      <w>apri</w>
       <w>aprés</w>
       <w>arenato</w>
       <w>armati</w>
@@ -66,6 +68,7 @@
       <w>atmosfera</w>
       <w>attenzione</w>
       <w>attiva</w>
+      <w>attivazione</w>
       <w>attività</w>
       <w>attivo</w>
       <w>attraversando</w>
@@ -75,6 +78,7 @@
       <w>autorità</w>
       <w>avanzati</w>
       <w>avente</w>
+      <w>avvenuto</w>
       <w>balletto</w>
       <w>barra</w>
       <w>bellezza</w>
@@ -152,6 +156,7 @@
       <w>contatto</w>
       <w>contenuto</w>
       <w>continuo</w>
+      <w>correttamente</w>
       <w>cosa</w>
       <w>costituiscono</w>
       <w>costo</w>
@@ -270,6 +275,7 @@
       <w>futuro</w>
       <w>garantisce</w>
       <w>generali</w>
+      <w>geodata</w>
       <w>geolocation</w>
       <w>gettonate</w>
       <w>gioconda</w>
@@ -293,6 +299,7 @@
       <w>guidato</w>
       <w>gustare</w>
       <w>hanno</w>
+      <w>homepanel</w>
       <w>hradcany</w>
       <w>ideale</w>
       <w>idee</w>
@@ -372,6 +379,7 @@
       <w>mappe</w>
       <w>meglio</w>
       <w>mentre</w>
+      <w>menù</w>
       <w>meraviglioso</w>
       <w>mesto</w>
       <w>metri</w>
@@ -413,7 +421,9 @@
       <w>negozi</w>
       <w>nella</w>
       <w>neve</w>
+      <w>newdate</w>
       <w>nostro</w>
+      <w>notrunnable</w>
       <w>notte</w>
       <w>notting</w>
       <w>notturna</w>
@@ -490,6 +500,7 @@
       <w>pinzolo</w>
       <w>pistesci</w>
       <w>pittoresche</w>
+      <w>playout</w>
       <w>pochi</w>
       <w>poco</w>
       <w>politica</w>
@@ -503,6 +514,7 @@
       <w>posizione</w>
       <w>possessori</w>
       <w>possibilità</w>
+      <w>posso</w>
       <w>possono</w>
       <w>poste</w>
       <w>posto</w>
@@ -638,6 +650,7 @@
       <w>sperimentali</w>
       <w>spettacolari</w>
       <w>spettacoli</w>
+      <w>spiacente</w>
       <w>spiagge</w>
       <w>spiaggia</w>
       <w>spicca</w>
@@ -726,12 +739,14 @@
       <w>vicine</w>
       <w>vicolo</w>
       <w>viene</w>
+      <w>viewport</w>
       <w>vinci</w>
       <w>visita</w>
       <w>visitarne</w>
       <w>visitatori</w>
       <w>visitlondon</w>
       <w>visualizza</w>
+      <w>visualizzare</w>
       <w>vitanotturna</w>
       <w>vivere</w>
       <w>vivo</w>

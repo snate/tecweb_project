@@ -104,14 +104,14 @@ function extLink() {
 			return false;
 		}
 	}
-  for(var i = 0; i < linksG.length; i++) {
-    linksG[i].onclick = function(){
+  for(var j = 0; j < linksG.length; j++) {
+    linksG[j].onclick = function(){
       popUp(this.getAttribute("href"));
       return false;
     }
   }
-  for(var i = 0; i < linksL.length; i++) {
-    linksL[i].onclick = function(){
+  for(var k = 0; k < linksL.length; k++) {
+    linksL[k].onclick = function(){
       popUp(this.getAttribute("href"));
       return false;
     }
@@ -155,7 +155,7 @@ function createCookie(name, value, days) {
       expires = "";
     }
     document.cookie = name + "=" + value + expires + "; path=/";
-};
+}
 
 function getCookie(c_name) {
     if (document.cookie.length > 0) {
@@ -170,7 +170,7 @@ function getCookie(c_name) {
       }
     }
     return "";
-};
+}
 
 function mobileMenu() {
   var menu = document.getElementById("main-menu");
