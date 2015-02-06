@@ -5,6 +5,8 @@ var mylat;
 var mylon;
 var geodata = document.getElementById('geodata');
 var mapholder = document.getElementById('mapholder');
+var elencoLoc = new Array();
+var mapMarkers = new Array();
 
 // flag per riconoscere in che tipo di pagina ci troviamo (località o sezione mare,città..)
 var flag = document.getElementById("content") ? true : false;
@@ -48,7 +50,7 @@ function getLocation() {
   }else
     alert("La geolocalizzazione non è supportata da questo browser.");
   };
-
+  
   function showPosition(position) {
     var mapcanvas = document.createElement('div');
     mapcanvas.id = 'mapcontainer';
@@ -61,7 +63,10 @@ function getLocation() {
 
     if(!flag){
       var currentpage = document.getElementById('current_page').innerHTML;
-      var currentloc = _.find(località,function(località){return currentpage == località.name;});
+      var currentloc = null;
+      for(loc in località)
+	if(currentpage == località[loc].name)
+	  currentloc = località[loc];
       var pagecoords = new google.maps.LatLng(currentloc.lat,currentloc.lon);
     }else
       var coords = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
@@ -93,57 +98,63 @@ function getLocation() {
       mylat = position.coords.latitude;
       mylon = position.coords.longitude;
 
-      // Filtro tutte le località per ottenere solo quelle appartenenti al tipo della pagina corrente.
-      var filteredloc = _.filter(località,function(località){
-        return locname == località.loc;
-      });
+      filteredloc = new Array();
+      for(loc in località)
+	if(locname == località[loc].loc)
+	  filteredloc.push(località[loc]);
 
       // Appendo i Google Marker per le località filtrate.
       if(flag){
-        _.each(filteredloc,function(località){
-
-          var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(località.lat, località.lon),
-            map: map
+	for(var i=0; i < filteredloc.length; i++) {
+	  var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(filteredloc[i].lat, filteredloc[i].lon),
+            map: map,
+            nomeLoc: filteredloc[i].name
           });
-
-          (function(marker, località) {
-            google.maps.event.addListener(marker, 'click', function() {
-              infowindow = new google.maps.InfoWindow({
-                content: località.name
-              });
-              infowindow.open(map, marker);
+	  mapMarkers.push(marker);
+	  elencoLoc[marker.indexLoc] = i;
+	}
+	for(var i=0; i < mapMarkers.length; i++) {
+          google.maps.event.addListener(mapMarkers[i], 'click', function() {
+	    infowindow = new google.maps.InfoWindow({
+	      content: this.nomeLoc
             });
-          })(marker, località);
-        });
+            infowindow.open(map, this);
+          });
+	}
       }
       // Creo per ogni località filtrata un elemento "p" e lo appendo al div "geodata".
       // In questo modo aggiungendo altre località all'oggetto "località" gli elementi su pagina verranno
       // creati dinamicamente.
       if(flag){
-        _.each(filteredloc,function(località){
-          return geodl.appendChild(document.createElement('li'));
-        });
+	for(var i=0; i < filteredloc.length; i++)
+	  geodl.appendChild(document.createElement('li'));
       }else
         geodl.appendChild(document.createElement('li'));
 
         // Scorro tutte le località filtrate, calcolando la distanza dalla posizione attuale e inserendo
         // una nuova proprietà "distance" all'array delle località filtrate.
-        _.each(filteredloc,function(località){
-          return  località.distance = CalcolaDistanza(mylat,mylon,località.lat,località.lon);
-        });
+	for(var i=0; i < filteredloc.length; i++)
+	  filteredloc[i].distance = CalcolaDistanza(mylat,mylon,filteredloc[i].lat,filteredloc[i].lon);
 
         // Creo un array con le località riordinate per distanza minore dalla posizione attuale.
-        var sortedlist = _.sortBy(filteredloc,function(località){
-          return Math.floor(località.distance);
-        });
+	sortedlist = filteredloc.slice(0);
+	sortedlist.sort(function(a, b){
+	  var distA = Math.floor(a.distance);
+	  var distB = Math.floor(b.distance);
+	  console.log(a.name + ": " + distA);
+	  console.log(b.name + ": " + distB);
+	  console.log(distA < distB);
+	  if(distA < distB) return -1;
+	  if(distA > distB) return 1;
+	  return 0;
+	});
 
         // Scorro l'array delle località riordinate ed inserisco i valori nella pagina HTML.
         if(flag){
           var k=0;
-          _.each(sortedlist,function(sortedlist){
-            return  geodl.childNodes[k++].innerHTML = sortedlist.name + ": " + sortedlist.distance + " Km";
-          });
+	  for(var i=0; i < sortedlist.length; i++)
+	    geodl.childNodes[i].innerHTML = sortedlist[i].name + ": " + sortedlist[i].distance + " Km";
         }else
           geodl.childNodes[0].innerHTML = currentloc.name + " è lontana " + currentloc.distance + " Km da te.";
         };
