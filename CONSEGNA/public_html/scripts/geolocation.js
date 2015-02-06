@@ -99,7 +99,7 @@ function getLocation() {
       mylon = position.coords.longitude;
 
       filteredloc = new Array();
-      for(loc in località)
+      for(var loc in località)
 	if(locname == località[loc].loc)
 	  filteredloc.push(località[loc]);
 
