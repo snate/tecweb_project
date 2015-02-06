@@ -1,0 +1,8 @@
+.img_content {
+  width: 60%;
+  height: 10em;
+  float: left;
+  clear: both;
+  border-radius: 0;
+  margin: 1em 40% 1em 0;
+}
