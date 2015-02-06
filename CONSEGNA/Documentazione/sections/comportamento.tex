@@ -5,24 +5,30 @@ esperienza per l'utente.
 
 
 Nello specifico sono state inserite le seguenti features:
-\begin {itemize}
+\begin{itemize}
 \item un cookie per il salvataggio del nome utente al momento della
 pubblicazione di un nuovo commento;
 \item il placeholder nella barra di ricerca località;
 \item uno script relativo ai commenti utente che si occupa di controllare,
 caricare e nascondere i dati inseriti nella form di pubblicazione;
 \item un modulo che effettua la geolocalizzazione.
-\end {itemize} 
+\end{itemize} 
 Per ogni caratteristica sopra elencata si è cercato di separare il codice nel
 modo più chiaro possibile; a tal fine si è scelto di utilizzare la libreria
-require.js (\textit{http://requirejs.org}) che si occupa essenzialmente di
+require.js (\texttt{http://requirejs.org}) che si occupa essenzialmente di
 caricare files situati in percorsi diversi modularizzando quindi i vari
 script.
 
 
 Require.js si è dimostrato un valido \textit{module loader} anche per la sua
-estesa compatibilità con i browsers (IE 6+, Firefox 2+, Safari 3.2+, Chrome
+estesa compatibilità con i browser (IE 6+, Firefox 2+, Safari 3.2+, Chrome
 3+, Opera 10+).
+
+Nello script \texttt{main.js} sono presenti delle variabili globali; tuttavia,
+queste vengono inizializzate ed utilizzate solo quando ciò è sia possibile che
+necessario (ad esempio una variabile relativa ad un elemento presente solo
+nelle pagine di terzo livello non viene inizializzata al caricamento della
+homepage).
 
 \subsection{Gestione cookie}
 Per immagazzinare persistentemente la username dell'utente abbiamo deciso di
@@ -36,20 +42,111 @@ Nei nostri script sono state implementate una funzione per l'inizializzazione
 ed una per il recupero/lettura del cookie appena creato.
 
 
-In fase di creazione del cookie, oltre alla coppia chiave-valore abbiamo aggiunto come terzo parametro una data di scadenza impostata a 15 giorni.
-La funzione di recupero restituisce il valore del cookie se questo è presente, successivamente il valore verrà inserito nel documento html e l'utente vedrà la username già compilata.
+In fase di creazione del cookie, oltre alla coppia chiave-valore abbiamo
+aggiunto come terzo parametro una data di scadenza impostata a 15 giorni.
+La funzione di recupero restituisce il valore del cookie se questo è presente,
+successivamente il valore verrà inserito nel documento HTML e l'utente vedrà
+la username già compilata.
 
-\subsection{ Inserimento placeholder in barra di ricerca}
+\subsection{Inserimento placeholder in barra di ricerca}
 
-Poichè il nostro progetto è conforme allo standard xhtml 1.0 strict ed  il tag \textit{placeholder} non vi è definito, abbiamo dovuto usare Javascript per riuscire nel nostro intento di includerlo.
+Poichè il nostro progetto è conforme allo standard XHTML 1.0 Strict ed  il tag
+\textit{placeholder} non vi è definito, abbiamo dovuto usare una funzione
+JavaScript per riuscire nel nostro intento di includerlo.
 
 
-Grazie ai metodi \textit{onblur} ed \textit{onfocus} abbiamo potuto forzare il valore di input della nostra barra di ricerca a seconda che questa si trovi in focus oppure no.
+Si è quindi deciso di collegare la gestione degli eventi \textit{onBlur()} e
+\textit{onFocus()} a due funzioni definite nello script \texttt{main.js}.
+Queste due funzioni assicurano un comportamento tale che se la barra di ricerca
+non possiede il focus e non contiene testo inserito dall'utente, visualizza un
+\textbf{placeholder} ``Nome località" per aiutare l'utente a capire cosa
+inserire in quella barra di ricerca, fornendo una classe diversa a questo
+testo per enfatizzarla e distinguerla dal testo inserito dall'utente.
+
+Se invece la barra di ricerca acquisisce il focus, vengono aumentate le
+dimensioni della stessa, scompare il placeholder (se presente) ma non un
+eventuale testo inserito dall'utente. A questo punto l'utente può inserire un
+testo, al quale verrà attribuita la classe predefinita prevista per il testo.
+
+Se la barra di ricerca perde il focus, allora questa continuerà a visualizzare
+il testo inserito dall'utente oppure verrà nuovamente visualizzato un placeholder (con classe di enfasi), nel caso in cui l'utente non avesse
+inserito testo.
 
 
-\subsection{Visualizzazione dei commenti (lato client)}
+\subsection{Gestione dei commenti}
+Nelle pagine delle località (sezione \ref{sec:struttLoc}) sono stati
+inseriti dei pulsanti per visualizzare, nascondere e pubblicare commenti; qui
+di seguito viene descritto il modo con cui queste tre operazioni
+(visualizzazione, rendere invisibili e pubblicazione dei commenti) sono state
+gestite sul lato client di What To Visit.
 
-\subsection{Geolocalizzazione}
+\subsubsection{Visualizzazione commenti}
+I commenti sono visibili per tutti i browser fuorchè Internet Explorer, nel
+cui caso viene mostrato un messaggio di scuse all'utente per la mancanza della
+funzionalità.
+
+Questo è dovuto al fatto che i commenti non sono già presenti nella pagina al
+momento del caricamento, ma vengono importati da un file XML e quindi
+trasformati tramite un foglio di stile XSLT, che trasforma i commenti in liste
+prive di ordine i commenti presenti nel file; in particolare:
+\begin{itemize}
+\item lo script che applicava il foglio di stile XSLT al file XML forniva
+degli output parziali e incompleti utilizzando la funzione prevista per
+Internet Explorer, mentre la funzione supportata da tutti gli altri browser
+forniva un frammento di documento facilmente manipolabile;
+\item il risultato fornito dalla funzione prevista per IE non riusciva ad
+essere gestito come elemento nodo ma solamente come stringa, mentre con
+la funzione supportata da tutti gli altri browser veniva prodotto un elemento
+di tipo nodo sul quale era possibile ricercare tra i nodi figli la lista
+contenente i commenti relativi solamente alla località della pagina.
+\end{itemize}
+
+Se non vi sono commenti da visualizzare viene visualizzata la stringa
+``Non vi sono commenti da visualizzare", altrimenti i commenti vengono
+visualizzati a gruppi di due ad ogni pressione del pulsante
+``Visualizza commenti" fin tanto che ci sono commenti; la divisione di
+documento contenente i documenti viene creata ed allocata nel documento solo
+alla prima pressione del pulsante ``Visualizza commenti".
+
+I pulsanti ``Visualizza commenti" può essere in tre stati e questi vengono
+assegnati via JavaScript tramite delle classi:
+\begin{itemize}
+\item \texttt{com-runnable}: non sono visualizzati commenti e si può
+richiedere la visualizzazione dei commenti (se l'utente sta usando
+Internet Explorer o se non vi sono commenti, solo in seguito alla pressione
+del pulsante sarà avvisato dell'impossibilità di mostrargli dei commenti sulla
+località)
+\item \texttt{com-running}: sono attualmente visualizzati alcuni commenti ma vi
+sono ancora presenti altri commenti che è possibile visualizzare
+\item \texttt{com-notrunnable}: non sono presenti ulteriori commenti da
+visualizzare
+\end{itemize}
+
+\subsubsection{Rendere invisibili i commenti}
+Dopo aver visualizzato tutti i commenti di una località o parte di questi,
+l'utente ha la possibilità di nasconderli tramite la semplice pressione di un
+pulsante.
+
+Ciò è stato realizzato collegando l'evento onclick del pulsante
+``Nascondi commenti" ad una funzione \texttt{nascondi\_c()}, che toglie i
+commenti presenti nella divisione in cui erano visualizzati e pone il pulsante
+``Visualizza commenti" nello stato \texttt{com-runnable} se erano presenti
+commenti.
+
+Il pulsante ``Nascondi commenti" può essere in due stati, assegnati anch'essi
+attribuendo delle classi al pulsante:
+\begin{itemize}
+\item \texttt{com-runnable}: sono visualizzati commenti e si offre all'utente
+la possibilità di nasconderli
+\item \texttt{com-notrunnable}: non sono visualizzati commenti, perciò per non
+creare confusione all'utente si segnala che il pulsante è inutilizzabile
+(un'eventuale pressione di questo non produrrebbe alcun output visibile)
+\end{itemize}
+
+
+\subsubsection{Pubblicazione commenti} %TODO Federica
+
+\subsection{Geolocalizzazione} %TODO Graziano - Sistemare se le modifiche al codice hanno portato a incongruenze nel testo, altrimenti lasciare pure così
 In questo progetto abbiamo inoltre deciso di implementare un modulo che fa uso delle API HTML5 per la geolocalizzazione. L'introduzione di tale caratteristica ha il puro scopo di migliorare la qualità del sito; in assenza di questa, l'utente avrà comunque accesso a tutte le funzionalità di base.
 \begin{flushleft}
 Grazie al modulo in questione, dopo aver acconsentito a fornire i dati sulla propria posizione e a seconda della pagina in cui si trova, all'utente verranno mostrate diverse informazioni.
@@ -78,7 +175,7 @@ oppure passare in modalità StreetView in modo semplice ed immediato.
 
 \subsubsection{L'implementazione del modulo in dettaglio}
 
-Per svolgere più leggermente l'attività di codifica è stata inclusa una libreria di utilità, underscore.js (\textit{http://underscorejs.org}).
+Per svolgere più leggermente l'attività di codifica è stata inclusa una libreria di utilità, underscore.js (\texttt{http://underscorejs.org}).
 Vi è un unico script che viene inizializzato al caricamento della pagina ed è valido sia per le pagine di sezione, (es: “mare.html”) sia per le pagine delle località turistiche (es: “praga.html”).
 Questo è stato possibile attraverso la ricerca di un id presente solamente nelle pagine relative alle categorie, ma assente nelle pagine delle località. In tal modo lo script è in grado di discriminare se la pagina è di una categoria o di una località.
 
