@@ -64,7 +64,7 @@ function getLocation() {
     if(!flag){
       var currentpage = document.getElementById('current_page').innerHTML;
       var currentloc = null;
-      for(loc in località)
+      for(var loc in località)
 	if(currentpage == località[loc].name)
 	  currentloc = località[loc];
       var pagecoords = new google.maps.LatLng(currentloc.lat,currentloc.lon);
@@ -142,9 +142,6 @@ function getLocation() {
 	sortedlist.sort(function(a, b){
 	  var distA = Math.floor(a.distance);
 	  var distB = Math.floor(b.distance);
-	  console.log(a.name + ": " + distA);
-	  console.log(b.name + ": " + distB);
-	  console.log(distA < distB);
 	  if(distA < distB) return -1;
 	  if(distA > distB) return 1;
 	  return 0;
