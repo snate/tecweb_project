@@ -2,7 +2,7 @@
 
 var geo;
 var searchbar;
-var loc;
+var loca;
 var userIn;
 var commentIn;
 var formIn;
@@ -23,17 +23,17 @@ var searchM;
 window.onload = load;
 
 function load(){  //ho dovuto rinominare la funzione a causa di conflitti con altre libs
+  if(document.getElementById("geodata") != null)
+    geo = require(['geolocation'], function (geolocation){});
   init();
   search();
   homeLink();
   menuM.onclick=mobileMenu;
   searchM.onclick=mobileSearch;
-  if(document.getElementById("geodata") != null)
-    geo = require(['geolocation'], function (geolocation){});
-  if(loc!=null){
+  if(loca!=null){
     insertDate();
-    loc = loc.innerHTML;
-    var nomeLoc = loc.trim().toLowerCase();
+    loca = loca.innerHTML;
+    var nomeLoc = loca.trim().toLowerCase();
     visualizzaIn.onclick=visualizza_c;
     nascondiIn.onclick=nascondi_c;
     nuovoIn.onclick=visualizza_form;
@@ -48,7 +48,7 @@ function load(){  //ho dovuto rinominare la funzione a causa di conflitti con al
 
 function init() {
   searchbar = document.getElementById('place');
-  loc = document.getElementById('current_page');
+  loca = document.getElementById('current_page');
   userIn=document.getElementById('user');
   commentIn=document.getElementById('comment');
   formIn=document.getElementById('formcompl');
@@ -209,7 +209,7 @@ function visualizza_c(){
 			xsltProcessor = new XSLTProcessor();
 			xsltProcessor.importStylesheet(xsl);
 			text= xsltProcessor.transformToFragment(xml, document);
-			nomeLoc = loc.trim().toLowerCase();
+			nomeLoc = loca.trim().toLowerCase();
 			nomeLoc = getNome(nomeLoc);
       content = text.querySelector("#commenti_"+nomeLoc);
 			if(content.innerHTML == "") {
@@ -248,9 +248,9 @@ function showSome(content) {
   }
 }
 
-function getNome(loc) {
+function getNome(loca) {
 	var locNomi = {"londra":"london","madonna di campiglio":"madonnadicampiglio","zante":"zakynthos","praga":"praga","parigi":"paris"};
-	return locNomi[loc];
+	return locNomi[loca];
 }
 
 function loadXMLDoc(file){
