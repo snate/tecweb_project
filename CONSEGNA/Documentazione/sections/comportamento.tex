@@ -80,7 +80,7 @@ di seguito viene descritto il modo con cui queste tre operazioni
 (visualizzazione, rendere invisibili e pubblicazione dei commenti) sono state
 gestite sul lato client di What To Visit.
 
-\subsubsection{Visualizzazione commenti}
+\subsubsection{Visualizzazione commenti}\label{sec:visComm}
 I commenti sono visibili per tutti i browser fuorchè Internet Explorer, nel
 cui caso viene mostrato un messaggio di scuse all'utente per la mancanza della
 funzionalità.
@@ -144,7 +144,38 @@ creare confusione all'utente si segnala che il pulsante è inutilizzabile
 \end{itemize}
 
 
-\subsubsection{Pubblicazione commenti} %TODO Federica
+\subsubsection{Pubblicazione commenti}
+Nel sito è prevista per gli utenti la possibilità di inserire un proprio commento
+inerentemente ad una determinata località. A questo scopo, al termine della sezione 
+della pagina dedicata alla visualizzazione dei commenti, vi è il pulsante 
+``Pubblica il tuo commento" che permette di visualizzare un form per l'inserimento. 
+Tale pulsante può trovarsi in due stati:
+\begin{itemize}
+\item Disattivo: il form non viene visualizzato
+\item Attivo: il pulsante è stato attivato dall'utente causando
+quindi la visualizzazione del form per l'inserimento.
+\end{itemize}
+
+Il form ha inizialmente, quando disattivo, una classe \texttt{class="hidden"} 
+che viene gestita in CSS per nasconderlo. Nel momento in cui l'utente attiva il pulsante
+``Pubblica il tuo commento" il codice JavaScript si occupa di modificare tale classe
+eliminandone il valore. In questo modo il form compare permettendo all'utente
+di inserire il proprio commento. 
+Il form è costituito da due campi e due pulsanti così caratterizzati:
+\begin{itemize}
+\item \textbf{Username:} campo in cui viene richiesto uno username di identificazione
+eventualmente compilato automanicamente tramite il valore del cookie precedentemente creato
+\item \textbf{Testo del commento:} campo in cui l'utente può inserire il testo del proprio commento
+\item \textbf{Pubblica:} pulsante la cui attivazione determina l'invio del commento
+\item \textbf{Annulla:}  pulsante la cui attivazione determina l'annullamento dell'operazione
+\end{itemize}
+A ciascuno dei campi sono associate una o più funzioni che si occupano di controllare i dati
+in input. E' prevista infatti l'obbligatorietà di inserire un valore per ognuno dei campi 
+\textbf{Username} e \textbf{Testo del commento}. Alla perdita del focus dei campi, se il loro contenuto è vuoto, vengono visualizzati i relativi messaggi di errore.
+Il pulsante \textbf{Pubblica} si occupa di attivare il codice Perl che esegue l'effettivo
+inserimento del commento all'interno dell'apposito file XML. Il pulsante \textbf{Annulla} invece permette all'utente di annullare l'operazione di pubblicazione del proprio commento.
+Lo script ad esso associato, dopo aver eliminato il contenuto dei campi, nasconde il form e
+annulla l'operazione.
 
 \subsection{Geolocalizzazione}
 In questo progetto abbiamo inoltre deciso di implementare un modulo che fa uso
