@@ -3,3 +3,8 @@
   border-radius: 0;
   margin: 1em 0;
 }
+
+#c_mare {
+  background-image: url(../images/HOME_BG_SEA.jpg);
+  background-position: center -6em;
+}
