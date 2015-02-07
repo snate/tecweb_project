@@ -23,6 +23,8 @@ a:hover{
   text-decoration: none;
 }
 
+/* HEADER - ALL PAGES */
+
 #header {
   background-color: #1d653c;
   height: 2.8em;
@@ -101,6 +103,35 @@ a:hover{
   transition: all 0.7s ease 0s;
 }
 
+#header legend, #nav legend {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  color: #fff;
+}
+
+#trigger-form {
+  display: none;
+}
+
+#header #search_submit {
+background-position: 0.5em center;
+height: 1.8em;
+width: 1.8em;
+margin-left: -2.8em;
+}
+
+#search_submit {
+background-image: url(../images/icons/searchbar_icon.png);
+background-repeat: no-repeat;
+background-size: 1.1em;
+background-color: transparent;
+color: #444;
+text-indent: -10em;
+}
+
+/* BREADCRUMBS - ALL PAGES */
+
 #breadcrumb {
   background-color: #E0E0E0;
   overflow: hidden;
@@ -164,6 +195,20 @@ a:hover{
   transition: all 0.7s ease 0s;
 }
 
+#breadcrumb legend {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  color: #1d653c;
+}
+
+#breadcrumb #search_submit {
+background-position: 0.2em center;
+height: 1.4em;
+width: 1.4em;
+margin-left: -2.3em;
+}
+
 .emphasized {
   font-style: italic;
 }
@@ -174,6 +219,8 @@ a:hover{
   overflow: hidden;
   color: #fff;
 }
+
+/* CONTENT - HOMEPAGE */
 
 .homepanel {
   float: left;
@@ -228,6 +275,8 @@ a:hover{
   transition: all 0.7s ease 0s;
 }
 
+/* FOOTER - ALL PAGES */
+
 .foothome {
   position: absolute;
   bottom: 0;
@@ -260,7 +309,6 @@ a:hover{
   border: none;
 }
 
-
 #footer li a {
   text-decoration: none;
   line-height: 3.2em;
@@ -285,7 +333,7 @@ a:hover{
   padding: 0.3em 0.7em 0 0;
 }
 
-/* INIZIO CSS LOCALITA */
+/* NAV - NOT HOME */
 
 #nav {
   clear: left;
@@ -311,7 +359,6 @@ a:hover{
   color: white;
 }
 
-
 #nav li a {
   color: white;
 }
@@ -329,6 +376,17 @@ a:hover{
 #cat_selected {
   background-image: url(../images/icons/cat_selected.png);
 }
+
+#nav #geolocation {
+  margin: 0.5em;
+}
+
+#nav #geodata li{
+  text-transform: none;
+  padding-left: 0.2em;
+}
+
+/* CONTENT - NOT HOME,LOC */
 
 #content {
   float: left;
@@ -439,6 +497,8 @@ a:hover{
   padding: 0.3em 0 1em 1em;
 }
 
+/* DESCRIZIONE LOC - LOC */
+
 #descr_loc {
   float: left;
   width: 60%;
@@ -526,6 +586,8 @@ a:hover{
   overflow: hidden;
 }
 
+/* ASIDE - LOC */
+
 #aside {
   border-radius: 0.2em;
   float: right;
@@ -601,62 +663,58 @@ a:hover{
 }
 
 #comments input[type="submit"] {
-color: #FFF;
-font-weight: bold;
-font-family: 'Roboto';
-margin: 0.3em;
-padding: 0.2em 0.6em;
-border-radius: 0.2em;
-background-color: #2ECC71;
-
-float: left;
-clear: left;
+  color: #FFF;
+  font-weight: bold;
+  font-family: 'Roboto';
+  margin: 0.3em;
+  padding: 0.2em 0.6em;
+  border-radius: 0.2em;
+  background-color: #2ECC71;
+  float: left;
+  clear: left;
 }
 
 #comments input[type="reset"] {
-color: #FFF;
-font-weight: bold;
-font-family: 'Roboto';
-margin: 0.3em;
-padding: 0.2em 0.6em;
-border-radius: 0.2em;
-background-color: #E84444;
-
-float: left;
+  color: #FFF;
+  font-weight: bold;
+  font-family: 'Roboto';
+  margin: 0.3em;
+  padding: 0.2em 0.6em;
+  border-radius: 0.2em;
+  background-color: #E84444;
+  float: left;
 }
 
 #comments input[type="text"] {
-background-color: #444;
-height: 1.5em;
-margin: 0.2em;
-padding: 0.1em 0.4em 0.1em 0.6em;
-color: #d7d7d7;
-width: 7em;
-border-radius: 0.2em;
-
-float: left;
-clear: both;
+  background-color: #444;
+  height: 1.5em;
+  margin: 0.2em;
+  padding: 0.1em 0.4em 0.1em 0.6em;
+  color: #d7d7d7;
+  width: 7em;
+  border-radius: 0.2em;
+  float: left;
+  clear: both;
 }
 
 #comments textarea {
-font-family: Arial;
-background-color: #444;
-border-radius: 0.2em;
-margin: 0.2em;
-padding: 0.1em 0.4em 0.1em 0.6em;
-color: #d7d7d7;
-
-float: left;
-clear: both;
+  font-family: Arial;
+  background-color: #444;
+  border-radius: 0.2em;
+  margin: 0.2em;
+  padding: 0.1em 0.4em 0.1em 0.6em;
+  color: #d7d7d7;
+  float: left;
+  clear: both;
 }
 
 #comments label {
-margin-left: 0.2em;
+  margin-left: 0.2em;
 }
 
 #comments #formcompl label {
-float: left;
-clear: both;
+  float: left;
+  clear: both;
 }
 
 #comments #visualizza_commenti li {
@@ -686,6 +744,13 @@ clear: both;
 
 #comments #visualizza_commenti li p {
   padding-left: 1em;
+}
+
+.hidden{
+  display: none;
+  visibility: hidden;
+  height: 0;
+  width: 0;
 }
 
 #comments .com-running {
@@ -726,47 +791,6 @@ clear: both;
   clear: both;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.hidden{
-  display: none;
-  visibility: hidden;
-  height: 0;
-  width: 0;
-}
-
 #geolocation #mapholder {
   display: none;
   position: relative;
@@ -786,64 +810,16 @@ clear: both;
   padding-top: 0.4em;
 }
 
-#nav #geolocation {
-  margin: 0.5em;
-}
-
-#nav #geodata li{
-  text-transform: none;
-  padding-left: 0.2em;
-}
-
 #aside #geodata li{
   padding-right: 0.5em;
 }
+
 
 #mapholder a{
   background-position: right 0.2em;
   padding-right: 1.2em;
 }
 
-#trigger-form {
-  display: none;
-}
-
-#header legend, #nav legend {
-  height: 0;
-  width: 0;
-  visibility: hidden;
-  color: #fff;
-}
-
-#breadcrumb legend {
-  height: 0;
-  width: 0;
-  visibility: hidden;
-  color: #1d653c;
-}
-
-#search_submit {
-background-image: url(../images/icons/searchbar_icon.png);
-background-repeat: no-repeat;
-background-size: 1.1em;
-background-color: transparent;
-color: #444;
-text-indent: -10em;
-}
-
-#header #search_submit {
-background-position: 0.5em center;
-height: 1.8em;
-width: 1.8em;
-margin-left: -2.8em;
-}
-
-#breadcrumb #search_submit {
-background-position: 0.2em center;
-height: 1.4em;
-width: 1.4em;
-margin-left: -2.3em;
-}
 
 
 
