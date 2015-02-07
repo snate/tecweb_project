@@ -450,13 +450,13 @@ a:hover{
   margin-bottom: 0.5em;
 }
 
-#descr_loc dd .img_content {
-  width: 100%;
+.img_content, #descr_loc dd .img_content {
+  width: 60%;
   height: 10em;
   float: left;
   clear: both;
-  border-radius: 0;
-  margin: 1em 0;
+  border-radius: 0.3em;
+  margin: 1em 40% 1em 0;
 }
 
 #descr_loc p {
@@ -474,15 +474,6 @@ a:hover{
 
 #comments label[for="see_comments"], #comments label[for="hide_comments"], #comments label[for="new_comment"] {
   display: none;
-}
-
-.img_content {
-  width: 60%;
-  height: 10em;
-  float: left;
-  clear: both;
-  border-radius: 0.3em;
-  margin: 1em 40% 1em 0;
 }
 
 #img_presentazione {
