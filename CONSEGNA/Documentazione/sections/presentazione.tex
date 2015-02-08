@@ -7,10 +7,10 @@ Essendo il nostro sito orientato ad un target non specifico che vuole apprendere
 \item \textbf{Foglio di stile layout.css:} Questo layout viene applicato a tutti i dispositivi che visualizzano il nostro sito con più di 780px di larghezza, abbiamo però deciso di ottimizzare tale layout in maniera che potesse essere accessibile anche a coloro che utilizzano screen-reader
 \item \textbf{Foglio di stile playout.css:} Una persona che trova informazioni riguardo ad una località potrebbe decidere scaricare o stampare il contenuto della nostra pagina così da poterlo guardare in un secondo tempo, su un PDF od un foglio stampato. Questo stile serve proprio affinchè un utente possa stampare ogni pagina del nostro sito, visualizzando al meglio le informazioni chiave della pagina
 \item \textbf{Foglio di stile tlayout.css:} Questo foglio di stile entra in gioco quando la pagina viene visualizzata in dispositivi con larghezza inferiore a 780px. In tal modo il nostro sito offre una visualizzazione pulita anche su Tablet e Cellulari
-\item \textbf{Foglio di stile mlayout.css:} Nel caso What To Visit venga visualizzato su un cellulare o in una finestra con larghezza inferiore ai 480px, ecco che verrà chiamato in causa questo quarto foglio di stile, molto simile al precedente, che permette però un eccellente visualizzazione delle pagine di III Livello anche sui cellulari. Il sito è quindi riconosciuto da Google come \textit{Mobile-Friendly}\footnote{Il \textit{Test di compatibilità con dispositivi mobili} è stato eseguito all'indirizzo: https://www.google.com/webmasters/tools/mobile-friendly/}
+\item \textbf{Foglio di stile mlayout.css:} Nel caso What To Visit venga visualizzato su un cellulare o in una finestra con larghezza inferiore ai 480px, ecco che verrà chiamato in causa questo quarto foglio di stile, molto simile al precedente, che permette però un eccellente visualizzazione delle pagine di III Livello anche sui cellulari. Il sito è quindi riconosciuto da Google come \textit{Mobile-Friendly}\footnote{Il \textit{test di compatibilità con dispositivi mobili} è stato eseguito all'indirizzo: https://www.google.com/webmasters/tools/mobile-friendly/}
 \end{itemize}
 
-\subsection{I colori}
+\subsection{I colori}\label{sec:Pres-Colore}
 Prima di iniziare a guardare nel dettaglio l'aspetto grafico di ogni pagina, vogliamo presentare quelli che sono i colori adottati nel nostro sito. In What To Visit infatti gli utenti avranno di fronte a se delle pagine che utilizzano pochi colori, ai quali abbiamo cercato di attribuire un significato:
 \begin{itemize}
 \item \textbf{Verde scuro (\#1D653C):} Con questo colore, simile ad un Verde primavera scuro, abbiamo voluto indicare gli elementi non attivi ma che possono essere attivati (come pulsanti per i commenti o i link), gli elementi fissi della pagina (come footer ed header) oppure elementi non attivabili che però caratterizzano una località o un collegamento (come succede per indicare a quale categoria appartiene la località o per indicare un link che non è stato visitato e porta in una pagina esterna al nostro sito)
@@ -21,22 +21,33 @@ Prima di iniziare a guardare nel dettaglio l'aspetto grafico di ogni pagina, vog
 \item \textbf{Grigio Chiaro (\#C9C9C9):} Questo colore viene utilizzato solamente in un caso, quello in cui un pulsante, anche se premuto, non cambierebbe la pagina. Questa scelta è dovuta al fatto che si vuol cercare di far capire all'utente che quel pulsante è sostanzialmente inutile in quel determinato momento ma che potrebbe essere utilizzato in un secondo momento
 \end{itemize}
 
-\subsection{CSS e Parti comuni a tutte le pagine}
+\subsection{I font}\label{sec:Pres-Font}
+What To Visit è un sito che punta a catturare l'attenzione dell'utente, non solo grazie ai suoi contenuti, ma anche grazie al suo layout.
+I colori sopra descritti sono stati utilizzati per creare contrasto ed attirare l'attenzione dell'utente in determinate aree del sito, stessa cosa è stata fatta con i font ed il contrasto tra quelli che sono i titoli, di pagine e paragrafi, ed il testo.
+
+Per catturare l'attenzione del visitatore abbiamo voluto utilizzare due font \textit{open source} importati grazie alla \textit{Google Fonts API}, parliamo di \textbf{Open Sans Condensed} e \textbf{Roboto}, caratteri che comunque, anche in caso di assenza, possono essere sotituiti da Arial, Helvetica e Serif senza creare troppi problemi di visualizzazione. Ecco come sono stati utilizzati questi due font:
+\begin{itemize}
+\item \textbf{Open Sans Condensed} è stato utilizzato per tutti i tag \textbf{h1} ed i titoli di sezioni o paragrafi, questo per mettere in risalto e catturare l'attenzione dell'utente in maniera tale che sappia a cosa si riferisce il contenuto sottostante a tali elementi.
+Questo font è stato anche utilizzato per identificare determinati link, come quelli del \textbf{Menù di navigazione} o quelli all'interno delle liste di località
+\item \textbf{Roboto} Questo è il font di base del sito, tutto il contenuto e la maggiorparte dei link sono scritti con questo carattere. Abbiamo voluto utilizzare questo font in quando l'abbiamo ritenuto di facile lettura ed ottimo nel caso di lunghi paragrafi
+\end{itemize}
+
+\subsection{CSS3 e Parti comuni a tutte le pagine}
 Durante la realizzazione del sito abbiamo cercato di creare un layout semplice, accessibile, utilizzabile ma sopratutto visualizzabile al meglio sul maggior numero possibile di Browser. Il nostro sito limita quindi l'utilizzo del linguaggio CSS3, un liguaggio presente ma allo stesso tempo non fondamentale, che consente quindi un degrado elegante del sito nel caso di mancato supporto a determinate funzioni.
 
 CSS3 è usato in diverse parti del sito, specialmente nelle parti comuni a tutte le pagine, già descritte nella sezione \ref{sec:struttCommon}, e specialmente nell'ambito della visualizzazione del sito per dispositivi mobili. Ora però vediamo come vengono visualizzati tali elementi a seconda dei dispositivi utilizzati:
 
 \subsubsection{Header}\label{sec:Pres-Header}
-L'\texttt{Header} è un elemento presente in tutte le pagine del nostro sito
+L'\textbf{Header} è un elemento presente in tutte le pagine del nostro sito
 (I, II e III Livello) ma viene visualizzato in maniera differente a seconda
 che venga utilizzato un foglio di stile piuttosto che un altro. La differenza
 principale è il modo di mostrare il nome del sito, infatti nella versione 
-texttt{Screen} e \texttt{Print}, l'utente vedrà sempre comparire in
+texttt{Screen} e \textbf{Print}, l'utente vedrà sempre comparire in
 \textit{alto a sinistra} il nome del sito come una scritta, mentre nel layout
-per \texttt{Dispositivi Mobili}, tramite una tecnica di
+per \textbf{Dispositivi Mobili}, tramite una tecnica di
 \textit{image-replacement}\footnote{Abbiamo utilizzato una piccola variante
 (Text-indent: -10em e non -9999px) del \textit{Phark's Method} - citato da
-Zeldman nel 2003: http://www.zeldman.com/daily/0703b.shtml\#au1103} abbiamo
+Zeldman nel 2003: \texttt{http://www.zeldman.com/daily/0703b.shtml\#au1103}} abbiamo
 deciso di far visualizzare all'utente il logo di What To Visit.
 \begin{figure}[h!]
   \centering
@@ -55,15 +66,15 @@ deciso di far visualizzare all'utente il logo di What To Visit.
 \end{figure}
 
 \subsubsection{Navigation menù}\label{sec:Pres-Nav}
-Come accade per l'\texttt{Header} anche il \texttt{Menù di Navigazione} è un elemento presente in tutte le pagine del nostro sito. Questo elemento però viene visualizzato in maniera diversa a seconda del livello della pagina e anche del dispositivo utilizzato. Nella \textit{Homepage} infatti esso è visualizzato nell'\texttt{Header} affianco al nome del sito, mentre in tutte le altre pagine rimane sempre nella \textit{parte alta della pagina} ma si trova sotto alla \texttt{Breadcrumb}, affianco al contenuto. Il nostro intento però è quello di soffermarsi su come si presenta all'utente questo elemento, quindi è importante dire che le voci di questo menù, a differenza degli altri link, saranno di colore bianco su sfondo verde.
+Come accade per l'\textbf{Header} anche il \textbf{Menù di Navigazione} è un elemento presente in tutte le pagine del nostro sito. Questo elemento però viene visualizzato in maniera diversa a seconda del livello della pagina e anche del dispositivo utilizzato. Nella \textit{Homepage} infatti esso è visualizzato nell'\textbf{Header} affianco al nome del sito, mentre in tutte le altre pagine rimane sempre nella \textit{parte alta della pagina} ma si trova sotto alla \textbf{Breadcrumb}, affianco al contenuto. Il nostro intento però è quello di soffermarsi su come si presenta all'utente questo elemento, quindi è importante dire che le voci di questo menù, a differenza degli altri link, saranno di colore bianco su sfondo verde.
 
-Nella versione \texttt{Screen} e nella \textit{Homepage}, le voci del \texttt{Menù di Navigazione} riprendono quelli che sono i caratteri distintivi dei box che indicano le categorie, creando così uno stile particolare per le pagine di I livello, cercando quindi di dare un punto di riferimento all'utente che dovrà saper distinguere la sua posizione una volta che arriva o ritorna nella \textit{Homepage}.
+Nella versione \textbf{Screen} e nella \textit{Homepage}, le voci del \textbf{Menù di Navigazione} riprendono quelli che sono i caratteri distintivi dei box che indicano le categorie, creando così uno stile particolare per le pagine di I livello, cercando quindi di dare un punto di riferimento all'utente che dovrà saper distinguere la sua posizione una volta che arriva o ritorna nella \textit{Homepage}.
 
-La versione per \texttt{Dispositivi Mobili} invece, non fa distinzione tra pagine di \textit{I, II o III livello} e visualizza il \texttt{Menù di Navigazione} solamente se l'utente attiverà il pulsante posto sempre in \textit{alto a destra} sullo schermo del dispositivo, affianco a quello per la \texttt{Casella di ricerca}\footnote{Entrambi i pulsanti sono sempre visibili e sono posizionati in \textit{alto a destra} grazie all'attributo \textit{Position: fixed}. Questi pulsanti, per cui abbiamo utilizzato la tecnica di \textit{image-replacement} precedentemente descritta, non cambiano all'attivazione, poichè pensiamo che l'utente capisca cosa abbia portato all'apertura del menù e cosa dovrà premere per chiudere i box}. In questo caso il menù apparirà in \textit{posizione fissa} coprendo il contenuto sotto ad esso e, nel caso di menù a più livelli di profondità cercherà di rimarcare questa gerarchia aumentando lo spessore dei bordi superiori ed inferiori delle voci del sotto-menù.
+La versione per \textbf{Dispositivi Mobili} invece, non fa distinzione tra pagine di \textit{I, II o III livello} e visualizza il \textbf{Menù di Navigazione} solamente se l'utente attiverà il pulsante posto sempre in \textit{alto a destra} sullo schermo del dispositivo, affianco a quello per la \textbf{Casella di ricerca}\footnote{Entrambi i pulsanti sono sempre visibili e sono posizionati in \textit{alto a destra} grazie all'attributo \textit{position: fixed}. Questi pulsanti, per cui abbiamo utilizzato la tecnica di \textit{image-replacement} precedentemente descritta, non cambiano all'attivazione, poichè pensiamo che l'utente capisca cosa abbia portato all'apertura del menù e cosa dovrà premere per chiudere i box}. In questo caso il menù apparirà in \textit{posizione fissa} coprendo il contenuto sotto ad esso e, nel caso di menù a più livelli di profondità cercherà di rimarcare questa gerarchia aumentando lo spessore dei bordi superiori ed inferiori delle voci del sotto-menù.
 
-Altre due particolarità delle voci del \texttt{Menù di Navigazione} sono:
+Altre due particolarità delle voci del \textbf{Menù di Navigazione} sono:
 \begin{itemize}
-\item Il fatto che un link sia già stato visualizzato o meno, non cambia le caratteristiche dell'ancora, questo poichè il \texttt{Menù di Navigazione} serve all'utente per poter spostarsi all'interno del sito e quindi abbiamo ritenuto, non necessario che sapesse se fosse o meno già stato in una determinata categoria o pagina secondaria;
+\item Il fatto che un link sia già stato visualizzato o meno, non cambia le caratteristiche dell'ancora, questo poichè il \textbf{Menù di Navigazione} serve all'utente per poter spostarsi all'interno del sito e quindi abbiamo ritenuto, non necessario che sapesse se fosse o meno già stato in una determinata categoria o pagina secondaria;
 \item La seconda caratteristica è che, nel caso il visitatore si trovi in una \textit{pagina di II livello}, la voce che indica la posizione in cui si trova, non sarà cliccabile, ma sopratutto verrà caratterizzata da un immagine posta alla \textit{sinistra} di essa. Anche nel caso di \textit{pagine di III livello}, il visitatore vedrà un immagine affianco alla voce che indica la categoria in cui si trova, questa volta però l'ancora sarà utilizzabile.
 \end{itemize}
 \begin{figure}[h!]
@@ -83,6 +94,84 @@ Altre due particolarità delle voci del \texttt{Menù di Navigazione} sono:
 \end{figure}
 
 \subsubsection{Searchbar}\label{sec:Pres-Searchbar}
-La \texttt{Searchbar} è un elemento presente in \textit{tutte le pagine del sito} e, nonostante possa trovarsi in posizioni diverse, nell'\texttt{Header} per l'\textit{Homepage} e nella \texttt{Breadcrumb} nelle \textit{pagine di II e III livello}, essa sarà sempre riconoscibile in quanto, oltre ad essere l'unica casella di testo con sfondo bianco, il testo sarà verde scuro e sopratutto il \textit{submit-botton} sarà rappresentato da una lente d'ingrandimento, immagine spesso usata nel web per indicare la ricerca, che verrà posta a destra della casella.
-Questo elemento non viene visualizzato in maniera completamente diversa a seconda del foglio di stile, eccezion fatta per il foglio playout.css (Vedi punto \ref{sec:presentazione}.) che elimina dalla stampa tale elemento in quanto in quanto ritenuto non rilevante nel caso l'utente voglia stampare informazioni su località o pagine secondarie.
-Nelle visualizzazioni per \texttt{Screen} e per \texttt{Dispositivi Mobili}, la searchbar si differenzia solamente per la posizione del \textit{submit-botton}, posto a destra nella versione \texttt{Screen} ed a sinistra in quella per \texttt{Dispositivi Mobili}.
+La \textbf{Searchbar} è un elemento presente in \textit{tutte le pagine del sito} e, nonostante possa trovarsi in posizioni diverse, nell'\textbf{Header} per l'\textit{Homepage} e nella \textbf{Breadcrumb} nelle \textit{pagine di II e III livello}, essa sarà sempre riconoscibile in quanto, oltre ad essere l'unica casella di testo con sfondo bianco, il testo sarà verde scuro e sopratutto il \textit{submit-botton} sarà rappresentato da una lente d'ingrandimento, immagine spesso usata nel web per indicare la ricerca, che verrà posta a destra della casella.
+
+Questo elemento non viene visualizzato in maniera completamente diversa a seconda del foglio di stile, eccezion fatta per il foglio playout.css (Vedi punto \ref{sec:presentazione}) che elimina dalla stampa tale elemento in quanto in quanto ritenuto non rilevante nel caso l'utente voglia stampare informazioni su località o pagine secondarie.
+Nelle visualizzazioni per \textbf{Screen} e per \textbf{Dispositivi Mobili}, la searchbar si differenzia solamente per la posizione del \textit{submit-botton}, posto a destra nella versione \textbf{Screen} ed a sinistra in quella per \textbf{Dispositivi Mobili}.
+
+\subsubsection{Footer}\label{sec:Pres-Footer}
+Il \textbf{Footer}, elemento con \textit{background-color: verde scuro}, è presente in tutte le pagine del sito. I link di questo box si comportano come quelli del \textbf{Navigation menù} (Vedi \ref{sec:Pres-Nav}), sono quindi sempre bianchi e non fanno distinzione tra ancora visitata o meno, questo perchè servono all'utente solo come aiuto nella navigazione. Sebbene non ci sia differenza tra \textit{visited} e \textit{unvisited}, abbiamo comunque voluto che al passaggio del cursore ci fosse un cambiamento visivo, operato tramite l'aumento e la diminutione del bordo inferiore.
+
+Il \textbf{Footer} viene comunque visualizzato in maniera diversa a seconda del foglio di stile utilizzato. La versione \textbf{Screen} e quella \textbf{Print}, vedranno l'elemento svilupparsi orizzontalmente, occupando tutta la larghezza della finestra, mentre nel caso di visualizzazione su \textbf{Dispositivi Mobili}, esso si svilupperà in verticale e i link puntati cursore, si distingueranno per la presenza o meno della sottolineatura.
+
+Un piccolo appunto sul \textbf{Footer} riguarda la classe \textit{foothome} che, nella versione \textbf{Screen}, discrimina alcune pagine portando l'elemento direttamente a piè pagina, utilizzando l'attributo \textit{position: absolute}.
+\begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[height=0.62cm,width=6cm]{images/pres_footer.jpg}
+                \caption{Footer in Screen}
+                \label{fig:Footer-screen}
+        \end{subfigure}
+        \hspace{4cm}
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[height=2.25cm,width=5.4cm]{images/pres_footer_m.jpg}
+                \caption{Footer su Dispositivi Mobili}
+                \label{fig:Footer-mobile}
+        \end{subfigure}
+        \caption{I Footer di WTV}\label{fig:Display-Footer}
+\end{figure}
+
+\subsection{Il layout delle pagine di I livello}\label{sec:Pres-Iliv}
+Di come sono costruite le pagine, si è già parlato nella sezione \ref{sec:struttura}, ora parliamo invece di come e cosa l'utente deve vedere nelle pagine del nostro sito.
+Nel web le cose non si vedono solo con gli occhi, ma anche con le orecchie e magari anche con le mani; le scelte che abbiamo effettuato cercano quindi di venire incontro alle esigenze di tutti, che utilizzino dispositivi con dimensioni di schermo ridotte o che utilizzino screen-reader, abbiamo quindi voluto nascondere elementi in alcune occasioni per poterli utilizzare da altre parti, oppure abbiamo mostrato cose in un occasione ed in un altra abbiamo fatto finta di niente.
+
+Partiamo subito quindi parlando della nostra \textit{Homepage}, l'unica pagina di I livello e l'unica con un layout diverso dalle altre. I tre pannelli centrali vogliono mettere il visitatore davanti ad un bivio, offrendogli però un rinscontro visivo su dove lo porterà un click su uno dei 3 box. Al passaggio del cursore, ecco che l'immagine di sfondo aumenterà gradualmente la sua grandezza richiamando a se l'occhio dell'utente per poi tornare bruscamente alla sua naturale grandezza in caso il cursore vada altrove. Nel caso in cui CSS3 non fosse supportato dal browser dell'utente, ciò non comporterebbe disagio poiché l'immagine verrebbe istantaneamente ingrandita, permettendo al visitatore di comprendere che sta per scegliere la categoria sopra la quale ha fatto scorrere il mouse.
+
+Oltre ai 3 box, cliccabili su tutta la superfice e non solo sulla parte verde contentente il nome della categoria, nella \textit{Homepage} sono presenti \textbf{Header}, contenente una \textbf{Searchbar} più grande di quella delle altre pagine, ed \textbf{Footer}, elementi già descritti in precedenza nei paragrafi \ref{sec:Pres-Header}, \ref{sec:Pres-Searchbar} e \ref{sec:Pres-Footer} e che, come accade per i 3 \textit{homepanel}, si sviluppano in verticale anziché orizzontalmente.
+\begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[height=3.7cm,width=8.9cm]{images/pres_home.jpg}
+                \caption{Homepage in Screen}
+                \label{fig:Home-screen}
+        \end{subfigure}
+        \hspace{4cm}
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[height=8.43cm,width=5.4cm]{images/pres_home_m.jpg}
+                \caption{Homepage su Dispositivi Mobili}
+                \label{fig:Home-mobile}
+        \end{subfigure}
+        \caption{La Homepage di WTV}\label{fig:Display-Home}
+\end{figure}
+
+\subsection{Il layout delle pagine di II livello}\label{sec:Pres-IIliv}
+Le pagine di secondo livello, che siano primarie o sencodarie, hanno tutte una struttura simile così come il layout, in maniera da non creare problemi all'utente durante la navigazione, utente che potrà però sempre contare sulla presenza fissa di \textbf{Navigation menù}, \textbf{Breadbrumb}, \textbf{Header} e \textbf{Footer}.
+
+Prima di passare a parlare dei due tipi di pagine di II livello, vogliamo soffermaci sulla \textbf{Breadbrumb}, quella barra che molte volte consente all'utente di capire dove si trova e che, nonostante contenga link utili alla navigazione, come quelli di \textbf{Navigation menù} e \textbf{Footer}, vede colorare le sue ancore di Verde scuro e chiaro. I colori dei link, così come il colore di sfondo di questa barra, sono diversi da quelli del resto del sito poichè, se per il \textit{background-color} abbiamo optato per un colore molto simile a quello di sfondo, in quanto non abbiamo ritenuto fosse sempre importante segnalare all'utente la posizione di questo elemento, abbiamo voluto fare diversamente con i colori dei link visto che solitamente la \textbf{Breadbrumb}, come suggerisce il nome stesso, serve a ritrovare la strada ed a capire dove ci si trova focalizzando così la propria attenzione su cosa c'era prima del passo appena effettuato.
+
+\subsubsection{Il layout delle categorie}\label{sec:Pres-IIliv-cat}
+Non appena un utente entra in una delle 3 pagine riguardanti le categorie di località, il suo occhio verrà catturato dalle immagini di tutti luoghi presenti in quella famiglia.
+
+Che la pagina sia visualizzata su \textbf{Dispositivi Mobili} o in versione \textbf{Screen} non cambia, l'utente è portato a focalizzare la propria attenzione sulla lista di località che alterna immagini del luogo al nome di esso. Non fa molta differenza quindi se la geolocalizzazione sia attiva o meno, in quanto è solo un'aggiunta a quello che è il vero contenuto della pagina, non importa se essa ci fornisce anche una lista delle località più vicine a noi, perchè ciò che conta è il contenuto, ragion per cui essa non verrà visualizzata sui \textbf{Dispositivi Mobili}.
+
+\subsubsection{Il layout delle pagine secondarie}\label{sec:Pres-IIliv-sec}
+Da una parte il \textbf{Menù di navigazione} e dall'altra il contenuto, anche nelle pagine secondarie quindi l'utente potrà concentrarsi su ciò che davvero gli interessa, ed è proprio per questo che abbiamo deciso che tutti i link all'interno del contenuto dovessero risaltare ancora di più, da qui la scelta di scrivere in \textit{grassetto} tutte le porzioni di testo contenute nei tag \textbf{a}.
+
+Nella visualizzazione di queste pagine su \textbf{Dispositivi Mobili}, non abbiamo voluto forzare la visualizzazione portando a piè pagina il \textbf{Footer}, così come nel caso di una stampa, non abbiamo voluto inserire elementi non necessari, rendendo così stampabili solamente \textbf{Header}, perchè What To Visit non si deve dimenticare, la \textbf{Breadcrumb}, in particolare il percorso che faciliterà l'utente nel caso volesse cercare di nuovo la pagina sul sito, ed il contenuto.
+
+\subsection{Il layout delle pagine di III livello}\label{sec:Pres-IIIliv}
+Il III livello di pagine è quello più importante ed è quello che più cambia il suo modo di essere visualizzato a seconda del dispositivo utilizzato.
+In tutti i casi però abbiamo deciso di rendere visualizzabili il contenuto che descrive la località e le informazioni schematiche allegate ad essa, compresa posizione geografica, fornita grazie alla geolocalizzazione, e link utili che nonostante conducano l'utente fuori dal nostro sito, gli permettono di ottenere ancora più informazioni riguardo alla località su cui si stava informando, tutto questo contrassegnado queste ancore con appositi accorgimenti grafici.
+
+\subsubsection{Il layout su Dispositivi Mobili}\label{sec:Pres-IIliv-sec}
+parla di contenuto tutto in verticale con titolo - img - testo..
+elenco puntanto di differenza tra tlayout e mlayout per img.. una 60perc e l'altro 100perc
+
+
+
+
+
+
+\subsubsection{Il layout Screen e Print}\label{sec:Pres-IIliv-sec}
+La differenza tra layout \textbf{Screen} e quello per \textbf{Dispositivi Mobili} sta nel come viene sfruttato ed occupalo orizzontalmente lo spazio a propria disposizione.
+Quando l'utente guarda la pagina di una località con una finestra di dimensione più larga di 780px, potrà notare a sinistra il \textbf{Menù di navigazione}, in centro il contenuto ed a destra
