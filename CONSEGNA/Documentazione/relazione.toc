@@ -1,0 +1,74 @@
+\contentsline {section}{\numberline {1}Abstract}{4}
+\contentsline {subsection}{\numberline {1.1}Suddivisione ruoli}{4}
+\contentsline {subsection}{\numberline {1.2}Schema organizzativo}{4}
+\contentsline {section}{\numberline {2}Individuazione degli utenti e delle loro esigenze}{5}
+\contentsline {section}{\numberline {3}Struttura}{6}
+\contentsline {subsection}{\numberline {3.1}Struttura organizzativa}{6}
+\contentsline {subsection}{\numberline {3.2}Progettazione della struttura delle pagine}{6}
+\contentsline {subsubsection}{\numberline {3.2.1}XHTML and Semantic Markup}{6}
+\contentsline {subsubsection}{\numberline {3.2.2}Tighter, Firmer Pages Guaranteed: Structure and Semantics}{7}
+\contentsline {subsection}{\numberline {3.3}Parti comuni a tutte le pagine}{7}
+\contentsline {subsubsection}{\numberline {3.3.1}Head}{8}
+\contentsline {subsubsection}{\numberline {3.3.2}Body}{8}
+\contentsline {subsection}{\numberline {3.4}Pagine di primo livello}{8}
+\contentsline {subsection}{\numberline {3.5}Pagine di secondo livello}{9}
+\contentsline {subsubsection}{\numberline {3.5.1}Pagine secondarie}{9}
+\contentsline {subsubsection}{\numberline {3.5.2}Categorie di localit\IeC {\`a}}{9}
+\contentsline {subsection}{\numberline {3.6}Pagine di terzo livello}{10}
+\contentsline {subsection}{\numberline {3.7}Pagina di ricerca fallita}{10}
+\contentsline {section}{\numberline {4}Presentazione}{11}
+\contentsline {subsection}{\numberline {4.1}I colori}{11}
+\contentsline {subsection}{\numberline {4.2}CSS e Parti comuni a tutte le pagine}{12}
+\contentsline {subsubsection}{\numberline {4.2.1}Header}{12}
+\contentsline {subsubsection}{\numberline {4.2.2}Navigation men\IeC {\`u}}{12}
+\contentsline {subsubsection}{\numberline {4.2.3}Searchbar}{13}
+\contentsline {section}{\numberline {5}Front-end}{14}
+\contentsline {subsection}{\numberline {5.1}Gestione cookie}{14}
+\contentsline {subsection}{\numberline {5.2}Inserimento placeholder in barra di ricerca}{14}
+\contentsline {subsection}{\numberline {5.3}Gestione dei commenti}{15}
+\contentsline {subsubsection}{\numberline {5.3.1}Visualizzazione commenti}{15}
+\contentsline {subsubsection}{\numberline {5.3.2}Rendere invisibili i commenti}{15}
+\contentsline {subsubsection}{\numberline {5.3.3}Pubblicazione dei commenti}{16}
+\contentsline {subsection}{\numberline {5.4}Geolocalizzazione}{16}
+\contentsline {subsubsection}{\numberline {5.4.1}L'implementazione del modulo in dettaglio}{17}
+\contentsline {section}{\numberline {6}Back-end}{18}
+\contentsline {subsection}{\numberline {6.1}Inserimento commenti}{18}
+\contentsline {subsection}{\numberline {6.2}Barra di ricerca}{18}
+\contentsline {section}{\numberline {7}Accessibilit\IeC {\`a}}{19}
+\contentsline {subsection}{\numberline {7.1}Trasformazione elegante}{19}
+\contentsline {subsubsection}{\numberline {7.1.1}Separazione struttura-comportamento}{19}
+\contentsline {subsubsection}{\numberline {7.1.2}Separazione struttura-presentazione}{19}
+\contentsline {subsubsection}{\numberline {7.1.3}Separazione presentazione-comportamento}{19}
+\contentsline {subsubsection}{\numberline {7.1.4}Porzioni di sito visibili}{19}
+\contentsline {subsection}{\numberline {7.2}Linee guida per l'accessibilit\IeC {\`a}}{19}
+\contentsline {subsubsection}{\numberline {7.2.1}Alternative a contenuti audio e visivi}{19}
+\contentsline {subsubsection}{\numberline {7.2.2}Non fare affidamento sul colore}{19}
+\contentsline {subsubsection}{\numberline {7.2.3}Uso appropriato dei tag}{20}
+\contentsline {subsubsection}{\numberline {7.2.4}Linguaggi naturali}{20}
+\contentsline {subsubsection}{\numberline {7.2.5}Trasformazione elegante delle tabelle}{20}
+\contentsline {subsubsection}{\numberline {7.2.6}Trasformazione elegante delle nuove tecnologie}{20}
+\contentsline {subsubsection}{\numberline {7.2.7}Contenuti che cambiano nel corso del tempo}{20}
+\contentsline {subsubsection}{\numberline {7.2.8}Interfacce utente}{20}
+\contentsline {subsubsection}{\numberline {7.2.9}Indipendenza da dispositivo}{20}
+\contentsline {subsubsection}{\numberline {7.2.10}Meccanismi di fallback}{21}
+\contentsline {subsubsection}{\numberline {7.2.11}Raccomandazioni W3C}{21}
+\contentsline {subsubsection}{\numberline {7.2.12}Orientamento}{21}
+\contentsline {subsubsection}{\numberline {7.2.13}Navigazione}{21}
+\contentsline {subsubsection}{\numberline {7.2.14}Semplicit\IeC {\`a} dei contenuti}{21}
+\contentsline {section}{\numberline {8}Test effettuati}{22}
+\contentsline {subsection}{\numberline {8.1}Validazione XHTML}{22}
+\contentsline {subsection}{\numberline {8.2}Validazione CSS}{22}
+\contentsline {subsection}{\numberline {8.3}Validazione XML e XSD}{22}
+\contentsline {subsection}{\numberline {8.4}Validazione XSLT}{22}
+\contentsline {subsection}{\numberline {8.5}JavaScript}{22}
+\contentsline {subsection}{\numberline {8.6}Perl e CGI}{22}
+\contentsline {subsection}{\numberline {8.7}Cynthia Says}{22}
+\contentsline {subsection}{\numberline {8.8}WAVE}{23}
+\contentsline {subsection}{\numberline {8.9}Vischeck}{23}
+\contentsline {subsection}{\numberline {8.10}Fangs}{24}
+\contentsline {subsection}{\numberline {8.11}Lynx}{24}
+\contentsline {subsection}{\numberline {8.12}Compatibilit\IeC {\`a} con i vari Browser}{24}
+\contentsline {subsubsection}{\numberline {8.12.1}Internet Explorer}{25}
+\contentsline {subsubsection}{\numberline {8.12.2}Geolocalizzazione}{25}
+\contentsline {subsubsection}{\numberline {8.12.3}Visualizzazione commenti degli utenti}{25}
+\contentsline {subsection}{\numberline {8.13}Performance}{25}

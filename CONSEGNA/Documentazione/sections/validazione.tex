@@ -182,3 +182,73 @@ in quanto non supportata, da Internet Explorer 8 (e versioni precedenti) e Maxth
 \subsubsection{Visualizzazione commenti degli utenti}
 Nel sito è prevista la visualizzazione, per ogni località, dei commenti inseriti dagli utenti.
 Tale funzionalità tuttavia è supportata in tutti i browser testati ad eccezione di Internet Explorer, come spiegato nella sezione \ref{sec:visComm}.
+
+\subsection{Performance}
+Per terminare la fase di testing sono state eseguite, con strumenti automatici, una serie di verifiche riguardo le performance del sito.
+
+
+\begin{flushleft}
+Ci siamo avvalsi di tools online\footnote{ \textit{https://developers.google.com/speed/pagespeed/insights/}, \textit{http://www.webpagetest.org/}, \textit{http://gtmetrix.com/}} che analizzano in profondità le pagine html volute e restituiscono: consigli di ottimizzazione, scale di punteggi per ogni aspetto del sito e una serie di statistiche che vedremo in dettaglio.\footnote{ NB: Per poter utilizzare i tester il sito è stato "hostato" sulla piattaforma Github.io}
+\end{flushleft}
+
+\begin{flushleft}
+Al fine di uniformare i risultati raccolti da questi strumenti abbiamo deciso di mostrare solo alcune delle pagine analizzate.
+In particolare le più significative (Homepage, citta.html, london.html) hanno dato i seguenti esiti:
+\end{flushleft}
+
+\begin{figure}[h]
+
+\includegraphics[width=\linewidth]{images/performance/webpagetest/home.png}
+\caption{Homepage: tempi di caricamento}
+\end{figure}
+\begin{figure}[h]
+
+\includegraphics[width=\linewidth]{images/performance/webpagetest/home-graph.png}
+\caption{Homepage: Grafico a 'torta'}
+\end{figure}
+
+In homepage come evidenziato in fig.6 dal diagramma circolare delle richieste e della quantità di dati trasmessi dal server, si nota la prevalenza del flusso delle immagini.
+
+Come è facile aspettarsi, le immagini occupano in termini di peso la maggior parte del sito ed essendo molteplici, le richieste per il loro recupero rappresentano più del 40\% delle richieste totali.
+
+
+\begin{flushleft}
+Lo stesso è replicato in \textit{citta.html} e \textit{london.html} (fig.7), eccezion fatta per \textit{citta.html} dove viene fatto un uso più intenso dei fogli di stile.\\
+Dopo aver eseguito i test sulle stesse pagine per 3 volte abbiamo stimato che il tempo medio di caricamento completo si attesta sui 1.4 secondi circa.\\
+
+I controlli sulla velocità di caricamento sono stati effettuati su di un client residente negli Stati Uniti avente browser Chrome.
+
+\end{flushleft}
+
+
+\begin{figure}[h]
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{images/performance/webpagetest/citta.png}
+\subcaption{\textit{citta.htm}l: tempi di caricamento}
+\end{minipage}
+\hspace{\fill}
+\vspace*{0.5cm}
+\begin{minipage}{0.45\textwidth}
+
+\includegraphics[width=\linewidth]{images/performance/webpagetest/citta-graph.png}
+\subcaption{\textit{citta.html}: grafico a 'torta'}
+\end{minipage}
+
+\begin{minipage}{0.45\textwidth}
+\vspace*{0.5cm}
+\includegraphics[width=\linewidth]{images/performance/webpagetest/london.png}
+\subcaption{\textit{london.html}: tempi di caricamento}
+\end{minipage}
+\hspace{\fill}
+\vspace*{0.5cm}
+\begin{minipage}{0.45\textwidth}
+
+\includegraphics[width=\linewidth]{images/performance/webpagetest/london-graph.png}
+\subcaption{\textit{london.html}: grafico a 'torta'}
+\end{minipage}
+\caption{Performance in \textit{citta.html} e \textit{london.html}}\label{multiavp}
+\end{figure}
+\begin{flushleft}
+Complessivamente il sito ha totalizzato una media di 71 punti su 100 totali in Google PageSpeed Insights.\\
+ Le ottimizzazioni suggerite per aumentarne il punteggio andavano contro standards W3C e/o compatibilità con i browsers più obsoleti, abbiamo quindi cercato di alleggerire il sito (es: minificazione della libreria Require.js, immagini a risoluzione inferiore ecc.) trovando un buon compresso tra velocità di caricamento e compatibilità con più browsers.
+\end{flushleft}
