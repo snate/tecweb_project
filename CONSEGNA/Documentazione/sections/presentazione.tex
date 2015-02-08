@@ -24,23 +24,34 @@ Prima di iniziare a guardare nel dettaglio l'aspetto grafico di ogni pagina, vog
 \subsection{CSS e Parti comuni a tutte le pagine}
 Durante la realizzazione del sito abbiamo cercato di creare un layout semplice, accessibile, utilizzabile ma sopratutto visualizzabile al meglio sul maggior numero possibile di Browser. Il nostro sito limita quindi l'utilizzo del linguaggio CSS3, un liguaggio presente ma allo stesso tempo non fondamentale, che consente quindi un degrado elegante del sito nel caso di mancato supporto a determinate funzioni.
 
-CSS3 è usato in diverse parti del sito, specialmente nelle parti comuni a tutte le pagine, già descritte nella sezione 3.3.2, e specialmente nell'ambito della visualizzazione del sito per dispositivi mobili. Ora però vediamo come vengono visualizzati tali elementi a seconda dei dispositivi utilizzati:
+CSS3 è usato in diverse parti del sito, specialmente nelle parti comuni a tutte le pagine, già descritte nella sezione 3.3.2, e specialmente nell'ambito della visualizzazione del sito per dispositivi mobili. Ora però vediamo come vengono visualizzati tali elemenreti a seconda dei dispositivi utilizzati:
 
 \subsubsection{Header}\label{sec:Pres-Header}
-L'\texttt{Header} è un elemento presente in tutte le pagine del nostro sito (I, II e III Livello) ma viene visualizzato in maniera differente a seconda che venga utilizzato un foglio di stile piuttosto che un altro. La differenza principale è il modo di mostrare il nome del sito, infatti nella versione \texttt{Screen} e \texttt{Print}, l'utente vedrà sempre comparire in \textit{alto a sinistra} il nome del sito come una scritta, mentre nel layout per \texttt{Dispositivi Mobili}, tramite una tecnica di \textit{image-replacement}\footnote{Abbiamo utilizzato una piccola variante (Text-indent: -10em e non -9999px) del \textit{Phark's Method} - citato da Zeldman nel 2003: http://www.zeldman.com/daily/0703b.shtml\#au1103} abbiamo deciso di far visualizzare all'utente il logo di What To Visit.
+L'\texttt{Header} è un elemento presente in tutte le pagine del nostro sito
+(I, II e III Livello) ma viene visualizzato in maniera differente a seconda
+che venga utilizzato un foglio di stile piuttosto che un altro. La differenza
+principale è il modo di mostrare il nome del sito, infatti nella versione 
+texttt{Screen} e \texttt{Print}, l'utente vedrà sempre comparire in
+\textit{alto a sinistra} il nome del sito come una scritta, mentre nel layout
+per \texttt{Dispositivi Mobili}, tramite una tecnica di
+\textit{image-replacement}\footnote{Abbiamo utilizzato una piccola variante
+(Text-indent: -10em e non -9999px) del \textit{Phark's Method} - citato da
+Zeldman nel 2003: http://www.zeldman.com/daily/0703b.shtml\#au1103} abbiamo
+deciso di far visualizzare all'utente il logo di What To Visit.
 \begin{figure}[h!]
-        \centering
-        \begin{subfigure}[b]
-                \includegraphics[height=0.7cm,width=6cm]{images/pres_header.jpg}
-                \caption{Header in Screen}
-                \label{fig:Header-screen}
-        \end{subfigure}
-        \begin{subfigure}[b]
-                \includegraphics[height=1.2cm,width=5.4cm]{images/pres_header_m.jpg}
-                \caption{Header su Dispositivi Mobili}
-                \label{fig:Header-mobile}
-        \end{subfigure}
-        \caption{Gli Header di WTV}\label{fig:Display-Header}
+  \centering
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[height=0.7cm,width=6cm]{images/pres_header.jpg}
+    \caption{Header in Screen}
+    \label{fig:Header-screen}
+  \end{subfigure}
+  \hspace{3cm}
+  \begin{subfigure}[b]{0.3\textwidth}
+    \includegraphics[height=1.2cm,width=5.4cm]{images/pres_header_m.jpg}
+    \caption{Header su Dispositivi Mobili}
+    \label{fig:Header-mobile}
+  \end{subfigure}
+  \caption{Gli Header di WTV}\label{fig:Display-Header}
 \end{figure}
 \subsubsection{Navigation menù}\label{sec:Pres-Nav}
 Come accade per l'\texttt{Header} anche il \texttt{Menù di Navigazione} è un elemento presente in tutte le pagine del nostro sito. Questo elemento però viene visualizzato in maniera diversa a seconda del livello della pagina e anche del dispositivo utilizzato. Nella \textit{Homepage} infatti esso è visualizzato nell'\texttt{Header} affianco al nome del sito, mentre in tutte le altre pagine rimane sempre nella \textit{parte alta della pagina} ma si trova sotto alla \texttt{Breadcrumb}, affianco al contenuto. Il nostro intento però è quello di soffermarsi su come si presenta all'utente questo elemento, quindi è importante dire che le voci di questo menù, a differenza degli altri link, saranno di colore bianco su sfondo verde.
@@ -56,12 +67,13 @@ Altre due particolarità delle voci del \texttt{Menù di Navigazione} sono:
 \end{itemize}
 \begin{figure}[h!]
         \centering
-        \begin{subfigure}[b]
+        \begin{subfigure}[b]{0.3\textwidth}
                 \includegraphics[height=2.63cm,width=6cm]{images/pres_nav.jpg}
                 \caption{Navigation Menù in Screen}
                 \label{fig:Nav-screen}
         \end{subfigure}
-        \begin{subfigure}[b]
+        \hspace{4cm}
+        \begin{subfigure}[b]{0.3\textwidth}
                 \includegraphics[height=4.65cm,width=5.4cm]{images/pres_nav_m.jpg}
                 \caption{Navigation Menù su Dispositivi Mobili}
                 \label{fig:Nav-mobile}
