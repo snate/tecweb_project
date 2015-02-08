@@ -53,12 +53,13 @@ deciso di far visualizzare all'utente il logo di What To Visit.
   \end{subfigure}
   \caption{Gli Header di WTV}\label{fig:Display-Header}
 \end{figure}
+
 \subsubsection{Navigation menù}\label{sec:Pres-Nav}
 Come accade per l'\texttt{Header} anche il \texttt{Menù di Navigazione} è un elemento presente in tutte le pagine del nostro sito. Questo elemento però viene visualizzato in maniera diversa a seconda del livello della pagina e anche del dispositivo utilizzato. Nella \textit{Homepage} infatti esso è visualizzato nell'\texttt{Header} affianco al nome del sito, mentre in tutte le altre pagine rimane sempre nella \textit{parte alta della pagina} ma si trova sotto alla \texttt{Breadcrumb}, affianco al contenuto. Il nostro intento però è quello di soffermarsi su come si presenta all'utente questo elemento, quindi è importante dire che le voci di questo menù, a differenza degli altri link, saranno di colore bianco su sfondo verde.
 
 Nella versione \texttt{Screen} e nella \textit{Homepage}, le voci del \texttt{Menù di Navigazione} riprendono quelli che sono i caratteri distintivi dei box che indicano le categorie, creando così uno stile particolare per le pagine di I livello, cercando quindi di dare un punto di riferimento all'utente che dovrà saper distinguere la sua posizione una volta che arriva o ritorna nella \textit{Homepage}.
 
-La versione per \texttt{Dispositivi Mobili} invece, non fa distinzione tra pagine di \textit{I, II o III livello} e visualizza il \texttt{Menù di Navigazione} solamente se l'utente attiverà il pulsante posto sempre in \textit{alto a destra} sullo schermo del dispositivo, affianco a quello per la \texttt{Casella di ricerca}\footnote{Entrambi i pulsanti sono sempre visibili e sono posizionati in \textit{alto a destra} grazie all'attributo \textit{Position: fixed}. Questi pulsanti, per cui abbiamo utilizzato la tecnica di \textit{image-replacement} precedentemente descritta, non cambiano all'attivazione, poichè pensiamo che l'utente capisca cosa ha portato all'attivazione e cosa dovrà premere per chiudere i box}. In questo caso il menù apparirà in \textit{posizione fissa} coprendo il contenuto sotto ad esso e, nel caso di menù a più livelli di profondità cercherà di rimarcare questa gerarchia aumentando lo spessore dei bordi superiori ed inferiori delle voci del sotto-menù.
+La versione per \texttt{Dispositivi Mobili} invece, non fa distinzione tra pagine di \textit{I, II o III livello} e visualizza il \texttt{Menù di Navigazione} solamente se l'utente attiverà il pulsante posto sempre in \textit{alto a destra} sullo schermo del dispositivo, affianco a quello per la \texttt{Casella di ricerca}\footnote{Entrambi i pulsanti sono sempre visibili e sono posizionati in \textit{alto a destra} grazie all'attributo \textit{Position: fixed}. Questi pulsanti, per cui abbiamo utilizzato la tecnica di \textit{image-replacement} precedentemente descritta, non cambiano all'attivazione, poichè pensiamo che l'utente capisca cosa abbia portato all'apertura del menù e cosa dovrà premere per chiudere i box}. In questo caso il menù apparirà in \textit{posizione fissa} coprendo il contenuto sotto ad esso e, nel caso di menù a più livelli di profondità cercherà di rimarcare questa gerarchia aumentando lo spessore dei bordi superiori ed inferiori delle voci del sotto-menù.
 
 Altre due particolarità delle voci del \texttt{Menù di Navigazione} sono:
 \begin{itemize}
@@ -78,6 +79,10 @@ Altre due particolarità delle voci del \texttt{Menù di Navigazione} sono:
                 \caption{Navigation Menù su Dispositivi Mobili}
                 \label{fig:Nav-mobile}
         \end{subfigure}
-        \caption{Gli Header di WTV}\label{fig:Display-Header}
+        \caption{I Navigation Menù di WTV}\label{fig:Display-Nav}
 \end{figure}
 
+\subsubsection{Searchbar}\label{sec:Pres-Searchbar}
+La \texttt{Searchbar} è un elemento presente in \textit{tutte le pagine del sito} e, nonostante possa trovarsi in posizioni diverse, nell'\texttt{Header} per l'\textit{Homepage} e nella \texttt{Breadcrumb} nelle \textit{pagine di II e III livello}, essa sarà sempre riconoscibile in quanto, oltre ad essere l'unica casella di testo con sfondo bianco, il testo sarà verde scuro e sopratutto il \textit{submit-botton} sarà rappresentato da una lente d'ingrandimento, immagine spesso usata nel web per indicare la ricerca, che verrà posta a destra della casella.
+Questo elemento non viene visualizzato in maniera completamente diversa a seconda del foglio di stile, eccezion fatta per il foglio playout.css (Vedi punto 4.) che elimina dalla stampa tale elemento in quanto in quanto ritenuto non rilevante nel caso l'utente voglia stampare informazioni su località o pagine secondarie.
+Nelle visualizzazioni per \texttt{Screen} e per \texttt{Dispositivi Mobili}, la searchbar si differenzia solamente per la posizione del \textit{submit-botton}, posto a destra nella versione \texttt{Screen} ed a sinistra in quella per \texttt{Dispositivi Mobili}.
