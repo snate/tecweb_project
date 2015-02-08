@@ -25,8 +25,47 @@ Prima di iniziare a guardare nel dettaglio l'aspetto grafico di ogni pagina, vog
 Durante la realizzazione del sito abbiamo cercato di creare un layout semplice, accessibile, utilizzabile ma sopratutto visualizzabile al meglio sul maggior numero possibile di Browser. Il nostro sito limita quindi l'utilizzo del linguaggio CSS3, un liguaggio presente ma allo stesso tempo non fondamentale, che consente quindi un degrado elegante del sito nel caso di mancato supporto a determinate funzioni.
 
 CSS3 è usato in diverse parti del sito, specialmente nelle parti comuni a tutte le pagine, già descritte nella sezione 3.3.2, e specialmente nell'ambito della visualizzazione del sito per dispositivi mobili. Ora però vediamo come vengono visualizzati tali elementi a seconda dei dispositivi utilizzati:
+
+\subsubsection{Header}\label{sec:Pres-Header}
+L'\texttt{Header} è un elemento presente in tutte le pagine del nostro sito (I, II e III Livello) ma viene visualizzato in maniera differente a seconda che venga utilizzato un foglio di stile piuttosto che un altro. La differenza principale è il modo di mostrare il nome del sito, infatti nella versione \texttt{Screen} e \texttt{Print}, l'utente vedrà sempre comparire in \textit{alto a sinistra} il nome del sito come una scritta, mentre nel layout per \texttt{Dispositivi Mobili}, tramite una tecnica di \textit{image-replacement}\footnote{Abbiamo utilizzato una piccola variante (Text-indent: -10em e non -9999px) del \textit{Phark's Method} - citato da Zeldman nel 2003: http://www.zeldman.com/daily/0703b.shtml\#au1103} abbiamo deciso di far visualizzare all'utente il logo di What To Visit.
+\begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]
+                \includegraphics[height=0.7cm,width=6cm]{images/pres_header.jpg}
+                \caption{Header in Screen}
+                \label{fig:Header-screen}
+        \end{subfigure}
+        \begin{subfigure}[b]
+                \includegraphics[height=1.2cm,width=5.4cm]{images/pres_header_m.jpg}
+                \caption{Header su Dispositivi Mobili}
+                \label{fig:Header-mobile}
+        \end{subfigure}
+        \caption{Gli Header di WTV}\label{fig:Display-Header}
+\end{figure}
+\subsubsection{Navigation menù}\label{sec:Pres-Nav}
+Come accade per l'\texttt{Header} anche il \texttt{Menù di Navigazione} è un elemento presente in tutte le pagine del nostro sito. Questo elemento però viene visualizzato in maniera diversa a seconda del livello della pagina e anche del dispositivo utilizzato. Nella \textit{Homepage} infatti esso è visualizzato nell'\texttt{Header} affianco al nome del sito, mentre in tutte le altre pagine rimane sempre nella \textit{parte alta della pagina} ma si trova sotto alla \texttt{Breadcrumb}, affianco al contenuto. Il nostro intento però è quello di soffermarsi su come si presenta all'utente questo elemento, quindi è importante dire che le voci di questo menù, a differenza degli altri link, saranno di colore bianco su sfondo verde.
+
+Nella versione \texttt{Screen} e nella \textit{Homepage}, le voci del \texttt{Menù di Navigazione} riprendono quelli che sono i caratteri distintivi dei box che indicano le categorie, creando così uno stile particolare per le pagine di I livello, cercando quindi di dare un punto di riferimento all'utente che dovrà saper distinguere la sua posizione una volta che arriva o ritorna nella \textit{Homepage}.
+
+La versione per \texttt{Dispositivi Mobili} invece, non fa distinzione tra pagine di \textit{I, II o III livello} e visualizza il \texttt{Menù di Navigazione} solamente se l'utente attiverà il pulsante posto sempre in \textit{alto a destra} sullo schermo del dispositivo, affianco a quello per la \texttt{Casella di ricerca}\footnote{Entrambi i pulsanti sono sempre visibili e sono posizionati in \textit{alto a destra} grazie all'attributo \textit{Position: fixed}. Questi pulsanti, per cui abbiamo utilizzato la tecnica di \textit{image-replacement} precedentemente descritta, non cambiano all'attivazione, poichè pensiamo che l'utente capisca cosa ha portato all'attivazione e cosa dovrà premere per chiudere i box}. In questo caso il menù apparirà in \textit{posizione fissa} coprendo il contenuto sotto ad esso e, nel caso di menù a più livelli di profondità cercherà di rimarcare questa gerarchia aumentando lo spessore dei bordi superiori ed inferiori delle voci del sotto-menù.
+
+Altre due particolarità delle voci del \texttt{Menù di Navigazione} sono:
 \begin{itemize}
-\item L'\texttt{Header} è un elemento presente in tutte le pagine del nostro sito (I, II e III Livello) ma viene visualizzato in maniera differente a seconda che venga utilizzato un foglio di stile piuttosto che un altro. La differenza principale è il modo di mostrare il nome del sito, infatti nella versione \texttt{Screen} e \texttt{Print}, l'utente vedrà sempre comparire in \textit{alto a sinistra} il nome del sito come una scritta, mentre nel layout per \texttt{Dispositivi Mobili}, tramite una tecnica di \textit{image-replacement}\footnote{Abbiamo utilizzato una piccola variante (Text-indent: -10em e non -9999px) del \textit{Phark's Method} - citato anche da Zeldman nel 2003: http://www.zeldman.com/daily/0703b.shtml\#au1103} abbiamo deciso di far visualizzare all'utente il logo di What To Visit.
-\item Nav
-\item Footer
+\item Il fatto che un link sia già stato visualizzato o meno, non cambia le caratteristiche dell'ancora, questo poichè il \texttt{Menù di Navigazione} serve all'utente per poter spostarsi all'interno del sito e quindi abbiamo ritenuto, non necessario che sapesse se fosse o meno già stato in una determinata categoria o pagina secondaria;
+\item La seconda caratteristica è che, nel caso il visitatore si trovi in una \textit{pagina di II livello}, la voce che indica la posizione in cui si trova, non sarà cliccabile, ma sopratutto verrà caratterizzata da un immagine posta alla \textit{sinistra} di essa. Anche nel caso di \textit{pagine di III livello}, il visitatore vedrà un immagine affianco alla voce che indica la categoria in cui si trova, questa volta però l'ancora sarà utilizzabile.
 \end{itemize}
+\begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]
+                \includegraphics[height=2.63cm,width=6cm]{images/pres_nav.jpg}
+                \caption{Navigation Menù in Screen}
+                \label{fig:Nav-screen}
+        \end{subfigure}
+        \begin{subfigure}[b]
+                \includegraphics[height=4.65cm,width=5.4cm]{images/pres_nav_m.jpg}
+                \caption{Navigation Menù su Dispositivi Mobili}
+                \label{fig:Nav-mobile}
+        \end{subfigure}
+        \caption{Gli Header di WTV}\label{fig:Display-Header}
+\end{figure}
+
