@@ -1,6 +1,4 @@
 ﻿// GLOBALS
-var _ = require(['underscore'], function (underscore){});
-
 var mylat;
 var mylon;
 var geodata = document.getElementById('geodata');
@@ -50,7 +48,7 @@ function getLocation() {
   }else
     alert("La geolocalizzazione non è supportata da questo browser.");
   };
-  
+
   function showPosition(position) {
     var mapcanvas = document.createElement('div');
     mapcanvas.id = 'mapcontainer';

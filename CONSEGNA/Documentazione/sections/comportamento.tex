@@ -19,7 +19,6 @@ require.js (\texttt{http://requirejs.org}) che si occupa essenzialmente di
 caricare files situati in percorsi diversi modularizzando quindi i vari
 script.
 
-
 Require.js si è dimostrato un valido \textit{module loader} anche per la sua
 estesa compatibilità con i browser (IE 6+, Firefox 2+, Safari 3.2+, Chrome
 3+, Opera 10+).
@@ -40,7 +39,6 @@ già riempito il campo nome utente.
 
 Nei nostri script sono state implementate una funzione per l'inizializzazione
 ed una per il recupero/lettura del cookie appena creato.
-
 
 In fase di creazione del cookie, oltre alla coppia chiave-valore abbiamo
 aggiunto come terzo parametro una data di scadenza impostata a 15 giorni.
@@ -69,8 +67,7 @@ eventuale testo inserito dall'utente. A questo punto l'utente può inserire un
 testo, al quale verrà attribuita la classe predefinita prevista per il testo.
 
 Se la barra di ricerca perde il focus, allora questa continuerà a visualizzare
-il testo inserito dall'utente oppure verrà nuovamente visualizzato un placeholder (con classe di enfasi), nel caso in cui l'utente non avesse
-inserito testo.
+il testo inserito dall'utente oppure verrà nuovamente visualizzato un placeholder (con classe di enfasi), nel caso in cui l'utente non avesse inserito testo.
 
 
 \subsection{Gestione dei commenti}
@@ -105,19 +102,19 @@ Se non vi sono commenti da visualizzare viene visualizzata la stringa
 ``Non vi sono commenti da visualizzare", altrimenti i commenti vengono
 visualizzati a gruppi di due ad ogni pressione del pulsante
 ``Visualizza commenti" fin tanto che ci sono commenti; la divisione di
-documento contenente i documenti viene creata ed allocata nel documento solo
+documento contenente i commenti viene creata ed allocata nel documento solo
 alla prima pressione del pulsante ``Visualizza commenti".
 
 I pulsanti ``Visualizza commenti" può essere in tre stati e questi vengono
 assegnati via JavaScript tramite delle classi:
 \begin{itemize}
 \item \texttt{com-runnable}: non sono visualizzati commenti e si può
-richiedere la visualizzazione dei commenti (se l'utente sta usando
+richiedere la loro visualizzazione (se l'utente sta usando
 Internet Explorer o se non vi sono commenti, solo in seguito alla pressione
 del pulsante sarà avvisato dell'impossibilità di mostrargli dei commenti sulla
 località)
-\item \texttt{com-running}: sono attualmente visualizzati alcuni commenti ma vi
-sono ancora presenti altri commenti che è possibile visualizzare
+\item \texttt{com-running}: sono attualmente visualizzati alcuni commenti ma è
+possibile visualizzarne altri
 \item \texttt{com-notrunnable}: non sono presenti ulteriori commenti da
 visualizzare
 \end{itemize}
@@ -144,7 +141,7 @@ creare confusione all'utente si segnala che il pulsante è inutilizzabile
 \end{itemize}
 
 
-\subsubsection{Pubblicazione commenti}
+\subsubsection{Pubblicazione dei commenti}
 Nel sito è prevista per gli utenti la possibilità di inserire un proprio commento
 inerentemente ad una determinata località. A questo scopo, al termine della sezione 
 della pagina dedicata alla visualizzazione dei commenti, vi è il pulsante 
