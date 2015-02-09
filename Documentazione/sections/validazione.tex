@@ -79,16 +79,19 @@ pagina e indicazioni sul contrasto.
 
 Più in particolare, sono stati corretti gli errori trovati (relativi agli
 standard 508 e WCAG) non relativi alla lingua delle pagine, dal momento che
-nonostante il tag html fosse ben-formato e contenente l'indicazione sulla
+nonostante il tag HTML fosse ben-formato e contenente l'indicazione sulla
 lingua utilizzata nella pagina in modo corretto, il sito continuava a
 segnalare il falso positivo.
 
-I warnings sono stati corretti solo se effettivamente utili; questo dal
-momento che sono stati introdotti volutamente titoli o link ridondanti per
-aiutare l'utente a capire dove si trova e che l'uso dei tabindex viene
-segnalato come warning, anche se questi sono stati messi per permettere
-all'utente di raggiungere subito i link della pagina più rilevanti, saltando
-elementi di navigazione o breadcrumb a seconda dei casi.
+I warnings sono stati corretti solo se effettivamente utili:
+\begin{itemize}
+\item sono stati introdotti volutamente titoli o link ridondanti per
+aiutare l'utente a capire dove si trova;
+\item l'uso dei tabindex viene segnalato come warning, anche se questi sono
+stati messi per permettere all'utente di raggiungere subito i link della
+pagina più rilevanti, saltando elementi di navigazione o breadcrumb a seconda
+dei casi.
+\end{itemize}
 
 I contrasti dei colori sono stati regolati per riuscire a superare almeno il
 livello di accessibilità WCAG 2.0 AA.
@@ -97,9 +100,10 @@ livello di accessibilità WCAG 2.0 AA.
 Vischek è uno strumento che permette di visualizzare immagini e pagine web
 come le vedrebbe una persona che presenta deficit visivi quali:
 \begin{itemize}
-\item Deuteranope: una forma di deficit di colore rosso/verde
-\item Protanope: un'altra forma di deficit di colore rosso/verde
-\item Tritanope: una forma di parziale o insufficiente discriminativa per il blu e il violetto
+\item \textbf{Deuteranopia}: una forma di deficit di colore rosso/verde
+\item \textbf{Protanopia}: un'altra forma di deficit di colore rosso/verde
+\item \textbf{Tritanopia}: una forma di parziale o insufficiente
+discriminativa per il blu e il violetto
 \end{itemize}
 A causa del fatto che lo strumento per analizzare le pagine web era momentaneamente inutilizzabile sono state effettuate delle prove attraverso degli screen delle pagine web
 valutando la visione generale che avrebbero avuto utenti affetti dai deficit precedentemente
@@ -113,19 +117,19 @@ esposti.
 \hspace{\fill}
 \begin{minipage}{0.45\textwidth}
 \includegraphics[width=\linewidth]{images/screen/deuteranope.jpg}
-\subcaption{Deuteranope}
+\subcaption{Deuteranopia}
 \end{minipage}
 \vspace*{0.5cm}
 \begin{minipage}{0.45\textwidth}
 \includegraphics[width=\linewidth]{images/screen/protanope.jpg}
-\subcaption{Protanope}
+\subcaption{Protanopia}
 \end{minipage}
 \hspace{\fill}
 \begin{minipage}{0.45\textwidth}
 \includegraphics[width=\linewidth]{images/screen/tritanope.jpg}
-\subcaption{Tritanope}
+\subcaption{Tritanopia}
 \end{minipage}
-\caption{Test con Vischek su una pagina di una località}\label{multiavp}
+\caption{Test con Vischek su una pagina di terzo livello}\label{multiavp}
 \end{figure}
 
 Dalle quattro immagini si può vedere come le pagine rimangano comunque accessibili e
@@ -145,12 +149,12 @@ mentre gli aiuti come il ``salta la navigazione" sono presenti.
 
 \subsection{Lynx}\label{sec:lynx}
 Le pagine del sito sono state anche navigate tramite il browser testuale
-\texttt{lynx}, affinchè si potesse verificare la facilità d'uso di
+\texttt{Lynx}, affinchè si potesse verificare la facilità d'uso di
 \textit{What To Visit} anche per gli utenti che fanno uso di questo
 strumento di navigazione.
 
 \subsection{Compatibilità con i vari Browser}
-In sito \textit{What To Visit} è stato testato su vari browser e su
+Il sito \textit{What To Visit} è stato testato su vari browser e su
 diverse versioni di questi (sia desktop che mobile). 
 In particolare risulta compatibile in tutte le sue funzionalità, 
 eccetto la geolocalizzazione e la visualizzazione dei commenti
@@ -172,7 +176,7 @@ Inoltre, in versione mobile su:
 
 \subsubsection{Internet Explorer}
 Per testare il sito sulle varie versioni di Internet Explorer è stato utilizzato lo strumento
-\textit{IETester} disponibile gratuitamente online. Attraverso questo è stato rilevato che, fino alla versione 8 compresa del browser, gli script che si occupano di visualizzare i commenti e di rendere cliccabili le immagini delle categotrie in home non funzionano.
+\textit{IETester} disponibile gratuitamente online. Attraverso questo è stato rilevato che, fino alla versione 8 (compresa) del browser, gli script che si occupano di visualizzare i commenti e di rendere cliccabili le immagini delle categorie in home non funzionano.
 
 \subsubsection{Geolocalizzazione}
 La funzionalità di geolocalizzazione offerta da \textit{What To Visit} è stata
@@ -190,7 +194,7 @@ automatici, una serie di verifiche riguardo le performance del sito.
 Ci siamo avvalsi di tool online\footnote{\texttt{https://developers.google.com/speed/pagespeed/insights/}, \texttt{http://www.webpagetest.org/},
 \texttt{http://gtmetrix.com/}} che analizzano in profondità le pagine HTML
 fornite e restituiscono: consigli di ottimizzazione, scale di punteggi per ogni
-aspetto del sito e una serie di statistiche che vedremo in dettaglio.\footnote{NB: Per poter utilizzare i tester il sito è stato ``hostato" sulla piattaforma Github Pages, come scritto all'inizio di questa sezione}
+aspetto del sito e una serie di statistiche che vedremo in dettaglio.\footnote{NB: Per poter utilizzare i tester il sito è stato ``hostato" sulla piattaforma GitHub Pages, come scritto all'inizio di questa sezione}
 
 Al fine di uniformare i risultati raccolti da questi strumenti abbiamo deciso
 di mostrare solo alcune delle pagine analizzate, una per ogni livello
@@ -207,24 +211,25 @@ In particolare le più significative per ogni livello (\texttt{homepage.html},
 \begin{figure}[h]
 \includegraphics[width=\linewidth]{images/performance/webpagetest/home-graph.png}
 \caption{Homepage: Grafico a 'torta' dei tempi di caricamento}
-\label{fig:tempiOther}
 \end{figure}
 
 In homepage si nota la prevalenza del flusso delle immagini, come evidenziato
-in fig.\ref{fig:tempiHome} dal diagramma circolare delle richieste e della
+in fig.\ref{fig:tempiHome}, dal diagramma circolare delle richieste e della
 quantità di dati trasmessi dal server.
 
 Come è facile aspettarsi, le immagini occupano in termini di peso la maggior
-parte del sito ed essendo molteplici, le richieste per il loro recupero
-rappresentano più del 40\% delle richieste totali.
+parte del sito e le richieste per il loro recupero rappresentano più del 40\%
+delle richieste totali.
 
 
-Lo stesso esito è risultato in \texttt{citta.html} e \texttt{london.html}
-(fig.\ref{fig:tempiOther}), sebbene \texttt{citta.html} sia leggermente più pesante dal momento che viene fatto un uso più intenso dei fogli di stile.
+Lo stesso esito è stato conseguito in \texttt{citta.html} e
+\texttt{london.html} (fig.\ref{fig:tempiOther}), sebbene \texttt{citta.html}
+sia leggermente più pesante dal momento che viene fatto un uso più intenso dei
+fogli di stile.
 
-Dopo aver eseguito i test sulle stesse pagine per 3 volte abbiamo stimato che il tempo medio di caricamento completo si attesta sui 1.4 secondi circa.
+Dopo aver eseguito i test sulle stesse pagine per 3 volte abbiamo stimato che il tempo medio di caricamento complessivo si aggira intorno ai 1400ms.
 
-I controlli sulla velocità di caricamento sono stati effettuati su di un client residente negli Stati Uniti avente browser Chrome.
+I test sulla velocità di caricamento sono stati effettuati su di un client residente negli Stati Uniti avente browser Chrome.
 
 
 \begin{figure}[h]
@@ -253,6 +258,7 @@ I controlli sulla velocità di caricamento sono stati effettuati su di un client
 \subcaption{\textit{london.html}: grafico a 'torta'}
 \end{minipage}
 \caption{Performance in \texttt{citta.html} e \texttt{london.html}}\label{multiavp}
+\label{fig:tempiOther}
 \end{figure}
 
 Complessivamente il sito ha totalizzato una media di 71 punti su 100 totali in Google PageSpeed Insights.
@@ -262,5 +268,5 @@ contro standard W3C e/o compatibilità con i browser più obsoleti. Abbiamo
 quindi deciso di adottare le soluzioni che permettessero di mantenere
 l'accessibilità del sito, cercando di alleggerirlo con piccoli accorgimenti
 (e.g. minificazione della libreria Require.js, immagini a risoluzione
-inferiore, ecc.) trovando un buon compromesso tra velocità di caricamento e
-compatibilità con più browser.
+inferiore mantenendo una certa qualità di fondo, ecc.) trovando un buon
+compromesso tra velocità di caricamento e compatibilità con più browser.
