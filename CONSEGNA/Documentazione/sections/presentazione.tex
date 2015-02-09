@@ -159,19 +159,94 @@ Da una parte il \textbf{Menù di navigazione} e dall'altra il contenuto, anche n
 
 Nella visualizzazione di queste pagine su \textbf{Dispositivi Mobili}, non abbiamo voluto forzare la visualizzazione portando a piè pagina il \textbf{Footer}, così come nel caso di una stampa, non abbiamo voluto inserire elementi non necessari, rendendo così stampabili solamente \textbf{Header}, perchè What To Visit non si deve dimenticare, la \textbf{Breadcrumb}, in particolare il percorso che faciliterà l'utente nel caso volesse cercare di nuovo la pagina sul sito, ed il contenuto.
 
-\subsection{Il layout delle pagine di III livello}\label{sec:Pres-IIIliv}
-Il III livello di pagine è quello più importante ed è quello che più cambia il suo modo di essere visualizzato a seconda del dispositivo utilizzato.
-In tutti i casi però abbiamo deciso di rendere visualizzabili il contenuto che descrive la località e le informazioni schematiche allegate ad essa, compresa posizione geografica, fornita grazie alla geolocalizzazione, e link utili che nonostante conducano l'utente fuori dal nostro sito, gli permettono di ottenere ancora più informazioni riguardo alla località su cui si stava informando, tutto questo contrassegnado queste ancore con appositi accorgimenti grafici.
-
-\subsubsection{Il layout su Dispositivi Mobili}\label{sec:Pres-IIliv-sec}
-parla di contenuto tutto in verticale con titolo - img - testo..
-elenco puntanto di differenza tra tlayout e mlayout per img.. una 60\% e l'altro 100\%
-
-
-
-
-
-
-\subsubsection{Il layout Screen e Print}\label{sec:Pres-IIliv-sec}
-La differenza tra layout \textbf{Screen} e quello per \textbf{Dispositivi Mobili} sta nel come viene sfruttato ed occupalo orizzontalmente lo spazio a propria disposizione.
+\subsubsection{Il layout Screen e Print}\label{sec:Pres-IIliv-screenPrint}
+La differenza tra layout \textbf{Screen} e quello per \textbf{Dispositivi
+Mobili} sta nel come viene sfruttato ed occupato orizzontalmente lo spazio a
+propria disposizione.
 Quando l'utente guarda la pagina di una località con una finestra di dimensione più larga di 780px, potrà notare a sinistra il \textbf{Menù di navigazione}, in centro il contenuto ed a destra
+
+\subsection{Il layout delle pagine di III livello}\label{sec:Pres-IIIliv}
+Il III livello di pagine è quello più importante ed è quello che più cambia il
+suo modo di essere visualizzato a seconda del dispositivo utilizzato.
+In tutti i casi però abbiamo deciso di rendere visualizzabili il contenuto che
+descrive la località e le informazioni schematiche allegate ad essa, compresa
+posizione geografica, fornita grazie alla geolocalizzazione, e link utili che
+nonostante conducano l'utente fuori dal nostro sito, gli permettono di
+ottenere ancora più informazioni riguardo alla località su cui si stava
+informando, tutto questo contrassegnado queste ancore con appositi
+accorgimenti grafici.
+
+\subsubsection{Il layout Screen e Print}\label{sec:Pres-IIIliv-Screen}
+La differenza tra layout \textbf{Screen} e quello per \textbf{Dispositivi
+Mobili} sta nel come viene sfruttato ed occupato orizzontalmente lo spazio a
+propria disposizione.
+
+Quando l'utente guarda la pagina di una località con una finestra di
+dimensione più larga di 780px, potrà notare a \textit{sinistra} il
+\textbf{Menù di navigazione}, al \textit{centro} il contenuto descrittivo
+della località ed a \textit{destra} noterà il box di cui si parlava in
+precedenza, quello con le informazioni ed i link utili inerenti a quella
+località.
+ 
+Questo tipo di layout punta ad occupare la finestra in tutta la sua larghezza,
+offrendo così spazio a nuove soluzioni per quanto riguarda la disposizione del
+testo all'interno del box centrale. In particolar modo si è deciso di mettere
+come \textit{primo elemento} un immagine significativa che presenti la
+località, seguita dal suo nome ed affiancata da un box che ne identifichi la
+categoria.
+
+Successivamente inizia la parte descrittiva, divisa in paragrafi ai quali è
+sempre associata un immagine. La struttura del blocco centrale ci ha permesso
+quindi di poter posizionare a \textit{sinistra} un immagine ed a
+\textit{destra} un paragrafo ad essa associato, creando così un effetto lista
+che, se associato ad un testo non particolarmente lungo e verboso, renderà
+scorrevole la lettura facendo si che il sito ne tragga vantaggio.
+
+Un volta terminata la lettura del testo su quella determinata località, ecco
+che il visitatore si troverà, nel caso supporti la funzione, a dover
+affrontare la sezione commenti, potendo così visualizzare o postare commenti
+su quel luogo. La visualizzazione dei commenti viene fatta a gruppi, evitando
+così che l'utente si ritrovi da un momento all'altro a vede comparire decine e
+decine di recensioni. La grafica di ogni singolo commento pone in risalto la
+data di pubblicazione, inserita in un apposito span con
+\textit{background-color: verde chiaro} affiancato dal nome dell'utente che ha
+scritto la recensione.
+
+\subsubsection{Il layout su Dispositivi Mobili}\label{sec:Pres-IIIliv-Mobile}
+A differenza di quel che accade per il layout \textbf{Screen}, la descrizione
+della località non è affiancata, bensì seguita, dal box con le informazioni ed
+i link utili su quel luogo. Un altra differenza riguardante la visualizzazione
+delle pagine di III livello su \textbf{Dispositivi Mobili}, è l'alternasi di
+testo e figure, già a partite dall'immagine di presenzazione; in questo layout
+infatti troveremo prima il titolo del paragrafo, poi l'immagine e
+successivamente il testo.
+
+Sempre parlando di immagini, arriviamo a discutere della differenza
+fondamentale tra il layout per cellulari e quello per dispositivi con
+larghezza di schermo compresa tra i 480 ed i 780px:
+\begin{itemize}
+\item Nel caso di dispositivi con schermo di larghezza inferiore ai 480px,
+l'immagine sarà larga il 100\% della grandezza del dispositivo;
+\item Nel caso di finestre con larghezza superiore a 780px, ecco che la figura
+occuperà il 60\% della larghezza della finestra, questo accade sia per le
+immagini dei paragrafi, sia per quelle delle liste di definizioni. Questa
+distinzione è atta a far si che l'utente possa comunque godere delle immagini
+messe a sua disposizione, perchè trattandosi di un sito che ha lo scopo di
+introdurre al visitatore nuove località, ecco che un minimo di qualità, e
+purtroppo anche di peso, è più che dovuta.
+\end{itemize}
+
+\subsection{Un CSS valido ma smart}\label{sec:Pres-CSSValid}
+All'interno di ogni pagina, in \textit{basso a destra}, troverete un immagine
+che indica che il nostro sito utilizza CSS valido, ma sopratutto ci teniamo a
+sottolineare che abbiamo cercato di non abusare di tecnologie, quali CSS3, non
+supportate da tutti i browser, creando quindi dei meccanismi che potessero in
+ogni caso portare l'utente a vivere al meglio l'esperienza What To Visit.
+
+Terminiamo questa sezione parlando quindi di come abbiamo voluto nascondere
+agli occhi di molti alcuni elementi, quali alcune label che quindi non saranno
+visibili all'occhio umano, o di come abbiamo cercato di nasconderne altri a
+tutti, come accaduto nel caso di layout \textbf{Screen} quando abbiamo
+utilizzato la caratteristica \textit{display: none} per nascondere
+completamente il form contenente i \textit{trigger} utilizzati successivamente
+nei layout per \textbf{Dispositivi Mobili}.
