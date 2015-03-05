@@ -1,0 +1,63 @@
+\section{Struttura organizzativa}\label{sec:struttura-org}
+Dopo aver analizzato e navigato nel sito, è stata individuata la seguente
+struttura organizzativa gerarchica:
+\begin{figure}[h!]
+    \centering
+    \scalebox{.7}{\input{sections/gerarchia}}
+    \caption{Organizzazione gerarchica del sito}
+    \label{fig:gerarchia}
+\end{figure}
+
+Si è deciso di non tracciare l'arco che collega l'homepage alle pagine del
+libro per non rendere più difficile la comprensione del grafico.
+
+\subsection{Considerazioni generiche}
+Come si può notare, la struttura potrebbe portare a delle navigazioni che si
+discostano da una navigazione lineare seguendo la gerarchia del sito.
+Ciò sarebbe un buon modo per far arrivare l'utente direttamente al contenuto
+ricercato evitando due click in più, ma mancano le indicazioni per poter informare l'utente dove si trova, come detto nella sezione %TODO aggiungere
+% sezione.
+
+  \begin{figure}[h!]
+  \centering
+  \includegraphics{images/WTV_logo.jpg}
+  \end{figure}
+
+\subsection{Considerazioni sulla gerarchia}
+La gerarchia non è troppo ampia in quanto vi sono meno di dieci opzioni nel
+menù principale, non comportando disorientamento cognitivo all'utente.
+La profondità della gerarchia è in una situazione di limite,
+poichè se, come detto sopra, all'utente interessasse commentare un libro non
+presente nella lista in home, avrebbe bisogno di navigare per quattro o cinque
+livelli di profondità prima di raggiungere il suo obiettivo.
+
+Seppur il menù principale non sia troppo ampio, questo problema potrebbe
+presentarsi nei risultati di ricerche o cercando un libro per genere, dove
+facilmente potrebbero presentarsi più di dieci voci.
+Tuttavia si ritiene tale problema trascurabile, poichè se un utente arriva in
+tali pagine vuol dire che non sa precisamente cosa sta cercando e
+apparentemente non vi è un ordine in tali elenchi.
+
+Tuttavia, qualora il gestore del sito notasse che le voci visualizzate
+potenzialmente possono raggiungere una soglia minima (e.g. 10), una facile
+soluzione sarebbe offrire all'utente la possibilità di ordinare per titolo,
+voto utenti, voto LDV, cognome autore, etc. tramite un semplice script
+JavaScript.
+
+\subsection{Ipertestualità}
+I link che dalla home portano direttamente alla pagina di un libro aggiungono
+ipertestualità alla struttura della pagina, aumentandone leggermente la
+flessibilità ma non abbastanza da poter soddisfare le esigenze del sito, che
+si ipotizza abbia almeno sei bacini di utenza (tanti quanti i generi).
+
+Siccome i due insiemi nella home composti da tre libri non sono mutuamente
+esclusivi, è altamente probabile che il più delle volte non vi siano
+contemporaneamente sei libri di sei generi diversi nella home.
+Dati:
+\begin{itemize}
+\item tra tutti gli utenti che stanno navigando contemporaneamente sul sito,
+ve ne sono almeno sei interessati a generi diversi;
+\item uguale probabilità ad ogni genere di libro di apparire in uno dei sei slot nella home;
+\end{itemize}
+7775 su 7776 volte un utente non troverà un libro di suo interesse nella home.
+%TODO scrivere altro?

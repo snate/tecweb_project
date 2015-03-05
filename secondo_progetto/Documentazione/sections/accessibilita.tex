@@ -1,0 +1,156 @@
+\section{Accessibilità}
+Come standard di accessibilità è stato scelto di raggiungere il grado WAI-AA
+WCAG 2.0. Di seguito sono descritti gli accorgimenti adottati dal nostro sito
+per perseguire questo obiettivo.
+
+\subsection{Trasformazione elegante}
+Le pagine del nostro sito rimangono accessibili anche se l'utente non può
+utilizzare alcune tecnologie o funzionalità per scelta personale, se il
+suo dispositivo di navigazione non le supporta o per cause di forza maggiore
+(e.g. svantaggi dal punto di vista fisico e psichico).
+
+\subsubsection{Separazione struttura-comportamento}
+In ogni pagina del sito non è stato introdotto alcun attributo per la gestione
+degli eventi associata ad un elemento strutturale e gli script sono inclusi
+nella pagina e non fanno parte del corpo di questa.
+Gli script JavaScript, a loro volta, non si preoccupano di creare intere pagine
+dinamicamente, ma si limitano a creare frammenti di queste in modo opportuno,
+ovvero quando ciò \textbf{non} è possibile staticamente.
+
+\subsubsection{Separazione struttura-presentazione}
+Le pagine del sito non contengono alcun foglio di stile ma ogni foglio di stile
+viene incluso in queste. Oltre a ciò, ogni elemento strutturale contiene
+solamente attributi relativi al suo significato semantico e non presentazionale
+(ad esempio non sono stati utilizzati gli attributi \texttt{bgcolor} e
+\texttt{font}).
+
+Ogni id e ogni classe è stata dichiarata utilizzando nomi relativi alla
+semantica e non al modo in cui verranno presentati.
+
+\subsubsection{Separazione presentazione-comportamento}
+Gli script JavaScript non vanno a modificare le regole con cui gli elementi
+sono presentati all'interno delle pagine del sito, ma si limitano ad attribuire
+o aggiungere ad essi classi che verranno trattate con dei fogli di stile.
+
+\subsubsection{Porzioni di sito visibili}
+L'area cosidetta ``\textit{above the fold}" contiene sempre i contenuti di maggior
+rilievo della pagina visualizzata, mentre elementi di minore importanza sono
+presenti in parti come il footer che non sempre possono essere visibili all'apertura di una nuova finestra.
+
+\subsection{Linee guida per l'accessibilità}
+In questa sottosezione viene descritto come il gruppo ha rispettato le linee
+guida del WAI.
+
+\subsubsection{Alternative a contenuti audio e visivi}
+Nel sito non sono presenti contenuti audio e video né applet, quindi non ci si
+pone il problema per questi. Al contrario, ogni immagine ha un attributo
+\texttt{alt} che fornisce l'equivalente testuale nel caso in cui non fosse
+possibile visualizzare l'immagine.
+
+\subsubsection{Non fare affidamento sul colore}
+Sono stati utilizzati tool per la verifica dell'accessibilità che controllano
+anche l'uso corretto del colore nel sito.
+
+\subsubsection{Uso appropriato dei tag}
+I tag sono stati utilizzati per il loro significato semantico, non sono state
+utilizzate tabelle per definire il layout delle pagine e, togliendo i fogli di
+stile, il sito rimane accessibile anche con le impostazioni predefinite dei
+browser.
+
+\subsubsection{Linguaggi naturali}
+Sono stati utilizzati marcatori sia per la pronuncia di parole in lingua
+straniera che per estendere la pronuncia di abbreviazioni e acronimi.
+
+\subsubsection{Trasformazione elegante delle tabelle}
+Non sono presenti tabelle nel sito.
+
+\subsubsection{Trasformazione elegante delle nuove tecnologie}
+\begin{enumerate}
+\item \textbf{CSS3}: abbiamo cercato di limitare al minimo l'impiego di questa tecnologia utilizzando solamente le proprietà \texttt{box-shadow} e \texttt{transition} che, nonostante siano state specialmente usate nei layout per Dispositivi mobili, in caso di mancato supporto non comprometterebbero l'usabilità del sito, in quanto il degrado si limiterebbe ad una lieve perdita di grazia
+\item \textbf{JavaScript}: se un utente ha disattivato JavaScript sul proprio
+browser non è in grado di visualizzare i commenti (parte secondaria di contenuto), non visualizza il placeholder nella barra di ricerca, quando clicca su un link ``esterno", questo viene aperto sulla stessa finestra e le immagini sulla home non fungono da link alle pagine delle categorie; tuttavia, senza queste funzionalità il sito continua ad offrire una più che buona user experience
+\item \textbf{Geolocalizzazione}: la geolocalizzazione è un servizio opzionale che abbiamo voluto offrire agli utenti di \textit{What To Visit} e come tale, nel caso di mancato supporto o di mancata attivazione, non lascerà traccia di sé portando così l'utente a non accorgersi di essa
+\end{enumerate}
+
+\subsubsection{Contenuti che cambiano nel corso del tempo}
+\begin{enumerate}
+\item La searchbar cambia dimensione quando assume il focus e viene
+visualizzato un placeholder solamente se, quando questa perde il focus, non è
+presente testo (altrimenti rimane l'input immesso dall'utente);
+\item premendo sui pulsanti ``Visualizza commento",``Pubblica commento" e
+``Nascondi commenti" vengono rispettivamente visualizzati i commenti presenti,
+compare la form di inserimento commenti e vengono nascosti i commenti
+precedentemente visualizzati.
+\end{enumerate}
+
+Questi elementi non causano problemi ad eventuali utenti che soffrono di
+epilessia poichè il loro cambio di stato non è troppo rapido. Allo stesso
+tempo, questi elementi si aggiornano dopo dei click e mantengono il loro stato
+fino ad una successiva interazione tramite click non causando un senso di
+disagio nell'utente che altrimenti vedrebbe il layout modificarsi di continuo
+sotto i suoi occhi.
+
+\subsubsection{Interfacce utente}
+Non sono previste delle interfacce utente quali comandi vocali ed access key
+per il sito.
+
+Al contrario, sono stati previsti dei tab index per:
+\begin{enumerate}
+\item poter saltare delle voci di navigazione ridondanti;
+\item accedere con priorità ai link potenzialmente più interessanti per
+l'utente (secondo previsioni dei componenti del gruppo).
+\end{enumerate}
+
+\subsubsection{Indipendenza da dispositivo}
+Come detto nelle sezioni \ref{sec:fangs} e \ref{sec:lynx}, le pagine del sito
+sono state provate rispettivamente anche con emulatori di screen reader e
+browser testuali.
+
+Non sono state utilizzate aree di immagini come link.
+
+\subsubsection{Meccanismi di fallback}
+Ogniqualvolta che una certa tecnologia non fosse disponibile per visualizzare i
+contenuti previsti, si è scelto di non fornire tale contenuto (perché
+di secondaria importanza) oppure il sito offre dei meccanismi per i quali la
+degradazione è elegante (ad esempio la searchbar, se acquista il focus, si
+ingrandisce istantaneamente anzichè effettuare una transizione).
+
+\subsubsection{Raccomandazioni W3C}
+Come detto in precedenza, le immagini presentano sempre l'alternativa testuale
+inserita utilizzando la tecnologia offerta da W3C.
+
+Non sono presenti formati come shockwave e PDF.
+
+\subsubsection{Orientamento}
+Vengono inoltre forniti una mappa del sito ed una pagina di F.A.Q. riferite in
+ogni pagina del sito. Oltre a questo, in tutte le pagine eccetto la home (dove
+non è ritenuta necessaria) è presente una breadcrumb che indica all'utente la
+sua posizione all'interno del sito.
+
+\subsubsection{Navigazione}
+I link sono evidenziati in modo che siano distinguibili attraverso un test di \textit{Drue Miller} e forniscono sempre un attributo ``title" che informa
+l'utente sul contenuto della destinazione.
+In particolare:
+\begin{itemize}
+\item i link sono in grassetto se presenti nel testo;
+\item i colori sono ben distinguibili come spiegato nella sezione \ref{sec:Pres-Colore};
+\item i link visitati e non sono sempre riconoscibili gli uni dagli altri, ad
+eccezione del caso in cui questi siano nel \textbf{nav} o nel \textbf{footer};
+\item altri accorgimenti su come vengono trattati e specializzati gli elementi
+della navigazione vengono discussi nella sezione \ref{sec:presentazione} a pagina \pageref{sec:presentazione}.
+\end{itemize}
+
+In tutte le pagine eccetto la home (dove la navigazione viene indirizzata
+volutamente verso le categorie), è presente un menù di navigazione contenente
+i ``sibling" della pagina o, se l'utente si trova in una pagina di una
+località, visualizza i riferimenti alla homepage e alle categorie.
+
+In questo elemento viene indicata anche la pagina corrente con un'icona
+oppure, qualore l'utente si trovasse in una pagina di III livello, tale icona
+sarebbe differente ma si troverebbe comunque a fianco della voce relativa alla
+categoria di appartenenza.
+
+\subsubsection{Semplicità dei contenuti}
+Il layout è coerente, consistente e riconoscibile in tutte le pagine del sito,
+come descritto nelle sezioni \ref{sec:struttura} e \ref{sec:presentazione} ed
+allo stesso tempo si è cercato di tenere un linguaggio semplice nei contenuti.

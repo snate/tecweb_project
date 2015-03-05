@@ -1,0 +1,45 @@
+\section{Esperienza utente}\label{sec:user-exp}
+Di seguito vengono riportate le considerazioni riguardo la qualità del sito in
+termini di \textbf{user experience}.
+
+\subsection{Consistenza dell'interfaccia}
+L'interfaccia è consistente e utilizza sempre gli stessi elementi grafici per
+denotare elementi comuni a diverse pagine, eccezion fatta per:
+\begin{itemize}
+\item i link in \texttt{accesso.html} e \texttt{registrazione.html};
+\item la breadcrumb (in tali pagine contrassegnata con l'id \texttt{path}) non
+sempre è strutturata nello stesso modo, contenendo una o due voci a seconda
+dei casi (e.g. in \texttt{about.html} e nella pagina generata dalla ricerca);
+\item l'utente per poter inserire un commento (e quindi completare un task
+relativo alla pagina dove è descritto un libro) deve accedere ad una nuova
+pagina per scrivere il commento, senza che in questa nuova pagina siano
+visualizzate le informazioni sul libro.
+\end{itemize}
+
+Sebbene presenti i problemi sopra descritti, l'interfaccia è comunque ritenuta
+consistente rispetto al contesto in cui è inserita (una libreria) e alle
+medie aspettative che un utente avrebbe visitando un sito di una libreria.
+
+\subsection{Area visibile}
+Ogni pagina ha un'ampia intestazione che occupa una buona parte di spazio;
+tuttavia, non riducendo la pagina a dimensioni eccessivamente ridotte, il
+contenuto principale rimane parzialmente visibile (se non questi, almeno i
+titoli del contenuto).
+
+Nelle descrizioni dei libri i commenti occupano una posizione di fondo.
+Probabilmente i commenti dovrebbero trovare uno spazio nell'area visibile
+(\textit{above the fold}). Se non venissero inseriti in questa zona della
+pagina, servirebbe almeno un pulsante o un'ancora presente \textit{above the
+fold} per poter raggiungere facilmente la sezione della pagina riservata ai
+commenti.
+
+\subsection{Informazioni utili}
+L'utente non sempre dispone di informazioni accessorie ma utili durante la sua
+navigazione: di seguito verranno discusse la loro presenza e, se presenti, le
+modalità con cui queste sono state realizzate.
+
+\subsubsection{Informazioni sulla propria posizione}
+L'utente non dispone di sufficienti informazioni sulla barra contestuale
+(\textit{path} o \textit{breadcrumb}) per capire in che modo ha raggiunto la
+pagina in cui si trova: 
+

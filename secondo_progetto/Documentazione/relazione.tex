@@ -1,0 +1,124 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Arsclassica Article
+% LaTeX Template
+% Version 1.1 (10/6/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Lorenzo Pantieri (http://www.lorenzopantieri.net) with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+article,
+10pt, % Main document font size
+oneside, % One page layout (no page indentation)
+BCOR5mm, % Binding correction
+]{scrartcl}
+\usepackage[a4paper,margin=3cm]{geometry}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepackage{amsmath}
+\usepackage{xspace}
+\usepackage[usestackEOL]{stackengine}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\newcommand{\A}{\ensuremath{\mathcal{A}}\xspace}
+\newcommand{\B}{\ensuremath{\mathcal{B}}\xspace}
+\newcommand\pa[1]{\ensuremath{\left(#1\right)}}
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+
+\hyphenation{Fortran hy-phen-ation} % Specify custom hyphenation points in words with dashes where you would like hyphenation to occur, or alternatively, don't put any dashes in a word to stop hyphenation altogether
+
+%----------------------------------------------------------------------------------------
+%	TITLE AND AUTHOR(S)
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{center}
+\title{
+  \begin{figure}[h!]
+  \centering
+  \includegraphics{images/icona_titolo.png}
+  \end{figure}
+  Valutazione dell'accessibilità del sito \\
+  Libreria di Valyria
+}
+\author{Carlo Munarini 1050128 \\
+Sebastiano Valle 1050123}
+\end{center} % The article author(s) - author affiliations need to be specified in the AUTHOR AFFILIATIONS block
+
+
+
+
+
+
+%\date{} % An optional date to appear under the author(s)
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS & LISTS OF FIGURES AND TABLES
+%----------------------------------------------------------------------------------------
+
+\maketitle % Print the title/author/date block
+
+\setcounter{page}{1} % Set the depth of the table of contents to show sections and subsections only
+
+{\raggedleft\vfill\Longstack[l]{%
+Indirizzo: \texttt{http://tecnologie-web.studenti.math.unipd.it/tecweb/$\sim$aongaro} \\
+Email referente: \texttt{sebastiano.valle@hotmail.it}
+}
+\raggedright{}
+\newpage{}
+\tableofcontents % Print the table of contents
+
+
+
+\listoffigures % Print the list of figures
+
+\listoftables % Print the list of tables
+
+\include{sections/struttura} % 80%
+
+\include{sections/schema} % 70%
+
+\include{sections/accessibilita} % 0%
+
+\include{sections/esperienza_utente} % 0%
+
+\include{sections/test} % 0%
+
+%%%%%%%%%%%% B====>
+%PER NOI: OGNI SEZIONE CHE AGGIUNGETE BASTA METTERLA NELLA CARTELLA sections
+%con un certo nome (facciamo finta che sia pippo.tex) E
+%POI AGGIUNGERE QUI SOTTO \include{sections\pippo} COME HO FATTO CON L'ABSTRACT
+%%%%%%%%%%%% B====>
+
+%----------------------------------------------------------------------------------------
+
+\newpage % Start the article content on the second page, remove this if you have a longer abstract that goes onto the second page
+
+\end{document}
+
+%%%%%%%%%%% B====>
+% Dovete stare attenti ad avere installato texlive-full e texlive-publisher (o nome simile)
+% Per compilare, make da terminale nella folder dove è contenuto questo file (ho già fatto io il makefile)
+% Prima di committare, make clean e cancellare *.pdf
+%%%%%%%%%%% B====>
