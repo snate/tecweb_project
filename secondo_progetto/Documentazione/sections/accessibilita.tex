@@ -134,86 +134,132 @@ positivo o negativo a seconda delle motivazioni che risiedono dietro questa
 scelta; 9.5 si può ritenere rispettato.
 \end{enumerate}
 
-%%%%%%%%%%%%CARLO DA QUI NON HO PIÙ SCRITTO NULLA
+\subsubsection{Usare soluzioni provvisorie}
+\begin{enumerate}
+\item La finestra attiva non viene mai cambiata nè vengono generate nuove
+finestre nè appaiono finestre a cascata, perciò 10.1 è rispettato;
+\item Sebbene le label degli input nei form siano associate in modo erroneo
+(come discusso nella sezione \ref{sec:acc-form}), queste sono posizionate
+correttamente a livello presentazionale rispetto ai rispettivi input, perciò
+10.2 è rispettato;
+\item Non ci sono tabelle, perciò 10.3 è rispettato;
+\item I placeholder ci sono, ma non sempre funzionano nel modo aspettato (come
+discusso nella sezione \ref{sec:acc-form}) (\textit{Priorità 3});
+\item Non sono presenti molti link nelle pagine e nessuno di questi è
+adiacente a un altro senza altri elementi o tag tra i due link, perciò 9.5 è
+rispettato.
+\end{enumerate}
 
-\subsubsection{Meccanismi di fallback}
-Ogniqualvolta che una certa tecnologia non fosse disponibile per visualizzare i
-contenuti previsti, si è scelto di non fornire tale contenuto (perché
-di secondaria importanza) oppure il sito offre dei meccanismi per i quali la
-degradazione è elegante (ad esempio la searchbar, se acquista il focus, si
-ingrandisce istantaneamente anzichè effettuare una transizione).
+\subsubsection{Usare le tecnologie e le raccomandazioni del W3C}
+\begin{enumerate}
+\item Vengono utilizzate solamente tecnologie W3C (anche se talvolta non
+rispettando gli standard), perciò 11.1 è rispettato;
+\item Le label dei form sono associate al contenuto degli attributi
+\texttt{name} (come detto nella sezione \ref{sec:acc-form}) e non a quello
+degli attributi \texttt{id}, come da raccomandazione W3C; essendo pratica non
+prevista dall'ente, presumibilmente è anche disapprovata (\textit{Priorità 2}); %CONTROLLARE
+\item Non si vedono nè localizzazione nè globalizzazione come prospettive di
+tale sito, perciò 11.3 è rispettato;
+\item Durante la realizzazione del sito probabilmente non è stato notato che
+le pagine non rispettavano gli standard, perciò non sono fornite versioni
+alternative \textit{accessibili} delle pagine del sito (\textit{Priorità 1}).
+\end{enumerate}
 
-\subsubsection{Raccomandazioni W3C}
-Come detto in precedenza, le immagini presentano sempre l'alternativa testuale
-inserita utilizzando la tecnologia offerta da W3C.
+\subsubsection{Fornire informazione per la contestualizzazione e
+l'orientamento}
+\begin{enumerate}
+\item Non sono presenti \textbf{frame}, perciò 12.1 è rispettato;
+\item Non sono presenti frame, perciò 12.2 è rispettato;
+\item I campi delle form sono raggruppati con tag \texttt{fieldset} e
+\texttt{legend}, perciò 12.3 è rispettato;
+\item Come descritto nella sezione \ref{sec:acc-form}, i tag \texttt{label}
+non sono associati agli input correttamente (\textit{Priorità 2}).
+\end{enumerate}
 
-Non sono presenti formati come shockwave e PDF.
+\subsubsection{Fornire chiari meccanismi di navigazione}
+\begin{enumerate}
+\item I link fanno effettivamente capire dove portano, ma mancano gli
+attributi \texttt{title} per spiegare meglio cosa riferisce l'ancora, perciò
+13.1 si può ritenere rispettato in modo lasco;
+\item Sono presenti pochi \textbf{meta tag}, ritenuti insufficienti poichè
+mancano informazioni importanti tra cui autore e tipo di contenuto
+(\textit{Priorità 2});
+\item Non è presente nessuna pagina dedicata all'orientamento sul sito, nè
+mappa nè un indice ben definito (non è presente nemmeno una \textit{sitemap}
+\footnote{\texttt{https://support.google.com/webmasters/answer/183668?hl=it}}
+vera e propria), non rispettando di fatto il punto di controllo 13.3
+(\textit{Priorità 2});
+\item Come descritto nella sezione \ref{sec:user-ui_consistency}, gli elementi
+di navigazione non sono consistenti o coerenti nelle varie pagine del sito
+(\textit{Priorità 2});
+\item Il sito non dispone sempre di una barra di navigazione, ad esempio nella
+pagina visualizzata se si fallisce l'accesso (\textit{Priorità 3});
+\item Il sito non ha necessità di forkare codice per diversi
+\textit{user agent}, perciò 13.6 è ritenuto rispettato;
+\item Il sito offre diversi metodi di ricerca (sebbene questa non funzioni
+correttamente come descritto nella sezione \ref{sec:schema-org}), perciò 13.7
+è rispettato;
+\item In alcune parti l'informazione più significativa non è posta all'inizio
+di elenchi, come descritto nella sezione \ref{sec:schema-elenchi}
+(\textit{Priorità 3});
+\item Non sono presenti documenti composti da più pagine, perciò 13.9 è
+rispettato;
+\item Non sono presenti immagini realizzate con l'\textit{ASCII multi-line}
+\footnote{\texttt{https://trendimpulse.wordpress.com/tag/multiple-lines-ascii-art/}}.
+\end{enumerate}
 
-\subsubsection{Orientamento}
-Vengono inoltre forniti una mappa del sito ed una pagina di F.A.Q. riferite in
-ogni pagina del sito. Oltre a questo, in tutte le pagine eccetto la home (dove
-non è ritenuta necessaria) è presente una breadcrumb che indica all'utente la
-sua posizione all'interno del sito.
+\subsubsection{Assicurarsi che i documenti siano chiari e semplici}
+\begin{enumerate}
+\item Anche se il testo non sempre è grammaticalmente corretto e non sia
+semplice, si ritiene che la (\textbf{seconda}) scelta sia dovuta al fatto che
+l'audience è un pubblico di cultura letteraria medio-alta (essendo il sito di
+una biblioteca), perciò 14.1 si può ritenere rispettato;
+\item Sono mostrate le immagini delle copertine dei libri, mentre l'audio
+potrebbe essere meno significativo per aumentare il valore del contenuto,
+perciò 14.2 è rispettato;
+\item Lo stile di presentazione è comune a tutte le pagine, perciò 14.3 è
+rispettato.
+\end{enumerate}
 
-\subsubsection{Navigazione}
-I link sono evidenziati in modo che siano distinguibili attraverso un test di \textit{Drue Miller} e forniscono sempre un attributo ``title" che informa
-l'utente sul contenuto della destinazione.
-In particolare:
+%%%%%% FINE LINEE GUIDA -> QUI SI METTONO TUTTE LE COSE NON SALTATE FUORI PRIMA
+
+\subsection{Errori non risultati dal confronto con le linee guida}
+
+\subsubsection{Form}\label{sec:acc-form}
+I form presentano vari errori:
 \begin{itemize}
-\item i link sono in grassetto se presenti nel testo;
-\item i colori sono ben distinguibili come spiegato nella sezione \ref{sec:Pres-Colore};
-\item i link visitati e non sono sempre riconoscibili gli uni dagli altri, ad
-eccezione del caso in cui questi siano nel \textbf{nav} o nel \textbf{footer};
-\item altri accorgimenti su come vengono trattati e specializzati gli elementi
-della navigazione vengono discussi nella sezione \ref{sec:presentazione} a pagina \pageref{sec:presentazione}.
+\item I form sono spesso bizzarramente contrassegnati con la classe
+\texttt{forms}, come in \texttt{ricerca.html}, rompendo nuovamente la
+separazione presentazione-struttura;
+\item Non compaiono gli input di submit, rendendo impossibile la richiesta di
+azione di un form se JavaScript è disattivato (si ritiene che non siano stati
+messi i submit poichè fosse lievemente più complesso gestire l'arresto
+nell'invio della richiesta di sottomissione nel caso in cui i dati inseriti
+fossero scorretti, rompendo la separazione comportamento-struttura);
+\item Per qualche strano motivo gli input presentano attributi \texttt{name} e
+\texttt{id} con contenuto differente;
+\item Le label sono associate erroneamente, per cui la pressione sull'elemento
+individuato dal tag label non risulta nell'acquisizione del focus sull'input
+desiderato;
+\item Le ricerche di libri per autore, titolo e collana vengono eseguite con
+una chiamata REST di tipo POST, impedendo all'utente di salvare come possibile
+segnalibro (una \textbf{boa}, nella \textit{metafora della pesca}) la pagina
+contenente i risultati della ricerca effettuata;
+\item I placeholder non hanno comportamento del tutto aspettato dall'utente,
+dal momento che se perdono il focus dopo averlo acquisito (e aver perso il
+contenuto del segnaposto) e sono vuoti, non ricompare il placeholder.
 \end{itemize}
 
-In tutte le pagine eccetto la home (dove la navigazione viene indirizzata
-volutamente verso le categorie), è presente un menù di navigazione contenente
-i ``sibling" della pagina o, se l'utente si trova in una pagina di una
-località, visualizza i riferimenti alla homepage e alle categorie.
+\subsubsection{Separazione tra elementi del sito}
+Qui di seguito vengono evidenziate le incongruenze rilevate nel sito rispetto
+alla separazione tra i tre elementi che lo compongono, ovvero
+\textbf{struttura}, \textbf{presentazione} e \textbf{comportamento}.
 
-In questo elemento viene indicata anche la pagina corrente con un'icona
-oppure, qualore l'utente si trovasse in una pagina di III livello, tale icona
-sarebbe differente ma si troverebbe comunque a fianco della voce relativa alla
-categoria di appartenenza.
+\paragraph{Separazione struttura-comportamento} ~\\
+BLA BLA BLABLABLA BLA BLA
 
-\subsubsection{Semplicità dei contenuti}
-Il layout è coerente, consistente e riconoscibile in tutte le pagine del sito,
-come descritto nelle sezioni \ref{sec:struttura} e \ref{sec:presentazione} ed
-allo stesso tempo si è cercato di tenere un linguaggio semplice nei contenuti.
+\paragraph{Separazione struttura-presentazione} ~\\
+Alcune classi, come \textit{shiftsx} in \texttt{contatti.html} forniscono informazioni di carattere
+presentazionale e non semantico.
 
-\subsection{Fornire alternative equivalenti al contenuto audio e visivo}
-Le pagine del nostro sito rimangono accessibili anche se l'utente non può
-utilizzare alcune tecnologie o funzionalità per scelta personale, se il
-suo dispositivo di navigazione non le supporta o per cause di forza maggiore
-(e.g. svantaggi dal punto di vista fisico e psichico).
-
-\subsubsection{Separazione struttura-comportamento}
-In ogni pagina del sito non è stato introdotto alcun attributo per la gestione
-degli eventi associata ad un elemento strutturale e gli script sono inclusi
-nella pagina e non fanno parte del corpo di questa.
-Gli script JavaScript, a loro volta, non si preoccupano di creare intere pagine
-dinamicamente, ma si limitano a creare frammenti di queste in modo opportuno,
-ovvero quando ciò \textbf{non} è possibile staticamente.
-
-\subsubsection{Separazione struttura-presentazione}
-Le pagine del sito non contengono alcun foglio di stile ma ogni foglio di stile
-viene incluso in queste. Oltre a ciò, ogni elemento strutturale contiene
-solamente attributi relativi al suo significato semantico e non presentazionale
-(ad esempio non sono stati utilizzati gli attributi \texttt{bgcolor} e
-\texttt{font}).
-
-Ogni id e ogni classe è stata dichiarata utilizzando nomi relativi alla
-semantica e non al modo in cui verranno presentati.
-
-\subsubsection{Separazione presentazione-comportamento}
-Gli script JavaScript non vanno a modificare le regole con cui gli elementi
-sono presentati all'interno delle pagine del sito, ma si limitano ad attribuire
-o aggiungere ad essi classi che verranno trattate con dei fogli di stile.
-
-\subsubsection{Porzioni di sito visibili}
-L'area cosidetta ``\textit{above the fold}" contiene sempre i contenuti di maggior
-rilievo della pagina visualizzata, mentre elementi di minore importanza sono
-presenti in parti come il footer che non sempre possono essere visibili all'apertura di una nuova finestra.
-
+\paragraph{Separazione presentazione-comportamento} ~\\
