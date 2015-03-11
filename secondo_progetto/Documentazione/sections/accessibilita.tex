@@ -1,112 +1,140 @@
 \section{Accessibilità}
-Come standard di accessibilità è stato scelto di raggiungere il grado WAI-AA
-WCAG 2.0. Di seguito sono descritti gli accorgimenti adottati dal nostro sito
-per perseguire questo obiettivo.
-
-\subsection{Trasformazione elegante}
-Le pagine del nostro sito rimangono accessibili anche se l'utente non può
-utilizzare alcune tecnologie o funzionalità per scelta personale, se il
-suo dispositivo di navigazione non le supporta o per cause di forza maggiore
-(e.g. svantaggi dal punto di vista fisico e psichico).
-
-\subsubsection{Separazione struttura-comportamento}
-In ogni pagina del sito non è stato introdotto alcun attributo per la gestione
-degli eventi associata ad un elemento strutturale e gli script sono inclusi
-nella pagina e non fanno parte del corpo di questa.
-Gli script JavaScript, a loro volta, non si preoccupano di creare intere pagine
-dinamicamente, ma si limitano a creare frammenti di queste in modo opportuno,
-ovvero quando ciò \textbf{non} è possibile staticamente.
-
-\subsubsection{Separazione struttura-presentazione}
-Le pagine del sito non contengono alcun foglio di stile ma ogni foglio di stile
-viene incluso in queste. Oltre a ciò, ogni elemento strutturale contiene
-solamente attributi relativi al suo significato semantico e non presentazionale
-(ad esempio non sono stati utilizzati gli attributi \texttt{bgcolor} e
-\texttt{font}).
-
-Ogni id e ogni classe è stata dichiarata utilizzando nomi relativi alla
-semantica e non al modo in cui verranno presentati.
-
-\subsubsection{Separazione presentazione-comportamento}
-Gli script JavaScript non vanno a modificare le regole con cui gli elementi
-sono presentati all'interno delle pagine del sito, ma si limitano ad attribuire
-o aggiungere ad essi classi che verranno trattate con dei fogli di stile.
-
-\subsubsection{Porzioni di sito visibili}
-L'area cosidetta ``\textit{above the fold}" contiene sempre i contenuti di maggior
-rilievo della pagina visualizzata, mentre elementi di minore importanza sono
-presenti in parti come il footer che non sempre possono essere visibili all'apertura di una nuova finestra.
+Nel sito non è stato indicato nessuno standard di accessibilità raggiunto.
+Con strumenti di validazione, è facile notare che effettivamente non vengono
+soddisfatte nè le richieste di WAI-A WCAG2.0 nè della ``section 508".
+Di seguito verranno infatti descritte le mancanze rilevate nel sito in termini
+di accessibilità, ordinate secondo le 14 linee guida di WAI
+%;dove non conforme, verrà indicato la priorità del punto di controllo dove è stata riscontrata la mancanza
+.
 
 \subsection{Linee guida per l'accessibilità}
 In questa sottosezione viene descritto come il gruppo ha rispettato le linee
 guida del WAI.
 
-\subsubsection{Alternative a contenuti audio e visivi}
-Nel sito non sono presenti contenuti audio e video né applet, quindi non ci si
-pone il problema per questi. Al contrario, ogni immagine ha un attributo
-\texttt{alt} che fornisce l'equivalente testuale nel caso in cui non fosse
-possibile visualizzare l'immagine.
-
-\subsubsection{Non fare affidamento sul colore}
-Sono stati utilizzati tool per la verifica dell'accessibilità che controllano
-anche l'uso corretto del colore nel sito.
-
-\subsubsection{Uso appropriato dei tag}
-I tag sono stati utilizzati per il loro significato semantico, non sono state
-utilizzate tabelle per definire il layout delle pagine e, togliendo i fogli di
-stile, il sito rimane accessibile anche con le impostazioni predefinite dei
-browser.
-
-\subsubsection{Linguaggi naturali}
-Sono stati utilizzati marcatori sia per la pronuncia di parole in lingua
-straniera che per estendere la pronuncia di abbreviazioni e acronimi.
-
-\subsubsection{Trasformazione elegante delle tabelle}
-Non sono presenti tabelle nel sito.
-
-\subsubsection{Trasformazione elegante delle nuove tecnologie}
+\subsubsection{Fornire alternative equivalenti al contenuto audio e visivo}
 \begin{enumerate}
-\item \textbf{CSS3}: abbiamo cercato di limitare al minimo l'impiego di questa tecnologia utilizzando solamente le proprietà \texttt{box-shadow} e \texttt{transition} che, nonostante siano state specialmente usate nei layout per Dispositivi mobili, in caso di mancato supporto non comprometterebbero l'usabilità del sito, in quanto il degrado si limiterebbe ad una lieve perdita di grazia
-\item \textbf{JavaScript}: se un utente ha disattivato JavaScript sul proprio
-browser non è in grado di visualizzare i commenti (parte secondaria di contenuto), non visualizza il placeholder nella barra di ricerca, quando clicca su un link ``esterno", questo viene aperto sulla stessa finestra e le immagini sulla home non fungono da link alle pagine delle categorie; tuttavia, senza queste funzionalità il sito continua ad offrire una più che buona user experience
-\item \textbf{Geolocalizzazione}: la geolocalizzazione è un servizio opzionale che abbiamo voluto offrire agli utenti di \textit{What To Visit} e come tale, nel caso di mancato supporto o di mancata attivazione, non lascerà traccia di sé portando così l'utente a non accorgersi di essa
+\item Non sempre viene fornito un equivalente testuale, ad esempio nella
+pagina principale mancano gli attributi \texttt{alt} ai tag \texttt{img}
+(\textit{Priorità 1});
+\item Non sono presenti mappe immagine, perciò 1.2 è rispettato;
+\item Non sono presenti audio, perciò 1.3 è rispettato;
+\item Non sono presenti filmati, perciò 1.4 è rispettato;
+\item Non sono presenti mappe immagine, perciò 1.5 è rispettato;
 \end{enumerate}
 
-\subsubsection{Contenuti che cambiano nel corso del tempo}
+Il punto di controllo 1.1 fallisce e questo è sufficiente per dire che la
+pagina non è accessibile per WAI-A WCAG2.0. Di seguito non verrà più
+evidenziato tale fatto (nemmeno per i gradi successivi di accessibilità) poichè
+il non-rispetto di un solo punto di controllo compromette il grado complessivo
+di accessibilità del sito.
+
+\subsubsection{Non fare affidamento sul solo colore}
 \begin{enumerate}
-\item La searchbar cambia dimensione quando assume il focus e viene
-visualizzato un placeholder solamente se, quando questa perde il focus, non è
-presente testo (altrimenti rimane l'input immesso dall'utente);
-\item premendo sui pulsanti ``Visualizza commento",``Pubblica commento" e
-``Nascondi commenti" vengono rispettivamente visualizzati i commenti presenti,
-compare la form di inserimento commenti e vengono nascosti i commenti
-precedentemente visualizzati.
+\item L'informazione arriva tramite indicazioni indipendenti dal colore;
+\item %CONTRASTO
 \end{enumerate}
 
-Questi elementi non causano problemi ad eventuali utenti che soffrono di
-epilessia poichè il loro cambio di stato non è troppo rapido. Allo stesso
-tempo, questi elementi si aggiornano dopo dei click e mantengono il loro stato
-fino ad una successiva interazione tramite click non causando un senso di
-disagio nell'utente che altrimenti vedrebbe il layout modificarsi di continuo
-sotto i suoi occhi.
-
-\subsubsection{Interfacce utente}
-Non sono previste delle interfacce utente quali comandi vocali ed access key
-per il sito.
-
-Al contrario, sono stati previsti dei tab index per:
+\subsubsection{Usare marcatori e fogli di stile e farlo in modo appropriato}
 \begin{enumerate}
-\item poter saltare delle voci di navigazione ridondanti;
-\item accedere con priorità ai link potenzialmente più interessanti per
-l'utente (secondo previsioni dei componenti del gruppo).
+\item Le pagine sono scritte secondo lo standard \textbf{XHTML 1.0 Strict},
+sebbene poi non sempre venga rispettato;
+\item Tutte le pagine si riferiscono correttamente allo schema \textbf{DTD} di
+XHTML 1.0 Strict;
+\item Il tag \textit{hr} è utilizzato per meri scopi presentazionali, ovvero
+l'inserire un bordo tra delle intestazioni e il contenuto sottostante (ad
+esempio in \texttt{about.html}); oltre a questo, sono talvolta inseriti spam per puro scopo presentazionale e non semantico, come quello in \texttt{\#path} (\textit{Priorità 2});
+\item Vengono utilizzate delle unità assolute come \texttt{font-size: medium}
+per il testo (\textit{Priorità 2});
+\item Gli elementi di intestazione sono usati correttamente, tuttavia si
+potrebbe pensare di inserirne altri per favorire la lettura del contenuto da
+parte di screen-reader o altri dispositivi che fanno molto affidamento sulle
+intestazioni;
+\item Vi sono alcune \texttt{dl} che vengono scritte e marcate come
+\texttt{ul}, comportando l'aggiunta di tag come \texttt{strong} a parti
+dell'item listato per emulare i tag \texttt{dt} e \texttt{dd}
+(\textit{Priorità 2});
+\item Non sono presenti citazioni, perciò 3.7 è rispettato;
 \end{enumerate}
 
-\subsubsection{Indipendenza da dispositivo}
-Come detto nelle sezioni \ref{sec:fangs} e \ref{sec:lynx}, le pagine del sito
-sono state provate rispettivamente anche con emulatori di screen reader e
-browser testuali.
+\subsubsection{Chiarire l'uso di linguaggi naturali}
+\begin{enumerate}
+\item Non viene mai segnalato il cambio linguaggio, ad esempio \textit{home} o
+\textit{home} in \texttt{accesso.html} (\textit{Priorità 1});
+\item Non vengono mai segnalate abbreviazioni, ad esempio \textit{LDV} in
+qualsiasi pagina di un libro o ``\textit{J.K. Rowling}" in
+\texttt{ricerca.html} (\textit{Priorità 3});
+\item Viene correttamente identificato il linguaggio del documento, perciò 4.3
+è rispettato.
+\end{enumerate}
 
-Non sono state utilizzate aree di immagini come link.
+\subsubsection{Creare tabelle che si trasformino in maniera elegante}
+\begin{enumerate}
+\item Non sono presenti tabelle, perciò 5.1 è rispettato;
+\item Non sono presenti tabelle, perciò 5.2 è rispettato;
+\item Non sono presenti tabelle, perciò 5.3 è rispettato;
+\item Non sono presenti tabelle, perciò 5.4 è rispettato;
+\item Non sono presenti tabelle, perciò 5.5 è rispettato;
+\item Non sono presenti tabelle, perciò 5.6 è rispettato.
+\end{enumerate}
+
+\subsubsection{Assicurarsi che le pagine che danno spazio a nuove tecnologie
+si trasformino in maniera elegante}
+\begin{enumerate}
+\item Il contenuto, seppur presentando errori di markup, è sufficientemente
+leggibile e comprensibile senza fogli di stile, perciò 6.1 si può ritenere
+rispettato;
+\item Non si ritiene che i contenuti dinamici del sito possano essere
+modificati una volta inseriti, se non per i commenti in coda ai libri;
+tuttavia l'aggiornamento automatico tramite AJAX o altre tecnologie esulava
+dagli obiettivi del corso di Tecnologie Web, perciò 6.2 si può ritenere
+rispettato;
+\item Le pagine perdono gran parte della loro usabilità disattivando
+JavaScript, ad esempio ogni form anzichè avere un input di tipo \textbf{submit}
+ha un pulsante normale e la sottomissione dei dati inseriti è completamente
+gestita via JavaScript, compromettendo normali operazioni che sarebbero
+possibili utilizzando nella struttura i tag semanticamente corretti
+(\textit{Priorità 1});
+\item I gestori degli eventi non dipendono da particolari dispositivi che
+utilizzano JavaScript, perciò 6.4 è rispettato;
+\item Le pagine che non risultano accessibili disattivando JavaScript non
+presentano alcuna pagina o presentazione alternativa (\textit{Priorità 2}).
+\end{enumerate}
+
+\subsubsection{Assicurarsi che l'utente possa tenere sotto controllo i
+cambiamenti di contenuto nel corso del tempo}
+\begin{enumerate}
+\item Nessun componente nella pagina causa fenomeni di sfarfallio, perciò 7.1
+è rispettato;
+\item Nessun componente nella pagina causa fenomeni di lampeggiamento, perciò
+7.2 è rispettato;
+\item Nessun componente nella pagina si muove una volta caricato, perciò 7.3 è
+rispettato;
+\item Le pagine non si aggiornano automaticamente, perciò 7.4 è rispettato;
+\item Non vi sono pagine che effettuano auto-reindirizzamento, perciò 7.5 è
+rispettato.
+\end{enumerate}
+
+\subsubsection{Assicurare l'accessibilità diretta delle interfacce utente
+incorporate}
+\begin{enumerate}
+\item gli script sono ritenuti accessibili verso i dispositivi che li
+supportano, perciò 8.1 è rispettato.
+\end{enumerate}
+
+\subsubsection{Progettare per garantire l'indipendenza da dispositivo}
+\begin{enumerate}
+\item Non sono presenti mappe immagine, perciò 9.1 è rispettato;
+\item Ogni elemento è accessibile indipendemente dal dispositivo con cui si
+naviga nel sito, perciò 9.2 è rispettato;
+\item Gli eventi si riferiscono a gesture o actions astratte o logiche e non
+relative a specifici dispositivi, perciò 9.3 è rispettato;
+\item Non è specificato un ordine di tabulazione diverso da quello di default, sebbene potrebbe essere utile in questo sito (\textit{Priorità 3});
+\item Non sono definite scorciatoie da tastiera, il che potrebbe essere
+positivo o negativo a seconda delle motivazioni che risiedono dietro questa
+scelta; 9.5 si può ritenere rispettato.
+\end{enumerate}
+
+%%%%%%%%%%%%CARLO DA QUI NON HO PIÙ SCRITTO NULLA
 
 \subsubsection{Meccanismi di fallback}
 Ogniqualvolta che una certa tecnologia non fosse disponibile per visualizzare i
@@ -154,3 +182,38 @@ categoria di appartenenza.
 Il layout è coerente, consistente e riconoscibile in tutte le pagine del sito,
 come descritto nelle sezioni \ref{sec:struttura} e \ref{sec:presentazione} ed
 allo stesso tempo si è cercato di tenere un linguaggio semplice nei contenuti.
+
+\subsection{Fornire alternative equivalenti al contenuto audio e visivo}
+Le pagine del nostro sito rimangono accessibili anche se l'utente non può
+utilizzare alcune tecnologie o funzionalità per scelta personale, se il
+suo dispositivo di navigazione non le supporta o per cause di forza maggiore
+(e.g. svantaggi dal punto di vista fisico e psichico).
+
+\subsubsection{Separazione struttura-comportamento}
+In ogni pagina del sito non è stato introdotto alcun attributo per la gestione
+degli eventi associata ad un elemento strutturale e gli script sono inclusi
+nella pagina e non fanno parte del corpo di questa.
+Gli script JavaScript, a loro volta, non si preoccupano di creare intere pagine
+dinamicamente, ma si limitano a creare frammenti di queste in modo opportuno,
+ovvero quando ciò \textbf{non} è possibile staticamente.
+
+\subsubsection{Separazione struttura-presentazione}
+Le pagine del sito non contengono alcun foglio di stile ma ogni foglio di stile
+viene incluso in queste. Oltre a ciò, ogni elemento strutturale contiene
+solamente attributi relativi al suo significato semantico e non presentazionale
+(ad esempio non sono stati utilizzati gli attributi \texttt{bgcolor} e
+\texttt{font}).
+
+Ogni id e ogni classe è stata dichiarata utilizzando nomi relativi alla
+semantica e non al modo in cui verranno presentati.
+
+\subsubsection{Separazione presentazione-comportamento}
+Gli script JavaScript non vanno a modificare le regole con cui gli elementi
+sono presentati all'interno delle pagine del sito, ma si limitano ad attribuire
+o aggiungere ad essi classi che verranno trattate con dei fogli di stile.
+
+\subsubsection{Porzioni di sito visibili}
+L'area cosidetta ``\textit{above the fold}" contiene sempre i contenuti di maggior
+rilievo della pagina visualizzata, mentre elementi di minore importanza sono
+presenti in parti come il footer che non sempre possono essere visibili all'apertura di una nuova finestra.
+
