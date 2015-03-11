@@ -32,11 +32,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% ACCESSO.HTML
-% LINK CIRCOLARE IN ALTO A DX
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % EVERYWHERE
 % TABINDEX MANCANTI
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -94,7 +89,8 @@ visualizzate le informazioni sul libro.
 
 Sebbene presenti i problemi sopra descritti, l'interfaccia è comunque ritenuta
 consistente rispetto al contesto in cui è inserita (una libreria) e alle
-medie aspettative che un utente avrebbe visitando un sito di una libreria.
+medie aspettative che un utente avrebbe sapendo di visitare un sito di una
+libreria.
 
 \subsection{Area visibile}
 Ogni pagina ha un'ampia intestazione che occupa una buona parte di spazio;
@@ -116,7 +112,7 @@ modalità con cui queste sono state realizzate.
 
 \subsubsection{Informazioni sulla propria posizione}
 L'utente se si trova nelle pagine \texttt{accesso.html}, \texttt{logout.html},
-\texttt{access_failure.html} o \texttt{registrazione.html} non dispone di un
+\texttt{access\_failure.html} o \texttt{registrazione.html} non dispone di un
 blocco di navigazione presente nelle altre pagine.
 
 L'utente non dispone di sufficienti informazioni sulla barra contestuale
@@ -146,3 +142,30 @@ Il sito presenta le pagine ``Chi siamo" e ``Contatti", ma mancano:
 \item Una pagina dove viene illustrata la normativa sulla privacy, dal momento
 che il sito raccoglie dati sensibili come indirizzi e-mail.
 \end{itemize}
+
+\subsection{Considerazioni di carattere generico}
+Sono stati riscontrati i seguenti punti che compromettono gravemente
+l'esperienza utente:
+\begin{itemize}
+\item Link circolare in \texttt{accesso.html} presente in \texttt{\#acces};
+\item Difficoltà nell'accedere a funzionalità per utenti autenticati e nel
+comprenderle (sezione \ref{sec:user-login});
+\item A parte in home (dove è giusto che non sia un link, altrimenti sarebbe
+circolare), il logo posto come intestazione principale del sito non è
+cliccabile nelle altre pagine del sito, come invece ci si aspetterebbe.
+\end{itemize}
+
+\subsubsection{Accesso utente}\label{sec:user-login}
+L'accesso utente non viene giustificato in nessuna parte del sito, quindi un
+utente deve capire da solo a cosa serve effettivamente registrarsi ed accedere
+al sito.
+
+Questo è difficile perchè l'utente deve essere loggato per inserire commenti,
+tuttavia la possibilità di effettuare login/registrazione gli viene nascosta
+quando si trova nelle sezioni (e.g. pagine del libro, pagine dei generi) dove
+effettivamente serve effettuare l'accesso per accedere alle funzionalità.
+
+Da questo deriva naturalmente il fatto che una volta compreso il meccanismo di
+come funziona una tipica sessione utente, se questi riaccede al sito per
+inserire un commento, non trova il pulsante ``ACCEDI" nelle pagine dove è più
+utile, ovvero le pagine che contengono la descrizione di libri.
