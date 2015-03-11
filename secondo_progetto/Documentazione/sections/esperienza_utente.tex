@@ -1,3 +1,78 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%MANCANO ABBREVIAZIONI
+% LDV
+% J.K. ROWLING
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ERRORI NEI FORM
+% ASSEGNAZIONE CLASSI (STRUTTURA SCORRETTA)
+% LABEL MATCHANO NOME MA NON ID
+% MANCA SUBMIT
+%% ^ANCHE A CAUSA DI CIÒ NON SI PUÒ FARE NULLA DA SCREEN READER O SENZA JS
+% FUNZIONANO SOLO VIA JS
+% PLACEHOLDER FATTO MALE
+% LA RICERCA È EFFETTUATA CON POST E NON CON GET -> NON POSSO SALVARE --
+% RISULTATI RICERCA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LISTE
+% SPESSO SONO USATE UL ANZICHÈ DL
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% META
+% MANCANO META TAG UTILI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FONT SCELTO
+% TALVOLTA POCO LEGGIBILE (E.G. TITOLI)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ACCESSO.HTML
+% LINK CIRCOLARE IN ALTO A DX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EVERYWHERE
+% TABINDEX MANCANTI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ALT/TITLE
+% NON SEMPRE PRESENTI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NON VEDO/NON SENTO
+% PROVARE LA PAGINA CON VISCHECK
+% PROVARE LA PAGINA CON FANGS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% B/W
+% TESTARE LA PAGINA IN BIANCO E NERO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TITLE SUI LINK
+% MANCANTI DAPPERTUTTO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PAROLE STRANIERE
+% LA PAROLE STRANIERE NON SONO MARCATE COME TALI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SEPARAZIONE STRUTTURA/PRESENTAZIONE
+% È PRESENTE UN <hr /> IN contatti.html
+% NEL #path C'È UNO SPAN INUTILE INSERITO PROBABILMENTE A SCOPO PRESENTAZIONALE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Esperienza utente}\label{sec:user-exp}
 Di seguito vengono riportate le considerazioni riguardo la qualità del sito in
 termini di \textbf{user experience}.
@@ -6,6 +81,7 @@ termini di \textbf{user experience}.
 L'interfaccia è consistente e utilizza sempre gli stessi elementi grafici per
 denotare elementi comuni a diverse pagine, eccezion fatta per:
 \begin{itemize}
+\item il blocco di navigazione \textbf{non} presente in tutte le pagine;
 \item i link in \texttt{accesso.html} e \texttt{registrazione.html};
 \item la breadcrumb (in tali pagine contrassegnata con l'id \texttt{path}) non
 sempre è strutturata nello stesso modo, contenendo una o due voci a seconda
@@ -39,7 +115,34 @@ navigazione: di seguito verranno discusse la loro presenza e, se presenti, le
 modalità con cui queste sono state realizzate.
 
 \subsubsection{Informazioni sulla propria posizione}
+L'utente se si trova nelle pagine \texttt{accesso.html}, \texttt{logout.html},
+\texttt{access_failure.html} o \texttt{registrazione.html} non dispone di un
+blocco di navigazione presente nelle altre pagine.
+
 L'utente non dispone di sufficienti informazioni sulla barra contestuale
 (\textit{path} o \textit{breadcrumb}) per capire in che modo ha raggiunto la
-pagina in cui si trova: 
+pagina in cui si trova. Questa è composta solamente da una voce in quasi tutte
+le pagine e, dove non è così, sono visualizzati solamente due livelli di
+gerarchia e non il completo percorso dalla home fino alla pagina in questione.
 
+I titoli sono brevi e dal particolare al generale; tuttavia presentano i
+seguenti vizi di forma:
+\begin{enumerate}
+\item I titoli delle pagine hanno l'iniziale minuscola e si ritiene che non sia
+una scelta effettuata ma un incidente durante la realizzazione delle pagine;
+\item La pagina \texttt{accesso.html} ha come titolo ``acceso";
+\item La pagina a cui si accede scegliendo un genere letterario ha come titolo
+``risultati". Tale titolo non informa sul contenuto presente nella pagina ed è
+una forzatura dal punto di vista semantico; oltre a ciò, è un doppione perchè
+vi è un'altra pagina (quella dei risultati di una ricerca) che presenta lo
+stesso titolo ma offre funzionalità diverse.
+\end{enumerate}
+
+\subsubsection{Pagine di aiuto}
+Il sito presenta le pagine ``Chi siamo" e ``Contatti", ma mancano:
+\begin{itemize}
+\item Una pagina dedicata a (ipotetiche) domande frequenti;
+\item Una mappa del sito;
+\item Una pagina dove viene illustrata la normativa sulla privacy, dal momento
+che il sito raccoglie dati sensibili come indirizzi e-mail.
+\end{itemize}
