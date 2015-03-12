@@ -1,23 +1,22 @@
 \section{Accessibilità}
 Nel sito non è stato indicato nessuno standard di accessibilità raggiunto.
-Con strumenti di validazione, è facile notare che effettivamente non vengono
-soddisfatte nè le richieste di WAI-A WCAG2.0 nè della ``section 508".
+Tramite un analisi, si è notato inoltre che non vengono soddisfatte nè le
+richieste di WAI-A WCAG2.0 nè della ``section 508".
 Di seguito verranno infatti descritte le mancanze rilevate nel sito in termini
-di accessibilità, ordinate secondo le 14 linee guida di WAI
-%;dove non conforme, verrà indicato la priorità del punto di controllo dove è stata riscontrata la mancanza
-.
+di accessibilità, ordinate secondo le 14 linee guida di WAI; dove non conforme,
+verrà indicato la priorità del punto di controllo dove è stata riscontrata la
+mancanza.
 
 \subsection{Linee guida per l'accessibilità}
-In questa sottosezione viene descritto come il gruppo ha rispettato le linee
-guida del WAI.
 
 \subsubsection{Fornire alternative equivalenti al contenuto audio e visivo}
 \begin{enumerate}
-\item Non sempre viene fornito un equivalente testuale, ad esempio nella
-pagina principale mancano gli attributi \texttt{alt} ai tag \texttt{img}
+\item Non sempre viene fornito un equivalente testuale per gli elementi non
+testuali, ad esempio nella pagina principale mancano gli attributi \texttt{alt}
+ai tag \texttt{img}
 (\textit{Priorità 1});
 \item Non sono presenti mappe immagine, perciò 1.2 è rispettato;
-\item Non sono presenti audio, perciò 1.3 è rispettato;
+\item Non sono presenti filmati, perciò 1.3 è rispettato;
 \item Non sono presenti filmati, perciò 1.4 è rispettato;
 \item Non sono presenti mappe immagine, perciò 1.5 è rispettato;
 \end{enumerate}
@@ -42,14 +41,16 @@ sebbene poi non sempre venga rispettato;
 XHTML 1.0 Strict;
 \item Il tag \textit{hr} è utilizzato per meri scopi presentazionali, ovvero
 l'inserire un bordo tra delle intestazioni e il contenuto sottostante (ad
-esempio in \texttt{about.html}); oltre a questo, sono talvolta inseriti spam per puro scopo presentazionale e non semantico, come quello in \texttt{\#path} (\textit{Priorità 2});
+esempio in \texttt{about.html}); oltre a questo, sono talvolta inseriti
+\texttt{span} per puro scopo presentazionale e non semantico, come quello in
+\texttt{\#path} (\textit{Priorità 2});
 \item Vengono utilizzate delle unità assolute come \texttt{font-size: medium}
 per il testo (\textit{Priorità 2});
 \item Gli elementi di intestazione sono usati correttamente, tuttavia si
 potrebbe pensare di inserirne altri per favorire la lettura del contenuto da
 parte di screen-reader o altri dispositivi che fanno molto affidamento sulle
 intestazioni;
-\item Vi sono alcune \texttt{dl} che vengono scritte e marcate come
+\item Vi sono alcune \texttt{dl} che vengono scritte però marcate come
 \texttt{ul}, comportando l'aggiunta di tag come \texttt{strong} a parti
 dell'item listato per emulare i tag \texttt{dt} e \texttt{dd}
 (\textit{Priorità 2});
@@ -59,7 +60,7 @@ dell'item listato per emulare i tag \texttt{dt} e \texttt{dd}
 \subsubsection{Chiarire l'uso di linguaggi naturali}
 \begin{enumerate}
 \item Non viene mai segnalato il cambio linguaggio, ad esempio \textit{home} o
-\textit{home} in \texttt{accesso.html} (\textit{Priorità 1});
+\textit{user} in \texttt{accesso.html} (\textit{Priorità 1});
 \item Non vengono mai segnalate abbreviazioni, ad esempio \textit{LDV} in
 qualsiasi pagina di un libro o ``\textit{J.K. Rowling}" in
 \texttt{ricerca.html} (\textit{Priorità 3});
@@ -89,15 +90,15 @@ tuttavia l'aggiornamento automatico tramite AJAX o altre tecnologie esulava
 dagli obiettivi del corso di Tecnologie Web, perciò 6.2 si può ritenere
 rispettato;
 \item Le pagine perdono gran parte della loro usabilità disattivando
-JavaScript, ad esempio ogni form anzichè avere un input di tipo \textbf{submit}
-ha un pulsante normale e la sottomissione dei dati inseriti è completamente
-gestita via JavaScript, compromettendo normali operazioni che sarebbero
-possibili utilizzando nella struttura i tag semanticamente corretti
+JavaScript, ad esempio ogni form, anzichè avere un input di tipo
+\textbf{submit}, gestisce la sottomissione dei dati inseriti via JavaScript
+con un input di tipo \textbf{button}, compromettendo normali operazioni che
+sarebbero possibili utilizzando nella struttura i tag semanticamente corretti
 (\textit{Priorità 1});
 \item I gestori degli eventi non dipendono da particolari dispositivi che
 utilizzano JavaScript, perciò 6.4 è rispettato;
 \item Le pagine che non risultano accessibili disattivando JavaScript non
-presentano alcuna pagina o presentazione alternativa (\textit{Priorità 2}).
+forniscono alcuna pagina o presentazione alternativa (\textit{Priorità 2}).
 \end{enumerate}
 
 \subsubsection{Assicurarsi che l'utente possa tenere sotto controllo i
@@ -117,7 +118,7 @@ rispettato.
 \subsubsection{Assicurare l'accessibilità diretta delle interfacce utente
 incorporate}
 \begin{enumerate}
-\item gli script sono ritenuti accessibili verso i dispositivi che li
+\item Gli script sono ritenuti accessibili verso i dispositivi che li
 supportano, perciò 8.1 è rispettato.
 \end{enumerate}
 
@@ -128,7 +129,8 @@ supportano, perciò 8.1 è rispettato.
 naviga nel sito, perciò 9.2 è rispettato;
 \item Gli eventi si riferiscono a gesture o actions astratte o logiche e non
 relative a specifici dispositivi, perciò 9.3 è rispettato;
-\item Non è specificato un ordine di tabulazione diverso da quello di default, sebbene potrebbe essere utile in questo sito (\textit{Priorità 3});
+\item Non è specificato un ordine di tabulazione diverso da quello di default,
+sebbene potrebbe essere utile in questo sito (\textit{Priorità 3});
 \item Non sono definite scorciatoie da tastiera, il che potrebbe essere
 positivo o negativo a seconda delle motivazioni che risiedono dietro questa
 scelta; 9.5 si può ritenere rispettato.
@@ -146,7 +148,7 @@ correttamente a livello presentazionale rispetto ai rispettivi input, perciò
 \item I placeholder ci sono, ma non sempre funzionano nel modo aspettato (come
 discusso nella sezione \ref{sec:acc-form}) (\textit{Priorità 3});
 \item Non sono presenti molti link nelle pagine e nessuno di questi è
-adiacente a un altro senza altri elementi o tag tra i due link, perciò 9.5 è
+adiacente a un altro senza altri elementi o tag tra i due link, perciò 10.5 è
 rispettato.
 \end{enumerate}
 
@@ -157,12 +159,14 @@ rispettando gli standard), perciò 11.1 è rispettato;
 \item Le label dei form sono associate al contenuto degli attributi
 \texttt{name} (come detto nella sezione \ref{sec:acc-form}) e non a quello
 degli attributi \texttt{id}, come da raccomandazione W3C; essendo pratica non
-prevista dall'ente, presumibilmente è anche disapprovata (\textit{Priorità 2}); %CONTROLLARE
+prevista dall'ente, presumibilmente è anche disapprovata
+(\textit{Priorità 2});
 \item Non si vedono nè localizzazione nè globalizzazione come prospettive di
 tale sito, perciò 11.3 è rispettato;
 \item Durante la realizzazione del sito probabilmente non è stato notato che
-le pagine non rispettavano gli standard, perciò non sono fornite versioni
-alternative \textit{accessibili} delle pagine del sito (\textit{Priorità 1}).
+le pagine non rispettano gli standard o che presentano problemi di
+accessibilità, perciò non sono fornite versioni alternative
+\textit{accessibili} delle pagine del sito (\textit{Priorità 1}).
 \end{enumerate}
 
 \subsubsection{Fornire informazione per la contestualizzazione e
@@ -181,9 +185,11 @@ non sono associati agli input correttamente (\textit{Priorità 2}).
 \item I link fanno effettivamente capire dove portano, ma mancano gli
 attributi \texttt{title} per spiegare meglio cosa riferisce l'ancora, perciò
 13.1 si può ritenere rispettato in modo lasco;
-\item Sono presenti pochi \textbf{meta tag}, ritenuti insufficienti poichè
-mancano informazioni importanti tra cui autore e tipo di contenuto
-(\textit{Priorità 2});
+\item L'utilizzo dei meta tag è sempre scorretto, poichè i contenuti dei pochi
+tag presenti sembrano presi da un template XHTML (ad esempio in
+\texttt{about.html} il tag \texttt{description} ha come contenuto
+\textit{Inserisci le descrizioni}) e mancano tag importanti, come
+\texttt{author} (\textit{Priorità 2});
 \item Non è presente nessuna pagina dedicata all'orientamento sul sito, nè
 mappa nè un indice ben definito (non è presente nemmeno una \textit{sitemap}
 \footnote{\texttt{https://support.google.com/webmasters/answer/183668?hl=it}}
@@ -205,15 +211,15 @@ di elenchi, come descritto nella sezione \ref{sec:schema-elenchi}
 \item Non sono presenti documenti composti da più pagine, perciò 13.9 è
 rispettato;
 \item Non sono presenti immagini realizzate con l'\textit{ASCII multi-line}
-\footnote{\texttt{https://trendimpulse.wordpress.com/tag/multiple-lines-ascii-art/}}.
+\footnote{\texttt{https://trendimpulse.wordpress.com/tag/multiple-lines-ascii-art/}}, perciò 13.10 è rispettato.
 \end{enumerate}
 
 \subsubsection{Assicurarsi che i documenti siano chiari e semplici}
 \begin{enumerate}
-\item Anche se il testo non sempre è grammaticalmente corretto e non sia
-semplice, si ritiene che la (\textbf{seconda}) scelta sia dovuta al fatto che
-l'audience è un pubblico di cultura letteraria medio-alta (essendo il sito di
-una biblioteca), perciò 14.1 si può ritenere rispettato;
+\item Anche se il testo non sempre è grammaticalmente corretto e semplice, si
+ritiene che la (\textbf{seconda}) scelta sia dovuta al fatto che l'audience è
+un pubblico di cultura letteraria medio-alta (essendo il sito di una
+biblioteca), perciò 14.1 si può ritenere rispettato;
 \item Sono mostrate le immagini delle copertine dei libri, mentre l'audio
 potrebbe essere meno significativo per aumentare il valore del contenuto,
 perciò 14.2 è rispettato;
@@ -246,20 +252,39 @@ una chiamata REST di tipo POST, impedendo all'utente di salvare come possibile
 segnalibro (una \textbf{boa}, nella \textit{metafora della pesca}) la pagina
 contenente i risultati della ricerca effettuata;
 \item I placeholder non hanno comportamento del tutto aspettato dall'utente,
-dal momento che se perdono il focus dopo averlo acquisito (e aver perso il
-contenuto del segnaposto) e sono vuoti, non ricompare il placeholder.
+dal momento che se l'input perde il focus dopo averlo acquisito ed è vuoto,
+non ricompare il placeholder.
 \end{itemize}
 
 \subsubsection{Separazione tra elementi del sito}
-Qui di seguito vengono evidenziate le incongruenze rilevate nel sito rispetto
-alla separazione tra i tre elementi che lo compongono, ovvero
-\textbf{struttura}, \textbf{presentazione} e \textbf{comportamento}.
+Qui di seguito vengono evidenziate le incongruenze non precedentemente
+segnalate, rispetto alla separazione tra i tre elementi che lo compongono,
+ovvero \textbf{struttura}, \textbf{presentazione} e \textbf{comportamento}.
 
 \paragraph{Separazione struttura-comportamento} ~\\
-BLA BLA BLABLABLA BLA BLA
+In quasi tutte le pagine HTML c'è codice JavaScript, rompendo in modo netto la
+separazione struttura-comportamento.
 
 \paragraph{Separazione struttura-presentazione} ~\\
-Alcune classi, come \textit{shiftsx} in \texttt{contatti.html} forniscono informazioni di carattere
-presentazionale e non semantico.
+Alcune classi, come \textit{shiftsx} in \texttt{contatti.html} forniscono
+informazioni di carattere presentazionale e non semantico.
+
+Nei form è inserito il tag \texttt{br} a scopo presentazionale, poichè serve
+solamente per controllare la posizione del fieldset.
+
+Nella pagina \texttt{registrazione.html} il tag \texttt{br} è usato per far
+andare a capo il testo.
+
+Nella pagina \texttt{registrazione.html} è associata la classe
+\textit{link\_blok} che presuppone che il link sia visualizzato all'interno di
+un proprio blocco, ma ciò non avviene. Il nome della classe non ha carattere
+semantico ma presentazionale.
+
+Come in \texttt{generi.html}, sono state inserite classi non necessarie per
+modificare l'aspetto presentazionale di elementi (le classi
+\textit{adattaicona} associate ai link).
 
 \paragraph{Separazione presentazione-comportamento} ~\\
+In \texttt{registration\_control.js}, viene assegnato esplicitamente il colore
+di elementi tramite JavaScript (con l'attributo \texttt{style}, inserendo CSS
+inline).
