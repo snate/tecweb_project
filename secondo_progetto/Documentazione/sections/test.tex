@@ -5,21 +5,17 @@ GitHub Pages.
 
 \subsection{Validazione XHTML}
 Ogni pagina è stata validata con il tool offerto da W3C all'indirizzo
-\texttt{http://validator.w3.org/\#validate\_by\_input}.
+\texttt{http://validator.w3.org/\#validate\_by\_uri}, con il risultato che
+le seguenti pagine non sono valide:
+\begin{enumerate}
+\item pagina principale del sito;
+\item pagina descrittiva di un libro (generata tramite CGI).
+\end{enumerate}
 
 \subsection{Validazione CSS}
 Ogni foglio di stile CSS è stato validato con il tool offerto da W3C
 all'indirizzo
 \texttt{https://jigsaw.w3.org/css-validator/\#validate\_by\_input}.
-
-\subsection{JavaScript}
-Ogni script JavaScript è stato analizzato tramite il tool di analisi statica di
-\textit{WebStorm}, affinchè venissero trovati errori e miglioramenti al codice.
-
-Ogni frammento di codice è stato testato in locale ed in remoto non tralasciando alcun valore nel dominio dei possibili valori in ingresso. Ogni
-test è stato effettuato tenendo visibile la \textbf{Javascript Console} del
-browser, così da notare eventuali warning o errori nel codice. I test hanno
-avuto esito positivo sul prodotto finale.
 
 \subsection{Cynthia Says}
 Uno dei tool che è stato utilizzato per l'accessibilità delle pagine è Cynthia
@@ -126,21 +122,27 @@ sito nello stesso modo in cui verrebbe visualizzato da uno screen reader,
 fornendo il testo come sarebbe letto da questo dispositivo, la lista delle
 intestazioni e la lista dei link presenti nella pagina.
 
-Sono state controllate tutte le pagine, con esito positivo: le intestazioni
-seguono l'ordine logico pensato dai componenti del gruppo, i link sono
-visualizzati nell'ordine aspettato e non sono presenti elementi estranei nel
-testo corrispondente all'audio che sentirebbe un utente con screen reader,
-mentre gli aiuti come il ``salta la navigazione" sono presenti.
+In sintesi, come principali problemi vengono individuati:
+\begin{itemize}
+\item Le parole straniere vengono lette in italiano;
+\item A volte i numeri sono scritti in numero; ciò vuol dire che se l'utente
+ha la lingua di default del computer/browser impostata su inglese (come nel
+caso di un verificatore) si hanno frasi come ``\textit{La società distopica in
+cui vive Beatrice Prior è suddivisa in five fazioni}", mentre in casi simili
+un numero dovrebbe essere scritto per esteso;
+\item Si vedono i nomi dei file delle immagini anzichè un testo alternativo;
+\item Quando presente, il testo delle immagini spesso trasmette poca
+informazione, ridondando semplicemente il titolo anzichè rimanere vuoto
+(soluzione preferibile alla ridondanza);
+\item Le abbreviazioni non vengono estese, diventando potenzialmente
+incomprensibili.
+\end{itemize}
 
 \subsection{Lynx}\label{sec:lynx}
 Le pagine del sito sono state anche navigate tramite il browser testuale
 \texttt{Lynx}, affinchè si potesse verificare la facilità d'uso di
 \textit{What To Visit} anche per gli utenti che fanno uso di questo
 strumento di navigazione.
-
-\subsubsection{Visualizzazione commenti degli utenti}
-Nel sito è prevista la visualizzazione, per ogni località, dei commenti inseriti dagli utenti.
-Tale funzionalità tuttavia è supportata in tutti i browser testati ad eccezione di Internet Explorer, come spiegato nella sezione \ref{sec:visComm}.
 
 \subsection{Performance}
 Per terminare la fase di testing sono state eseguite, con strumenti
