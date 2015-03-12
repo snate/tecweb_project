@@ -12,17 +12,6 @@ Ogni foglio di stile CSS è stato validato con il tool offerto da W3C
 all'indirizzo
 \texttt{https://jigsaw.w3.org/css-validator/\#validate\_by\_input}.
 
-\subsection{Validazione XML e XSD}
-Il file XML dove sono salvati i commenti è stato validato rispetto al suo
-schema XSD con il tool offerto da \textit{freeformatter.com} all'indirizzo
-\texttt{http://www.freeformatter.com/xml-validator-xsd.html}.
-
-\subsection{Validazione XSLT}
-Il file XSLT che permette di trasformare il file XML dove sono salvati i
-commenti è stato validato (si è anche verificato il suo corretto
-funzionamento) con il tool offerto da \textit{freeformatter.com} all'indirizzo
-\texttt{http://www.freeformatter.com/xsl-transformer.html}.
-
 \subsection{JavaScript}
 Ogni script JavaScript è stato analizzato tramite il tool di analisi statica di
 \textit{WebStorm}, affinchè venissero trovati errori e miglioramenti al codice.
@@ -31,10 +20,6 @@ Ogni frammento di codice è stato testato in locale ed in remoto non tralasciand
 test è stato effettuato tenendo visibile la \textbf{Javascript Console} del
 browser, così da notare eventuali warning o errori nel codice. I test hanno
 avuto esito positivo sul prodotto finale.
-
-\subsection{Perl e CGI}
-Ciascuno degli script Perl e CGI è stato verificato in locale, con esiti
-positivi.
 
 \subsection{Cynthia Says}
 Uno dei tool che è stato utilizzato per l'accessibilità delle pagine è Cynthia
@@ -152,36 +137,6 @@ Le pagine del sito sono state anche navigate tramite il browser testuale
 \texttt{Lynx}, affinchè si potesse verificare la facilità d'uso di
 \textit{What To Visit} anche per gli utenti che fanno uso di questo
 strumento di navigazione.
-
-\subsection{Compatibilità con i vari Browser}
-Il sito \textit{What To Visit} è stato testato su vari browser e su
-diverse versioni di questi (sia desktop che mobile). 
-In particolare risulta compatibile in tutte le sue funzionalità, 
-eccetto la geolocalizzazione e la visualizzazione dei commenti
-degli utenti, con i seguenti in versione desktop:
-\begin{itemize}
-\item \textbf{Google Chrome:} versione 40.0+ 
-\item \textbf{Mozilla Firefox:} versione 32.0.3+
-\item \textbf{Internet Explorer:} versioni 9+
-\item \textbf{Opera:} versione 12.16+
-\item \textbf{Safari:} versione 5.0+
-\item \textbf{Maxthon:} versione 0.9.0.31+ (per Linux)
-\end{itemize}
-
-Inoltre, in versione mobile su:
-\begin{itemize}
-\item \textbf{Google Chrome:} versione 40.0+ 
-\item \textbf{Mozilla Firefox:} versione 35+  
-\end{itemize}
-
-\subsubsection{Internet Explorer}
-Per testare il sito sulle varie versioni di Internet Explorer è stato utilizzato lo strumento
-\textit{IETester} disponibile gratuitamente online. Attraverso questo è stato rilevato che, fino alla versione 8 (compresa) del browser, gli script che si occupano di visualizzare i commenti e di rendere cliccabili le immagini delle categorie in home non funzionano.
-
-\subsubsection{Geolocalizzazione}
-La funzionalità di geolocalizzazione offerta da \textit{What To Visit} è stata
-testata con tutti i browser precedentemente elencati tuttavia non risulta compatibile,
-in quanto non supportata, da Internet Explorer 8 (e versioni precedenti) e Maxthon per Linux (le altre versioni di Maxthon non sono state provate).
 
 \subsubsection{Visualizzazione commenti degli utenti}
 Nel sito è prevista la visualizzazione, per ogni località, dei commenti inseriti dagli utenti.
