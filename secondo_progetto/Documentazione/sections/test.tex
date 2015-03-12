@@ -45,31 +45,21 @@ del sito:
 Le pagine del sito non sono conformi a WCAG 2.0 A, come detto nella sezione
 \ref{sec:accessibilita}.
 
-\subsection{WAVE}
+\subsection{WAVE} %DONE
 WAVE (Web Accessibility Evaluation Tool) è uno strumento offerto da
 \textit{WebAIM} (WEB Accessibility In Mind) per verificare l'accessibilità
 delle pagine. Questo strumento analizza una pagina e fornisce errori,
 avvertimenti (warnings), caratteristiche positive, struttura basilare di una
 pagina e indicazioni sul contrasto.
 
-Più in particolare, sono stati corretti gli errori trovati (relativi agli
-standard 508 e WCAG) non relativi alla lingua delle pagine, dal momento che
-nonostante il tag HTML fosse ben-formato e contenente l'indicazione sulla
-lingua utilizzata nella pagina in modo corretto, il sito continuava a
-segnalare il falso positivo.
+Tramite i controlli effettuati, sono stati rilevati gli stessi errori
+descritti nella sezione \ref{sec:accessibilita}, confermando la non-conformità
+al grado WCAG 2.0 A.
 
-I warnings sono stati corretti solo se effettivamente utili:
-\begin{itemize}
-\item sono stati introdotti volutamente titoli o link ridondanti per
-aiutare l'utente a capire dove si trova;
-\item l'uso dei tabindex viene segnalato come warning, anche se questi sono
-stati messi per permettere all'utente di raggiungere subito i link della
-pagina più rilevanti, saltando elementi di navigazione o breadcrumb a seconda
-dei casi.
-\end{itemize}
-
-I contrasti dei colori sono stati regolati per riuscire a superare almeno il
-livello di accessibilità WCAG 2.0 AA.
+WAVE ha rilevato degli errori di contrasto dovuti al colore giallo delle
+intestazioni sopra sfondo bianco (presente di default in assenza dell'immagine
+di background). Tuttavia, questa segnalazione viene ritenuta un falso positivo
+in quanto il foglio di stile prevede un bordo nero intorno al titolo.
 
 \subsection{Vischeck}
 Vischek è uno strumento che permette di visualizzare immagini e pagine web
