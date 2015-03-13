@@ -266,23 +266,28 @@ In quasi tutte le pagine HTML c'è codice JavaScript, rompendo in modo netto la
 separazione struttura-comportamento.
 
 \paragraph{Separazione struttura-presentazione} ~\\
-Alcune classi, come \textit{shiftsx} in \texttt{contatti.html} forniscono
-informazioni di carattere presentazionale e non semantico.
+Durante l'analisi del sito abbiamo notato delle anomalie che rompevano la
+separazione tra struttura e presentazione:
 
-Nei form è inserito il tag \texttt{br} a scopo presentazionale, poichè serve
-solamente per controllare la posizione del fieldset.
+\begin{itemize}
+\item Alcune classi, come \textit{shiftsx} in \texttt{contatti.html} forniscono
+informazioni di carattere presentazionale e non semantico;
 
-Nella pagina \texttt{registrazione.html} il tag \texttt{br} è usato per far
-andare a capo il testo.
+\item Nei form è inserito il tag \texttt{br} a scopo presentazionale, poichè
+serve solamente per controllare la posizione del fieldset;
 
-Nella pagina \texttt{registrazione.html} è associata la classe
+\item Nella pagina \texttt{registrazione.html} il tag \texttt{br} è usato per
+far andare a capo il testo;
+
+\item Nella pagina \texttt{registrazione.html} è associata la classe
 \textit{link\_blok} che presuppone che il link sia visualizzato all'interno di
 un proprio blocco, ma ciò non avviene. Il nome della classe non ha carattere
-semantico ma presentazionale.
+semantico ma presentazionale;
 
-Come in \texttt{generi.html}, sono state inserite classi non necessarie per
-modificare l'aspetto presentazionale di elementi (le classi
+\item Come in \texttt{generi.html}, sono state inserite classi non necessarie
+per modificare l'aspetto presentazionale di elementi (le classi
 \textit{adattaicona} associate ai link).
+\end{itemize}
 
 \paragraph{Separazione presentazione-comportamento} ~\\
 In \texttt{registration\_control.js}, viene assegnato esplicitamente il colore

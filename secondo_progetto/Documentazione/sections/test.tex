@@ -19,9 +19,9 @@ all'indirizzo
 trovando alcuna scorrettezza nel codice.
 
 \subsection{Cynthia Says} %DONE
-Uno dei tool che è stato utilizzato per l'accessibilità delle pagine è Cynthia
-Says, inserendo l'URL di ogni pagina caricata su GitHub Pages e richiedendo la
-conformità a WCAG 2.0 AAA.
+Uno dei tool che è stato utilizzato per controllare l'accessibilità delle
+pagine è Cynthia Says, inserendo l'URL di ogni pagina caricata su GitHub Pages
+e richiedendo la conformità a WCAG 2.0 AAA.
 Di seguito vengono riportati i risultati ottenuti per \textbf{tutte} le pagine
 del sito:
 
@@ -56,10 +56,11 @@ Tramite i controlli effettuati, sono stati rilevati gli stessi errori
 descritti nella sezione \ref{sec:accessibilita}, confermando la non-conformità
 al grado WCAG 2.0 A.
 
-WAVE ha rilevato degli errori di contrasto dovuti al colore giallo delle
-intestazioni sopra sfondo bianco (presente di default in assenza dell'immagine
-di background). Tuttavia, questa segnalazione viene ritenuta un falso positivo
-in quanto il foglio di stile prevede un bordo nero intorno al titolo.
+WAVE ha inoltre rilevato degli errori di contrasto dovuti al colore giallo
+delle intestazioni sopra sfondo bianco (presente di default in assenza
+dell'immagine di background). Tuttavia, questa segnalazione viene ritenuta un
+falso positivo in quanto il foglio di stile prevede un bordo nero intorno al
+titolo.
 
 \subsection{Vischeck} %DONE
 Vischek è uno strumento che permette di visualizzare immagini e pagine web
@@ -70,7 +71,7 @@ come le vedrebbe una persona che presenta deficit visivi quali:
 \item \textbf{Tritanopia}: una forma di parziale o insufficiente
 discriminativa per il blu e il violetto
 \end{itemize}
-A causa del momentaneo manlfunzionamento dello strumento per analizzare le
+A causa del momentaneo malfunzionamento dello strumento per analizzare le
 pagine web, si è provveduto all'analisi tramite l'utilizzo di screenshot. Sono
 state analizzate tutte le singole pagine e di seguito portiamo una sola
 immagine abbastanza significativa per la comprensione dei casi legati ai
@@ -132,11 +133,13 @@ Abbiamo anche esaminato il sito web con una visualizzazione in scala di grigi no
 \end{figure}
 
 Dalle figure sovrastanti si può notare come vengono visti alcuni elementi
-quando si effettua una visualizzazione in scala di grigi, e come questi a
-volte non siano accessibili, come nel caso di link già visitati, in pagine
-come \texttt{accesso.html} o \texttt{registrazione.html}, titoli dei generi,
-come accade in \texttt{generi.html}, o come nel caso di breadcrumb e scheda
-selezionata, in gran parte delle pagine del sito.
+quando si effettua una visualizzazione in scala di grigi e come questi a
+volte non siano accessibili.
+
+Ciò si verifica nel caso di link già visitati in pagine come
+\texttt{accesso.html} o \texttt{registrazione.html}, per tutti i titoli dei
+generi presenti in \texttt{generi.html}, o come nel caso di breadcrumb e scheda
+selezionata in gran parte delle pagine del sito.
 
 \subsection{Fangs}\label{sec:fangs} %DONE
 \textit{Fangs} è un'estensione per i browser che consente di visualizzare un
@@ -146,7 +149,7 @@ intestazioni e la lista dei link presenti nella pagina.
 
 In sintesi, come principali problemi vengono individuati:
 \begin{itemize}
-\item Le parole straniere vengono lette in italiano;
+\item Le parole straniere lette in italiano;
 \item A volte i numeri sono scritti in numero; ciò vuol dire che se l'utente
 ha la lingua di default del computer/browser impostata su inglese (come nel
 caso di un verificatore) si hanno frasi come ``\textit{La società distopica in
