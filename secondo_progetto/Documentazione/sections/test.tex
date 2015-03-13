@@ -58,9 +58,14 @@ al grado WCAG 2.0 A.
 
 WAVE ha inoltre rilevato degli errori di contrasto dovuti al colore giallo
 delle intestazioni sopra sfondo bianco (presente di default in assenza
-dell'immagine di background). Tuttavia, questa segnalazione viene ritenuta un
-falso positivo in quanto il foglio di stile prevede un bordo nero intorno al
-titolo.
+dell'immagine di background). Tuttavia, questa segnalazione risulta falso
+positivo nei browser che supportano CSS3 in quanto il foglio di stile prevede
+un bordo generato tramite \textit{text-shadow} intorno al titolo.
+
+Se invece il browser non supportasse CSS3 (ad esempio in IE9), tale lacuna
+sarebbe grave poichè il testo risulterebbe illeggibile sia per la mancanza del
+bordo sia per il bassissimo contrasto del giallo dell'intestazione con il
+marroncino dell'immagine di background.
 
 \subsection{Vischeck} %DONE
 Vischek è uno strumento che permette di visualizzare immagini e pagine web
